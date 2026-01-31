@@ -39,9 +39,6 @@ bibliography: references.bib
 csl: apa.csl
 # language
 lang: en
-# includes:
-metadata-files:
-  - _affiliations.yml
 # rendering:
 from: "markdown+emoji"
 
