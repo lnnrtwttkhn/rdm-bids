@@ -62,7 +62,7 @@ format:
     page-layout: article
     title-block-style: default
     # code:
-    code-fold: show
+    code-fold: false
     code-summary: "Code"
     code-overflow: scroll
     code-copy: true
