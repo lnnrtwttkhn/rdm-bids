@@ -1,0 +1,4 @@
+[codespell]
+skip = .git,*.csl,*.bib
+#
+# ignore-words-list =
