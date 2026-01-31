@@ -30,9 +30,11 @@ jobs:
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           QUARTO_PROFILE: ci
           QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
+        with:
+          target: gh-pages
+          path: --execute
+
