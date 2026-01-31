@@ -1,6 +1,0 @@
-execute:
-  eval: true
-  echo: true
-  output: true
-  warning: true
-  error: true
