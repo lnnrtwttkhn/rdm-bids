@@ -36,5 +36,4 @@ jobs:
           QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
         with:
           target: gh-pages
-          path: --execute
 
