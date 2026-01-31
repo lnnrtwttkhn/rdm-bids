@@ -1,0 +1,24 @@
+project:
+  name: "rdm-bids"
+  title: "The Brain Imaging Data Structure"
+  subtitle: "Exercise: How to turn your data into BIDS"
+  author: "Dr. Lennart Wittkuhn"
+  source: "https://github.com/lnnrtwttkhn/rdm-bids"
+  website: "https://lennartwittkuhn.com/rdm-bids"
+  issues: "https://github.com/lnnrtwttkhn/rdm-bids/issues"
+  # license-long: "[MIT](https://opensource.org/license/mit/)"
+  # license-short: "[MIT](https://opensource.org/license/mit/)"
+  # license-badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  license-long: "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))"
+  license-short: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+  license-badge: "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)"
+  # doi: "10.5281/zenodo.8300151"
+  # doi-link: "https://doi.org/{{< var project.doi >}}"
+  homepage: "https://lennartwittkuhn.com/"
+  email: "lennart.wittkuhn@tutanota.com"
+  mailto: "lennart.wittkuhn@tutanota.com"
+  github: https://github.com/lnnrtwttkhn
+  linkedin: https://www.linkedin.com/in/lennart-wittkuhn/
+  scholar: https://scholar.google.com/citations?user=GXvJB1kAAAAJ&hl=en
+  orcid: 0000-0003-2966-6888
+  orcid-link: "https://orcid.org/0000-0003-2966-6888"
