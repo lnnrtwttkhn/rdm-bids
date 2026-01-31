@@ -6,3 +6,4 @@ execute:
   error: true
   freeze: false
   cache: false
+  enabled: true
