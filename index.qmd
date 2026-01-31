@@ -82,3 +82,6 @@ heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1
 
 :::{#refs}
 :::
+
+- Python {{< env QUARTO_PYTHON >}}
+- Profile: {{< env QUARTO_PROFILE >}}
