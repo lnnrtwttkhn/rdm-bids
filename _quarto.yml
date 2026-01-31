@@ -1,0 +1,86 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 4200
+    browser: true
+    watch-inputs: true
+    navigate: true
+author:
+- id: wittkuhn
+  name: Dr. Lennart Wittkuhn
+  url: "{{< var project.homepage >}}"
+  email: "{{< var project.email >}}"
+  orcid: "{{< var project.orcid >}}"
+  attributes:
+    corresponding: true
+
+# table of contents:
+toc-depth: 3
+toc-title: "Contents"
+# numbering:
+number-sections: false
+number-depth: 1
+# layout:
+fig-cap-location: bottom
+tbl-cap-location: top
+page-layout: article
+title-block-style: default
+# code:
+code-line-numbers: true
+code-annotations: true
+highlight-style: monokai
+# execution:
+execute:
+  eval: false
+# references
+bibliography: references.bib
+csl: apa.csl
+# language
+lang: en
+# includes:
+metadata-files:
+  - _affiliations.yml
+# rendering:
+from: "markdown+emoji"
+
+format:
+  html:
+    title: "{{< var project.title >}}"
+    subtitle: "{{< var project.subtitle >}}"
+    # format options:
+    theme: [cosmo, custom.scss]
+    anchor-sections: true
+    smooth-scroll: true
+    html-math-method: katex
+    email-obfuscation: none
+    # table of contents:
+    toc: true
+    toc-location: right
+    toc-expand: true
+    # layout:
+    page-layout: article
+    title-block-style: default
+    # code:
+    code-fold: show
+    code-summary: "Code"
+    code-overflow: scroll
+    code-copy: true
+    code-link: false
+    code-tools:
+      source: "https://github.com/lnnrtwttkhn/rdm-bids"
+      toggle: true
+      caption: "Code"
+    # links:
+    link-external-icon: false
+    link-external-newwindow: true
+    # references:
+    citations-hover: true
+    citation-location: document
+    # includes:
+    include-after-body: plausible.html
+    # metadata
+    license: "CC BY"
+    # website:
+    search: false
+    repo-actions: true
