@@ -27,6 +27,45 @@ Consult the [BIDS Specification](https://bids-specification.readthedocs.io/en/st
 If you want to setup a new study using BIDS, check out documentation and scripts for converting raw data to BIDS format.
 You can also practice using BIDS with sample datasets.
 
+## Tutorial
+
+## Create a directory for your dataset
+
+Create an empty directory and navigate into it:
+
+```{bash}
+mkdir mydataset
+cd mydataset
+```
+
+Download the data by @nastase2020 from [Zenodo](https://doi.org/10.5281/zenodo.3677089):
+
+::: {.callout-warning title="Download can take ca. 5 Min." appearance="minimal"}
+:::
+
+```{bash}
+wget https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+```
+
+```{bash}
+tar -xvzf 0219191_mystudy-0219-1114.tar.gz
+```
+
+Let's navigate into the directory and see what's inside the dataset:
+
+```{bash}
+tree -L 2 0219191_mystudy-0219-1114
+```
+
+```{bash}
+gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
+```
+
+```{bash}
+mkdir bids
+heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
+```
+
 ## Resources
 
 - [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
