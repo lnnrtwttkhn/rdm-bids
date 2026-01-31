@@ -33,6 +33,7 @@ highlight-style: monokai
 # execution:
 execute:
   eval: false
+  output: true
 # references
 bibliography: references.bib
 csl: apa.csl
