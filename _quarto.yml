@@ -50,7 +50,7 @@ format:
     title: "{{< var project.title >}}"
     subtitle: "{{< var project.subtitle >}}"
     # format options:
-    theme: [cosmo, custom.scss]
+    theme: default
     anchor-sections: true
     smooth-scroll: true
     html-math-method: katex
