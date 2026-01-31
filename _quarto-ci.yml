@@ -4,3 +4,5 @@ execute:
   output: true
   warning: true
   error: true
+  freeze: false
+  cache: false

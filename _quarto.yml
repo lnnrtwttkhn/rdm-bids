@@ -33,6 +33,8 @@ highlight-style: monokai
 # execution:
 execute:
   eval: false
+  freeze: false
+  cache: false
 # references
 bibliography: references.bib
 csl: apa.csl
