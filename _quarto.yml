@@ -78,8 +78,6 @@ format:
     # references:
     citations-hover: true
     citation-location: document
-    # includes:
-    include-after-body: plausible.html
     # metadata
     license: "CC BY"
     # website:
