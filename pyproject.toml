@@ -1,0 +1,15 @@
+[project]
+name = "rdm-bids"
+version = "0.1.0"
+description = "Research Data Management with BIDS"
+readme = "README.md"
+authors = [
+    { name = "Lennart Wittkuhn", email = "lennart.wittkuhn@tutanota.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.0.0",
+]
