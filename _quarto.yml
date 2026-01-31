@@ -32,7 +32,7 @@ code-annotations: true
 highlight-style: monokai
 # execution:
 execute:
-  eval: false
+  eval: true
   output: true
 # references
 bibliography: references.bib
