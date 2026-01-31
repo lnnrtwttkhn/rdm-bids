@@ -1,5 +1,7 @@
 ---
 date: today
+execute:
+  eval: true
 ---
 
 ## What is BIDS (Brain Imaging Data Structure)?
