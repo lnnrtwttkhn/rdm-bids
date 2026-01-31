@@ -32,8 +32,7 @@ code-annotations: true
 highlight-style: monokai
 # execution:
 execute:
-  eval: true
-  output: true
+  eval: false
 # references
 bibliography: references.bib
 csl: apa.csl
