@@ -4,6 +4,7 @@ on:
     branches: main
 
 env:
+  QUARTO_PYTHON: .venv/bin/python3
   QUARTO_PROFILE: ci
 
 name: Quarto Publish
