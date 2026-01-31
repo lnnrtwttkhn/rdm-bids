@@ -3,10 +3,6 @@ on:
   push:
     branches: main
 
-env:
-  QUARTO_PYTHON: .venv/bin/python3
-  QUARTO_PROFILE: ci
-
 name: Quarto Publish
 
 jobs:
@@ -38,3 +34,5 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUARTO_PROFILE: ci
+          QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
