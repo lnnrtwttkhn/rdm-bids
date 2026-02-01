@@ -167,6 +167,12 @@ echo ".heudiconv" >> .bidsignore
 
 Remove data from the MRI loalizer:
 
+::: {.callout-tip title="What is an MRI Localizer (Scout) scan?"}
+An **MRI localizer** (also called a *scout* or *survey* scan) is a quick, low-resolution scan done at the start of an MRI session.
+Its main purpose is to help plan and position the detailed scans that follow.
+Localizers show the basic anatomy and orientation, but are not used for diagnosis or analysis.
+:::
+
 ```{bash}
 rm -rf sub-*/ses-*/*/*scout*
 ```
