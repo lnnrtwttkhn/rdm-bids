@@ -165,9 +165,18 @@ echo ".heudiconv" >> .bidsignore
 
 ### Fixing a BIDS Dataset
 
-Remove data from the MRI loalizer:
+The BIDS Validator found several errors and issued a number of warnings.
+This means the dataset is not yet fully BIDS-compliant.
+You need to manually adjust the relevant files to fix these issues.
+Start by addressing the errors first.
+Errors make your dataset BIDS-incompatible and must be resolved for proper validation.
+Many [BIDS Apps](https://bids-apps.neuroimaging.io/) (like [fMRIPrep](https://fmriprep.org/en/stable/) and [MRIQC](https://mriqc.readthedocs.io/en/latest/)) require datasets to be error-free they can run.
+Warnings indicate that your dataset is technically BIDS-compliant, but improvements are recommended.
+You should try to resolve all warnings to ensure your dataset is robust and ready for downstream analysis.
 
-::: {.callout-tip title="What is an MRI Localizer (Scout) scan?"}
+#### Remove data from the MRI loalizer
+
+::: {.callout-tip title="What is an MRI Localizer (Scout) scan?" collapse="true"}
 An **MRI localizer** (also called a *scout* or *survey* scan) is a quick, low-resolution scan done at the start of an MRI session.
 Its main purpose is to help plan and position the detailed scans that follow.
 Localizers show the basic anatomy and orientation, but are not used for diagnosis or analysis.
@@ -177,13 +186,13 @@ Localizers show the basic anatomy and orientation, but are not used for diagnosi
 rm -rf sub-*/ses-*/*/*scout*
 ```
 
-Remove repeated runs (resulting in duplications):
+#### Remove repeated runs (resulting in duplications)
 
 ```{bash}
 rm -rf sub-*/ses-*/*/*_dup*
 ```
 
-Adjust the `scans.tsv` file:
+#### Adjust the `scans.tsv` file:
 
 ```{python}
 import pandas as pd # <1>
@@ -201,16 +210,24 @@ df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False) 
 
 ### Validate again
 
+Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:
+
 ```{bash}
 bids-validator-deno .
 ```
 
 Cool, at least no errors!
 
+## What's next?
+
+Once you have a fully BIDS-compatible dataset, you can run [BIDS Apps](https://bids-apps.neuroimaging.io/) (like [fMRIPrep](https://fmriprep.org/en/stable/) and [MRIQC](https://mriqc.readthedocs.io/en/latest/)) and more!
+And you have a well-documented dataset that follows best community practices!
+Congrats!
+
 ## Resources
 
 - [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
-- [](https://bids-standard.github.io/bids-validator/)
+- [BIDS Validator](https://bids-standard.github.io/bids-validator/)
 - [BIDS Validator on GitHub](https://github.com/bids-standard/bids-validator)
 - [BIDS Apps](https://bids-apps.neuroimaging.io/)
 - [OpenNeuro](https://openneuro.org/)
