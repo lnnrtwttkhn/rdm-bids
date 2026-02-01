@@ -1,6 +1,6 @@
 ---
 date: today
-enginer: jupyter
+engine: jupyter
 ---
 
 ## What is BIDS (Brain Imaging Data Structure)?
@@ -34,9 +34,9 @@ You can also practice using BIDS with sample datasets.
 
 Create an empty directory and navigate into it:
 
-```{python}
-!mkdir mydataset
-!cd mydataset
+```{bash}
+mkdir mydataset
+cd mydataset
 ```
 
 Download the data by @nastase2020 from [Zenodo](https://doi.org/10.5281/zenodo.3677089):
@@ -44,27 +44,27 @@ Download the data by @nastase2020 from [Zenodo](https://doi.org/10.5281/zenodo.3
 ::: {.callout-warning title="Download can take ca. 5 Min." appearance="minimal"}
 :::
 
-```{python}
-!wget https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+```{bash}
+wget https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
 ```
 
-```{python}
-!tar -xvzf 0219191_mystudy-0219-1114.tar.gz
+```{bash}
+tar -xvzf 0219191_mystudy-0219-1114.tar.gz
 ```
 
 Let's navigate into the directory and see what's inside the dataset:
 
-```{python}
-!tree -L 2 0219191_mystudy-0219-1114
+```{bash}
+tree -L 2 0219191_mystudy-0219-1114
 ```
 
-```{python}
-!gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
+```{bash}
+gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
 ```
 
-```{python}
-!mkdir bids
-!heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
+```{bash}
+mkdir bids
+heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
 ```
 
 ## Resources
