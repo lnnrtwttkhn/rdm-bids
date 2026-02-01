@@ -19,21 +19,26 @@ RUN apt-get update && apt-get install -y \
     pandoc \
     && rm -rf /var/lib/apt/lists/*
 
-# Install uv
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-ENV PATH="/root/.cargo/bin:$PATH"
+# Install uv using the official method
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Install Quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && \
-    gdebi -n quarto-${QUARTO_VERSION}-linux-amd64.deb && \
-    rm quarto-${QUARTO_VERSION}-linux-amd64.deb && \
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "x86_64" ]; then \
+        QUARTO_ARCH="linux-amd64"; \
+    elif [ "$ARCH" = "aarch64" ]; then \
+        QUARTO_ARCH="linux-arm64"; \
+    else \
+        echo "Unsupported architecture: $ARCH" && exit 1; \
+    fi && \
+    wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-${QUARTO_ARCH}.deb && \
+    gdebi -n quarto-${QUARTO_VERSION}-${QUARTO_ARCH}.deb && \
+    rm quarto-${QUARTO_VERSION}-${QUARTO_ARCH}.deb && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Copy dependency files
+# Copy dependency files and install Python dependencies
 COPY pyproject.toml uv.lock ./
-
-# Install Python dependencies using uv
 RUN uv sync --frozen
 
 # Install and register bash kernel for Jupyter
