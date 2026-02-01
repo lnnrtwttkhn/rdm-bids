@@ -5,26 +5,33 @@ on:
 
 env:
   QUARTO_PROFILE: ci
+  CONTAINER_IMAGE: lnnrtwttkhn/rdm-bids:latest
 
 name: Quarto Publish
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    container:
-      image: lnnrtwttkhn/rdm-bids:latest
     permissions:
       contents: write
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUARTO_PROFILE: ci
-          QUARTO_PYTHON: /app/.venv/bin/python
         with:
-          target: gh-pages
+          fetch-depth: 0
+
+      - name: Pull Docker image
+        run: |
+          docker pull ${{ env.CONTAINER_IMAGE }}
+
+      - name: Render Quarto website in Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/app ${{ env.CONTAINER_IMAGE }} \
+            quarto render /app --profile ci
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
 
