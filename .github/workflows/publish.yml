@@ -27,7 +27,7 @@ jobs:
       - name: Render Quarto website in Docker
         run: |
           docker run --rm -v ${{ github.workspace }}:/app ${{ env.CONTAINER_IMAGE }} \
-            quarto render /app --profile ci
+            uv run quarto render /app --profile ci
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
