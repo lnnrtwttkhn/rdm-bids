@@ -1,11 +1,13 @@
 project:
   type: website
+  execute-dir: project
   output-dir: _site
   preview:
     port: 4200
     browser: true
     watch-inputs: true
     navigate: true
+
 author:
 - id: wittkuhn
   name: Dr. Lennart Wittkuhn
@@ -14,6 +16,17 @@ author:
   orcid: "{{< var project.orcid >}}"
   attributes:
     corresponding: true
+
+website:
+  site-url: https://lennartwittkuhn.com/rdm-bids/
+  repo-url: https://github.com/lnnrtwttkhn/rdm-bids
+  repo-actions: [edit, source, issue]
+  search: false
+  page-navigation: false
+  back-to-top-navigation: true
+  other-links:
+    - text: Jupyter Notebook
+      href: index.ipynb
 
 # table of contents:
 toc-depth: 3
@@ -79,6 +92,4 @@ format:
     citation-location: document
     # metadata
     license: "CC BY-SA 4.0"
-    # website:
-    search: false
-    repo-actions: true
+

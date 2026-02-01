@@ -243,5 +243,7 @@ Congrats!
 :::{#refs}
 :::
 
-- Python {{< env QUARTO_PYTHON >}}
-- Profile: {{< env QUARTO_PROFILE >}}
+## Execution
+
+- Python: `{{< env QUARTO_PYTHON >}}`
+- Profile: `{{< env QUARTO_PROFILE >}}`

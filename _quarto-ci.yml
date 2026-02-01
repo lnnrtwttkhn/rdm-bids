@@ -10,7 +10,8 @@ execute:
   cache: false
   enabled: true
   panel: tabset
-html:
+website:
   other-links:
     - text: Jupyter Notebook
       href: index.ipynb
+      icon: journal-code
