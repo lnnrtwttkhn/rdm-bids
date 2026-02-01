@@ -1,0 +1,12 @@
+# https://quarto.org/docs/reference/formats/ipynb.html
+format:
+  ipynb:
+    execute:
+      eval: true
+      echo: true
+      output: true
+      warning: true
+      error: true
+      include: true
+      cache: false
+      freeze: false
