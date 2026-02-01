@@ -1,0 +1,42 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+
+# Quarto
+.quarto/
+_site/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Documentation
+README.md
+
+# CI/CD
+.github/
+
+# Other
+mydataset/
+index_files/
