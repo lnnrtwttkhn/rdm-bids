@@ -9,6 +9,7 @@ execute:
   freeze: false
   cache: false
   enabled: true
+  panel: tabset
 html:
   other-links:
     - text: Jupyter Notebook
