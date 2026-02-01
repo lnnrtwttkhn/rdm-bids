@@ -30,6 +30,7 @@ jobs:
         run: |
           uv python install
           uv sync
+          uv run python -m bash_kernel.install
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
