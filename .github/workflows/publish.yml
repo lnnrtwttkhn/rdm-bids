@@ -12,7 +12,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     container:
-      image: ${{ secrets.DOCKERHUB_USERNAME }}/rdm-bids:latest
+      image: lnnrtwttkhn/rdm-bids:latest
     permissions:
       contents: write
     steps:
