@@ -19,14 +19,14 @@ help:
 # Build the Docker image
 .PHONY: build
 build:
-	docker build -t $(IMAGE_NAME):latest .
+	docker build --platform=linux/arm64 -t $(IMAGE_NAME):latest .
 
 # Build with specific Quarto version
 .PHONY: build-quarto
 build-quarto:
 	@read -p "Enter Quarto version (default: 1.8.27): " version; \
 	version=$${version:-1.8.27}; \
-	docker build --build-arg QUARTO_VERSION=$$version -t $(IMAGE_NAME):latest .
+	docker build --build-arg QUARTO_VERSION=$$version --platform=linux/arm64 -t $(IMAGE_NAME):latest .
 
 # Run container interactively
 .PHONY: run
