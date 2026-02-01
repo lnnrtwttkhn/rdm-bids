@@ -11,33 +11,20 @@ name: Quarto Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container:
+      image: ${{ secrets.DOCKERHUB_USERNAME }}/rdm-bids:latest
     permissions:
       contents: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          version: "latest"
-          enable-cache: true
-
-      - name: Set up Python and Install Dependencies
-        run: |
-          uv python install
-          uv sync
-          uv run python -m bash_kernel.install
-
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           QUARTO_PROFILE: ci
-          QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
+          QUARTO_PYTHON: /app/.venv/bin/python
         with:
           target: gh-pages
 
