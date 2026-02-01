@@ -2,7 +2,7 @@
 format:
   ipynb:
     execute:
-      eval: true
+      eval: false
       echo: true
       output: true
       warning: true
