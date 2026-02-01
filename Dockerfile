@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y \
     tree \
     git \
     build-essential \
+    ca-certificates \
+    gdebi-core \
+    pandoc \
     && rm -rf /var/lib/apt/lists/*
 
 # Install uv
@@ -22,9 +25,9 @@ ENV PATH="/root/.cargo/bin:$PATH"
 
 # Install Quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb && \
-    apt-get update && \
-    apt-get install -y ./quarto-${QUARTO_VERSION}-linux-amd64.deb && \
+    gdebi -n quarto-${QUARTO_VERSION}-linux-amd64.deb && \
     rm quarto-${QUARTO_VERSION}-linux-amd64.deb && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy dependency files
