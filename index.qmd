@@ -1,6 +1,7 @@
 ---
 date: today
 engine: jupyter
+jupyter: bash
 ---
 
 ## What is BIDS (Brain Imaging Data Structure)?
