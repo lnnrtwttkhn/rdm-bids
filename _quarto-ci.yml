@@ -1,3 +1,5 @@
+project:
+  pre-render: quarto convert index.qmd
 execute:
   eval: true
   echo: true
@@ -7,3 +9,7 @@ execute:
   freeze: false
   cache: false
   enabled: true
+html:
+  other-links:
+    - text: Jupyter Notebook
+      href: index.ipynb
