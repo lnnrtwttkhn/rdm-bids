@@ -37,8 +37,7 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen
 
 # Install and register bash kernel for Jupyter
-RUN uv run pip install bash_kernel && \
-    uv run python -m bash_kernel.install
+RUN uv run python -m bash_kernel.install
 
 # Set environment variables
 ENV QUARTO_PYTHON="/app/.venv/bin/python"
