@@ -4,6 +4,14 @@ engine: jupyter
 jupyter: bash
 ---
 
+::: {.callout-note title="Acknowledgements" collapse="true"}
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.4455923.svg)](https://doi.org/10.5281/zenodo.4455923)
+
+This tutorial is inspired by and reuses content from the [Princeton Handbook for Reproducible Neuroimaging](https://brainhack-princeton.github.io/handbook/) by @wagner2021.
+The handbook is licensed under a a [CC BY-SA 4.0](https://github.com/brainhack-princeton/handbook/blob/master/LICENSE) license.
+:::
+
 ## What is BIDS (Brain Imaging Data Structure)?
 
 Many of the best practices we encourage in this handbook revolve around the Brain Imaging Data Structure (BIDS) [@gorgolewski2016].
