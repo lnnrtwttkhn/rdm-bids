@@ -64,7 +64,6 @@ gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
 ```
 
 ```{bash}
-mkdir bids
 heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
 ```
 
