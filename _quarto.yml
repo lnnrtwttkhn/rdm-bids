@@ -66,6 +66,7 @@ format:
     code-overflow: scroll
     code-copy: true
     code-link: false
+    code-annotations: hover
     code-tools:
       source: "https://github.com/lnnrtwttkhn/rdm-bids"
       toggle: true
