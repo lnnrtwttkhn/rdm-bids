@@ -82,10 +82,6 @@ div.csl-indent {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -98,18 +94,6 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-ff9de43c12c5769272d6d0d5187c3c55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -155,8 +139,9 @@ div.csl-indent {
   <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next?</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#execution" id="toc-execution" class="nav-link" data-scroll-target="#execution">Execution</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="index.ipynb"><i class="bi bi-link-45deg"></i>Jupyter Notebook</a></li><li><a href="index.ipynb"><i class="bi bi-journal-code"></i>Jupyter Notebook</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -246,7 +231,7 @@ div.csl-indent {
 <section id="create-a-project-directory" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-project-directory">Create a project directory</h3>
 <p>Create an empty directory and navigate into it:</p>
-<div id="1f17bcc8" class="cell" data-execution_count="1">
+<div id="1c51fd80" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a><span class="fu">mkdir</span> mydataset</span>
 <span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="bu">cd</span> mydataset</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
@@ -275,23 +260,23 @@ div.csl-indent {
 
 </div>
 </div>
-<div id="0f20abef" class="cell" data-execution_count="2">
+<div id="4ba98a0d" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">wget</span> https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>--2026-02-01 14:04:51--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+<pre><code>--2026-02-01 14:24:21--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
 Resolving zenodo.org (zenodo.org)... 137.138.52.235, 188.185.48.75, 188.185.43.153, ...
 Connecting to zenodo.org (zenodo.org)|137.138.52.235|:443... connected.
 HTTP request sent, awaiting response... 301 MOVED PERMANENTLY
 Location: /records/3677090/files/0219191_mystudy-0219-1114.tar.gz [following]
---2026-02-01 14:04:51--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
+--2026-02-01 14:24:22--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
 Reusing existing connection to zenodo.org:443.
 HTTP request sent, awaiting response... 200 OK
 Length: 405671662 (387M) [application/octet-stream]
 Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 
-          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  55.49K   228KB/s                       0219191_mys   0%[                    ] 177.83K   384KB/s                      0219191_myst   0%[                    ] 367.38K   536KB/s                     0219191_mystu   0%[                    ] 606.89K   658KB/s                    0219191_mystud   0%[                    ] 814.52K   713KB/s                   0219191_mystudy   0%[                    ] 990.15K   727KB/s                  0219191_mystudy-   0%[                    ]   1.31M   848KB/s                 0219191_mystudy-0   0%[                    ]   1.48M   843KB/s                0219191_mystudy-02   0%[                    ]   1.73M   878KB/s               0219191_mystudy-021   0%[                    ]   1.96M   899KB/s               219191_mystudy-0219   0%[                    ]   2.99M  1.22MB/s               19191_mystudy-0219-   0%[                    ]   3.37M  1.16MB/s               9191_mystudy-0219-1   1%[                    ]   4.31M  1.37MB/s    eta 4m 39s 191_mystudy-0219-11   1%[                    ]   4.85M  1.44MB/s    eta 4m 39s 91_mystudy-0219-111   1%[                    ]   5.24M  1.43MB/s    eta 4m 39s 1_mystudy-0219-1114   1%[                    ]   5.78M  1.49MB/s    eta 4m 39s _mystudy-0219-1114.   1%[                    ]   6.36M  1.52MB/s    eta 4m 10s mystudy-0219-1114.t   1%[                    ]   6.94M  1.58MB/s    eta 4m 10s ystudy-0219-1114.ta   1%[                    ]   7.46M  1.61MB/s    eta 4m 10s study-0219-1114.tar   2%[                    ]   8.21M  1.69MB/s    eta 4m 10s tudy-0219-1114.tar.   2%[                    ]   8.87M  1.83MB/s    eta 4m 10s udy-0219-1114.tar.g   2%[                    ]   9.59M  1.95MB/s    eta 3m 28s dy-0219-1114.tar.gz   2%[                    ]  10.29M  2.06MB/s    eta 3m 28s y-0219-1114.tar.gz    2%[                    ]  10.80M  2.12MB/s    eta 3m 28s -0219-1114.tar.gz     2%[                    ]  11.23M  2.14MB/s    eta 3m 28s 0219-1114.tar.gz      3%[                    ]  11.71M  2.20MB/s    eta 3m 28s 219-1114.tar.gz       3%[                    ]  12.44M  2.28MB/s    eta 3m 15s 19-1114.tar.gz        3%[                    ]  13.00M  2.36MB/s    eta 3m 15s 9-1114.tar.gz         3%[                    ]  13.77M  2.46MB/s    eta 3m 15s -1114.tar.gz          3%[                    ]  14.49M  2.56MB/s    eta 3m 15s 1114.tar.gz           3%[                    ]  15.07M  2.47MB/s    eta 3m 15s 114.tar.gz            4%[                    ]  15.48M  2.50MB/s    eta 3m 3s  14.tar.gz             4%[                    ]  16.17M  2.53MB/s    eta 3m 3s  4.tar.gz              4%[                    ]  16.76M  2.62MB/s    eta 3m 3s  .tar.gz               4%[                    ]  17.35M  2.63MB/s    eta 3m 3s  tar.gz                4%[                    ]  18.15M  2.73MB/s    eta 3m 3s  ar.gz                 4%[                    ]  18.87M  2.76MB/s    eta 2m 50s r.gz                  5%[&gt;                   ]  19.63M  2.82MB/s    eta 2m 50s .gz                   5%[&gt;                   ]  20.03M  2.67MB/s    eta 2m 50s gz                    5%[&gt;                   ]  20.82M  2.69MB/s    eta 2m 50s z                     5%[&gt;                   ]  21.43M  2.67MB/s    eta 2m 46s                       5%[&gt;                   ]  22.23M  2.69MB/s    eta 2m 46s                   0   5%[&gt;                   ]  22.91M  2.73MB/s    eta 2m 46s                  02   6%[&gt;                   ]  23.49M  2.82MB/s    eta 2m 46s                 021   6%[&gt;                   ]  24.14M  2.83MB/s    eta 2m 46s                0219   6%[&gt;                   ]  24.81M  2.85MB/s    eta 2m 38s               02191   6%[&gt;                   ]  25.56M  2.89MB/s    eta 2m 38s              021919   6%[&gt;                   ]  25.88M  2.73MB/s    eta 2m 38s             0219191   6%[&gt;                   ]  26.69M  2.77MB/s    eta 2m 38s            0219191_   7%[&gt;                   ]  27.13M  2.71MB/s    eta 2m 38s           0219191_m   7%[&gt;                   ]  27.85M  2.82MB/s    eta 2m 35s          0219191_my   7%[&gt;                   ]  28.49M  2.81MB/s    eta 2m 35s         0219191_mys   7%[&gt;                   ]  29.17M  2.84MB/s    eta 2m 35s        0219191_myst   7%[&gt;                   ]  29.89M  2.87MB/s    eta 2m 35s       0219191_mystu   7%[&gt;                   ]  30.61M  2.81MB/s    eta 2m 35s      0219191_mystud   8%[&gt;                   ]  31.31M  2.81MB/s    eta 2m 29s     0219191_mystudy   8%[&gt;                   ]  31.98M  2.78MB/s    eta 2m 29s    0219191_mystudy-   8%[&gt;                   ]  32.55M  2.89MB/s    eta 2m 29s   0219191_mystudy-0   8%[&gt;                   ]  33.21M  2.87MB/s    eta 2m 29s  0219191_mystudy-02   8%[&gt;                   ]  33.94M  2.90MB/s    eta 2m 29s 0219191_mystudy-021   8%[&gt;                   ]  34.57M  2.86MB/s    eta 2m 25s 219191_mystudy-0219   9%[&gt;                   ]  35.16M  2.84MB/s    eta 2m 25s 19191_mystudy-0219-   9%[&gt;                   ]  35.56M  2.80MB/s    eta 2m 25s 9191_mystudy-0219-1   9%[&gt;                   ]  36.25M  2.80MB/s    eta 2m 25s 191_mystudy-0219-11   9%[&gt;                   ]  36.97M  2.81MB/s    eta 2m 25s 91_mystudy-0219-111   9%[&gt;                   ]  37.50M  2.77MB/s    eta 2m 23s 1_mystudy-0219-1114   9%[&gt;                   ]  38.18M  2.77MB/s    eta 2m 23s _mystudy-0219-1114.  10%[=&gt;                  ]  38.79M  2.89MB/s    eta 2m 23s mystudy-0219-1114.t  10%[=&gt;                  ]  39.49M  2.87MB/s    eta 2m 23s ystudy-0219-1114.ta  10%[=&gt;                  ]  40.16M  2.92MB/s    eta 2m 23s study-0219-1114.tar  10%[=&gt;                  ]  40.57M  2.80MB/s    eta 2m 21s tudy-0219-1114.tar.  11%[=&gt;                  ]  44.36M  3.52MB/s    eta 2m 21s udy-0219-1114.tar.g  13%[=&gt;                  ]  52.13M  5.08MB/s    eta 2m 21s dy-0219-1114.tar.gz  13%[=&gt;                  ]  52.81M  5.17MB/s    eta 2m 21s y-0219-1114.tar.gz   13%[=&gt;                  ]  53.48M  5.16MB/s    eta 2m 21s -0219-1114.tar.gz    13%[=&gt;                  ]  54.13M  5.17MB/s    eta 1m 49s 0219-1114.tar.gz     14%[=&gt;                  ]  54.78M  5.19MB/s    eta 1m 49s 219-1114.tar.gz      14%[=&gt;                  ]  55.34M  5.16MB/s    eta 1m 49s 19-1114.tar.gz       14%[=&gt;                  ]  56.08M  5.16MB/s    eta 1m 49s 9-1114.tar.gz        14%[=&gt;                  ]  56.64M  5.14MB/s    eta 1m 49s -1114.tar.gz         14%[=&gt;                  ]  57.20M  5.21MB/s    eta 1m 48s 1114.tar.gz          14%[=&gt;                  ]  57.81M  5.20MB/s    eta 1m 48s 114.tar.gz           15%[==&gt;                 ]  58.43M  5.18MB/s    eta 1m 48s 14.tar.gz            15%[==&gt;                 ]  59.12M  5.19MB/s    eta 1m 48s 4.tar.gz             15%[==&gt;                 ]  59.80M  5.21MB/s    eta 1m 48s .tar.gz              15%[==&gt;                 ]  60.54M  5.25MB/s    eta 1m 47s tar.gz               15%[==&gt;                 ]  61.10M  5.21MB/s    eta 1m 47s ar.gz                15%[==&gt;                 ]  61.57M  5.12MB/s    eta 1m 47s r.gz                 16%[==&gt;                 ]  62.04M  5.02MB/s    eta 1m 47s .gz                  16%[==&gt;                 ]  62.71M  5.17MB/s    eta 1m 47s gz                   16%[==&gt;                 ]  63.19M  4.43MB/s    eta 1m 48s z                    16%[==&gt;                 ]  63.83M  3.58MB/s    eta 1m 48s                      16%[==&gt;                 ]  64.56M  2.81MB/s    eta 1m 48s                   0  16%[==&gt;                 ]  65.23M  2.81MB/s    eta 1m 48s                  02  17%[==&gt;                 ]  65.83M  2.79MB/s    eta 1m 48s                 021  17%[==&gt;                 ]  66.39M  2.77MB/s    eta 1m 47s                0219  17%[==&gt;                 ]  67.07M  2.78MB/s    eta 1m 47s               02191  17%[==&gt;                 ]  67.76M  2.81MB/s    eta 1m 47s              021919  17%[==&gt;                 ]  68.35M  2.78MB/s    eta 1m 47s             0219191  17%[==&gt;                 ]  69.07M  2.82MB/s    eta 1m 47s            0219191_  18%[==&gt;                 ]  69.73M  2.84MB/s    eta 1m 46s           0219191_m  18%[==&gt;                 ]  70.40M  2.85MB/s    eta 1m 46s          0219191_my  18%[==&gt;                 ]  70.69M  2.68MB/s    eta 1m 46s         0219191_mys  18%[==&gt;                 ]  71.38M  2.67MB/s    eta 1m 46s        0219191_myst  18%[==&gt;                 ]  72.03M  2.66MB/s    eta 1m 46s       0219191_mystu  18%[==&gt;                 ]  72.66M  2.64MB/s    eta 1m 46s      0219191_mystud  18%[==&gt;                 ]  73.34M  2.67MB/s    eta 1m 46s     0219191_mystudy  19%[==&gt;                 ]  74.00M  2.72MB/s    eta 1m 46s    0219191_mystudy-  19%[==&gt;                 ]  74.75M  2.79MB/s    eta 1m 46s   0219191_mystudy-0  19%[==&gt;                 ]  75.44M  2.76MB/s    eta 1m 45s  0219191_mystudy-02  19%[==&gt;                 ]  76.12M  2.80MB/s    eta 1m 45s 0219191_mystudy-021  19%[==&gt;                 ]  76.80M  2.80MB/s    eta 1m 45s 219191_mystudy-0219  20%[===&gt;                ]  77.40M  2.77MB/s    eta 1m 45s 19191_mystudy-0219-  20%[===&gt;                ]  78.10M  2.77MB/s    eta 1m 45s 9191_mystudy-0219-1  20%[===&gt;                ]  78.80M  2.80MB/s    eta 1m 44s 191_mystudy-0219-11  20%[===&gt;                ]  79.50M  2.83MB/s    eta 1m 44s 91_mystudy-0219-111  20%[===&gt;                ]  80.15M  2.82MB/s    eta 1m 44s 1_mystudy-0219-1114  20%[===&gt;                ]  80.83M  2.82MB/s    eta 1m 44s _mystudy-0219-1114.  21%[===&gt;                ]  81.52M  2.84MB/s    eta 1m 44s mystudy-0219-1114.t  21%[===&gt;                ]  82.16M  2.82MB/s    eta 1m 43s ystudy-0219-1114.ta  21%[===&gt;                ]  82.72M  2.80MB/s    eta 1m 43s study-0219-1114.tar  21%[===&gt;                ]  83.31M  2.79MB/s    eta 1m 43s tudy-0219-1114.tar.  21%[===&gt;                ]  84.00M  2.98MB/s    eta 1m 43s udy-0219-1114.tar.g  21%[===&gt;                ]  84.70M  2.99MB/s    eta 1m 43s dy-0219-1114.tar.gz  22%[===&gt;                ]  85.37M  2.99MB/s    eta 1m 41s y-0219-1114.tar.gz   22%[===&gt;                ]  86.06M  3.00MB/s    eta 1m 41s -0219-1114.tar.gz    22%[===&gt;                ]  86.76M  3.01MB/s    eta 1m 41s 0219-1114.tar.gz     22%[===&gt;                ]  87.44M  3.01MB/s    eta 1m 41s 219-1114.tar.gz      22%[===&gt;                ]  88.15M  3.00MB/s    eta 1m 41s 19-1114.tar.gz       22%[===&gt;                ]  88.86M  3.03MB/s    eta 1m 40s 9-1114.tar.gz        23%[===&gt;                ]  89.50M  3.03MB/s    eta 1m 40s -1114.tar.gz         23%[===&gt;                ]  90.10M  3.03MB/s    eta 1m 40s 1114.tar.gz          23%[===&gt;                ]  90.81M  3.04MB/s    eta 1m 40s 114.tar.gz           23%[===&gt;                ]  91.48M  3.04MB/s    eta 1m 40s 14.tar.gz            23%[===&gt;                ]  92.19M  3.03MB/s    eta 99s    4.tar.gz             23%[===&gt;                ]  92.78M  3.02MB/s    eta 99s    .tar.gz              24%[===&gt;                ]  93.50M  3.02MB/s    eta 99s    tar.gz               24%[===&gt;                ]  94.17M  3.02MB/s    eta 99s    ar.gz                24%[===&gt;                ]  94.88M  3.03MB/s    eta 99s    r.gz                 24%[===&gt;                ]  95.60M  3.04MB/s    eta 98s    .gz                  24%[===&gt;                ]  96.26M  3.06MB/s    eta 98s    gz                   25%[====&gt;               ]  96.91M  3.07MB/s    eta 98s    z                    25%[====&gt;               ]  97.33M  2.76MB/s    eta 98s                         25%[====&gt;               ]  97.89M  2.73MB/s    eta 98s                      0  25%[====&gt;               ]  98.54M  2.73MB/s    eta 98s                     02  25%[====&gt;               ]  99.14M  2.71MB/s    eta 98s                    021  25%[====&gt;               ]  99.70M  2.66MB/s    eta 98s                   0219  25%[====&gt;               ] 100.36M  2.67MB/s    eta 98s                  02191  26%[====&gt;               ] 100.79M  2.59MB/s    eta 98s                 021919  26%[====&gt;               ] 101.43M  2.57MB/s    eta 98s                0219191  26%[====&gt;               ] 102.12M  2.61MB/s    eta 98s               0219191_  26%[====&gt;               ] 102.77M  2.59MB/s    eta 98s              0219191_m  26%[====&gt;               ] 103.35M  2.58MB/s    eta 97s             0219191_my  26%[====&gt;               ] 104.05M  2.59MB/s    eta 97s            0219191_mys  27%[====&gt;               ] 104.63M  2.56MB/s    eta 97s           0219191_myst  27%[====&gt;               ] 105.33M  2.58MB/s    eta 97s          0219191_mystu  27%[====&gt;               ] 105.81M  2.54MB/s    eta 97s         0219191_mystud  27%[====&gt;               ] 106.14M  2.39MB/s    eta 97s        0219191_mystudy  27%[====&gt;               ] 106.82M  2.38MB/s    eta 97s       0219191_mystudy-  27%[====&gt;               ] 107.48M  2.37MB/s    eta 97s      0219191_mystudy-0  27%[====&gt;               ] 108.19M  2.39MB/s    eta 97s     0219191_mystudy-02  28%[====&gt;               ] 108.75M  2.37MB/s    eta 97s    0219191_mystudy-021  28%[====&gt;               ] 109.39M  2.64MB/s    eta 96s    219191_mystudy-0219  28%[====&gt;               ] 110.12M  2.67MB/s    eta 96s    19191_mystudy-0219-  28%[====&gt;               ] 110.75M  2.67MB/s    eta 96s    9191_mystudy-0219-1  28%[====&gt;               ] 111.46M  2.70MB/s    eta 96s    191_mystudy-0219-11  28%[====&gt;               ] 112.18M  2.74MB/s    eta 96s    91_mystudy-0219-111  29%[====&gt;               ] 112.93M  2.76MB/s    eta 94s    1_mystudy-0219-1114  29%[====&gt;               ] 113.68M  2.84MB/s    eta 94s    _mystudy-0219-1114.  29%[====&gt;               ] 114.29M  2.84MB/s    eta 94s    mystudy-0219-1114.t  29%[====&gt;               ] 115.14M  2.88MB/s    eta 94s    ystudy-0219-1114.ta  29%[====&gt;               ] 115.41M  2.65MB/s    eta 94s    study-0219-1114.tar  30%[=====&gt;              ] 116.09M  2.67MB/s    eta 94s    tudy-0219-1114.tar.  30%[=====&gt;              ] 116.70M  2.65MB/s    eta 94s    udy-0219-1114.tar.g  30%[=====&gt;              ] 117.37M  2.66MB/s    eta 94s    dy-0219-1114.tar.gz  30%[=====&gt;              ] 118.00M  2.65MB/s    eta 94s    y-0219-1114.tar.gz   30%[=====&gt;              ] 118.67M  2.69MB/s    eta 93s    -0219-1114.tar.gz    30%[=====&gt;              ] 119.37M  2.85MB/s    eta 93s    0219-1114.tar.gz     30%[=====&gt;              ] 119.50M  2.63MB/s    eta 93s    219-1114.tar.gz      31%[=====&gt;              ] 120.18M  2.64MB/s    eta 93s    19-1114.tar.gz       31%[=====&gt;              ] 120.74M  2.61MB/s    eta 93s    9-1114.tar.gz        31%[=====&gt;              ] 121.27M  2.61MB/s    eta 93s    -1114.tar.gz         31%[=====&gt;              ] 122.03M  2.62MB/s    eta 93s    1114.tar.gz          31%[=====&gt;              ] 122.58M  2.61MB/s    eta 93s    114.tar.gz           31%[=====&gt;              ] 123.31M  2.62MB/s    eta 93s    14.tar.gz            32%[=====&gt;              ] 124.08M  2.63MB/s    eta 91s    4.tar.gz             32%[=====&gt;              ] 124.63M  2.60MB/s    eta 91s    .tar.gz              32%[=====&gt;              ] 125.21M  2.57MB/s    eta 91s    tar.gz               32%[=====&gt;              ] 125.89M  2.56MB/s    eta 91s    ar.gz                32%[=====&gt;              ] 126.49M  2.54MB/s    eta 91s    r.gz                 32%[=====&gt;              ] 127.03M  2.51MB/s    eta 91s    .gz                  33%[=====&gt;              ] 127.75M  2.69MB/s    eta 91s    gz                   33%[=====&gt;              ] 128.41M  2.43MB/s    eta 91s    z                    33%[=====&gt;              ] 128.67M  2.37MB/s    eta 91s                         33%[=====&gt;              ] 129.28M  2.35MB/s    eta 91s                      0  33%[=====&gt;              ] 129.95M  2.36MB/s    eta 91s                     02  33%[=====&gt;              ] 130.68M  2.37MB/s    eta 91s                    021  33%[=====&gt;              ] 130.81M  2.26MB/s    eta 91s                   0219  33%[=====&gt;              ] 131.37M  2.43MB/s    eta 90s                  02191  34%[=====&gt;              ] 131.90M  2.37MB/s    eta 90s                 021919  34%[=====&gt;              ] 132.57M  2.39MB/s    eta 90s                0219191  34%[=====&gt;              ] 133.17M  2.40MB/s    eta 90s               0219191_  34%[=====&gt;              ] 133.83M  2.38MB/s    eta 90s              0219191_m  34%[=====&gt;              ] 134.62M  2.43MB/s    eta 89s             0219191_my  34%[=====&gt;              ] 135.39M  2.44MB/s    eta 89s            0219191_mys  35%[======&gt;             ] 136.36M  2.48MB/s    eta 89s           0219191_myst  35%[======&gt;             ] 137.03M  2.50MB/s    eta 89s          0219191_mystu  35%[======&gt;             ] 137.45M  2.30MB/s    eta 89s         0219191_mystud  35%[======&gt;             ] 137.47M  2.18MB/s    eta 89s        0219191_mystudy  35%[======&gt;             ] 138.12M  2.19MB/s    eta 89s       0219191_mystudy-  35%[======&gt;             ] 138.54M  2.14MB/s    eta 89s      0219191_mystudy-0  35%[======&gt;             ] 139.14M  2.12MB/s    eta 89s     0219191_mystudy-02  36%[======&gt;             ] 139.56M  2.26MB/s    eta 89s    0219191_mystudy-021  36%[======&gt;             ] 140.19M  2.33MB/s    eta 89s    219191_mystudy-0219  36%[======&gt;             ] 140.89M  2.34MB/s    eta 89s    19191_mystudy-0219-  36%[======&gt;             ] 141.59M  2.34MB/s    eta 89s    9191_mystudy-0219-1  36%[======&gt;             ] 142.20M  2.33MB/s    eta 89s    191_mystudy-0219-11  36%[======&gt;             ] 142.90M  2.44MB/s    eta 88s    91_mystudy-0219-111  37%[======&gt;             ] 143.53M  2.45MB/s    eta 88s    1_mystudy-0219-1114  37%[======&gt;             ] 144.25M  2.52MB/s    eta 88s    _mystudy-0219-1114.  37%[======&gt;             ] 144.87M  2.51MB/s    eta 88s    mystudy-0219-1114.t  37%[======&gt;             ] 145.58M  2.53MB/s    eta 88s    ystudy-0219-1114.ta  37%[======&gt;             ] 146.27M  2.54MB/s    eta 86s    study-0219-1114.tar  38%[======&gt;             ] 147.02M  2.53MB/s    eta 86s    tudy-0219-1114.tar.  38%[======&gt;             ] 147.46M  2.46MB/s    eta 86s    udy-0219-1114.tar.g  38%[======&gt;             ] 148.16M  2.41MB/s    eta 86s    dy-0219-1114.tar.gz  38%[======&gt;             ] 148.79M  2.41MB/s    eta 86s    y-0219-1114.tar.gz   38%[======&gt;             ] 149.34M  2.62MB/s    eta 85s    -0219-1114.tar.gz    38%[======&gt;             ] 150.01M  2.76MB/s    eta 85s    0219-1114.tar.gz     38%[======&gt;             ] 150.62M  2.75MB/s    eta 85s    219-1114.tar.gz      39%[======&gt;             ] 151.32M  2.85MB/s    eta 85s    19-1114.tar.gz       39%[======&gt;             ] 152.00M  2.86MB/s    eta 85s    9-1114.tar.gz        39%[======&gt;             ] 152.69M  2.97MB/s    eta 84s    -1114.tar.gz         39%[======&gt;             ] 153.33M  2.97MB/s    eta 84s    1114.tar.gz          39%[======&gt;             ] 154.02M  2.98MB/s    eta 84s    114.tar.gz           39%[======&gt;             ] 154.70M  2.97MB/s    eta 84s    14.tar.gz            40%[=======&gt;            ] 155.36M  2.98MB/s    eta 84s    4.tar.gz             40%[=======&gt;            ] 155.90M  2.84MB/s    eta 83s    .tar.gz              40%[=======&gt;            ] 155.91M  2.71MB/s    eta 83s    tar.gz               40%[=======&gt;            ] 156.46M  2.68MB/s    eta 83s    ar.gz                40%[=======&gt;            ] 157.09M  2.65MB/s    eta 83s    r.gz                 40%[=======&gt;            ] 157.99M  2.70MB/s    eta 83s    .gz                  40%[=======&gt;            ] 158.59M  2.64MB/s    eta 82s    gz                   41%[=======&gt;            ] 159.14M  2.67MB/s    eta 82s    z                    41%[=======&gt;            ] 159.95M  2.69MB/s    eta 82s                         41%[=======&gt;            ] 160.54M  2.68MB/s    eta 82s                      0  41%[=======&gt;            ] 161.27M  2.72MB/s    eta 82s                     02  41%[=======&gt;            ] 161.82M  2.69MB/s    eta 81s                    021  41%[=======&gt;            ] 162.27M  2.66MB/s    eta 81s                   0219  42%[=======&gt;            ] 162.89M  2.65MB/s    eta 81s                  02191  42%[=======&gt;            ] 163.40M  2.62MB/s    eta 81s                 021919  42%[=======&gt;            ] 164.00M  2.59MB/s    eta 81s                0219191  42%[=======&gt;            ] 164.63M  2.59MB/s    eta 80s               0219191_  42%[=======&gt;            ] 165.36M  2.60MB/s    eta 80s              0219191_m  42%[=======&gt;            ] 166.08M  2.61MB/s    eta 80s             0219191_my  43%[=======&gt;            ] 166.72M  2.61MB/s    eta 80s            0219191_mys  43%[=======&gt;            ] 167.28M  2.71MB/s    eta 80s           0219191_myst  43%[=======&gt;            ] 167.95M  2.87MB/s    eta 79s          0219191_mystu  43%[=======&gt;            ] 168.50M  2.86MB/s    eta 79s         0219191_mystud  43%[=======&gt;            ] 169.07M  2.88MB/s    eta 79s        0219191_mystudy  43%[=======&gt;            ] 169.52M  2.76MB/s    eta 79s       0219191_mystudy-  43%[=======&gt;            ] 169.63M  2.59MB/s    eta 79s      0219191_mystudy-0  44%[=======&gt;            ] 170.31M  2.61MB/s    eta 78s     0219191_mystudy-02  44%[=======&gt;            ] 170.99M  2.64MB/s    eta 78s    0219191_mystudy-021  44%[=======&gt;            ] 171.66M  2.61MB/s    eta 78s    219191_mystudy-0219  44%[=======&gt;            ] 172.35M  2.64MB/s    eta 78s    19191_mystudy-0219-  44%[=======&gt;            ] 173.00M  2.62MB/s    eta 78s    9191_mystudy-0219-1  44%[=======&gt;            ] 173.65M  2.62MB/s    eta 77s    191_mystudy-0219-11  45%[========&gt;           ] 174.29M  2.66MB/s    eta 77s    91_mystudy-0219-111  45%[========&gt;           ] 174.80M  2.62MB/s    eta 77s    1_mystudy-0219-1114  45%[========&gt;           ] 175.44M  2.65MB/s    eta 77s    _mystudy-0219-1114.  45%[========&gt;           ] 176.09M  2.67MB/s    eta 77s    mystudy-0219-1114.t  45%[========&gt;           ] 176.51M  2.62MB/s    eta 76s    ystudy-0219-1114.ta  45%[========&gt;           ] 177.11M  2.59MB/s    eta 76s    study-0219-1114.tar  45%[========&gt;           ] 177.78M  2.57MB/s    eta 76s    tudy-0219-1114.tar.  46%[========&gt;           ] 178.47M  2.42MB/s    eta 76s    udy-0219-1114.tar.g  46%[========&gt;           ] 180.19M  2.66MB/s    eta 74s    dy-0219-1114.tar.gz  47%[========&gt;           ] 182.87M  3.07MB/s    eta 74s    y-0219-1114.tar.gz   47%[========&gt;           ] 183.69M  3.12MB/s    eta 74s    -0219-1114.tar.gz    47%[========&gt;           ] 184.53M  3.18MB/s    eta 74s    0219-1114.tar.gz     47%[========&gt;           ] 185.28M  3.32MB/s    eta 74s    219-1114.tar.gz      47%[========&gt;           ] 185.67M  3.38MB/s    eta 71s    19-1114.tar.gz       48%[========&gt;           ] 186.45M  3.40MB/s    eta 71s    9-1114.tar.gz        48%[========&gt;           ] 187.22M  3.42MB/s    eta 71s    -1114.tar.gz         48%[========&gt;           ] 188.05M  3.44MB/s    eta 71s    1114.tar.gz          48%[========&gt;           ] 188.85M  3.46MB/s    eta 71s    114.tar.gz           48%[========&gt;           ] 189.50M  3.47MB/s    eta 70s    14.tar.gz            49%[========&gt;           ] 190.32M  3.52MB/s    eta 70s    4.tar.gz             49%[========&gt;           ] 191.13M  3.56MB/s    eta 70s    .tar.gz              49%[========&gt;           ] 191.91M  3.63MB/s    eta 70s    tar.gz               49%[========&gt;           ] 192.66M  3.66MB/s    eta 70s    ar.gz                50%[=========&gt;          ] 193.50M  3.70MB/s    eta 68s    r.gz                 50%[=========&gt;          ] 194.29M  3.76MB/s    eta 68s    .gz                  50%[=========&gt;          ] 194.99M  3.79MB/s    eta 68s    gz                   50%[=========&gt;          ] 195.79M  3.82MB/s    eta 68s    z                    50%[=========&gt;          ] 196.63M  4.12MB/s    eta 68s                         51%[=========&gt;          ] 197.44M  3.92MB/s    eta 66s                      0  51%[=========&gt;          ] 198.27M  3.49MB/s    eta 66s                     02  51%[=========&gt;          ] 198.54M  3.16MB/s    eta 66s                    021  51%[=========&gt;          ] 199.07M  3.05MB/s    eta 66s                   0219  51%[=========&gt;          ] 199.91M  3.14MB/s    eta 66s                  02191  51%[=========&gt;          ] 200.85M  3.17MB/s    eta 66s                 021919  52%[=========&gt;          ] 201.23M  3.03MB/s    eta 66s                0219191  52%[=========&gt;          ] 202.04M  3.03MB/s    eta 66s               0219191_  52%[=========&gt;          ] 202.42M  2.94MB/s    eta 65s              0219191_m  52%[=========&gt;          ] 203.42M  2.98MB/s    eta 65s             0219191_my  52%[=========&gt;          ] 204.27M  2.99MB/s    eta 65s            0219191_mys  52%[=========&gt;          ] 204.94M  2.87MB/s    eta 65s           0219191_myst  53%[=========&gt;          ] 205.75M  2.87MB/s    eta 64s          0219191_mystu  53%[=========&gt;          ] 206.46M  2.86MB/s    eta 64s         0219191_mystud  53%[=========&gt;          ] 207.22M  2.87MB/s    eta 64s        0219191_mystudy  53%[=========&gt;          ] 208.03M  2.86MB/s    eta 64s       0219191_mystudy-  53%[=========&gt;          ] 208.68M  2.67MB/s    eta 63s      0219191_mystudy-0  54%[=========&gt;          ] 209.30M  2.62MB/s    eta 63s     0219191_mystudy-02  54%[=========&gt;          ] 210.17M  2.64MB/s    eta 63s    0219191_mystudy-021  54%[=========&gt;          ] 210.82M  2.62MB/s    eta 63s    219191_mystudy-0219  54%[=========&gt;          ] 211.56M  2.88MB/s    eta 63s    19191_mystudy-0219-  54%[=========&gt;          ] 212.22M  2.98MB/s    eta 62s    9191_mystudy-0219-1  55%[==========&gt;         ] 212.98M  2.96MB/s    eta 62s    191_mystudy-0219-11  55%[==========&gt;         ] 213.44M  2.87MB/s    eta 62s    91_mystudy-0219-111  55%[==========&gt;         ] 214.23M  2.82MB/s    eta 62s    1_mystudy-0219-1114  55%[==========&gt;         ] 214.98M  2.97MB/s    eta 62s    _mystudy-0219-1114.  55%[==========&gt;         ] 215.60M  2.93MB/s    eta 60s    mystudy-0219-1114.t  55%[==========&gt;         ] 216.38M  3.05MB/s    eta 60s    ystudy-0219-1114.ta  56%[==========&gt;         ] 217.13M  3.00MB/s    eta 60s    study-0219-1114.tar  56%[==========&gt;         ] 217.99M  2.99MB/s    eta 60s    tudy-0219-1114.tar.  56%[==========&gt;         ] 218.73M  3.03MB/s    eta 60s    udy-0219-1114.tar.g  56%[==========&gt;         ] 219.46M  3.10MB/s    eta 59s    dy-0219-1114.tar.gz  56%[==========&gt;         ] 220.25M  3.10MB/s    eta 59s    y-0219-1114.tar.gz   57%[==========&gt;         ] 220.96M  3.10MB/s    eta 59s    -0219-1114.tar.gz    57%[==========&gt;         ] 221.74M  3.10MB/s    eta 59s    0219-1114.tar.gz     57%[==========&gt;         ] 222.59M  3.12MB/s    eta 59s    219-1114.tar.gz      57%[==========&gt;         ] 223.36M  3.33MB/s    eta 57s    19-1114.tar.gz       57%[==========&gt;         ] 224.13M  3.37MB/s    eta 57s    9-1114.tar.gz        58%[==========&gt;         ] 224.90M  3.34MB/s    eta 57s    -1114.tar.gz         58%[==========&gt;         ] 225.40M  3.30MB/s    eta 57s    1114.tar.gz          58%[==========&gt;         ] 226.21M  3.31MB/s    eta 57s    114.tar.gz           58%[==========&gt;         ] 226.96M  3.33MB/s    eta 56s    14.tar.gz            58%[==========&gt;         ] 227.61M  3.31MB/s    eta 56s    4.tar.gz             59%[==========&gt;         ] 228.39M  3.39MB/s    eta 56s    .tar.gz              59%[==========&gt;         ] 229.15M  3.38MB/s    eta 56s    tar.gz               59%[==========&gt;         ] 230.00M  3.40MB/s    eta 56s    ar.gz                59%[==========&gt;         ] 230.81M  3.44MB/s    eta 54s    r.gz                 59%[==========&gt;         ] 231.41M  3.34MB/s    eta 54s    .gz                  60%[===========&gt;        ] 232.24M  3.35MB/s    eta 54s    gz                   60%[===========&gt;        ] 232.99M  3.33MB/s    eta 54s    z                    60%[===========&gt;        ] 233.63M  3.31MB/s    eta 54s                         60%[===========&gt;        ] 234.48M  3.34MB/s    eta 53s                      0  60%[===========&gt;        ] 235.41M  3.36MB/s    eta 53s                     02  61%[===========&gt;        ] 236.20M  3.38MB/s    eta 53s                    021  61%[===========&gt;        ] 236.89M  3.36MB/s    eta 53s                   0219  61%[===========&gt;        ] 237.00M  3.07MB/s    eta 52s                  02191  61%[===========&gt;        ] 237.85M  3.08MB/s    eta 52s                 021919  61%[===========&gt;        ] 238.60M  3.07MB/s    eta 52s                0219191  61%[===========&gt;        ] 239.36M  3.07MB/s    eta 52s               0219191_  62%[===========&gt;        ] 240.13M  3.14MB/s    eta 52s              0219191_m  62%[===========&gt;        ] 240.87M  3.13MB/s    eta 51s             0219191_my  62%[===========&gt;        ] 241.59M  3.12MB/s    eta 51s            0219191_mys  62%[===========&gt;        ] 241.98M  3.03MB/s    eta 51s           0219191_myst  62%[===========&gt;        ] 242.81M  3.04MB/s    eta 51s          0219191_mystu  62%[===========&gt;        ] 243.56M  3.03MB/s    eta 51s         0219191_mystud  63%[===========&gt;        ] 244.12M  2.97MB/s    eta 50s        0219191_mystudy  63%[===========&gt;        ] 244.90M  2.97MB/s    eta 50s       0219191_mystudy-  63%[===========&gt;        ] 245.75M  3.08MB/s    eta 50s      0219191_mystudy-0  63%[===========&gt;        ] 246.54M  3.09MB/s    eta 50s     0219191_mystudy-02  64%[===========&gt;        ] 247.88M  3.20MB/s    eta 50s    0219191_mystudy-021  65%[============&gt;       ] 252.33M  4.00MB/s    eta 46s    219191_mystudy-0219  66%[============&gt;       ] 257.70M  4.99MB/s    eta 46s    19191_mystudy-0219-  67%[============&gt;       ] 261.62M  5.67MB/s    eta 46s    9191_mystudy-0219-1  67%[============&gt;       ] 262.37M  5.67MB/s    eta 46s    191_mystudy-0219-11  68%[============&gt;       ] 263.22M  6.15MB/s    eta 46s    91_mystudy-0219-111  68%[============&gt;       ] 264.08M  6.16MB/s    eta 40s    1_mystudy-0219-1114  68%[============&gt;       ] 264.64M  6.12MB/s    eta 40s    _mystudy-0219-1114.  68%[============&gt;       ] 265.78M  6.17MB/s    eta 40s    mystudy-0219-1114.t  68%[============&gt;       ] 265.80M  5.99MB/s    eta 40s    ystudy-0219-1114.ta  70%[=============&gt;      ] 272.10M  7.22MB/s    eta 40s    study-0219-1114.tar  72%[=============&gt;      ] 279.02M  8.60MB/s    eta 34s    tudy-0219-1114.tar.  72%[=============&gt;      ] 279.73M  8.80MB/s    eta 34s    udy-0219-1114.tar.g  72%[=============&gt;      ] 280.59M  8.81MB/s    eta 34s    dy-0219-1114.tar.gz  72%[=============&gt;      ] 281.39M  8.82MB/s    eta 34s    y-0219-1114.tar.gz   72%[=============&gt;      ] 282.29M  8.87MB/s    eta 34s    -0219-1114.tar.gz    73%[=============&gt;      ] 283.10M  8.88MB/s    eta 33s    0219-1114.tar.gz     73%[=============&gt;      ] 283.90M  8.86MB/s    eta 33s    219-1114.tar.gz      73%[=============&gt;      ] 284.76M  8.88MB/s    eta 33s    19-1114.tar.gz       73%[=============&gt;      ] 285.59M  8.89MB/s    eta 33s    9-1114.tar.gz        73%[=============&gt;      ] 286.26M  8.31MB/s    eta 33s    -1114.tar.gz         74%[=============&gt;      ] 287.18M  7.85MB/s    eta 31s    1114.tar.gz          74%[=============&gt;      ] 287.65M  6.76MB/s    eta 31s    114.tar.gz           74%[=============&gt;      ] 288.47M  6.07MB/s    eta 31s    14.tar.gz            74%[=============&gt;      ] 289.31M  6.06MB/s    eta 31s    4.tar.gz             74%[=============&gt;      ] 290.15M  6.03MB/s    eta 31s    .tar.gz              75%[==============&gt;     ] 290.98M  6.02MB/s    eta 30s    tar.gz               75%[==============&gt;     ] 291.71M  6.05MB/s    eta 30s    ar.gz                75%[==============&gt;     ] 292.62M  6.04MB/s    eta 30s    r.gz                 75%[==============&gt;     ] 293.44M  6.22MB/s    eta 30s    .gz                  76%[==============&gt;     ] 294.28M  4.99MB/s    eta 30s    gz                   76%[==============&gt;     ] 295.21M  3.64MB/s    eta 29s    z                    76%[==============&gt;     ] 296.02M  3.51MB/s    eta 29s                         76%[==============&gt;     ] 296.85M  3.52MB/s    eta 29s                      0  76%[==============&gt;     ] 297.75M  3.52MB/s    eta 29s                     02  77%[==============&gt;     ] 298.62M  3.53MB/s    eta 28s                    021  77%[==============&gt;     ] 299.39M  3.53MB/s    eta 28s                   0219  77%[==============&gt;     ] 300.22M  3.52MB/s    eta 28s                  02191  77%[==============&gt;     ] 301.14M  3.54MB/s    eta 28s                 021919  78%[==============&gt;     ] 301.85M  3.55MB/s    eta 28s                0219191  78%[==============&gt;     ] 302.15M  3.17MB/s    eta 27s               0219191_  78%[==============&gt;     ] 303.00M  3.24MB/s    eta 27s              0219191_m  78%[==============&gt;     ] 303.81M  3.24MB/s    eta 27s             0219191_my  78%[==============&gt;     ] 304.62M  3.25MB/s    eta 27s            0219191_mys  78%[==============&gt;     ] 305.05M  3.17MB/s    eta 27s           0219191_myst  79%[==============&gt;     ] 305.80M  3.16MB/s    eta 25s          0219191_mystu  79%[==============&gt;     ] 306.76M  3.20MB/s    eta 25s         0219191_mystud  79%[==============&gt;     ] 307.64M  3.20MB/s    eta 25s        0219191_mystudy  79%[==============&gt;     ] 308.53M  3.21MB/s    eta 25s       0219191_mystudy-  79%[==============&gt;     ] 309.20M  3.17MB/s    eta 25s      0219191_mystudy-0  80%[===============&gt;    ] 310.17M  3.18MB/s    eta 24s     0219191_mystudy-02  80%[===============&gt;    ] 310.96M  3.16MB/s    eta 24s    0219191_mystudy-021  80%[===============&gt;    ] 311.65M  3.29MB/s    eta 24s    219191_mystudy-0219  80%[===============&gt;    ] 312.43M  3.28MB/s    eta 24s    19191_mystudy-0219-  80%[===============&gt;    ] 313.24M  3.26MB/s    eta 24s    9191_mystudy-0219-1  81%[===============&gt;    ] 313.96M  3.06MB/s    eta 23s    191_mystudy-0219-11  81%[===============&gt;    ] 314.76M  3.05MB/s    eta 23s    91_mystudy-0219-111  81%[===============&gt;    ] 315.44M  3.02MB/s    eta 23s    1_mystudy-0219-1114  81%[===============&gt;    ] 316.25M  3.00MB/s    eta 23s    _mystudy-0219-1114.  81%[===============&gt;    ] 317.17M  3.04MB/s    eta 23s    mystudy-0219-1114.t  82%[===============&gt;    ] 317.84M  3.33MB/s    eta 22s    ystudy-0219-1114.ta  82%[===============&gt;    ] 318.47M  3.29MB/s    eta 22s    study-0219-1114.tar  82%[===============&gt;    ] 319.25M  3.29MB/s    eta 22s    tudy-0219-1114.tar.  82%[===============&gt;    ] 319.93M  3.26MB/s    eta 22s    udy-0219-1114.tar.g  82%[===============&gt;    ] 320.68M  3.33MB/s    eta 22s    dy-0219-1114.tar.gz  83%[===============&gt;    ] 321.52M  3.35MB/s    eta 21s    y-0219-1114.tar.gz   83%[===============&gt;    ] 322.38M  3.33MB/s    eta 21s    -0219-1114.tar.gz    83%[===============&gt;    ] 323.19M  3.31MB/s    eta 21s    0219-1114.tar.gz     83%[===============&gt;    ] 324.05M  3.31MB/s    eta 21s    219-1114.tar.gz      83%[===============&gt;    ] 324.55M  3.27MB/s    eta 21s    19-1114.tar.gz       84%[===============&gt;    ] 325.31M  3.12MB/s    eta 19s    9-1114.tar.gz        84%[===============&gt;    ] 326.09M  3.14MB/s    eta 19s    -1114.tar.gz         84%[===============&gt;    ] 326.95M  3.16MB/s    eta 19s    1114.tar.gz          84%[===============&gt;    ] 327.79M  3.17MB/s    eta 19s    114.tar.gz           84%[===============&gt;    ] 328.65M  3.40MB/s    eta 19s    14.tar.gz            85%[================&gt;   ] 329.33M  3.39MB/s    eta 18s    4.tar.gz             85%[================&gt;   ] 330.12M  3.41MB/s    eta 18s    .tar.gz              85%[================&gt;   ] 330.92M  3.41MB/s    eta 18s    tar.gz               85%[================&gt;   ] 331.31M  3.26MB/s    eta 18s    ar.gz                85%[================&gt;   ] 332.11M  3.29MB/s    eta 18s    r.gz                 86%[================&gt;   ] 332.94M  3.33MB/s    eta 17s    .gz                  86%[================&gt;   ] 333.73M  3.30MB/s    eta 17s    gz                   86%[================&gt;   ] 334.40M  3.31MB/s    eta 17s    z                    86%[================&gt;   ] 335.32M  3.40MB/s    eta 17s                         86%[================&gt;   ] 336.14M  3.38MB/s    eta 17s                      0  87%[================&gt;   ] 337.02M  3.39MB/s    eta 16s                     02  87%[================&gt;   ] 337.34M  3.24MB/s    eta 16s                    021  87%[================&gt;   ] 338.15M  3.23MB/s    eta 16s                   0219  87%[================&gt;   ] 339.01M  3.32MB/s    eta 16s                  02191  87%[================&gt;   ] 339.87M  3.32MB/s    eta 16s                 021919  88%[================&gt;   ] 340.68M  3.43MB/s    eta 14s                0219191  88%[================&gt;   ] 341.39M  3.41MB/s    eta 14s               0219191_  88%[================&gt;   ] 342.10M  3.38MB/s    eta 14s              0219191_m  88%[================&gt;   ] 342.94M  3.38MB/s    eta 14s             0219191_my  88%[================&gt;   ] 343.71M  3.33MB/s    eta 14s            0219191_mys  89%[================&gt;   ] 344.61M  3.38MB/s    eta 13s           0219191_myst  89%[================&gt;   ] 345.32M  3.36MB/s    eta 13s          0219191_mystu  89%[================&gt;   ] 346.11M  3.36MB/s    eta 13s         0219191_mystud  89%[================&gt;   ] 347.05M  3.51MB/s    eta 13s        0219191_mystudy  89%[================&gt;   ] 347.92M  3.53MB/s    eta 13s       0219191_mystudy-  90%[=================&gt;  ] 348.73M  3.52MB/s    eta 12s      0219191_mystudy-0  90%[=================&gt;  ] 349.46M  3.51MB/s    eta 12s     0219191_mystudy-02  90%[=================&gt;  ] 350.26M  3.54MB/s    eta 12s    0219191_mystudy-021  90%[=================&gt;  ] 351.09M  3.52MB/s    eta 12s    219191_mystudy-0219  90%[=================&gt;  ] 351.64M  3.40MB/s    eta 12s    19191_mystudy-0219-  91%[=================&gt;  ] 352.52M  3.39MB/s    eta 11s    9191_mystudy-0219-1  91%[=================&gt;  ] 353.37M  3.55MB/s    eta 11s    191_mystudy-0219-11  91%[=================&gt;  ] 354.23M  3.56MB/s    eta 11s    91_mystudy-0219-111  91%[=================&gt;  ] 355.04M  3.55MB/s    eta 11s    1_mystudy-0219-1114  91%[=================&gt;  ] 355.85M  3.54MB/s    eta 11s    _mystudy-0219-1114.  92%[=================&gt;  ] 356.68M  3.54MB/s    eta 9s     mystudy-0219-1114.t  92%[=================&gt;  ] 356.87M  3.24MB/s    eta 9s     ystudy-0219-1114.ta  92%[=================&gt;  ] 358.56M  3.44MB/s    eta 9s     study-0219-1114.tar  93%[=================&gt;  ] 361.55M  3.89MB/s    eta 9s     tudy-0219-1114.tar.  93%[=================&gt;  ] 362.14M  3.88MB/s    eta 8s     udy-0219-1114.tar.g  93%[=================&gt;  ] 362.82M  3.85MB/s    eta 8s     dy-0219-1114.tar.gz  93%[=================&gt;  ] 363.53M  3.84MB/s    eta 8s     y-0219-1114.tar.gz   94%[=================&gt;  ] 364.07M  3.79MB/s    eta 8s     -0219-1114.tar.gz    94%[=================&gt;  ] 364.62M  3.67MB/s    eta 8s     0219-1114.tar.gz     94%[=================&gt;  ] 365.45M  3.65MB/s    eta 7s     219-1114.tar.gz      94%[=================&gt;  ] 366.02M  3.60MB/s    eta 7s     19-1114.tar.gz       94%[=================&gt;  ] 366.60M  3.55MB/s    eta 7s     9-1114.tar.gz        95%[==================&gt; ] 367.66M  3.61MB/s    eta 7s     -1114.tar.gz         95%[==================&gt; ] 368.52M  3.62MB/s    eta 7s     1114.tar.gz          95%[==================&gt; ] 369.27M  3.75MB/s    eta 5s     114.tar.gz           95%[==================&gt; ] 369.68M  3.38MB/s    eta 5s     14.tar.gz            95%[==================&gt; ] 369.69M  3.21MB/s    eta 5s     4.tar.gz             95%[==================&gt; ] 370.55M  3.22MB/s    eta 5s     .tar.gz              95%[==================&gt; ] 371.30M  3.20MB/s    eta 5s     tar.gz               96%[==================&gt; ] 371.95M  3.17MB/s    eta 5s     ar.gz                96%[==================&gt; ] 372.86M  3.19MB/s    eta 5s     r.gz                 96%[==================&gt; ] 373.44M  3.39MB/s    eta 5s     .gz                  96%[==================&gt; ] 374.07M  3.18MB/s    eta 4s     gz                   96%[==================&gt; ] 374.43M  2.59MB/s    eta 4s     z                    96%[==================&gt; ] 375.03M  2.58MB/s    eta 4s                          97%[==================&gt; ] 375.74M  2.58MB/s    eta 4s                       0  97%[==================&gt; ] 376.42M  2.61MB/s    eta 4s                      02  97%[==================&gt; ] 377.00M  2.65MB/s    eta 3s                     021  97%[==================&gt; ] 377.58M  2.60MB/s    eta 3s                    0219  97%[==================&gt; ] 378.28M  2.63MB/s    eta 3s                   02191  97%[==================&gt; ] 378.99M  2.65MB/s    eta 3s                  021919  98%[==================&gt; ] 379.63M  2.56MB/s    eta 3s                 0219191  98%[==================&gt; ] 380.32M  2.52MB/s    eta 2s                0219191_  98%[==================&gt; ] 380.88M  2.48MB/s    eta 2s               0219191_m  98%[==================&gt; ] 381.52M  2.75MB/s    eta 2s              0219191_my  98%[==================&gt; ] 382.26M  2.92MB/s    eta 2s             0219191_mys  98%[==================&gt; ] 382.84M  2.85MB/s    eta 2s            0219191_myst  99%[==================&gt; ] 383.54M  2.84MB/s    eta 1s           0219191_mystu  99%[==================&gt; ] 384.01M  2.69MB/s    eta 1s          0219191_mystud  99%[==================&gt; ] 384.70M  2.74MB/s    eta 1s         0219191_mystudy  99%[==================&gt; ] 385.39M  2.76MB/s    eta 1s        0219191_mystudy-  99%[==================&gt; ] 385.98M  2.75MB/s    eta 1s       0219191_mystudy-0  99%[==================&gt; ] 386.68M  2.89MB/s    eta 0s     0219191_mystudy-021 100%[===================&gt;] 386.88M  2.94MB/s    in 2m 1s   
+          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  43.49K   186KB/s                       0219191_mys   0%[                    ] 190.50K   410KB/s                      0219191_myst   0%[                    ] 350.21K   505KB/s                     0219191_mystu   0%[                    ] 557.77K   604KB/s                    0219191_mystud   0%[                    ] 717.46K   622KB/s                   0219191_mystudy   0%[                    ] 893.14K   645KB/s                  0219191_mystudy-   0%[                    ]   1.06M   672KB/s                 0219191_mystudy-0   0%[                    ]   1.27M   705KB/s                0219191_mystudy-02   0%[                    ]   1.43M   704KB/s               0219191_mystudy-021   0%[                    ]   1.68M   744KB/s               219191_mystudy-0219   0%[                    ]   2.02M   815KB/s               19191_mystudy-0219-   0%[                    ]   2.24M   828KB/s               9191_mystudy-0219-1   0%[                    ]   2.62M   893KB/s    eta 7m 21s 191_mystudy-0219-11   0%[                    ]   2.83M   898KB/s    eta 7m 21s 91_mystudy-0219-111   0%[                    ]   3.08M   912KB/s    eta 7m 21s 1_mystudy-0219-1114   0%[                    ]   3.32M   920KB/s    eta 7m 21s _mystudy-0219-1114.   0%[                    ]   3.58M   935KB/s    eta 7m 21s mystudy-0219-1114.t   0%[                    ]   3.80M   938KB/s    eta 6m 58s ystudy-0219-1114.ta   1%[                    ]   4.02M   940KB/s    eta 6m 58s study-0219-1114.tar   1%[                    ]   4.27M   948KB/s    eta 6m 58s tudy-0219-1114.tar.   1%[                    ]   4.47M   985KB/s    eta 6m 58s udy-0219-1114.tar.g   1%[                    ]   4.72M  1007KB/s    eta 6m 58s dy-0219-1114.tar.gz   1%[                    ]   5.02M  1.01MB/s    eta 6m 44s y-0219-1114.tar.gz    1%[                    ]   5.22M  1.01MB/s    eta 6m 44s -0219-1114.tar.gz     1%[                    ]   5.55M  1.05MB/s    eta 6m 44s 0219-1114.tar.gz      1%[                    ]   5.89M  1.09MB/s    eta 6m 44s 219-1114.tar.gz       1%[                    ]   6.14M  1.10MB/s    eta 6m 44s 19-1114.tar.gz        1%[                    ]   6.42M  1.12MB/s    eta 6m 23s 9-1114.tar.gz         1%[                    ]   6.67M  1.14MB/s    eta 6m 23s -1114.tar.gz          1%[                    ]   6.89M  1.13MB/s    eta 6m 23s 1114.tar.gz           1%[                    ]   7.13M  1.11MB/s    eta 6m 23s 114.tar.gz            1%[                    ]   7.30M  1.10MB/s    eta 6m 23s 14.tar.gz             1%[                    ]   7.48M  1.05MB/s    eta 6m 26s 4.tar.gz              2%[                    ]   7.78M  1.07MB/s    eta 6m 26s .tar.gz               2%[                    ]   7.98M  1.06MB/s    eta 6m 26s tar.gz                2%[                    ]   8.17M  1.05MB/s    eta 6m 26s ar.gz                 2%[                    ]   8.61M  1.09MB/s    eta 6m 26s r.gz                  2%[                    ]   8.84M  1.09MB/s    eta 6m 15s .gz                   2%[                    ]   9.08M  1.09MB/s    eta 6m 15s gz                    2%[                    ]   9.29M  1.09MB/s    eta 6m 15s z                     2%[                    ]   9.51M  1.08MB/s    eta 6m 15s                       2%[                    ]   9.68M  1.07MB/s    eta 6m 15s                   0   2%[                    ]   9.93M  1.06MB/s    eta 6m 18s                  02   2%[                    ]  10.14M  1.06MB/s    eta 6m 18s                 021   2%[                    ]  10.35M  1.04MB/s    eta 6m 18s                0219   2%[                    ]  10.63M  1.02MB/s    eta 6m 18s               02191   2%[                    ]  10.82M  1.01MB/s    eta 6m 18s              021919   2%[                    ]  11.01M  1009KB/s    eta 6m 20s             0219191   2%[                    ]  11.26M  1007KB/s    eta 6m 20s            0219191_   2%[                    ]  11.48M  1007KB/s    eta 6m 20s           0219191_m   3%[                    ]  11.70M  1003KB/s    eta 6m 20s          0219191_my   3%[                    ]  11.88M  1006KB/s    eta 6m 20s         0219191_mys   3%[                    ]  12.18M  1.01MB/s    eta 6m 18s        0219191_myst   3%[                    ]  12.35M  1002KB/s    eta 6m 18s       0219191_mystu   3%[                    ]  12.54M   998KB/s    eta 6m 18s      0219191_mystud   3%[                    ]  12.72M   999KB/s    eta 6m 18s     0219191_mystudy   3%[                    ]  13.05M   974KB/s    eta 6m 18s    0219191_mystudy-   3%[                    ]  13.35M   988KB/s    eta 6m 16s   0219191_mystudy-0   3%[                    ]  13.58M   987KB/s    eta 6m 16s  0219191_mystudy-02   3%[                    ]  13.82M   991KB/s    eta 6m 16s 0219191_mystudy-021   3%[                    ]  14.11M  1013KB/s    eta 6m 16s 219191_mystudy-0219   3%[                    ]  14.32M  1020KB/s    eta 6m 16s 19191_mystudy-0219-   3%[                    ]  14.55M  1016KB/s    eta 6m 14s 9191_mystudy-0219-1   3%[                    ]  14.75M  1015KB/s    eta 6m 14s 191_mystudy-0219-11   3%[                    ]  15.03M  1.00MB/s    eta 6m 14s 91_mystudy-0219-111   3%[                    ]  15.24M  1009KB/s    eta 6m 14s 1_mystudy-0219-1114   4%[                    ]  15.52M  1.01MB/s    eta 6m 14s _mystudy-0219-1114.   4%[                    ]  15.80M  1.03MB/s    eta 6m 11s mystudy-0219-1114.t   4%[                    ]  16.05M  1.03MB/s    eta 6m 11s ystudy-0219-1114.ta   4%[                    ]  16.26M  1.03MB/s    eta 6m 11s study-0219-1114.tar   4%[                    ]  16.54M  1.04MB/s    eta 6m 11s tudy-0219-1114.tar.   4%[                    ]  16.84M  1.06MB/s    eta 6m 11s udy-0219-1114.tar.g   4%[                    ]  17.04M  1.04MB/s    eta 6m 8s  dy-0219-1114.tar.gz   4%[                    ]  17.23M  1.05MB/s    eta 6m 8s  y-0219-1114.tar.gz    4%[                    ]  17.42M  1.05MB/s    eta 6m 8s  -0219-1114.tar.gz     4%[                    ]  17.73M  1.08MB/s    eta 6m 8s  0219-1114.tar.gz      4%[                    ]  18.25M  1.12MB/s    eta 6m 8s  219-1114.tar.gz       4%[                    ]  18.48M  1.10MB/s    eta 6m 1s  19-1114.tar.gz        4%[                    ]  18.71M  1.10MB/s    eta 6m 1s  9-1114.tar.gz         4%[                    ]  18.90M  1.09MB/s    eta 6m 1s  -1114.tar.gz          4%[                    ]  19.13M  1.08MB/s    eta 6m 1s  1114.tar.gz           5%[&gt;                   ]  19.38M  1.09MB/s    eta 6m 1s  114.tar.gz            5%[&gt;                   ]  19.57M  1.08MB/s    eta 6m 1s  14.tar.gz             5%[&gt;                   ]  19.91M  1.11MB/s    eta 6m 1s  4.tar.gz              5%[&gt;                   ]  20.10M  1.09MB/s    eta 6m 1s  .tar.gz               5%[&gt;                   ]  20.33M  1.09MB/s    eta 6m 1s  tar.gz                5%[&gt;                   ]  20.54M  1.08MB/s    eta 6m 1s  ar.gz                 5%[&gt;                   ]  20.74M  1.06MB/s    eta 6m 1s  r.gz                  5%[&gt;                   ]  21.13M  1.09MB/s    eta 6m 1s  .gz                   5%[&gt;                   ]  21.47M  1.12MB/s    eta 6m 1s  gz                    5%[&gt;                   ]  21.69M  1.11MB/s    eta 6m 1s  z                     5%[&gt;                   ]  21.99M  1.11MB/s    eta 6m 1s                        5%[&gt;                   ]  22.27M  1.12MB/s    eta 5m 54s                   0   5%[&gt;                   ]  22.56M  1.15MB/s    eta 5m 54s                  02   5%[&gt;                   ]  22.80M  1.16MB/s    eta 5m 54s                 021   5%[&gt;                   ]  23.02M  1.14MB/s    eta 5m 54s                0219   6%[&gt;                   ]  23.25M  1.08MB/s    eta 5m 54s               02191   6%[&gt;                   ]  23.50M  1.08MB/s    eta 5m 52s              021919   6%[&gt;                   ]  23.73M  1.08MB/s    eta 5m 52s             0219191   6%[&gt;                   ]  23.97M  1.09MB/s    eta 5m 52s            0219191_   6%[&gt;                   ]  24.16M  1.08MB/s    eta 5m 52s           0219191_m   6%[&gt;                   ]  24.42M  1.08MB/s    eta 5m 52s          0219191_my   6%[&gt;                   ]  24.72M  1.11MB/s    eta 5m 50s         0219191_mys   6%[&gt;                   ]  24.90M  1.07MB/s    eta 5m 50s        0219191_myst   6%[&gt;                   ]  25.06M  1.07MB/s    eta 5m 50s       0219191_mystu   6%[&gt;                   ]  25.25M  1.06MB/s    eta 5m 50s      0219191_mystud   6%[&gt;                   ]  25.54M  1.08MB/s    eta 5m 50s     0219191_mystudy   6%[&gt;                   ]  26.00M  1.13MB/s    eta 5m 48s    0219191_mystudy-   6%[&gt;                   ]  26.18M  1.09MB/s    eta 5m 48s   0219191_mystudy-0   6%[&gt;                   ]  26.42M  1.06MB/s    eta 5m 48s  0219191_mystudy-02   6%[&gt;                   ]  26.82M  1.10MB/s    eta 5m 48s 0219191_mystudy-021   6%[&gt;                   ]  27.06M  1.09MB/s    eta 5m 48s 219191_mystudy-0219   7%[&gt;                   ]  27.26M  1.07MB/s    eta 5m 46s 19191_mystudy-0219-   7%[&gt;                   ]  27.73M  1.11MB/s    eta 5m 46s 9191_mystudy-0219-1   7%[&gt;                   ]  28.18M  1.16MB/s    eta 5m 46s 191_mystudy-0219-11   7%[&gt;                   ]  28.51M  1.18MB/s    eta 5m 46s 91_mystudy-0219-111   7%[&gt;                   ]  28.72M  1.18MB/s    eta 5m 46s 1_mystudy-0219-1114   7%[&gt;                   ]  28.93M  1.17MB/s    eta 5m 39s _mystudy-0219-1114.   7%[&gt;                   ]  29.18M  1.17MB/s    eta 5m 39s mystudy-0219-1114.t   7%[&gt;                   ]  29.50M  1.19MB/s    eta 5m 39s ystudy-0219-1114.ta   7%[&gt;                   ]  29.69M  1.19MB/s    eta 5m 39s study-0219-1114.tar   7%[&gt;                   ]  30.03M  1.21MB/s    eta 5m 39s tudy-0219-1114.tar.   7%[&gt;                   ]  30.26M  1.19MB/s    eta 5m 37s udy-0219-1114.tar.g   7%[&gt;                   ]  30.46M  1.20MB/s    eta 5m 37s dy-0219-1114.tar.gz   7%[&gt;                   ]  30.75M  1.22MB/s    eta 5m 37s y-0219-1114.tar.gz    8%[&gt;                   ]  30.96M  1.23MB/s    eta 5m 37s -0219-1114.tar.gz     8%[&gt;                   ]  31.29M  1.24MB/s    eta 5m 37s 0219-1114.tar.gz      8%[&gt;                   ]  31.56M  1.20MB/s    eta 5m 35s 219-1114.tar.gz       8%[&gt;                   ]  31.93M  1.24MB/s    eta 5m 35s 19-1114.tar.gz        8%[&gt;                   ]  32.17M  1.24MB/s    eta 5m 35s 9-1114.tar.gz         8%[&gt;                   ]  32.36M  1.19MB/s    eta 5m 35s -1114.tar.gz          8%[&gt;                   ]  32.73M  1.22MB/s    eta 5m 35s 1114.tar.gz           8%[&gt;                   ]  32.96M  1.23MB/s    eta 5m 32s 114.tar.gz            8%[&gt;                   ]  33.31M  1.20MB/s    eta 5m 32s 14.tar.gz             8%[&gt;                   ]  33.51M  1.15MB/s    eta 5m 32s 4.tar.gz              8%[&gt;                   ]  33.76M  1.13MB/s    eta 5m 32s .tar.gz               8%[&gt;                   ]  34.07M  1.15MB/s    eta 5m 32s tar.gz                8%[&gt;                   ]  34.29M  1.16MB/s    eta 5m 29s ar.gz                 8%[&gt;                   ]  34.59M  1022KB/s    eta 5m 37s r.gz                  8%[&gt;                   ]  34.75M   992KB/s    eta 5m 37s .gz                   9%[&gt;                   ]  35.01M  1006KB/s    eta 5m 37s gz                    9%[&gt;                   ]  35.20M   976KB/s    eta 5m 37s z                     9%[&gt;                   ]  35.43M   976KB/s    eta 5m 37s                       9%[&gt;                   ]  35.65M   979KB/s    eta 5m 37s                   0   9%[&gt;                   ]  35.82M   958KB/s    eta 5m 37s                  02   9%[&gt;                   ]  36.00M   950KB/s    eta 5m 37s                 021   9%[&gt;                   ]  36.23M   932KB/s    eta 5m 37s                0219   9%[&gt;                   ]  36.57M   947KB/s    eta 5m 37s               02191   9%[&gt;                   ]  36.92M   941KB/s    eta 5m 35s              021919   9%[&gt;                   ]  37.26M   962KB/s    eta 5m 35s             0219191   9%[&gt;                   ]  37.51M   972KB/s    eta 5m 35s            0219191_   9%[&gt;                   ]  37.65M   928KB/s    eta 5m 35s           0219191_m   9%[&gt;                   ]  37.90M   931KB/s    eta 5m 35s          0219191_my   9%[&gt;                   ]  38.07M   899KB/s    eta 5m 35s         0219191_mys   9%[&gt;                   ]  38.38M   920KB/s    eta 5m 35s        0219191_myst  10%[=&gt;                  ]  38.69M   931KB/s    eta 5m 35s       0219191_mystu  10%[=&gt;                  ]  38.97M   926KB/s    eta 5m 35s      0219191_mystud  10%[=&gt;                  ]  39.11M   911KB/s    eta 5m 35s     0219191_mystudy  10%[=&gt;                  ]  39.38M  1.03MB/s    eta 5m 33s    0219191_mystudy-  10%[=&gt;                  ]  39.55M  1.03MB/s    eta 5m 33s   0219191_mystudy-0  10%[=&gt;                  ]  39.77M  1.02MB/s    eta 5m 33s  0219191_mystudy-02  10%[=&gt;                  ]  40.02M  1.04MB/s    eta 5m 33s 0219191_mystudy-021  10%[=&gt;                  ]  40.25M  1.04MB/s    eta 5m 33s 219191_mystudy-0219  10%[=&gt;                  ]  40.42M  1.03MB/s    eta 5m 33s 19191_mystudy-0219-  10%[=&gt;                  ]  40.64M  1.04MB/s    eta 5m 33s 9191_mystudy-0219-1  10%[=&gt;                  ]  40.86M  1.05MB/s    eta 5m 33s 191_mystudy-0219-11  10%[=&gt;                  ]  41.25M  1.08MB/s    eta 5m 33s 91_mystudy-0219-111  10%[=&gt;                  ]  41.47M  1.05MB/s    eta 5m 33s 1_mystudy-0219-1114  10%[=&gt;                  ]  41.72M  1.03MB/s    eta 5m 31s _mystudy-0219-1114.  10%[=&gt;                  ]  41.97M  1.01MB/s    eta 5m 31s mystudy-0219-1114.t  10%[=&gt;                  ]  42.19M  1.01MB/s    eta 5m 31s ystudy-0219-1114.ta  10%[=&gt;                  ]  42.37M  1.02MB/s    eta 5m 31s study-0219-1114.tar  11%[=&gt;                  ]  42.56M  1.00MB/s    eta 5m 31s tudy-0219-1114.tar.  11%[=&gt;                  ]  43.25M  1.12MB/s    eta 5m 27s udy-0219-1114.tar.g  11%[=&gt;                  ]  45.02M  1.44MB/s    eta 5m 27s dy-0219-1114.tar.gz  12%[=&gt;                  ]  50.08M  2.47MB/s    eta 5m 27s y-0219-1114.tar.gz   13%[=&gt;                  ]  53.88M  3.26MB/s    eta 5m 27s -0219-1114.tar.gz    14%[=&gt;                  ]  56.35M  3.89MB/s    eta 5m 27s 0219-1114.tar.gz     14%[=&gt;                  ]  57.03M  4.01MB/s    eta 4m 5s  219-1114.tar.gz      14%[=&gt;                  ]  57.70M  4.11MB/s    eta 4m 5s  19-1114.tar.gz       15%[==&gt;                 ]  58.34M  4.20MB/s    eta 4m 5s  9-1114.tar.gz        15%[==&gt;                 ]  58.97M  4.29MB/s    eta 4m 5s  -1114.tar.gz         15%[==&gt;                 ]  59.51M  4.39MB/s    eta 3m 59s 1114.tar.gz          15%[==&gt;                 ]  60.12M  4.48MB/s    eta 3m 59s 114.tar.gz           15%[==&gt;                 ]  60.78M  4.50MB/s    eta 3m 59s 14.tar.gz            15%[==&gt;                 ]  61.23M  4.56MB/s    eta 3m 59s 4.tar.gz             15%[==&gt;                 ]  61.67M  4.60MB/s    eta 3m 59s .tar.gz              16%[==&gt;                 ]  62.32M  4.70MB/s    eta 3m 52s tar.gz               16%[==&gt;                 ]  62.93M  4.79MB/s    eta 3m 52s ar.gz                16%[==&gt;                 ]  63.57M  4.89MB/s    eta 3m 52s r.gz                 16%[==&gt;                 ]  64.11M  4.97MB/s    eta 3m 52s .gz                  16%[==&gt;                 ]  64.75M  4.97MB/s    eta 3m 52s gz                   16%[==&gt;                 ]  65.30M  4.74MB/s    eta 3m 45s z                    17%[==&gt;                 ]  65.91M  4.18MB/s    eta 3m 45s                      17%[==&gt;                 ]  66.58M  3.33MB/s    eta 3m 45s                   0  17%[==&gt;                 ]  67.20M  2.86MB/s    eta 3m 45s                  02  17%[==&gt;                 ]  67.84M  2.49MB/s    eta 3m 45s                 021  17%[==&gt;                 ]  68.47M  2.48MB/s    eta 3m 38s                0219  17%[==&gt;                 ]  69.10M  2.47MB/s    eta 3m 38s               02191  18%[==&gt;                 ]  69.65M  2.45MB/s    eta 3m 38s              021919  18%[==&gt;                 ]  70.24M  2.42MB/s    eta 3m 38s             0219191  18%[==&gt;                 ]  70.77M  2.53MB/s    eta 3m 38s            0219191_  18%[==&gt;                 ]  71.41M  2.54MB/s    eta 3m 32s           0219191_m  18%[==&gt;                 ]  72.03M  2.56MB/s    eta 3m 32s          0219191_my  18%[==&gt;                 ]  72.67M  2.58MB/s    eta 3m 32s         0219191_mys  18%[==&gt;                 ]  73.22M  2.60MB/s    eta 3m 32s        0219191_myst  19%[==&gt;                 ]  73.89M  2.63MB/s    eta 3m 32s       0219191_mystu  19%[==&gt;                 ]  74.48M  2.63MB/s    eta 3m 27s      0219191_mystud  19%[==&gt;                 ]  75.11M  2.60MB/s    eta 3m 27s     0219191_mystudy  19%[==&gt;                 ]  75.78M  2.61MB/s    eta 3m 27s    0219191_mystudy-  19%[==&gt;                 ]  76.46M  2.64MB/s    eta 3m 27s   0219191_mystudy-0  19%[==&gt;                 ]  76.92M  2.62MB/s    eta 3m 27s  0219191_mystudy-02  20%[===&gt;                ]  77.50M  2.61MB/s    eta 3m 21s 0219191_mystudy-021  20%[===&gt;                ]  78.06M  2.59MB/s    eta 3m 21s 219191_mystudy-0219  20%[===&gt;                ]  78.59M  2.56MB/s    eta 3m 21s 19191_mystudy-0219-  20%[===&gt;                ]  79.01M  2.52MB/s    eta 3m 21s 9191_mystudy-0219-1  20%[===&gt;                ]  79.66M  2.52MB/s    eta 3m 21s 191_mystudy-0219-11  20%[===&gt;                ]  80.29M  2.52MB/s    eta 3m 17s 91_mystudy-0219-111  20%[===&gt;                ]  80.79M  2.49MB/s    eta 3m 17s 1_mystudy-0219-1114  21%[===&gt;                ]  81.41M  2.49MB/s    eta 3m 17s _mystudy-0219-1114.  21%[===&gt;                ]  81.97M  2.51MB/s    eta 3m 17s mystudy-0219-1114.t  21%[===&gt;                ]  82.58M  2.52MB/s    eta 3m 17s ystudy-0219-1114.ta  21%[===&gt;                ]  83.25M  2.53MB/s    eta 3m 12s study-0219-1114.tar  21%[===&gt;                ]  83.83M  2.52MB/s    eta 3m 12s tudy-0219-1114.tar.  21%[===&gt;                ]  84.45M  2.52MB/s    eta 3m 12s udy-0219-1114.tar.g  21%[===&gt;                ]  85.11M  2.54MB/s    eta 3m 12s dy-0219-1114.tar.gz  22%[===&gt;                ]  85.78M  2.54MB/s    eta 3m 12s y-0219-1114.tar.gz   22%[===&gt;                ]  86.40M  2.55MB/s    eta 3m 8s  -0219-1114.tar.gz    22%[===&gt;                ]  86.93M  2.54MB/s    eta 3m 8s  0219-1114.tar.gz     22%[===&gt;                ]  87.59M  2.52MB/s    eta 3m 8s  219-1114.tar.gz      22%[===&gt;                ]  88.12M  2.49MB/s    eta 3m 8s  19-1114.tar.gz       22%[===&gt;                ]  88.77M  2.54MB/s    eta 3m 8s  9-1114.tar.gz        23%[===&gt;                ]  89.32M  2.53MB/s    eta 3m 4s  -1114.tar.gz         23%[===&gt;                ]  89.96M  2.55MB/s    eta 3m 4s  1114.tar.gz          23%[===&gt;                ]  90.61M  2.57MB/s    eta 3m 4s  114.tar.gz           23%[===&gt;                ]  91.24M  2.61MB/s    eta 3m 4s  14.tar.gz            23%[===&gt;                ]  91.88M  2.61MB/s    eta 3m 4s  4.tar.gz             23%[===&gt;                ]  92.51M  2.62MB/s    eta 2m 59s .tar.gz              24%[===&gt;                ]  93.08M  2.63MB/s    eta 2m 59s tar.gz               24%[===&gt;                ]  93.72M  2.63MB/s    eta 2m 59s ar.gz                24%[===&gt;                ]  94.37M  2.65MB/s    eta 2m 59s r.gz                 24%[===&gt;                ]  94.83M  2.62MB/s    eta 2m 59s .gz                  24%[===&gt;                ]  95.36M  2.59MB/s    eta 2m 56s gz                   24%[===&gt;                ]  95.99M  2.60MB/s    eta 2m 56s z                    24%[===&gt;                ]  96.54M  2.58MB/s    eta 2m 56s                      25%[====&gt;               ]  97.09M  2.56MB/s    eta 2m 56s                   0  25%[====&gt;               ]  97.64M  2.55MB/s    eta 2m 56s                  02  25%[====&gt;               ]  98.19M  2.52MB/s    eta 2m 52s                 021  25%[====&gt;               ]  98.72M  2.53MB/s    eta 2m 52s                0219  25%[====&gt;               ]  99.36M  2.54MB/s    eta 2m 52s               02191  25%[====&gt;               ]  99.98M  2.56MB/s    eta 2m 52s              021919  26%[====&gt;               ] 100.62M  2.56MB/s    eta 2m 52s             0219191  26%[====&gt;               ] 101.23M  2.57MB/s    eta 2m 49s            0219191_  26%[====&gt;               ] 101.88M  2.57MB/s    eta 2m 49s           0219191_m  26%[====&gt;               ] 102.45M  2.55MB/s    eta 2m 49s          0219191_my  26%[====&gt;               ] 103.09M  2.56MB/s    eta 2m 49s         0219191_mys  26%[====&gt;               ] 103.77M  2.56MB/s    eta 2m 49s        0219191_myst  26%[====&gt;               ] 104.37M  2.55MB/s    eta 2m 45s       0219191_mystu  27%[====&gt;               ] 105.00M  2.57MB/s    eta 2m 45s      0219191_mystud  27%[====&gt;               ] 105.58M  2.56MB/s    eta 2m 45s     0219191_mystudy  27%[====&gt;               ] 106.14M  2.54MB/s    eta 2m 45s    0219191_mystudy-  27%[====&gt;               ] 106.78M  2.58MB/s    eta 2m 45s   0219191_mystudy-0  27%[====&gt;               ] 107.44M  2.60MB/s    eta 2m 41s  0219191_mystudy-02  27%[====&gt;               ] 108.06M  2.60MB/s    eta 2m 41s 0219191_mystudy-021  28%[====&gt;               ] 108.58M  2.59MB/s    eta 2m 41s 219191_mystudy-0219  28%[====&gt;               ] 109.25M  2.62MB/s    eta 2m 41s 19191_mystudy-0219-  28%[====&gt;               ] 109.79M  2.60MB/s    eta 2m 41s 9191_mystudy-0219-1  28%[====&gt;               ] 110.45M  2.63MB/s    eta 2m 38s 191_mystudy-0219-11  30%[=====&gt;              ] 116.07M  3.68MB/s    eta 2m 38s 91_mystudy-0219-111  31%[=====&gt;              ] 123.02M  5.02MB/s    eta 2m 38s 1_mystudy-0219-1114  33%[=====&gt;              ] 129.96M  6.40MB/s    eta 2m 38s _mystudy-0219-1114.  34%[=====&gt;              ] 132.49M  6.84MB/s    eta 2m 38s mystudy-0219-1114.t  34%[=====&gt;              ] 133.41M  6.89MB/s    eta 2m 2s  ystudy-0219-1114.ta  34%[=====&gt;              ] 134.31M  6.95MB/s    eta 2m 2s  study-0219-1114.tar  34%[=====&gt;              ] 135.30M  7.04MB/s    eta 2m 2s  tudy-0219-1114.tar.  35%[======&gt;             ] 136.15M  6.62MB/s    eta 2m 1s  udy-0219-1114.tar.g  35%[======&gt;             ] 136.96M  6.67MB/s    eta 2m 1s  dy-0219-1114.tar.gz  35%[======&gt;             ] 137.90M  6.73MB/s    eta 2m 1s  y-0219-1114.tar.gz   35%[======&gt;             ] 138.82M  6.80MB/s    eta 2m 1s  -0219-1114.tar.gz    35%[======&gt;             ] 139.12M  6.66MB/s    eta 1m 59s 0219-1114.tar.gz     36%[======&gt;             ] 140.02M  6.71MB/s    eta 1m 59s 219-1114.tar.gz      36%[======&gt;             ] 140.84M  6.77MB/s    eta 1m 59s 19-1114.tar.gz       36%[======&gt;             ] 140.84M  6.66MB/s    eta 1m 59s 9-1114.tar.gz        36%[======&gt;             ] 141.79M  6.74MB/s    eta 1m 59s -1114.tar.gz         36%[======&gt;             ] 142.46M  6.74MB/s    eta 1m 56s 1114.tar.gz          37%[======&gt;             ] 143.42M  6.82MB/s    eta 1m 56s 114.tar.gz           37%[======&gt;             ] 144.33M  6.89MB/s    eta 1m 56s 14.tar.gz            37%[======&gt;             ] 145.25M  6.60MB/s    eta 1m 56s 4.tar.gz             37%[======&gt;             ] 146.19M  5.40MB/s    eta 1m 56s .tar.gz              37%[======&gt;             ] 147.00M  4.04MB/s    eta 1m 52s tar.gz               38%[======&gt;             ] 147.92M  3.18MB/s    eta 1m 52s ar.gz                38%[======&gt;             ] 148.70M  3.13MB/s    eta 1m 52s r.gz                 38%[======&gt;             ] 149.65M  3.13MB/s    eta 1m 52s .gz                  38%[======&gt;             ] 150.56M  3.13MB/s    eta 1m 52s gz                   39%[======&gt;             ] 151.46M  3.11MB/s    eta 1m 49s z                    39%[======&gt;             ] 151.84M  2.99MB/s    eta 1m 49s                      39%[======&gt;             ] 152.79M  3.01MB/s    eta 1m 49s                   0  39%[======&gt;             ] 153.62M  2.99MB/s    eta 1m 49s                  02  39%[======&gt;             ] 154.57M  3.00MB/s    eta 1m 49s                 021  40%[=======&gt;            ] 155.48M  3.16MB/s    eta 1m 49s                0219  40%[=======&gt;            ] 156.34M  3.15MB/s    eta 1m 49s               02191  40%[=======&gt;            ] 157.76M  3.22MB/s    eta 1m 45s              021919  42%[=======&gt;            ] 163.64M  4.35MB/s    eta 1m 45s             0219191  44%[=======&gt;            ] 171.39M  5.64MB/s    eta 1m 45s            0219191_  46%[========&gt;           ] 179.14M  7.03MB/s    eta 1m 45s           0219191_m  46%[========&gt;           ] 179.94M  6.99MB/s    eta 84s             0219191_my  46%[========&gt;           ] 180.63M  6.95MB/s    eta 84s            0219191_mys  46%[========&gt;           ] 181.47M  6.94MB/s    eta 84s           0219191_myst  47%[========&gt;           ] 182.26M  6.94MB/s    eta 84s          0219191_mystu  47%[========&gt;           ] 183.03M  6.61MB/s    eta 83s         0219191_mystud  47%[========&gt;           ] 183.87M  6.58MB/s    eta 83s        0219191_mystudy  47%[========&gt;           ] 184.67M  6.56MB/s    eta 83s       0219191_mystudy-  47%[========&gt;           ] 185.53M  6.55MB/s    eta 83s      0219191_mystudy-0  48%[========&gt;           ] 186.35M  7.42MB/s    eta 83s     0219191_mystudy-02  48%[========&gt;           ] 187.19M  7.41MB/s    eta 81s    0219191_mystudy-021  48%[========&gt;           ] 188.01M  7.41MB/s    eta 81s    219191_mystudy-0219  48%[========&gt;           ] 188.81M  7.56MB/s    eta 81s    19191_mystudy-0219-  49%[========&gt;           ] 189.68M  7.56MB/s    eta 81s    9191_mystudy-0219-1  49%[========&gt;           ] 190.48M  7.35MB/s    eta 81s    191_mystudy-0219-11  49%[========&gt;           ] 191.22M  5.57MB/s    eta 79s    91_mystudy-0219-111  49%[========&gt;           ] 192.08M  4.49MB/s    eta 79s    1_mystudy-0219-1114  49%[========&gt;           ] 192.88M  3.70MB/s    eta 79s    _mystudy-0219-1114.  50%[=========&gt;          ] 193.70M  3.19MB/s    eta 79s    mystudy-0219-1114.t  50%[=========&gt;          ] 194.44M  3.20MB/s    eta 79s    ystudy-0219-1114.ta  50%[=========&gt;          ] 195.12M  3.17MB/s    eta 77s    study-0219-1114.tar  50%[=========&gt;          ] 195.49M  2.94MB/s    eta 77s    tudy-0219-1114.tar.  50%[=========&gt;          ] 196.25M  3.19MB/s    eta 77s    udy-0219-1114.tar.g  50%[=========&gt;          ] 197.08M  3.18MB/s    eta 77s    dy-0219-1114.tar.gz  51%[=========&gt;          ] 197.91M  3.21MB/s    eta 76s    y-0219-1114.tar.gz   51%[=========&gt;          ] 198.76M  3.21MB/s    eta 76s    -0219-1114.tar.gz    51%[=========&gt;          ] 199.79M  3.25MB/s    eta 76s    0219-1114.tar.gz     51%[=========&gt;          ] 200.62M  3.26MB/s    eta 76s    219-1114.tar.gz      52%[=========&gt;          ] 201.42M  3.25MB/s    eta 76s    19-1114.tar.gz       52%[=========&gt;          ] 202.27M  3.24MB/s    eta 73s    9-1114.tar.gz        52%[=========&gt;          ] 203.13M  3.27MB/s    eta 73s    -1114.tar.gz         52%[=========&gt;          ] 203.97M  3.26MB/s    eta 73s    1114.tar.gz          52%[=========&gt;          ] 204.75M  3.27MB/s    eta 73s    114.tar.gz           53%[=========&gt;          ] 205.56M  3.26MB/s    eta 73s    14.tar.gz            53%[=========&gt;          ] 206.41M  3.30MB/s    eta 71s    4.tar.gz             53%[=========&gt;          ] 207.25M  3.28MB/s    eta 71s    .tar.gz              53%[=========&gt;          ] 207.90M  3.27MB/s    eta 71s    tar.gz               53%[=========&gt;          ] 208.59M  3.06MB/s    eta 71s    ar.gz                54%[=========&gt;          ] 209.40M  3.08MB/s    eta 70s    r.gz                 54%[=========&gt;          ] 210.21M  3.08MB/s    eta 70s    .gz                  54%[=========&gt;          ] 211.01M  3.10MB/s    eta 70s    gz                   54%[=========&gt;          ] 211.80M  3.32MB/s    eta 70s    z                    54%[=========&gt;          ] 212.61M  3.33MB/s    eta 70s                         55%[==========&gt;         ] 213.41M  3.32MB/s    eta 68s                      0  55%[==========&gt;         ] 214.09M  3.29MB/s    eta 68s                     02  55%[==========&gt;         ] 214.70M  3.23MB/s    eta 68s                    021  55%[==========&gt;         ] 215.33M  3.14MB/s    eta 68s                   0219  55%[==========&gt;         ] 215.98M  3.11MB/s    eta 68s                  02191  55%[==========&gt;         ] 216.51M  3.06MB/s    eta 67s                 021919  56%[==========&gt;         ] 217.15M  3.01MB/s    eta 67s                0219191  56%[==========&gt;         ] 218.85M  2.85MB/s    eta 66s               0219191_  57%[==========&gt;         ] 221.38M  3.16MB/s    eta 66s              0219191_m  57%[==========&gt;         ] 223.25M  3.33MB/s    eta 66s             0219191_my  57%[==========&gt;         ] 224.09M  3.34MB/s    eta 66s            0219191_mys  58%[==========&gt;         ] 224.93M  3.34MB/s    eta 66s           0219191_myst  58%[==========&gt;         ] 225.78M  3.34MB/s    eta 62s          0219191_mystu  58%[==========&gt;         ] 226.64M  3.54MB/s    eta 62s         0219191_mystud  58%[==========&gt;         ] 227.40M  3.53MB/s    eta 62s        0219191_mystudy  59%[==========&gt;         ] 228.27M  3.54MB/s    eta 62s       0219191_mystudy-  59%[==========&gt;         ] 229.11M  3.55MB/s    eta 62s      0219191_mystudy-0  59%[==========&gt;         ] 230.00M  3.57MB/s    eta 60s     0219191_mystudy-02  59%[==========&gt;         ] 230.89M  3.58MB/s    eta 60s    0219191_mystudy-021  59%[==========&gt;         ] 231.65M  3.58MB/s    eta 60s    219191_mystudy-0219  60%[===========&gt;        ] 232.53M  3.61MB/s    eta 60s    19191_mystudy-0219-  60%[===========&gt;        ] 233.22M  3.39MB/s    eta 59s    9191_mystudy-0219-1  61%[===========&gt;        ] 239.47M  4.43MB/s    eta 59s    191_mystudy-0219-11  62%[===========&gt;        ] 240.33M  4.45MB/s    eta 59s    91_mystudy-0219-111  62%[===========&gt;        ] 241.25M  4.52MB/s    eta 59s    1_mystudy-0219-1114  62%[===========&gt;        ] 242.13M  4.56MB/s    eta 59s    _mystudy-0219-1114.  62%[===========&gt;        ] 243.00M  4.93MB/s    eta 54s    mystudy-0219-1114.t  63%[===========&gt;        ] 243.84M  4.70MB/s    eta 54s    ystudy-0219-1114.ta  63%[===========&gt;        ] 244.42M  4.26MB/s    eta 54s    study-0219-1114.tar  63%[===========&gt;        ] 245.31M  4.29MB/s    eta 54s    tudy-0219-1114.tar.  63%[===========&gt;        ] 246.21M  4.30MB/s    eta 53s    udy-0219-1114.tar.g  63%[===========&gt;        ] 247.08M  4.33MB/s    eta 53s    dy-0219-1114.tar.gz  64%[===========&gt;        ] 247.97M  4.37MB/s    eta 53s    y-0219-1114.tar.gz   64%[===========&gt;        ] 248.86M  4.39MB/s    eta 53s    -0219-1114.tar.gz    64%[===========&gt;        ] 249.73M  4.43MB/s    eta 53s    0219-1114.tar.gz     64%[===========&gt;        ] 250.62M  4.42MB/s    eta 51s    219-1114.tar.gz      64%[===========&gt;        ] 250.75M  4.15MB/s    eta 51s    19-1114.tar.gz       65%[============&gt;       ] 251.65M  4.16MB/s    eta 51s    9-1114.tar.gz        65%[============&gt;       ] 252.54M  4.18MB/s    eta 51s    -1114.tar.gz         65%[============&gt;       ] 253.27M  4.54MB/s    eta 50s    1114.tar.gz          65%[============&gt;       ] 254.18M  3.33MB/s    eta 50s    114.tar.gz           65%[============&gt;       ] 255.16M  3.38MB/s    eta 50s    14.tar.gz            66%[============&gt;       ] 255.94M  3.34MB/s    eta 50s    4.tar.gz             66%[============&gt;       ] 256.81M  3.34MB/s    eta 50s    .tar.gz              66%[============&gt;       ] 257.69M  3.34MB/s    eta 48s    tar.gz               66%[============&gt;       ] 258.56M  3.33MB/s    eta 48s    ar.gz                67%[============&gt;       ] 259.40M  3.46MB/s    eta 48s    r.gz                 67%[============&gt;       ] 260.48M  3.51MB/s    eta 48s    .gz                  67%[============&gt;       ] 261.43M  3.52MB/s    eta 48s    gz                   67%[============&gt;       ] 262.26M  3.50MB/s    eta 46s    z                    68%[============&gt;       ] 263.13M  3.50MB/s    eta 46s                         68%[============&gt;       ] 263.53M  3.25MB/s    eta 46s                      0  68%[============&gt;       ] 264.39M  3.26MB/s    eta 46s                     02  68%[============&gt;       ] 265.28M  3.26MB/s    eta 45s                    021  68%[============&gt;       ] 266.24M  3.29MB/s    eta 45s                   0219  69%[============&gt;       ] 267.20M  3.30MB/s    eta 45s                  02191  69%[============&gt;       ] 268.19M  3.57MB/s    eta 45s                 021919  69%[============&gt;       ] 269.07M  3.56MB/s    eta 45s                0219191  69%[============&gt;       ] 269.41M  3.27MB/s    eta 43s               0219191_  69%[============&gt;       ] 269.43M  3.14MB/s    eta 43s              0219191_m  69%[============&gt;       ] 270.15M  3.10MB/s    eta 43s             0219191_my  70%[=============&gt;      ] 270.93M  3.06MB/s    eta 43s            0219191_mys  70%[=============&gt;      ] 271.75M  3.07MB/s    eta 43s           0219191_myst  70%[=============&gt;      ] 272.63M  3.07MB/s    eta 42s          0219191_mystu  70%[=============&gt;      ] 273.53M  3.07MB/s    eta 42s         0219191_mystud  70%[=============&gt;      ] 273.98M  2.93MB/s    eta 42s        0219191_mystudy  70%[=============&gt;      ] 274.00M  2.79MB/s    eta 42s       0219191_mystudy-  71%[=============&gt;      ] 274.89M  2.75MB/s    eta 41s      0219191_mystudy-0  71%[=============&gt;      ] 275.73M  2.73MB/s    eta 41s     0219191_mystudy-02  71%[=============&gt;      ] 276.59M  2.74MB/s    eta 41s    0219191_mystudy-021  71%[=============&gt;      ] 277.43M  2.74MB/s    eta 41s    219191_mystudy-0219  71%[=============&gt;      ] 277.77M  2.68MB/s    eta 40s    19191_mystudy-0219-  72%[=============&gt;      ] 278.64M  2.68MB/s    eta 40s    9191_mystudy-0219-1  72%[=============&gt;      ] 279.45M  2.66MB/s    eta 40s    191_mystudy-0219-11  72%[=============&gt;      ] 280.28M  2.64MB/s    eta 40s    91_mystudy-0219-111  72%[=============&gt;      ] 281.12M  2.62MB/s    eta 40s    1_mystudy-0219-1114  72%[=============&gt;      ] 281.98M  2.60MB/s    eta 39s    _mystudy-0219-1114.  73%[=============&gt;      ] 282.83M  2.60MB/s    eta 39s    mystudy-0219-1114.t  73%[=============&gt;      ] 283.83M  2.86MB/s    eta 39s    ystudy-0219-1114.ta  73%[=============&gt;      ] 283.92M  2.77MB/s    eta 39s    study-0219-1114.tar  73%[=============&gt;      ] 284.78M  2.81MB/s    eta 38s    tudy-0219-1114.tar.  73%[=============&gt;      ] 285.62M  2.82MB/s    eta 38s    udy-0219-1114.tar.g  74%[=============&gt;      ] 286.34M  2.80MB/s    eta 38s    dy-0219-1114.tar.gz  74%[=============&gt;      ] 287.18M  2.79MB/s    eta 38s    y-0219-1114.tar.gz   74%[=============&gt;      ] 287.96M  2.77MB/s    eta 38s    -0219-1114.tar.gz    74%[=============&gt;      ] 288.80M  2.90MB/s    eta 36s    0219-1114.tar.gz     74%[=============&gt;      ] 289.65M  3.05MB/s    eta 36s    219-1114.tar.gz      75%[==============&gt;     ] 290.54M  3.05MB/s    eta 36s    19-1114.tar.gz       75%[==============&gt;     ] 291.38M  3.04MB/s    eta 36s    9-1114.tar.gz        75%[==============&gt;     ] 292.25M  3.04MB/s    eta 36s    -1114.tar.gz         75%[==============&gt;     ] 293.16M  3.05MB/s    eta 34s    1114.tar.gz          76%[==============&gt;     ] 294.31M  3.40MB/s    eta 34s    114.tar.gz           76%[==============&gt;     ] 294.95M  3.36MB/s    eta 34s    14.tar.gz            76%[==============&gt;     ] 295.40M  3.29MB/s    eta 34s    4.tar.gz             76%[==============&gt;     ] 295.63M  3.00MB/s    eta 33s    .tar.gz              76%[==============&gt;     ] 296.24M  2.95MB/s    eta 33s    tar.gz               76%[==============&gt;     ] 296.87M  2.91MB/s    eta 33s    ar.gz                76%[==============&gt;     ] 297.46M  2.86MB/s    eta 33s    r.gz                 77%[==============&gt;     ] 298.25M  2.82MB/s    eta 33s    .gz                  77%[==============&gt;     ] 298.99M  3.05MB/s    eta 32s    gz                   77%[==============&gt;     ] 299.51M  2.98MB/s    eta 32s    z                    77%[==============&gt;     ] 300.23M  2.96MB/s    eta 32s                         77%[==============&gt;     ] 300.76M  2.92MB/s    eta 32s                      0  77%[==============&gt;     ] 301.32M  2.86MB/s    eta 32s                     02  78%[==============&gt;     ] 302.00M  2.84MB/s    eta 31s                    021  78%[==============&gt;     ] 302.55M  2.78MB/s    eta 31s                   0219  78%[==============&gt;     ] 303.31M  2.77MB/s    eta 31s                  02191  78%[==============&gt;     ] 303.94M  2.71MB/s    eta 31s                 021919  78%[==============&gt;     ] 304.53M  2.67MB/s    eta 31s                0219191  78%[==============&gt;     ] 304.94M  2.58MB/s    eta 30s               0219191_  78%[==============&gt;     ] 305.58M  2.52MB/s    eta 30s              0219191_m  79%[==============&gt;     ] 306.11M  2.40MB/s    eta 30s             0219191_my  79%[==============&gt;     ] 306.68M  2.39MB/s    eta 30s            0219191_mys  79%[==============&gt;     ] 307.26M  2.41MB/s    eta 30s           0219191_myst  79%[==============&gt;     ] 307.79M  2.60MB/s    eta 29s          0219191_mystu  79%[==============&gt;     ] 308.38M  2.59MB/s    eta 29s         0219191_mystud  79%[==============&gt;     ] 309.07M  2.60MB/s    eta 29s        0219191_mystudy  80%[===============&gt;    ] 309.57M  2.58MB/s    eta 29s       0219191_mystudy-  80%[===============&gt;    ] 310.18M  2.54MB/s    eta 29s      0219191_mystudy-0  80%[===============&gt;    ] 310.88M  2.54MB/s    eta 28s     0219191_mystudy-02  80%[===============&gt;    ] 311.41M  2.54MB/s    eta 28s    0219191_mystudy-021  80%[===============&gt;    ] 312.11M  2.54MB/s    eta 28s    219191_mystudy-0219  80%[===============&gt;    ] 312.70M  2.55MB/s    eta 28s    19191_mystudy-0219-  81%[===============&gt;    ] 313.47M  2.59MB/s    eta 28s    9191_mystudy-0219-1  81%[===============&gt;    ] 314.08M  2.58MB/s    eta 27s    191_mystudy-0219-11  81%[===============&gt;    ] 314.20M  2.49MB/s    eta 27s    91_mystudy-0219-111  81%[===============&gt;    ] 314.21M  2.34MB/s    eta 27s    1_mystudy-0219-1114  81%[===============&gt;    ] 314.77M  2.32MB/s    eta 27s    _mystudy-0219-1114.  81%[===============&gt;    ] 315.19M  2.27MB/s    eta 27s    mystudy-0219-1114.t  81%[===============&gt;    ] 315.81M  2.31MB/s    eta 26s    ystudy-0219-1114.ta  81%[===============&gt;    ] 316.46M  2.31MB/s    eta 26s    study-0219-1114.tar  81%[===============&gt;    ] 317.02M  2.32MB/s    eta 26s    tudy-0219-1114.tar.  82%[===============&gt;    ] 317.63M  2.32MB/s    eta 26s    udy-0219-1114.tar.g  82%[===============&gt;    ] 318.08M  2.30MB/s    eta 26s    dy-0219-1114.tar.gz  82%[===============&gt;    ] 318.66M  2.32MB/s    eta 25s    y-0219-1114.tar.gz   82%[===============&gt;    ] 319.28M  2.33MB/s    eta 25s    -0219-1114.tar.gz    82%[===============&gt;    ] 319.81M  2.30MB/s    eta 25s    0219-1114.tar.gz     82%[===============&gt;    ] 320.40M  2.32MB/s    eta 25s    219-1114.tar.gz      82%[===============&gt;    ] 320.84M  2.16MB/s    eta 24s    19-1114.tar.gz       83%[===============&gt;    ] 321.51M  2.15MB/s    eta 24s    9-1114.tar.gz        83%[===============&gt;    ] 322.18M  2.17MB/s    eta 24s    -1114.tar.gz         83%[===============&gt;    ] 322.78M  2.15MB/s    eta 24s    1114.tar.gz          83%[===============&gt;    ] 323.40M  2.16MB/s    eta 24s    114.tar.gz           83%[===============&gt;    ] 323.96M  2.12MB/s    eta 23s    14.tar.gz            83%[===============&gt;    ] 324.55M  2.11MB/s    eta 23s    4.tar.gz             84%[===============&gt;    ] 325.08M  2.19MB/s    eta 23s    .tar.gz              84%[===============&gt;    ] 325.65M  2.29MB/s    eta 23s    tar.gz               84%[===============&gt;    ] 326.46M  2.35MB/s    eta 23s    ar.gz                84%[===============&gt;    ] 327.14M  2.41MB/s    eta 22s    r.gz                 84%[===============&gt;    ] 327.95M  2.46MB/s    eta 22s    .gz                  84%[===============&gt;    ] 328.51M  2.44MB/s    eta 22s    gz                   85%[================&gt;   ] 329.23M  2.46MB/s    eta 22s    z                    85%[================&gt;   ] 329.86M  2.46MB/s    eta 22s                         85%[================&gt;   ] 330.28M  2.43MB/s    eta 21s                      0  85%[================&gt;   ] 330.30M  2.31MB/s    eta 21s                     02  85%[================&gt;   ] 330.83M  2.31MB/s    eta 21s                    021  85%[================&gt;   ] 331.49M  2.32MB/s    eta 21s                   0219  85%[================&gt;   ] 332.35M  2.52MB/s    eta 21s                  02191  86%[================&gt;   ] 332.87M  2.47MB/s    eta 20s                 021919  86%[================&gt;   ] 333.49M  2.48MB/s    eta 20s                0219191  86%[================&gt;   ] 334.12M  2.48MB/s    eta 20s               0219191_  86%[================&gt;   ] 334.61M  2.47MB/s    eta 20s              0219191_m  86%[================&gt;   ] 335.19M  2.47MB/s    eta 20s             0219191_my  86%[================&gt;   ] 335.83M  2.49MB/s    eta 19s            0219191_mys  86%[================&gt;   ] 336.55M  2.53MB/s    eta 19s           0219191_myst  87%[================&gt;   ] 336.95M  2.44MB/s    eta 19s          0219191_mystu  87%[================&gt;   ] 337.58M  2.42MB/s    eta 19s         0219191_mystud  87%[================&gt;   ] 338.11M  2.36MB/s    eta 19s        0219191_mystudy  87%[================&gt;   ] 338.72M  2.37MB/s    eta 18s       0219191_mystudy-  87%[================&gt;   ] 339.32M  2.31MB/s    eta 18s      0219191_mystudy-0  87%[================&gt;   ] 340.04M  2.38MB/s    eta 18s     0219191_mystudy-02  88%[================&gt;   ] 340.74M  2.38MB/s    eta 18s    0219191_mystudy-021  88%[================&gt;   ] 341.20M  2.44MB/s    eta 18s    219191_mystudy-0219  88%[================&gt;   ] 341.80M  2.56MB/s    eta 17s    19191_mystudy-0219-  88%[================&gt;   ] 342.33M  2.56MB/s    eta 17s    9191_mystudy-0219-1  88%[================&gt;   ] 342.99M  2.56MB/s    eta 17s    191_mystudy-0219-11  88%[================&gt;   ] 343.69M  2.58MB/s    eta 17s    91_mystudy-0219-111  89%[================&gt;   ] 344.36M  2.54MB/s    eta 17s    1_mystudy-0219-1114  89%[================&gt;   ] 344.88M  2.58MB/s    eta 16s    _mystudy-0219-1114.  89%[================&gt;   ] 345.42M  2.56MB/s    eta 16s    mystudy-0219-1114.t  89%[================&gt;   ] 346.09M  2.57MB/s    eta 16s    ystudy-0219-1114.ta  89%[================&gt;   ] 346.75M  2.60MB/s    eta 16s    study-0219-1114.tar  89%[================&gt;   ] 347.45M  2.63MB/s    eta 16s    tudy-0219-1114.tar.  89%[================&gt;   ] 348.01M  2.61MB/s    eta 14s    udy-0219-1114.tar.g  90%[=================&gt;  ] 348.64M  2.59MB/s    eta 14s    dy-0219-1114.tar.gz  90%[=================&gt;  ] 349.27M  2.62MB/s    eta 14s    y-0219-1114.tar.gz   90%[=================&gt;  ] 349.91M  2.63MB/s    eta 14s    -0219-1114.tar.gz    90%[=================&gt;  ] 350.55M  2.65MB/s    eta 14s    0219-1114.tar.gz     90%[=================&gt;  ] 351.15M  2.65MB/s    eta 13s    219-1114.tar.gz      90%[=================&gt;  ] 351.70M  2.64MB/s    eta 13s    19-1114.tar.gz       91%[=================&gt;  ] 352.24M  2.61MB/s    eta 13s    9-1114.tar.gz        91%[=================&gt;  ] 352.98M  2.62MB/s    eta 13s    -1114.tar.gz         91%[=================&gt;  ] 353.62M  2.65MB/s    eta 13s    1114.tar.gz          91%[=================&gt;  ] 354.19M  2.63MB/s    eta 12s    114.tar.gz           91%[=================&gt;  ] 354.86M  2.66MB/s    eta 12s    14.tar.gz            91%[=================&gt;  ] 355.53M  2.66MB/s    eta 12s    4.tar.gz             92%[=================&gt;  ] 356.17M  2.65MB/s    eta 12s    .tar.gz              92%[=================&gt;  ] 356.90M  2.67MB/s    eta 12s    tar.gz               92%[=================&gt;  ] 357.43M  2.67MB/s    eta 11s    ar.gz                92%[=================&gt;  ] 358.05M  2.68MB/s    eta 11s    r.gz                 92%[=================&gt;  ] 358.61M  2.66MB/s    eta 11s    .gz                  92%[=================&gt;  ] 359.25M  2.66MB/s    eta 11s    gz                   93%[=================&gt;  ] 359.86M  2.64MB/s    eta 11s    z                    93%[=================&gt;  ] 360.41M  2.64MB/s    eta 10s                         93%[=================&gt;  ] 360.98M  2.62MB/s    eta 10s                      0  93%[=================&gt;  ] 361.59M  2.64MB/s    eta 10s                     02  93%[=================&gt;  ] 362.08M  2.60MB/s    eta 10s                    021  93%[=================&gt;  ] 362.67M  2.59MB/s    eta 10s                   0219  93%[=================&gt;  ] 363.21M  2.58MB/s    eta 9s                   02191  94%[=================&gt;  ] 363.76M  2.58MB/s    eta 9s                  021919  94%[=================&gt;  ] 364.42M  2.61MB/s    eta 9s                 0219191  94%[=================&gt;  ] 364.82M  2.52MB/s    eta 9s                0219191_  94%[=================&gt;  ] 365.37M  2.51MB/s    eta 9s               0219191_m  94%[=================&gt;  ] 366.00M  2.53MB/s    eta 8s              0219191_my  94%[=================&gt;  ] 366.59M  2.51MB/s    eta 8s             0219191_mys  94%[=================&gt;  ] 367.11M  2.48MB/s    eta 8s            0219191_myst  95%[==================&gt; ] 367.75M  2.48MB/s    eta 8s           0219191_mystu  95%[==================&gt; ] 368.34M  2.45MB/s    eta 8s          0219191_mystud  95%[==================&gt; ] 369.00M  2.48MB/s    eta 7s         0219191_mystudy  95%[==================&gt; ] 369.76M  2.51MB/s    eta 7s        0219191_mystudy-  96%[==================&gt; ] 372.65M  3.03MB/s    eta 7s       0219191_mystudy-0  97%[==================&gt; ] 378.97M  4.25MB/s    eta 7s      0219191_mystudy-02  99%[==================&gt; ] 384.58M  5.37MB/s    eta 7s     0219191_mystudy-021 100%[===================&gt;] 386.88M  5.96MB/s    in 2m 19s  
 
-2026-02-01 14:06:53 (3.19 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
+2026-02-01 14:26:41 (2.79 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
 </code></pre>
 </div>
 </div>
@@ -315,7 +300,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <section id="prepare-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h3>
 <p>Now we need to extract the downloaded archive:</p>
-<div id="6f793170" class="cell" data-execution_count="3">
+<div id="2bc3fb7f" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1"></a><span class="fu">tar</span> <span class="at">-xvzf</span> 0219191_mystudy-0219-1114.tar.gz</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
@@ -2995,7 +2980,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 </div>
 </div>
 <p>Let’s navigate into the directory and see what’s inside the dataset:</p>
-<div id="fc47ad23" class="cell" data-execution_count="4">
+<div id="dcb6bd47" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 0219191_mystudy-0219-1114</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
@@ -5676,14 +5661,14 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 </div>
 </div>
 <p>We need to decompress all gzipped DICOM files in the <code>dcm</code> directory:</p>
-<div id="0bb09e93" class="cell" data-execution_count="5">
+<div id="16ad221f" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">gunzip</span> 0219191_mystudy-0219-1114/dcm/<span class="pp">*</span>.dcm.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Finally, we can run <code>heudiconv</code>! The following command converts DICOM files to BIDS format using the ReproIn heuristic for subject 01, session 01</p>
 </section>
 <section id="run-heudiconv" class="level3">
 <h3 class="anchored" data-anchor-id="run-heudiconv">Run <code>heudiconv</code></h3>
-<div id="aaa44ea5" class="cell" data-execution_count="6">
+<div id="f3ab5f7a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">heudiconv</span> <span class="at">-f</span> reproin <span class="at">--subject</span> 01 <span class="at">--ses</span> 01 <span class="at">--bids</span> <span class="at">--files</span> 0219191_mystudy-0219-1114/dcm <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>WARNING: Could not check for version updates: Connection to server could not be made
@@ -5702,423 +5687,423 @@ WARNING: Detected 3 duplicated run(s) for template {bids_subject_session_dir}/an
 WARNING: Detected 2 duplicated run(s) for template {bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-sound_run-01_bold: ['6-func_ses-01_task-sound_run-01', '7-func_ses-01_task-sound_run-01']
 INFO: Doing conversion using dcm2niix
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:07:14,928 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixk1lmxq5z/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixk1lmxq5z/convert".
-260201-14:07:14,932 nipype.workflow INFO:
+260201-14:27:03,520 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixrafen93d/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixrafen93d/convert".
+260201-14:27:03,524 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:07:15,40 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.040360:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:07:15.040360:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:07:15,40 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.040360:Found 3 DICOM file(s)
-INFO: stdout 2026-02-01T14:07:15.040360:Found 3 DICOM file(s)
-260201-14:07:15,40 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.040360:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-INFO: stdout 2026-02-01T14:07:15.040360:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-260201-14:07:15,40 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.040360:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00001 (162x162x1x1)
-INFO: stdout 2026-02-01T14:07:15.040360:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00001 (162x162x1x1)
-260201-14:07:15,46 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.046236:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00002 (162x162x1x1)
-INFO: stdout 2026-02-01T14:07:15.046236:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00002 (162x162x1x1)
-260201-14:07:15,49 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.049217:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00003 (162x162x1x1)
-INFO: stdout 2026-02-01T14:07:15.049217:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv007_i00003 (162x162x1x1)
-260201-14:07:15,52 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.052765:Conversion required 0.016976 seconds (0.016636 for core code).
-INFO: stdout 2026-02-01T14:07:15.052765:Conversion required 0.016976 seconds (0.016636 for core code).
-260201-14:07:15,76 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.074593s.
-INFO: [Node] Finished "convert", elapsed time 0.074593s.
+260201-14:27:03,643 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.642991:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:27:03.642991:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:27:03,643 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.642991:Found 3 DICOM file(s)
+INFO: stdout 2026-02-01T14:27:03.642991:Found 3 DICOM file(s)
+260201-14:27:03,643 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.642991:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+INFO: stdout 2026-02-01T14:27:03.642991:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+260201-14:27:03,643 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.642991:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00001 (162x162x1x1)
+INFO: stdout 2026-02-01T14:27:03.642991:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00001 (162x162x1x1)
+260201-14:27:03,648 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.648399:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00002 (162x162x1x1)
+INFO: stdout 2026-02-01T14:27:03.648399:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00002 (162x162x1x1)
+260201-14:27:03,653 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.653960:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00003 (162x162x1x1)
+INFO: stdout 2026-02-01T14:27:03.653960:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv411_i00003 (162x162x1x1)
+260201-14:27:03,657 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.657924:Conversion required 0.020774 seconds (0.017591 for core code).
+INFO: stdout 2026-02-01T14:27:03.657924:Conversion required 0.020774 seconds (0.017591 for core code).
+260201-14:27:03,684 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.0827s.
+INFO: [Node] Finished "convert", elapsed time 0.0827s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w (192 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:07:15,141 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixuz03k_7j/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixuz03k_7j/convert".
-260201-14:07:15,180 nipype.workflow INFO:
+260201-14:27:03,750 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixw59sspkn/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixw59sspkn/convert".
+260201-14:27:03,790 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:07:15,276 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.276365:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:07:15.276365:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:07:15,276 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.276365:Found 192 DICOM file(s)
-INFO: stdout 2026-02-01T14:07:15.276365:Found 192 DICOM file(s)
-260201-14:07:15,276 nipype.interface INFO:
-     stdout 2026-02-01T14:07:15.276365:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv039 (256x256x192x1)
-INFO: stdout 2026-02-01T14:07:15.276365:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv039 (256x256x192x1)
-260201-14:07:17,617 nipype.interface INFO:
-     stdout 2026-02-01T14:07:17.617593:Conversion required 2.401531 seconds (2.398590 for core code).
-INFO: stdout 2026-02-01T14:07:17.617593:Conversion required 2.401531 seconds (2.398590 for core code).
-260201-14:07:17,640 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 2.459668s.
-INFO: [Node] Finished "convert", elapsed time 2.459668s.
-260201-14:07:23,248 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetarx0bmjeh/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetarx0bmjeh/embedder".
-260201-14:07:23,259 nipype.workflow INFO:
+260201-14:27:03,895 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.895776:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:27:03.895776:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:27:03,896 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.895776:Found 192 DICOM file(s)
+INFO: stdout 2026-02-01T14:27:03.895776:Found 192 DICOM file(s)
+260201-14:27:03,896 nipype.interface INFO:
+     stdout 2026-02-01T14:27:03.895776:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv765 (256x256x192x1)
+INFO: stdout 2026-02-01T14:27:03.895776:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv765 (256x256x192x1)
+260201-14:27:06,216 nipype.interface INFO:
+     stdout 2026-02-01T14:27:06.216037:Conversion required 2.388600 seconds (2.387647 for core code).
+INFO: stdout 2026-02-01T14:27:06.216037:Conversion required 2.388600 seconds (2.387647 for core code).
+260201-14:27:06,249 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 2.458618s.
+INFO: [Node] Finished "convert", elapsed time 2.458618s.
+260201-14:27:11,891 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta42h24y9f/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta42h24y9f/embedder".
+260201-14:27:11,903 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:07:26,409 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.149393s.
-INFO: [Node] Finished "embedder", elapsed time 3.149393s.
+260201-14:27:15,126 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.221911s.
+INFO: [Node] Finished "embedder", elapsed time 3.221911s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold (179 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:07:26,435 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixji_40cum/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixji_40cum/convert".
-260201-14:07:26,471 nipype.workflow INFO:
+260201-14:27:15,152 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix17q96aih/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix17q96aih/convert".
+260201-14:27:15,189 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:07:26,571 nipype.interface INFO:
-     stdout 2026-02-01T14:07:26.571373:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:07:26.571373:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:07:26,571 nipype.interface INFO:
-     stdout 2026-02-01T14:07:26.571373:Found 179 DICOM file(s)
-INFO: stdout 2026-02-01T14:07:26.571373:Found 179 DICOM file(s)
-260201-14:07:26,571 nipype.interface INFO:
-     stdout 2026-02-01T14:07:26.571373:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv596 (64x64x27x179)
-INFO: stdout 2026-02-01T14:07:26.571373:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv596 (64x64x27x179)
-260201-14:07:29,580 nipype.interface INFO:
-     stdout 2026-02-01T14:07:29.580359:Conversion required 3.073056 seconds (3.071757 for core code).
-INFO: stdout 2026-02-01T14:07:29.580359:Conversion required 3.073056 seconds (3.071757 for core code).
-260201-14:07:29,605 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.133496s.
-INFO: [Node] Finished "convert", elapsed time 3.133496s.
-260201-14:07:35,821 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta0oos8h7r/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta0oos8h7r/embedder".
-260201-14:07:35,833 nipype.workflow INFO:
+260201-14:27:15,297 nipype.interface INFO:
+     stdout 2026-02-01T14:27:15.297151:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:27:15.297151:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:27:15,297 nipype.interface INFO:
+     stdout 2026-02-01T14:27:15.297151:Found 179 DICOM file(s)
+INFO: stdout 2026-02-01T14:27:15.297151:Found 179 DICOM file(s)
+260201-14:27:15,297 nipype.interface INFO:
+     stdout 2026-02-01T14:27:15.297151:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv103 (64x64x27x179)
+INFO: stdout 2026-02-01T14:27:15.297151:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv103 (64x64x27x179)
+260201-14:27:18,305 nipype.interface INFO:
+     stdout 2026-02-01T14:27:18.305267:Conversion required 3.078654 seconds (3.078154 for core code).
+INFO: stdout 2026-02-01T14:27:18.305267:Conversion required 3.078654 seconds (3.078154 for core code).
+260201-14:27:18,334 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.144625s.
+INFO: [Node] Finished "convert", elapsed time 3.144625s.
+260201-14:27:24,613 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetav32z4hzi/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetav32z4hzi/embedder".
+260201-14:27:24,625 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:07:39,783 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.949354s.
-INFO: [Node] Finished "embedder", elapsed time 3.949354s.
+260201-14:27:28,623 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.996966s.
+INFO: [Node] Finished "embedder", elapsed time 3.996966s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:07:39,816 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixhzi60rsd/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhzi60rsd/convert".
-260201-14:07:39,923 nipype.workflow INFO:
+260201-14:27:28,656 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix_licbyv_/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix_licbyv_/convert".
+260201-14:27:28,753 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:07:40,122 nipype.interface INFO:
-     stdout 2026-02-01T14:07:40.122284:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:07:40.122284:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:07:40,122 nipype.interface INFO:
-     stdout 2026-02-01T14:07:40.122284:Found 485 DICOM file(s)
-INFO: stdout 2026-02-01T14:07:40.122284:Found 485 DICOM file(s)
-260201-14:07:40,122 nipype.interface INFO:
-     stdout 2026-02-01T14:07:40.122284:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv648 (64x64x27x485)
-INFO: stdout 2026-02-01T14:07:40.122284:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv648 (64x64x27x485)
-260201-14:07:48,256 nipype.interface INFO:
-     stdout 2026-02-01T14:07:48.256417:Conversion required 8.296367 seconds (8.295346 for core code).
-INFO: stdout 2026-02-01T14:07:48.256417:Conversion required 8.296367 seconds (8.295346 for core code).
-260201-14:07:48,282 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.357512s.
-INFO: [Node] Finished "convert", elapsed time 8.357512s.
-260201-14:08:05,270 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetaf4dvd1_u/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaf4dvd1_u/embedder".
-260201-14:08:05,294 nipype.workflow INFO:
+260201-14:27:28,956 nipype.interface INFO:
+     stdout 2026-02-01T14:27:28.956770:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:27:28.956770:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:27:28,957 nipype.interface INFO:
+     stdout 2026-02-01T14:27:28.956770:Found 485 DICOM file(s)
+INFO: stdout 2026-02-01T14:27:28.956770:Found 485 DICOM file(s)
+260201-14:27:28,957 nipype.interface INFO:
+     stdout 2026-02-01T14:27:28.956770:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv021 (64x64x27x485)
+INFO: stdout 2026-02-01T14:27:28.956770:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv021 (64x64x27x485)
+260201-14:27:37,144 nipype.interface INFO:
+     stdout 2026-02-01T14:27:37.144120:Conversion required 8.353636 seconds (8.352389 for core code).
+INFO: stdout 2026-02-01T14:27:37.144120:Conversion required 8.353636 seconds (8.352389 for core code).
+260201-14:27:37,173 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.419475s.
+INFO: [Node] Finished "convert", elapsed time 8.419475s.
+260201-14:27:54,145 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetahsxmz0yq/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahsxmz0yq/embedder".
+260201-14:27:54,171 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:08:16,501 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 11.206333s.
-INFO: [Node] Finished "embedder", elapsed time 11.206333s.
+260201-14:28:05,440 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 11.268726000000001s.
+INFO: [Node] Finished "embedder", elapsed time 11.268726000000001s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:08:16,564 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixbsn067qi/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixbsn067qi/convert".
-260201-14:08:16,662 nipype.workflow INFO:
+260201-14:28:05,503 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix08nx93pz/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix08nx93pz/convert".
+260201-14:28:05,600 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:08:16,885 nipype.interface INFO:
-     stdout 2026-02-01T14:08:16.885677:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:08:16.885677:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:08:16,885 nipype.interface INFO:
-     stdout 2026-02-01T14:08:16.885677:Found 485 DICOM file(s)
-INFO: stdout 2026-02-01T14:08:16.885677:Found 485 DICOM file(s)
-260201-14:08:16,885 nipype.interface INFO:
-     stdout 2026-02-01T14:08:16.885677:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv407 (64x64x27x485)
-INFO: stdout 2026-02-01T14:08:16.885677:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv407 (64x64x27x485)
-260201-14:08:25,241 nipype.interface INFO:
-     stdout 2026-02-01T14:08:25.241429:Conversion required 8.532928 seconds (8.526700 for core code).
-INFO: stdout 2026-02-01T14:08:25.241429:Conversion required 8.532928 seconds (8.526700 for core code).
-260201-14:08:25,269 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.605866s.
-INFO: [Node] Finished "convert", elapsed time 8.605866s.
-260201-14:08:41,937 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetax7n7vo8r/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetax7n7vo8r/embedder".
-260201-14:08:41,961 nipype.workflow INFO:
+260201-14:28:05,841 nipype.interface INFO:
+     stdout 2026-02-01T14:28:05.841933:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:28:05.841933:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:28:05,842 nipype.interface INFO:
+     stdout 2026-02-01T14:28:05.841933:Found 485 DICOM file(s)
+INFO: stdout 2026-02-01T14:28:05.841933:Found 485 DICOM file(s)
+260201-14:28:05,842 nipype.interface INFO:
+     stdout 2026-02-01T14:28:05.841933:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv005 (64x64x27x485)
+INFO: stdout 2026-02-01T14:28:05.841933:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv005 (64x64x27x485)
+260201-14:28:14,114 nipype.interface INFO:
+     stdout 2026-02-01T14:28:14.114499:Conversion required 8.472449 seconds (8.470529 for core code).
+INFO: stdout 2026-02-01T14:28:14.114499:Conversion required 8.472449 seconds (8.470529 for core code).
+260201-14:28:14,158 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.556777s.
+INFO: [Node] Finished "convert", elapsed time 8.556777s.
+260201-14:28:30,987 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetadl2l1wop/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetadl2l1wop/embedder".
+260201-14:28:31,12 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:08:52,825 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.862871s.
-INFO: [Node] Finished "embedder", elapsed time 10.862871s.
+260201-14:28:42,166 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 11.153564s.
+INFO: [Node] Finished "embedder", elapsed time 11.153564s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:08:52,886 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixzf452f0d/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixzf452f0d/convert".
-260201-14:08:52,983 nipype.workflow INFO:
+260201-14:28:42,230 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixh5vr9z6k/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixh5vr9z6k/convert".
+260201-14:28:42,327 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:08:53,197 nipype.interface INFO:
-     stdout 2026-02-01T14:08:53.197119:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:08:53.197119:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:08:53,197 nipype.interface INFO:
-     stdout 2026-02-01T14:08:53.197119:Found 485 DICOM file(s)
-INFO: stdout 2026-02-01T14:08:53.197119:Found 485 DICOM file(s)
-260201-14:08:53,197 nipype.interface INFO:
-     stdout 2026-02-01T14:08:53.197119:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv625 (64x64x27x485)
-INFO: stdout 2026-02-01T14:08:53.197119:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv625 (64x64x27x485)
-260201-14:09:01,397 nipype.interface INFO:
-     stdout 2026-02-01T14:09:01.397557:Conversion required 8.377945 seconds (8.377031 for core code).
-INFO: stdout 2026-02-01T14:09:01.397557:Conversion required 8.377945 seconds (8.377031 for core code).
-260201-14:09:01,427 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.4432s.
-INFO: [Node] Finished "convert", elapsed time 8.4432s.
-260201-14:09:17,940 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta9qgc8aiu/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta9qgc8aiu/embedder".
-260201-14:09:17,965 nipype.workflow INFO:
+260201-14:28:42,534 nipype.interface INFO:
+     stdout 2026-02-01T14:28:42.534351:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:28:42.534351:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:28:42,534 nipype.interface INFO:
+     stdout 2026-02-01T14:28:42.534351:Found 485 DICOM file(s)
+INFO: stdout 2026-02-01T14:28:42.534351:Found 485 DICOM file(s)
+260201-14:28:42,534 nipype.interface INFO:
+     stdout 2026-02-01T14:28:42.534351:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv351 (64x64x27x485)
+INFO: stdout 2026-02-01T14:28:42.534351:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv351 (64x64x27x485)
+260201-14:28:50,740 nipype.interface INFO:
+     stdout 2026-02-01T14:28:50.740275:Conversion required 8.375956 seconds (8.374811 for core code).
+INFO: stdout 2026-02-01T14:28:50.740275:Conversion required 8.375956 seconds (8.374811 for core code).
+260201-14:28:50,778 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.450329s.
+INFO: [Node] Finished "convert", elapsed time 8.450329s.
+260201-14:29:07,201 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetag4qsokwc/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetag4qsokwc/embedder".
+260201-14:29:07,226 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:09:28,913 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.947281s.
-INFO: [Node] Finished "embedder", elapsed time 10.947281s.
+260201-14:29:18,317 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 11.090465s.
+INFO: [Node] Finished "embedder", elapsed time 11.090465s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:09:28,973 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix2td9f6bm/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix2td9f6bm/convert".
-260201-14:09:29,70 nipype.workflow INFO:
+260201-14:29:18,380 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix634myicy/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix634myicy/convert".
+260201-14:29:18,478 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:09:29,272 nipype.interface INFO:
-     stdout 2026-02-01T14:09:29.272173:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:09:29.272173:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:09:29,272 nipype.interface INFO:
-     stdout 2026-02-01T14:09:29.272173:Found 485 DICOM file(s)
-INFO: stdout 2026-02-01T14:09:29.272173:Found 485 DICOM file(s)
-260201-14:09:29,272 nipype.interface INFO:
-     stdout 2026-02-01T14:09:29.272173:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv125 (64x64x27x485)
-INFO: stdout 2026-02-01T14:09:29.272173:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv125 (64x64x27x485)
-260201-14:09:37,464 nipype.interface INFO:
-     stdout 2026-02-01T14:09:37.464521:Conversion required 8.357516 seconds (8.355554 for core code).
-INFO: stdout 2026-02-01T14:09:37.464521:Conversion required 8.357516 seconds (8.355554 for core code).
-260201-14:09:37,492 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.421153s.
-INFO: [Node] Finished "convert", elapsed time 8.421153s.
-260201-14:09:55,104 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta6_o2hlh1/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta6_o2hlh1/embedder".
-260201-14:09:55,129 nipype.workflow INFO:
+260201-14:29:18,686 nipype.interface INFO:
+     stdout 2026-02-01T14:29:18.686419:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:29:18.686419:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:29:18,686 nipype.interface INFO:
+     stdout 2026-02-01T14:29:18.686419:Found 485 DICOM file(s)
+INFO: stdout 2026-02-01T14:29:18.686419:Found 485 DICOM file(s)
+260201-14:29:18,686 nipype.interface INFO:
+     stdout 2026-02-01T14:29:18.686419:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv515 (64x64x27x485)
+INFO: stdout 2026-02-01T14:29:18.686419:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv515 (64x64x27x485)
+260201-14:29:26,913 nipype.interface INFO:
+     stdout 2026-02-01T14:29:26.913727:Conversion required 8.398386 seconds (8.396872 for core code).
+INFO: stdout 2026-02-01T14:29:26.913727:Conversion required 8.398386 seconds (8.396872 for core code).
+260201-14:29:26,951 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.472282s.
+INFO: [Node] Finished "convert", elapsed time 8.472282s.
+260201-14:29:44,625 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta9rief2hk/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta9rief2hk/embedder".
+260201-14:29:44,651 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:10:06,118 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.98925s.
-INFO: [Node] Finished "embedder", elapsed time 10.98925s.
+260201-14:29:55,983 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 11.330646s.
+INFO: [Node] Finished "embedder", elapsed time 11.330646s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold (196 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:06,174 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixjxxaynj3/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixjxxaynj3/convert".
-260201-14:10:06,213 nipype.workflow INFO:
+260201-14:29:56,43 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixl1v7o3v1/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl1v7o3v1/convert".
+260201-14:29:56,84 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:06,319 nipype.interface INFO:
-     stdout 2026-02-01T14:10:06.319001:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:06.319001:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:06,319 nipype.interface INFO:
-     stdout 2026-02-01T14:10:06.319001:Found 196 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:06.319001:Found 196 DICOM file(s)
-260201-14:10:06,319 nipype.interface INFO:
-     stdout 2026-02-01T14:10:06.319001:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv735 (64x64x27x196)
-INFO: stdout 2026-02-01T14:10:06.319001:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv735 (64x64x27x196)
-260201-14:10:09,635 nipype.interface INFO:
-     stdout 2026-02-01T14:10:09.634984:Conversion required 3.385691 seconds (3.382872 for core code).
-INFO: stdout 2026-02-01T14:10:09.634984:Conversion required 3.385691 seconds (3.382872 for core code).
-260201-14:10:09,662 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.448648s.
-INFO: [Node] Finished "convert", elapsed time 3.448648s.
-260201-14:10:16,347 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetalzcu87q7/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetalzcu87q7/embedder".
-260201-14:10:16,360 nipype.workflow INFO:
+260201-14:29:56,196 nipype.interface INFO:
+     stdout 2026-02-01T14:29:56.195957:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:29:56.195957:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:29:56,196 nipype.interface INFO:
+     stdout 2026-02-01T14:29:56.195957:Found 196 DICOM file(s)
+INFO: stdout 2026-02-01T14:29:56.195957:Found 196 DICOM file(s)
+260201-14:29:56,196 nipype.interface INFO:
+     stdout 2026-02-01T14:29:56.195957:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv158 (64x64x27x196)
+INFO: stdout 2026-02-01T14:29:56.195957:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv158 (64x64x27x196)
+260201-14:29:59,527 nipype.interface INFO:
+     stdout 2026-02-01T14:29:59.527295:Conversion required 3.405224 seconds (3.404697 for core code).
+INFO: stdout 2026-02-01T14:29:59.527295:Conversion required 3.405224 seconds (3.404697 for core code).
+260201-14:29:59,566 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.48168s.
+INFO: [Node] Finished "convert", elapsed time 3.48168s.
+260201-14:30:06,382 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetauy_rhi1a/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetauy_rhi1a/embedder".
+260201-14:30:06,395 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:10:20,553 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 4.192626s.
-INFO: [Node] Finished "embedder", elapsed time 4.192626s.
+260201-14:30:10,772 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 4.376743s.
+INFO: [Node] Finished "embedder", elapsed time 4.376743s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01 (128 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:20,581 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixzc2iizpv/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixzc2iizpv/convert".
-260201-14:10:20,607 nipype.workflow INFO:
+260201-14:30:10,802 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixq1y47kgp/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixq1y47kgp/convert".
+260201-14:30:10,829 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:20,679 nipype.interface INFO:
-     stdout 2026-02-01T14:10:20.679679:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:20.679679:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:20,679 nipype.interface INFO:
-     stdout 2026-02-01T14:10:20.679679:Found 128 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:20.679679:Found 128 DICOM file(s)
-260201-14:10:20,679 nipype.interface INFO:
-     stdout 2026-02-01T14:10:20.679679:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv029 (160x160x128x1)
-INFO: stdout 2026-02-01T14:10:20.679679:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv029 (160x160x128x1)
-260201-14:10:21,255 nipype.interface INFO:
-     stdout 2026-02-01T14:10:21.255446:Conversion required 0.612448 seconds (0.612400 for core code).
-INFO: stdout 2026-02-01T14:10:21.255446:Conversion required 0.612448 seconds (0.612400 for core code).
-260201-14:10:21,279 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.671815s.
-INFO: [Node] Finished "convert", elapsed time 0.671815s.
-260201-14:10:26,18 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetaqy51rpad/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaqy51rpad/embedder".
-260201-14:10:26,27 nipype.workflow INFO:
+260201-14:30:10,908 nipype.interface INFO:
+     stdout 2026-02-01T14:30:10.908305:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:30:10.908305:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:30:10,908 nipype.interface INFO:
+     stdout 2026-02-01T14:30:10.908305:Found 128 DICOM file(s)
+INFO: stdout 2026-02-01T14:30:10.908305:Found 128 DICOM file(s)
+260201-14:30:10,908 nipype.interface INFO:
+     stdout 2026-02-01T14:30:10.908305:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv923 (160x160x128x1)
+INFO: stdout 2026-02-01T14:30:10.908305:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv923 (160x160x128x1)
+260201-14:30:11,484 nipype.interface INFO:
+     stdout 2026-02-01T14:30:11.484457:Conversion required 0.617132 seconds (0.616614 for core code).
+INFO: stdout 2026-02-01T14:30:11.484457:Conversion required 0.617132 seconds (0.616614 for core code).
+260201-14:30:11,517 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.686776s.
+INFO: [Node] Finished "convert", elapsed time 0.686776s.
+260201-14:30:16,342 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetao9m5481a/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetao9m5481a/embedder".
+260201-14:30:16,352 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:10:27,983 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 1.954889s.
-INFO: [Node] Finished "embedder", elapsed time 1.954889s.
+260201-14:30:18,390 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 2.03716s.
+INFO: [Node] Finished "embedder", elapsed time 2.03716s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-02 (5 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:27,999 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix979kc5ie/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix979kc5ie/convert".
-260201-14:10:28,2 nipype.workflow INFO:
+260201-14:30:18,406 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixdbc0dji8/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixdbc0dji8/convert".
+260201-14:30:18,410 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:28,44 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.044240:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:28.044240:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:28,44 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.044240:Found 5 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:28.044240:Found 5 DICOM file(s)
-260201-14:10:28,44 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.044240:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-INFO: stdout 2026-02-01T14:10:28.044240:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-260201-14:10:28,44 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.044240:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00003 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.044240:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00003 (162x162x1x1)
-260201-14:10:28,50 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.050100:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00002 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.050100:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00002 (162x162x1x1)
-260201-14:10:28,55 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.055667:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00001 (162x162x2x1)
-INFO: stdout 2026-02-01T14:10:28.055667:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00001 (162x162x2x1)
-260201-14:10:28,63 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.063324:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00004 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.063324:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv566_i00004 (162x162x1x1)
-260201-14:10:28,66 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.066878:Conversion required 0.027827 seconds (0.024967 for core code).
-INFO: stdout 2026-02-01T14:10:28.066878:Conversion required 0.027827 seconds (0.024967 for core code).
-260201-14:10:28,93 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.089732s.
-INFO: [Node] Finished "convert", elapsed time 0.089732s.
+260201-14:30:18,455 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.454969:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:30:18.454969:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:30:18,455 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.454969:Found 5 DICOM file(s)
+INFO: stdout 2026-02-01T14:30:18.454969:Found 5 DICOM file(s)
+260201-14:30:18,455 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.454969:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+INFO: stdout 2026-02-01T14:30:18.454969:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+260201-14:30:18,455 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.454969:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00003 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.454969:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00003 (162x162x1x1)
+260201-14:30:18,460 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.460955:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00002 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.460955:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00002 (162x162x1x1)
+260201-14:30:18,465 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.465209:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00001 (162x162x2x1)
+INFO: stdout 2026-02-01T14:30:18.465209:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00001 (162x162x2x1)
+260201-14:30:18,473 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.473846:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00004 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.473846:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv191_i00004 (162x162x1x1)
+260201-14:30:18,477 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.477471:Conversion required 0.029316 seconds (0.027433 for core code).
+INFO: stdout 2026-02-01T14:30:18.477471:Conversion required 0.029316 seconds (0.027433 for core code).
+260201-14:30:18,507 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.096069s.
+INFO: [Node] Finished "convert", elapsed time 0.096069s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-03 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:28,197 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix0c2t8mxk/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix0c2t8mxk/convert".
-260201-14:10:28,200 nipype.workflow INFO:
+260201-14:30:18,612 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixxxbt6wjq/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixxxbt6wjq/convert".
+260201-14:30:18,615 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:28,241 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.241124:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:28.241124:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:28,241 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.241124:Found 3 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:28.241124:Found 3 DICOM file(s)
-260201-14:10:28,241 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.241124:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-INFO: stdout 2026-02-01T14:10:28.241124:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-260201-14:10:28,241 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.241124:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00002 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.241124:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00002 (162x162x1x1)
-260201-14:10:28,247 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.247126:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00001 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.247126:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00001 (162x162x1x1)
-260201-14:10:28,252 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.252428:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00003 (162x162x1x1)
-INFO: stdout 2026-02-01T14:10:28.252428:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv063_i00003 (162x162x1x1)
-260201-14:10:28,255 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.255656:Conversion required 0.019489 seconds (0.016169 for core code).
-INFO: stdout 2026-02-01T14:10:28.255656:Conversion required 0.019489 seconds (0.016169 for core code).
-260201-14:10:28,280 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.079084s.
-INFO: [Node] Finished "convert", elapsed time 0.079084s.
+260201-14:30:18,659 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.659127:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:30:18.659127:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:30:18,659 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.659127:Found 3 DICOM file(s)
+INFO: stdout 2026-02-01T14:30:18.659127:Found 3 DICOM file(s)
+260201-14:30:18,659 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.659127:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+INFO: stdout 2026-02-01T14:30:18.659127:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+260201-14:30:18,660 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.659127:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00002 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.659127:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00002 (162x162x1x1)
+260201-14:30:18,663 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.663326:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00001 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.663326:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00001 (162x162x1x1)
+260201-14:30:18,667 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.667608:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00003 (162x162x1x1)
+INFO: stdout 2026-02-01T14:30:18.667608:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv388_i00003 (162x162x1x1)
+260201-14:30:18,670 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.670848:Conversion required 0.017098 seconds (0.016444 for core code).
+INFO: stdout 2026-02-01T14:30:18.670848:Conversion required 0.017098 seconds (0.016444 for core code).
+260201-14:30:18,703 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.086972s.
+INFO: [Node] Finished "convert", elapsed time 0.086972s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:28,331 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixucru99y4/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixucru99y4/convert".
-260201-14:10:28,334 nipype.workflow INFO:
+260201-14:30:18,759 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixxisvjylb/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixxisvjylb/convert".
+260201-14:30:18,762 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:28,377 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.377082:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:28.377082:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:28,377 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.377082:Found 3 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:28.377082:Found 3 DICOM file(s)
-260201-14:10:28,377 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.377082:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv082 (64x64x27x3)
-INFO: stdout 2026-02-01T14:10:28.377082:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv082 (64x64x27x3)
-260201-14:10:28,429 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.429231:Conversion required 0.058350 seconds (0.058347 for core code).
-INFO: stdout 2026-02-01T14:10:28.429231:Conversion required 0.058350 seconds (0.058347 for core code).
-260201-14:10:28,454 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.118729s.
-INFO: [Node] Finished "convert", elapsed time 0.118729s.
-260201-14:10:28,567 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetaxvrnhps4/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaxvrnhps4/embedder".
-260201-14:10:28,572 nipype.workflow INFO:
+260201-14:30:18,805 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.805844:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:30:18.805844:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:30:18,806 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.805844:Found 3 DICOM file(s)
+INFO: stdout 2026-02-01T14:30:18.805844:Found 3 DICOM file(s)
+260201-14:30:18,806 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.805844:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv994 (64x64x27x3)
+INFO: stdout 2026-02-01T14:30:18.805844:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv994 (64x64x27x3)
+260201-14:30:18,858 nipype.interface INFO:
+     stdout 2026-02-01T14:30:18.858645:Conversion required 0.058355 seconds (0.057851 for core code).
+INFO: stdout 2026-02-01T14:30:18.858645:Conversion required 0.058355 seconds (0.057851 for core code).
+260201-14:30:18,890 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.126824s.
+INFO: [Node] Finished "convert", elapsed time 0.126824s.
+260201-14:30:19,4 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetavd0075ss/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetavd0075ss/embedder".
+260201-14:30:19,9 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:10:28,646 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.074021s.
-INFO: [Node] Finished "embedder", elapsed time 0.074021s.
+260201-14:30:19,87 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.076908s.
+INFO: [Node] Finished "embedder", elapsed time 0.076908s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02 (12 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260201-14:10:28,655 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixs727k8ql/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixs727k8ql/convert".
-260201-14:10:28,660 nipype.workflow INFO:
+260201-14:30:19,96 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixwypjynt4/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixwypjynt4/convert".
+260201-14:30:19,101 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260201-14:10:28,705 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.705184:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-01T14:10:28.705184:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260201-14:10:28,705 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.705184:Found 12 DICOM file(s)
-INFO: stdout 2026-02-01T14:10:28.705184:Found 12 DICOM file(s)
-260201-14:10:28,705 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.705184:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv343 (64x64x27x12)
-INFO: stdout 2026-02-01T14:10:28.705184:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv343 (64x64x27x12)
-260201-14:10:28,906 nipype.interface INFO:
-     stdout 2026-02-01T14:10:28.906503:Conversion required 0.210367 seconds (0.210359 for core code).
-INFO: stdout 2026-02-01T14:10:28.906503:Conversion required 0.210367 seconds (0.210359 for core code).
-260201-14:10:28,929 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.269053s.
-INFO: [Node] Finished "convert", elapsed time 0.269053s.
-260201-14:10:29,355 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetatqwz4dwf/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetatqwz4dwf/embedder".
-260201-14:10:29,360 nipype.workflow INFO:
+260201-14:30:19,147 nipype.interface INFO:
+     stdout 2026-02-01T14:30:19.147752:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-01T14:30:19.147752:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260201-14:30:19,147 nipype.interface INFO:
+     stdout 2026-02-01T14:30:19.147752:Found 12 DICOM file(s)
+INFO: stdout 2026-02-01T14:30:19.147752:Found 12 DICOM file(s)
+260201-14:30:19,148 nipype.interface INFO:
+     stdout 2026-02-01T14:30:19.147752:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv967 (64x64x27x12)
+INFO: stdout 2026-02-01T14:30:19.147752:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv967 (64x64x27x12)
+260201-14:30:19,350 nipype.interface INFO:
+     stdout 2026-02-01T14:30:19.350033:Conversion required 0.211713 seconds (0.211199 for core code).
+INFO: stdout 2026-02-01T14:30:19.350033:Conversion required 0.211713 seconds (0.211199 for core code).
+260201-14:30:19,381 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.279432s.
+INFO: [Node] Finished "convert", elapsed time 0.279432s.
+260201-14:30:19,816 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetaev928c9m/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaev928c9m/embedder".
+260201-14:30:19,822 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260201-14:10:29,626 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.265113s.
-INFO: [Node] Finished "embedder", elapsed time 0.265113s.
+260201-14:30:20,116 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.293794s.
+INFO: [Node] Finished "embedder", elapsed time 0.293794s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02.json file
 INFO: Adding "IntendedFor" to the fieldmaps in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01.
 WARNING: We cannot add the IntendedFor field: no fmap/ in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01
@@ -6138,14 +6123,14 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 <section id="validating-a-bids-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="validating-a-bids-dataset">Validating a BIDS Dataset</h3>
 <p>Let’s see what was created:</p>
-<div id="671939f2" class="cell" data-execution_count="7">
+<div id="0bb1b3b0" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114  0219191_mystudy-0219-1114.tar.gz  Norman</code></pre>
 </div>
 </div>
 <p>Let’s inspect the new folder in more detail:</p>
-<div id="7a06f773" class="cell" data-execution_count="8">
+<div id="f39d2e22" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">tree</span> <span class="at">-L</span> 7 Norman</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Norman
@@ -6235,7 +6220,7 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 </div>
 </div>
 <p>That looks like a BIDS dataset! Let’s check using the <a href="https://bids-standard.github.io/bids-validator/">BIDS Validator</a>:</p>
-<div id="091a1025" class="cell" data-execution_count="9">
+<div id="94860ef8" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">cd</span> Norman/Mennen/5516_greenEyes/</span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -6282,11 +6267,19 @@ Please consider expanding it with additional information about the dataset.</spa
 
     <span class="ansi-yellow-fg">[WARNING] SIDECAR_FIELD_OVERRIDE Sidecar files should not override values assigned at a higher level.</span>
 
+        <span class="ansi-yellow-fg">BidsGuess</span>
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-8_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-13_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
+
+
+
         <span class="ansi-yellow-fg">ImageOrientationPatientDICOM</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6296,9 +6289,9 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">ImageType</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6308,9 +6301,9 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">ShimSetting</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6318,11 +6311,19 @@ Please consider expanding it with additional information about the dataset.</spa
 
 
 
+        <span class="ansi-yellow-fg">SliceTiming</span>
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0.7675,0.055,0.8225,0.11,0.8775,0.165,0.9325,0.22,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (0,0.765,0.0525,0.82,0.1075,0.875,0.1625,0.93,0.2175,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
+
+
+
         <span class="ansi-yellow-fg">TablePosition</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6332,9 +6333,9 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">TaskName</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (TODO: full task name for story) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (TODO: full task name for sound) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (TODO: full task name for story) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6344,9 +6345,9 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">dcmmeta_affine</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6356,9 +6357,9 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">dcmmeta_reorient_transform</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
@@ -6368,29 +6369,13 @@ Please consider expanding it with additional information about the dataset.</spa
 
         <span class="ansi-yellow-fg">dcmmeta_shape</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (64,64,27,485) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
         /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (64,64,27,179) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
+
+        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (64,64,27,485) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
 
 
         4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">BidsGuess</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-8_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-13_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">SliceTiming</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0.7675,0.055,0.8225,0.11,0.8775,0.165,0.9325,0.22,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (0,0.765,0.0525,0.82,0.1075,0.875,0.1625,0.93,0.2175,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
 
 
 
@@ -6589,7 +6574,7 @@ This design is suspiciously short.</span>
 </div>
 </div>
 <p>Let the BIDS validator ignore <code>/sourcedata</code> and <code>.heudiconv</code>:</p>
-<div id="4675665d" class="cell" data-execution_count="10">
+<div id="facd0b76" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">touch</span> .bidsignore</span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="bu">echo</span> <span class="st">"/sourcedata"</span> <span class="op">&gt;</span> .bidsignore</span>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="bu">echo</span> <span class="st">".heudiconv"</span> <span class="op">&gt;&gt;</span> .bidsignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -6616,13 +6601,13 @@ This design is suspiciously short.</span>
 </div>
 </div>
 </div>
-<div id="2f31a141" class="cell" data-execution_count="11">
+<div id="02c23c5f" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>scout<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="remove-repeated-runs-resulting-in-duplications" class="level4">
 <h4 class="anchored" data-anchor-id="remove-repeated-runs-resulting-in-duplications">Remove repeated runs (resulting in duplications)</h4>
-<div id="d1ceefb4" class="cell" data-execution_count="12">
+<div id="f0dc1bc3" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>_dup<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -6660,7 +6645,7 @@ This design is suspiciously short.</span>
 <section id="validate-again" class="level3">
 <h3 class="anchored" data-anchor-id="validate-again">Validate again</h3>
 <p>Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:</p>
-<div id="d46d11b8" class="cell" data-execution_count="13">
+<div id="90e9813d" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -7048,15 +7033,18 @@ Poldrack, R. A., &amp; Gorgolewski, K. J. (2017). OpenfMRI: Open sharing of task
 Wagner, A., Brooks, P., Hanke, M., Emcdevitt, Nastase, S., Meghantesterman, Waite, L., Halchenko, Y., Nayeonckim, Lisanmo, Heckner, M., Jean-Baptiste Poline, Castello, M. V. D. O., Amennen, Meyer, K., Tsoi, L., &amp; Pattarawat Chormai. (2021). <em>Brainhack-princeton/handbook: Fall 2020 pygers workshop / brainhack princeton 2020 release</em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.4455923">https://doi.org/10.5281/ZENODO.4455923</a>
 </div>
 </div>
+</section>
+<section id="execution" class="level2">
+<h2 class="anchored" data-anchor-id="execution">Execution</h2>
 <ul>
-<li>Python /app/.venv/bin/python</li>
-<li>Profile: ci</li>
+<li>Python: <code>/app/.venv/bin/python</code></li>
+<li>Profile: <code>ci</code></li>
 </ul>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -7181,7 +7169,7 @@ Wagner, A., Brooks, P., Hanke, M., Emcdevitt, Nastase, S., Meghantesterman, Wait
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/lennartwittkuhn\.com\/rdm-bids\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -7557,5 +7545,5 @@ Wagner, A., Brooks, P., Hanke, M., Emcdevitt, Nastase, S., Meghantesterman, Wait
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
