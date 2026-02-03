@@ -1,38 +1,46 @@
 ---
 title: "Setup: How to setup and run the tutorial"
-engine: jupyter
-jupyter: bash
 ---
 
-## JupyterHub at University of Hamburg
+## Download notebooks
+
+Download notebooks from the right sidebar.
+Select `Colab` if you are using [Google Colab](#google-colab).
+
+### JupyterHub at UHH
 
 1. Open <https://code.min.uni-hamburg.de/>
-1. Click on `File` > `New Launcher`
+1. Select `File` > `New Launcher`
 1. At the bottom, select `Terminal`
 1. In the Terminal, enter:
 
     ```bash
     git clone {{< var project.source >}}
+    cd {{< var project.name >}}
+    make install
     ```
 
-1. Next, enter:
-
-    ```bash
-    uv sync --frozen
-    ```
-
-1. Finally, enter:
-
-    ```bash
-    uv run quarto render
-    ```
-
-1. From the sidebar on the left, you can now open the exercise notebooks:
+1. From the sidebar on the left, you can now open the exercise notebooks in the `{{< var project.name >}}` folder:
 
     - `exercise1.ipynb`
     - `exercise2.ipynb`
 
-## JupyterHub at UKE
+1. Paste the installation command into the first cell of the notebook:
 
-1. Open <https://jupyterhub.uke.de/>
-1. TBA ...
+    ```bash
+    source .venv/bin/activate
+    ```
+
+### Google Colab
+
+1. Open <https://colab.research.google.com/>
+1. Sign in with a Google account
+1. Select `File` > `Open notebook`
+1. Select `Upload` and open or drag the notebook file
+1. Paste the installation command into the first cell of the notebook:
+
+{{< include _colab_install.md >}}
+
+### Terminal
+
+1. Open a Terminal and copy-paste all commands in the exercise

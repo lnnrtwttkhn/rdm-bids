@@ -3,3 +3,5 @@
 /.quarto/
 _site
 mydataset
+*.md
+*_colab.qmd

@@ -17,7 +17,7 @@ HeuDiConv is particularly useful for converting raw scanner data to BIDS format,
 The setup created an environment that needs to be activated:
 
 ```{bash}
-source .venv/bin/activate
+# < replace with installation command >
 ```
 
 ### Create a project directory

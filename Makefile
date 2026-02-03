@@ -127,11 +127,19 @@ clean-images: clean
 ps:
 	docker ps --filter name=$(CONTAINER_NAME)
 
+.PHONY: install
+install:
+	uv sync --frozen
+	uv run quarto render
+
 .PHONY: ipynb
 ipynb:
 	mkdir -p _site
-	quarto convert exercise1.qmd
+	uv run quarto convert exercise1.qmd
+	uv run python3 prepare_colab.py
+	uv run quarto convert exercise1_colab.qmd
 	mv exercise1.ipynb _site/
+	mv exercise1_colab.ipynb _site/
 
 # Show logs from running container
 .PHONY: logs

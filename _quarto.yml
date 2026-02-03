@@ -40,6 +40,9 @@ website:
     - text: Exercise 1
       href: exercise1.ipynb
       icon: journal-code
+    - text: Exercise 1 (Colab)
+      href: exercise1_colab.ipynb
+      icon: google
 
 # table of contents:
 toc-depth: 3
