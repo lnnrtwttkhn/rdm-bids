@@ -1,0 +1,38 @@
+---
+title: "Setup: How to setup and run the tutorial"
+engine: jupyter
+jupyter: bash
+---
+
+## JupyterHub at University of Hamburg
+
+1. Open <https://code.min.uni-hamburg.de/>
+1. Click on `File` > `New Launcher`
+1. At the bottom, select `Terminal`
+1. In the Terminal, enter:
+
+    ```bash
+    git clone {{< var project.source >}}
+    ```
+
+1. Next, enter:
+
+    ```bash
+    uv sync --frozen
+    ```
+
+1. Finally, enter:
+
+    ```bash
+    uv run quarto render
+    ```
+
+1. From the sidebar on the left, you can now open the exercise notebooks:
+
+    - `exercise1.ipynb`
+    - `exercise2.ipynb`
+
+## JupyterHub at UKE
+
+1. Open <https://jupyterhub.uke.de/>
+1. TBA ...
