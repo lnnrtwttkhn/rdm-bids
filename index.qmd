@@ -2,6 +2,7 @@
 date: today
 engine: jupyter
 jupyter: bash
+code-links: binder
 ---
 
 ::: {.callout-note title="Acknowledgements" collapse="true"}
