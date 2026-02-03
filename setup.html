@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
 <meta name="dcterms.date" content="2026-02-03">
 
-<title>Home: What this tutorial is about</title>
+<title>Setup: How to setup and run the tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -91,11 +106,11 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./setup.html"> 
+    <a class="nav-link active" href="./setup.html" aria-current="page"> 
 <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
@@ -122,17 +137,17 @@ div.csl-indent {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#what-is-bids-brain-imaging-data-structure" id="toc-what-is-bids-brain-imaging-data-structure" class="nav-link active" data-scroll-target="#what-is-bids-brain-imaging-data-structure">What is BIDS (Brain Imaging Data Structure)?</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#jupyterhub-at-university-of-hamburg" id="toc-jupyterhub-at-university-of-hamburg" class="nav-link active" data-scroll-target="#jupyterhub-at-university-of-hamburg">JupyterHub at University of Hamburg</a></li>
+  <li><a href="#jupyterhub-at-uke" id="toc-jupyterhub-at-uke" class="nav-link" data-scroll-target="#jupyterhub-at-uke">JupyterHub at UKE</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/setup.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Home: What this tutorial is about</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Setup: How to setup and run the tutorial</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Tutorial: How to create a BIDS dataset</p>
 </div>
 
@@ -162,68 +177,36 @@ div.csl-indent {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled" title="Acknowledgements">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Acknowledgements
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><a href="https://doi.org/10.5281/zenodo.4455923"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4455923.svg" class="img-fluid"></a></p>
-<p>This tutorial is inspired by and reuses content from the <a href="https://brainhack-princeton.github.io/handbook/">Princeton Handbook for Reproducible Neuroimaging</a> by <span class="citation" data-cites="wagner2021">Wagner et al. (<a href="#ref-wagner2021" role="doc-biblioref">2021</a>)</span>. The handbook is licensed under a a <a href="https://github.com/brainhack-princeton/handbook/blob/master/LICENSE">CC BY-SA 4.0</a> license.</p>
-</div>
-</div>
-</div>
-<section id="what-is-bids-brain-imaging-data-structure" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-bids-brain-imaging-data-structure">What is BIDS (Brain Imaging Data Structure)?</h2>
-<p>Many of the best practices we encourage in this handbook revolve around the Brain Imaging Data Structure (BIDS) <span class="citation" data-cites="gorgolewski2016">(<a href="#ref-gorgolewski2016" role="doc-biblioref">Gorgolewski et al., 2016</a>)</span>. Neuroimaging research relies on complex multimodal data and different software packages have historically used different naming and organization conventions. Different labs and different researchers use idiosyncratic conventions—even the same researcher may use different conventions from experiment to experiment. The goal of <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS</a> is to create an easy-to-adopt community standard for organizing neuroimaging data. BIDS facilitates:</p>
+<section id="jupyterhub-at-university-of-hamburg" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterhub-at-university-of-hamburg">JupyterHub at University of Hamburg</h2>
+<ol type="1">
+<li><p>Open <a href="https://code.min.uni-hamburg.de/" class="uri">https://code.min.uni-hamburg.de/</a></p></li>
+<li><p>Click on <code>File</code> &gt; <code>New Launcher</code></p></li>
+<li><p>At the bottom, select <code>Terminal</code></p></li>
+<li><p>In the Terminal, enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/lnnrtwttkhn/rdm-bids</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Next, enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">uv</span> sync <span class="at">--frozen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Finally, enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">uv</span> run quarto render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>From the sidebar on the left, you can now open the exercise notebooks:</p>
 <ul>
-<li><p><strong>Data validation</strong>: Data often has “bugs”—just like software. The <a href="https://github.com/bids-standard/bids-validator">BIDS-Validator</a> can be used to check the integrity of your BIDS dataset, allowing you to identify potential errors or inconsistencies in the data structure.</p></li>
-<li><p><strong>Collaboration</strong>: By using a standard format, working on data collaboratively within and across labs becomes much easier (no more re-organizing someone else’s data). It also makes it much easier to return to the same dataset years later (your future self will thank you).</p></li>
-<li><p><strong>Data analysis</strong>: The machine-readable format and rich metadata of BIDS allows software packages—such as <a href="https://fmriprep.readthedocs.io/">fMRIPrep</a> and <a href="https://mriqc.readthedocs.io/en/stable/">MRIQC</a>—to process BIDS data in an automated fashion. There is a growing number of software packages—called <a href="https://bids-apps.neuroimaging.io/">BIDS Apps</a>—that capitalize on BIDS <span class="citation" data-cites="gorgolewski2017">(<a href="#ref-gorgolewski2017" role="doc-biblioref">Gorgolewski et al., 2017</a>)</span>.</p></li>
-<li><p><strong>Sharing data</strong>: Data sharing is an important element of reproducible science and is encouraged (often enforced!) by many major federal funding agencies (e.g., <a href="https://grants.nih.gov/grants/policy/data_sharing/">NIH</a>, <a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF</a>, <a href="https://erc.europa.eu/managing-project/open-access">ERC</a>). BIDS allows others to more easily use your data and is the standard used by the <a href="https://openneuro.org/">OpenNeuro</a> data sharing platform <span class="citation" data-cites="poldrack2017">(<a href="#ref-poldrack2017" role="doc-biblioref">Poldrack &amp; Gorgolewski, 2017</a>)</span>. The workflow in this handbook encourages converting your data to BIDS format as early in the workflow as possible to facilitate reproducibility and save you the energy of retroactively organizing your data at the time of sharing.</p></li>
-</ul>
-<p>Consult the <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Specification</a> for detailed documentation on formatting. If you want to setup a new study using BIDS, check out documentation and scripts for converting raw data to BIDS format. You can also practice using BIDS with sample datasets.</p>
+<li><code>exercise1.ipynb</code></li>
+<li><code>exercise2.ipynb</code></li>
+</ul></li>
+</ol>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Specification</a></li>
-<li><a href="https://bids-standard.github.io/bids-validator/">BIDS Validator</a></li>
-<li><a href="https://github.com/bids-standard/bids-validator">BIDS Validator on GitHub</a></li>
-<li><a href="https://bids-apps.neuroimaging.io/">BIDS Apps</a></li>
-<li><a href="https://openneuro.org/">OpenNeuro</a></li>
-<li><a href="https://fmriprep.readthedocs.io/">fMRIPrep</a></li>
-<li><a href="https://mriqc.readthedocs.io/en/stable/">MRIQC</a></li>
-<li><a href="https://grants.nih.gov/grants/policy/data_sharing/">National Institutes of Health (NIH) Data Sharing Policy</a></li>
-<li><a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">National Science Foundation (NSF) Dissemination and Sharing of Research Results</a></li>
-<li><a href="https://erc.europa.eu/manage-your-project/open-science">European Research Council (ERC) Open Science</a></li>
-<li><a href="https://www.dfg.de/en/research-funding/funding-initiative/research-data">DFG: Handling of Research Data</a></li>
-</ul>
-
+<section id="jupyterhub-at-uke" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterhub-at-uke">JupyterHub at UKE</h2>
+<ol type="1">
+<li>Open <a href="https://jupyterhub.uke.de/" class="uri">https://jupyterhub.uke.de/</a></li>
+<li>TBA …</li>
+</ol>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-gorgolewski2017" class="csl-entry" role="listitem">
-Gorgolewski, K. J., Alfaro-Almagro, F., Auer, T., Bellec, P., Capotă, M., Chakravarty, M. M., Churchill, N. W., Cohen, A. L., Craddock, R. C., Devenyi, G. A., Eklund, A., Esteban, O., Flandin, G., Ghosh, S. S., Guntupalli, J. S., Jenkinson, M., Keshavan, A., Kiar, G., Liem, F., … Poldrack, R. A. (2017). BIDS apps: Improving ease of use, accessibility, and reproducibility of neuroimaging data analysis methods. <em>PLOS Computational Biology</em>, <em>13</em>(3), e1005209. <a href="https://doi.org/10.1371/journal.pcbi.1005209">https://doi.org/10.1371/journal.pcbi.1005209</a>
-</div>
-<div id="ref-gorgolewski2016" class="csl-entry" role="listitem">
-Gorgolewski, K. J., Auer, T., Calhoun, V. D., Craddock, R. C., Das, S., Duff, E. P., Flandin, G., Ghosh, S. S., Glatard, T., Halchenko, Y. O., Handwerker, D. A., Hanke, M., Keator, D., Li, X., Michael, Z., Maumet, C., Nichols, B. N., Nichols, T. E., Pellman, J., … Poldrack, R. A. (2016). The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. <em>Scientific Data</em>, <em>3</em>(1). <a href="https://doi.org/10.1038/sdata.2016.44">https://doi.org/10.1038/sdata.2016.44</a>
-</div>
-<div id="ref-poldrack2017" class="csl-entry" role="listitem">
-Poldrack, R. A., &amp; Gorgolewski, K. J. (2017). OpenfMRI: Open sharing of task fMRI data. <em>NeuroImage</em>, <em>144</em>, 259–261. <a href="https://doi.org/10.1016/j.neuroimage.2015.05.073">https://doi.org/10.1016/j.neuroimage.2015.05.073</a>
-</div>
-<div id="ref-wagner2021" class="csl-entry" role="listitem">
-Wagner, A., Brooks, P., Hanke, M., Emcdevitt, Nastase, S., Meghantesterman, Waite, L., Halchenko, Y., Nayeonckim, Lisanmo, Heckner, M., Jean-Baptiste Poline, Castello, M. V. D. O., Amennen, Meyer, K., Tsoi, L., &amp; Pattarawat Chormai. (2021). <em>Brainhack-princeton/handbook: Fall 2020 pygers workshop / brainhack princeton 2020 release</em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.4455923">https://doi.org/10.5281/ZENODO.4455923</a>
-</div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -724,5 +707,5 @@ Wagner, A., Brooks, P., Hanke, M., Emcdevitt, Nastase, S., Meghantesterman, Wait
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/setup.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
