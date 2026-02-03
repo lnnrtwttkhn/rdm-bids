@@ -18,7 +18,7 @@ markdown_content = f"""```python
 with open("_colab_install.md", "w") as f:
     f.write(markdown_content)
 
-print("Generated pip_install_command.md")
+print("Generated _colab_install.md")
 
 # Process exercise1.qmd - convert bash chunks to python with jupyter magics
 with open("exercise1.qmd", "r") as f:
