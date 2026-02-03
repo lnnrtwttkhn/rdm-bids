@@ -37,6 +37,15 @@ Consult the [BIDS Specification](https://bids-specification.readthedocs.io/en/st
 If you want to setup a new study using BIDS, check out documentation and scripts for converting raw data to BIDS format.
 You can also practice using BIDS with sample datasets.
 
+## Tutorial: Create a BIDS dataset using `heudiconv`
+
+In this tutorial, we will create a BIDS dataset using `heudiconv`.
+
+[HeuDiConv](https://heudiconv.readthedocs.io/en/latest/) is a flexible DICOM converter that helps organize brain imaging data into structured directory layouts.
+It converts DICOM files to NIfTI format using customizable heuristics (rules) to determine how files should be named and organized.
+HeuDiConv is particularly useful for converting raw scanner data to BIDS format, making your data more standardized and analysis-ready.
+
+
 ## Resources
 
 - [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)

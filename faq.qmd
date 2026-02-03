@@ -1,7 +1,5 @@
 ---
 title: "FAQ"
-engine: jupyter
-jupyter: bash
 ---
 
 ::: {.callout-tip title="What are key differences between DICOM and NIfTI?" collapse="true"}
