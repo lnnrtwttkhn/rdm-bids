@@ -34,14 +34,22 @@ website:
         href: setup.qmd
       - text: "Exercise 1"
         href: exercise1.qmd
+      - text: "Exercise 2"
+        href: exercise2.qmd
       - text: "FAQ"
         href: faq.qmd
   other-links:
     - text: Exercise 1
       href: exercise1.ipynb
       icon: journal-code
+    - text: Exercise 2
+      href: exercise2.ipynb
+      icon: journal-code
     - text: Exercise 1 (Colab)
       href: exercise1_colab.ipynb
+      icon: google
+    - text: Exercise 2 (Colab)
+      href: exercise2_colab.ipynb
       icon: google
 
 # table of contents:

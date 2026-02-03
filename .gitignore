@@ -5,3 +5,5 @@ _site
 mydataset
 *.md
 *_colab.qmd
+/rdm-data
+*.ipynb
