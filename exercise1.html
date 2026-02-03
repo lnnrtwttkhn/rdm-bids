@@ -220,14 +220,14 @@ div.csl-indent {
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Depending on your environment, paste the installation command here:</p>
-<div id="3d9c25a3" class="cell" data-execution_count="1">
+<div id="b774cf1e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="create-a-project-directory" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-project-directory">Create a project directory</h2>
 <p>Create an empty directory called <code>mydataset</code> and navigate into it. <code>mydataset</code> is only a name. You can choose any other name.</p>
-<div id="cc203931" class="cell" data-execution_count="2">
+<div id="397faed5" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">mkdir</span> mydataset</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">cd</span> mydataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -238,23 +238,23 @@ div.csl-indent {
 <section id="download-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download the data by <span class="citation" data-cites="nastase2020">Nastase et al. (<a href="#ref-nastase2020" role="doc-biblioref">2020</a>)</span> from <a href="https://doi.org/10.5281/zenodo.3677089">Zenodo</a>. Note that the download make take a few minutes.</p>
-<div id="3bb6f76f" class="cell" data-execution_count="3">
+<div id="f84c52a9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">wget</span> https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>--2026-02-03 22:12:21--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
-Resolving zenodo.org (zenodo.org)... 188.184.98.114, 137.138.153.219, 188.185.48.75, ...
-Connecting to zenodo.org (zenodo.org)|188.184.98.114|:443... connected.
+<pre><code>--2026-02-03 22:13:28--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+Resolving zenodo.org (zenodo.org)... 188.184.103.118, 137.138.52.235, 188.184.98.114, ...
+Connecting to zenodo.org (zenodo.org)|188.184.103.118|:443... connected.
 HTTP request sent, awaiting response... 301 MOVED PERMANENTLY
 Location: /records/3677090/files/0219191_mystudy-0219-1114.tar.gz [following]
---2026-02-03 22:12:22--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
+--2026-02-03 22:13:29--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
 Reusing existing connection to zenodo.org:443.
 HTTP request sent, awaiting response... 200 OK
 Length: 405671662 (387M) [application/octet-stream]
 Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 
-          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  48.76K   233KB/s                       0219191_mys   0%[                    ] 405.49K   919KB/s                      0219191_myst   0%[                    ]   1.74M  2.53MB/s                     0219191_mystu   2%[                    ]   8.55M  9.63MB/s                    0219191_mystud   4%[                    ]  16.82M  15.5MB/s                   0219191_mystudy   6%[&gt;                   ]  23.32M  17.9MB/s                  0219191_mystudy-   8%[&gt;                   ]  32.25M  20.5MB/s                 0219191_mystudy-0  10%[=&gt;                  ]  40.05M  22.6MB/s                0219191_mystudy-02  12%[=&gt;                  ]  46.52M  23.6MB/s               0219191_mystudy-021  14%[=&gt;                  ]  54.21M  24.9MB/s               219191_mystudy-0219  15%[==&gt;                 ]  61.17M  25.8MB/s               19191_mystudy-0219-  18%[==&gt;                 ]  69.73M  26.8MB/s               9191_mystudy-0219-1  19%[==&gt;                 ]  77.13M  27.6MB/s               191_mystudy-0219-11  21%[===&gt;                ]  84.55M  28.2MB/s               91_mystudy-0219-111  23%[===&gt;                ]  91.97M  28.8MB/s    eta 10s    1_mystudy-0219-1114  25%[====&gt;               ]  98.60M  29.0MB/s    eta 10s    _mystudy-0219-1114.  27%[====&gt;               ] 106.96M  29.7MB/s    eta 10s    mystudy-0219-1114.t  29%[====&gt;               ] 115.63M  30.4MB/s    eta 10s    ystudy-0219-1114.ta  31%[=====&gt;              ] 122.94M  30.7MB/s    eta 10s    study-0219-1114.tar  34%[=====&gt;              ] 131.64M  32.5MB/s    eta 8s     tudy-0219-1114.tar.  35%[======&gt;             ] 138.24M  33.7MB/s    eta 8s     udy-0219-1114.tar.g  37%[======&gt;             ] 145.96M  35.4MB/s    eta 8s     dy-0219-1114.tar.gz  39%[======&gt;             ] 153.77M  36.7MB/s    eta 8s     y-0219-1114.tar.gz   41%[=======&gt;            ] 160.74M  36.6MB/s    eta 8s     -0219-1114.tar.gz    43%[=======&gt;            ] 168.99M  36.7MB/s    eta 7s     0219-1114.tar.gz     45%[========&gt;           ] 177.19M  36.8MB/s    eta 7s     219-1114.tar.gz      47%[========&gt;           ] 184.91M  36.8MB/s    eta 7s     19-1114.tar.gz       49%[========&gt;           ] 193.23M  37.3MB/s    eta 7s     9-1114.tar.gz        51%[=========&gt;          ] 200.15M  37.0MB/s    eta 7s     -1114.tar.gz         53%[=========&gt;          ] 207.69M  37.0MB/s    eta 5s     1114.tar.gz          55%[==========&gt;         ] 216.44M  36.9MB/s    eta 5s     114.tar.gz           57%[==========&gt;         ] 223.95M  37.2MB/s    eta 5s     14.tar.gz            59%[==========&gt;         ] 231.87M  37.3MB/s    eta 5s     4.tar.gz             61%[===========&gt;        ] 239.32M  37.3MB/s    eta 5s     .tar.gz              63%[===========&gt;        ] 247.15M  37.4MB/s    eta 4s     tar.gz               65%[============&gt;       ] 255.05M  37.4MB/s    eta 4s     ar.gz                67%[============&gt;       ] 262.58M  37.2MB/s    eta 4s     r.gz                 70%[=============&gt;      ] 271.50M  36.9MB/s    eta 4s     .gz                  72%[=============&gt;      ] 279.63M  37.0MB/s    eta 4s     gz                   73%[=============&gt;      ] 285.54M  36.6MB/s    eta 3s     z                    75%[==============&gt;     ] 292.98M  36.8MB/s    eta 3s                          77%[==============&gt;     ] 301.08M  36.6MB/s    eta 3s                       0  80%[===============&gt;    ] 309.88M  37.5MB/s    eta 3s                      02  82%[===============&gt;    ] 317.96M  37.7MB/s    eta 3s                     021  83%[===============&gt;    ] 324.76M  36.6MB/s    eta 2s                    0219  85%[================&gt;   ] 332.02M  36.5MB/s    eta 2s                   02191  87%[================&gt;   ] 339.93M  36.2MB/s    eta 2s                  021919  89%[================&gt;   ] 347.28M  36.3MB/s    eta 2s                 0219191  92%[=================&gt;  ] 356.09M  37.1MB/s    eta 2s                0219191_  93%[=================&gt;  ] 363.24M  35.9MB/s    eta 1s               0219191_m  96%[==================&gt; ] 371.63M  36.3MB/s    eta 1s              0219191_my  98%[==================&gt; ] 380.24M  37.0MB/s    eta 1s             0219191_mys  99%[==================&gt; ] 386.45M  36.6MB/s    eta 1s     0219191_mystudy-021 100%[===================&gt;] 386.88M  36.7MB/s    in 11s     
+          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  50.02K   210KB/s                       0219191_mys   0%[                    ] 166.04K   349KB/s                      0219191_myst   0%[                    ] 669.14K   940KB/s                     0219191_mystu   0%[                    ]   2.59M  2.73MB/s                    0219191_mystud   2%[                    ]   9.04M  7.62MB/s                   0219191_mystudy   3%[                    ]  14.83M  10.4MB/s                  0219191_mystudy-   5%[&gt;                   ]  21.92M  13.1MB/s                 0219191_mystudy-0   7%[&gt;                   ]  29.61M  15.4MB/s                0219191_mystudy-02   9%[&gt;                   ]  36.89M  17.1MB/s               0219191_mystudy-021  11%[=&gt;                  ]  44.08M  18.4MB/s               219191_mystudy-0219  13%[=&gt;                  ]  51.21M  19.4MB/s               19191_mystudy-0219-  14%[=&gt;                  ]  57.51M  20.0MB/s               9191_mystudy-0219-1  16%[==&gt;                 ]  64.82M  20.7MB/s    eta 16s    191_mystudy-0219-11  18%[==&gt;                 ]  72.50M  21.5MB/s    eta 16s    91_mystudy-0219-111  20%[===&gt;                ]  79.08M  21.9MB/s    eta 16s    1_mystudy-0219-1114  22%[===&gt;                ]  86.74M  22.5MB/s    eta 16s    _mystudy-0219-1114.  24%[===&gt;                ]  94.19M  22.9MB/s    eta 16s    mystudy-0219-1114.t  26%[====&gt;               ] 101.85M  23.4MB/s    eta 12s    ystudy-0219-1114.ta  28%[====&gt;               ] 109.61M  23.8MB/s    eta 12s    study-0219-1114.tar  30%[=====&gt;              ] 116.99M  25.4MB/s    eta 12s    tudy-0219-1114.tar.  32%[=====&gt;              ] 124.27M  26.9MB/s    eta 12s    udy-0219-1114.tar.g  33%[=====&gt;              ] 130.71M  27.7MB/s    eta 12s    dy-0219-1114.tar.gz  35%[======&gt;             ] 137.88M  28.7MB/s    eta 10s    y-0219-1114.tar.gz   37%[======&gt;             ] 144.73M  28.9MB/s    eta 10s    -0219-1114.tar.gz    39%[======&gt;             ] 151.31M  29.2MB/s    eta 10s    0219-1114.tar.gz     41%[=======&gt;            ] 158.70M  29.5MB/s    eta 10s    219-1114.tar.gz      43%[=======&gt;            ] 166.41M  29.6MB/s    eta 10s    19-1114.tar.gz       44%[=======&gt;            ] 173.74M  29.6MB/s    eta 8s     9-1114.tar.gz        46%[========&gt;           ] 180.93M  29.5MB/s    eta 8s     -1114.tar.gz         48%[========&gt;           ] 188.58M  29.5MB/s    eta 8s     1114.tar.gz          50%[=========&gt;          ] 195.16M  29.5MB/s    eta 8s     114.tar.gz           52%[=========&gt;          ] 201.98M  29.6MB/s    eta 8s     14.tar.gz            53%[=========&gt;          ] 208.48M  29.4MB/s    eta 7s     4.tar.gz             55%[==========&gt;         ] 216.09M  29.4MB/s    eta 7s     .tar.gz              57%[==========&gt;         ] 222.84M  29.2MB/s    eta 7s     tar.gz               59%[==========&gt;         ] 228.90M  28.9MB/s    eta 7s     ar.gz                60%[===========&gt;        ] 234.48M  28.6MB/s    eta 6s     r.gz                 62%[===========&gt;        ] 240.03M  28.2MB/s    eta 6s     .gz                  63%[===========&gt;        ] 245.92M  27.8MB/s    eta 6s     gz                   65%[============&gt;       ] 252.02M  27.7MB/s    eta 6s     z                    66%[============&gt;       ] 258.65M  27.7MB/s    eta 6s                          68%[============&gt;       ] 264.26M  27.4MB/s    eta 5s                       0  70%[=============&gt;      ] 271.62M  27.6MB/s    eta 5s                      02  71%[=============&gt;      ] 278.41M  27.6MB/s    eta 5s                     021  73%[=============&gt;      ] 286.14M  27.7MB/s    eta 5s                    0219  75%[==============&gt;     ] 293.73M  27.1MB/s    eta 5s                   02191  77%[==============&gt;     ] 301.44M  27.8MB/s    eta 3s                  021919  79%[==============&gt;     ] 309.06M  27.9MB/s    eta 3s                 0219191  81%[===============&gt;    ] 315.54M  27.8MB/s    eta 3s                0219191_  83%[===============&gt;    ] 323.01M  27.7MB/s    eta 3s               0219191_m  85%[================&gt;   ] 330.66M  28.1MB/s    eta 3s              0219191_my  87%[================&gt;   ] 338.39M  27.9MB/s    eta 2s             0219191_mys  89%[================&gt;   ] 345.88M  28.3MB/s    eta 2s            0219191_myst  91%[=================&gt;  ] 353.46M  28.5MB/s    eta 2s           0219191_mystu  93%[=================&gt;  ] 361.15M  28.7MB/s    eta 2s          0219191_mystud  95%[==================&gt; ] 368.35M  28.8MB/s    eta 2s         0219191_mystudy  96%[==================&gt; ] 374.48M  28.8MB/s    eta 0s        0219191_mystudy-  98%[==================&gt; ] 381.29M  29.1MB/s    eta 0s     0219191_mystudy-021 100%[===================&gt;] 386.88M  29.6MB/s    in 14s     
 
-2026-02-03 22:12:33 (34.4 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
+2026-02-03 22:13:43 (27.2 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
 </code></pre>
 </div>
 </div>
@@ -262,7 +262,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <section id="prepare-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Now we need to extract the downloaded archive. The following command extracts the <code>tar.gz</code> archive (<code>-x</code> extract, <code>-v</code> verbose, <code>-z</code> gzip, <code>-f</code> file).</p>
-<div id="f0f32352" class="cell" data-execution_count="4">
+<div id="36745228" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy"><code class="sourceCode bash"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="fu">tar</span> <span class="at">-xvzf</span> 0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114/
@@ -2937,7 +2937,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <section id="inspect-the-raw-data" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-raw-data">Inspect the raw data</h2>
 <p>Let’s navigate into the directory and see what’s inside the dataset. Using <code>tree -L 2</code> we show the directory structure with a maximum depth of 2 levels.</p>
-<div id="54ea559b" class="cell" data-execution_count="5">
+<div id="15981179" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy"><code class="sourceCode bash"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 0219191_mystudy-0219-1114</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114
@@ -5613,7 +5613,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <section id="decompress-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="decompress-the-data">Decompress the data</h2>
 <p>We need to decompress all gzipped DICOM files in the <code>dcm</code> directory:</p>
-<div id="1754b74c" class="cell" data-execution_count="6">
+<div id="48ebcf2a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">gunzip</span> 0219191_mystudy-0219-1114/dcm/<span class="pp">*</span>.dcm.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -5629,7 +5629,7 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <li><code>--files</code> or directories containing files to process</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="bf9dfe86" class="cell" data-execution_count="7">
+<div id="f64da6c7" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">heudiconv</span> <span class="at">-f</span> reproin <span class="at">--subject</span> 01 <span class="at">--ses</span> 01 <span class="at">--bids</span> <span class="at">--files</span> 0219191_mystudy-0219-1114/dcm <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>WARNING: Could not check for version updates: Connection to server could not be made
@@ -5648,423 +5648,423 @@ WARNING: Detected 3 duplicated run(s) for template {bids_subject_session_dir}/an
 WARNING: Detected 2 duplicated run(s) for template {bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-sound_run-01_bold: ['6-func_ses-01_task-sound_run-01', '7-func_ses-01_task-sound_run-01']
 INFO: Doing conversion using dcm2niix
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:12:53,304 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix42g2807q/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix42g2807q/convert".
-260203-22:12:53,307 nipype.workflow INFO:
+260203-22:14:02,878 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixf4pqk1lb/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixf4pqk1lb/convert".
+260203-22:14:02,881 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:12:53,408 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.408055:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:12:53.408055:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:12:53,408 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.408055:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T22:12:53.408055:Found 3 DICOM file(s)
-260203-22:12:53,408 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.408055:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-INFO: stdout 2026-02-03T22:12:53.408055:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-260203-22:12:53,408 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.408055:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00001 (162x162x1x1)
-INFO: stdout 2026-02-03T22:12:53.408055:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00001 (162x162x1x1)
-260203-22:12:53,411 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.411855:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T22:12:53.411855:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00002 (162x162x1x1)
-260203-22:12:53,415 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.415267:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T22:12:53.415267:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00003 (162x162x1x1)
-260203-22:12:53,417 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.417898:Conversion required 0.014449 seconds (0.014446 for core code).
-INFO: stdout 2026-02-03T22:12:53.417898:Conversion required 0.014449 seconds (0.014446 for core code).
-260203-22:12:53,437 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.067878s.
-INFO: [Node] Finished "convert", elapsed time 0.067878s.
+260203-22:14:02,985 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.985813:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:14:02.985813:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:14:02,985 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.985813:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:14:02.985813:Found 3 DICOM file(s)
+260203-22:14:02,986 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.985813:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+INFO: stdout 2026-02-03T22:14:02.985813:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+260203-22:14:02,986 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.985813:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00001 (162x162x1x1)
+INFO: stdout 2026-02-03T22:14:02.985813:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00001 (162x162x1x1)
+260203-22:14:02,990 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.990018:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:14:02.990018:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00002 (162x162x1x1)
+260203-22:14:02,994 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.994378:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:14:02.994378:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv635_i00003 (162x162x1x1)
+260203-22:14:02,997 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.997442:Conversion required 0.016426 seconds (0.016405 for core code).
+INFO: stdout 2026-02-03T22:14:02.997442:Conversion required 0.016426 seconds (0.016405 for core code).
+260203-22:14:03,21 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.074147s.
+INFO: [Node] Finished "convert", elapsed time 0.074147s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w (192 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:12:53,501 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixvrm1kgtx/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixvrm1kgtx/convert".
-260203-22:12:53,539 nipype.workflow INFO:
+260203-22:14:03,84 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix54oq2d1d/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix54oq2d1d/convert".
+260203-22:14:03,122 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:12:53,634 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.634316:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:12:53.634316:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:12:53,634 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.634316:Found 192 DICOM file(s)
-INFO: stdout 2026-02-03T22:12:53.634316:Found 192 DICOM file(s)
-260203-22:12:53,634 nipype.interface INFO:
-     stdout 2026-02-03T22:12:53.634316:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv066 (256x256x192x1)
-INFO: stdout 2026-02-03T22:12:53.634316:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv066 (256x256x192x1)
-260203-22:12:55,940 nipype.interface INFO:
-     stdout 2026-02-03T22:12:55.940708:Conversion required 2.366310 seconds (2.366198 for core code).
-INFO: stdout 2026-02-03T22:12:55.940708:Conversion required 2.366310 seconds (2.366198 for core code).
-260203-22:12:55,962 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 2.422809s.
-INFO: [Node] Finished "convert", elapsed time 2.422809s.
-260203-22:13:01,554 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetad2r7qlgp/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetad2r7qlgp/embedder".
-260203-22:13:01,564 nipype.workflow INFO:
+260203-22:14:03,219 nipype.interface INFO:
+     stdout 2026-02-03T22:14:03.219760:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:14:03.219760:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:14:03,219 nipype.interface INFO:
+     stdout 2026-02-03T22:14:03.219760:Found 192 DICOM file(s)
+INFO: stdout 2026-02-03T22:14:03.219760:Found 192 DICOM file(s)
+260203-22:14:03,220 nipype.interface INFO:
+     stdout 2026-02-03T22:14:03.219760:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv305 (256x256x192x1)
+INFO: stdout 2026-02-03T22:14:03.219760:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv305 (256x256x192x1)
+260203-22:14:05,519 nipype.interface INFO:
+     stdout 2026-02-03T22:14:05.519451:Conversion required 2.362020 seconds (2.361804 for core code).
+INFO: stdout 2026-02-03T22:14:05.519451:Conversion required 2.362020 seconds (2.361804 for core code).
+260203-22:14:05,540 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 2.417175s.
+INFO: [Node] Finished "convert", elapsed time 2.417175s.
+260203-22:14:11,125 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta95gy2mns/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta95gy2mns/embedder".
+260203-22:14:11,137 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:13:04,704 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.138811s.
-INFO: [Node] Finished "embedder", elapsed time 3.138811s.
+260203-22:14:14,255 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.117337s.
+INFO: [Node] Finished "embedder", elapsed time 3.117337s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold (179 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:13:04,727 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixakky4lj8/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixakky4lj8/convert".
-260203-22:13:04,762 nipype.workflow INFO:
+260203-22:14:14,280 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixlcahirxd/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixlcahirxd/convert".
+260203-22:14:14,315 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:13:04,857 nipype.interface INFO:
-     stdout 2026-02-03T22:13:04.857896:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:13:04.857896:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:13:04,858 nipype.interface INFO:
-     stdout 2026-02-03T22:13:04.857896:Found 179 DICOM file(s)
-INFO: stdout 2026-02-03T22:13:04.857896:Found 179 DICOM file(s)
-260203-22:13:04,858 nipype.interface INFO:
-     stdout 2026-02-03T22:13:04.857896:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv663 (64x64x27x179)
-INFO: stdout 2026-02-03T22:13:04.857896:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv663 (64x64x27x179)
-260203-22:13:07,848 nipype.interface INFO:
-     stdout 2026-02-03T22:13:07.848867:Conversion required 3.051294 seconds (3.051166 for core code).
-INFO: stdout 2026-02-03T22:13:07.848867:Conversion required 3.051294 seconds (3.051166 for core code).
-260203-22:13:07,871 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.108382s.
-INFO: [Node] Finished "convert", elapsed time 3.108382s.
-260203-22:13:14,102 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta4d28fv0e/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta4d28fv0e/embedder".
-260203-22:13:14,113 nipype.workflow INFO:
+260203-22:14:14,414 nipype.interface INFO:
+     stdout 2026-02-03T22:14:14.414449:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:14:14.414449:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:14:14,414 nipype.interface INFO:
+     stdout 2026-02-03T22:14:14.414449:Found 179 DICOM file(s)
+INFO: stdout 2026-02-03T22:14:14.414449:Found 179 DICOM file(s)
+260203-22:14:14,414 nipype.interface INFO:
+     stdout 2026-02-03T22:14:14.414449:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv681 (64x64x27x179)
+INFO: stdout 2026-02-03T22:14:14.414449:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv681 (64x64x27x179)
+260203-22:14:17,408 nipype.interface INFO:
+     stdout 2026-02-03T22:14:17.408507:Conversion required 3.057866 seconds (3.057601 for core code).
+INFO: stdout 2026-02-03T22:14:17.408507:Conversion required 3.057866 seconds (3.057601 for core code).
+260203-22:14:17,433 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.117048s.
+INFO: [Node] Finished "convert", elapsed time 3.117048s.
+260203-22:14:23,607 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetatyh3fbnw/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetatyh3fbnw/embedder".
+260203-22:14:23,618 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:13:18,67 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.9536s.
-INFO: [Node] Finished "embedder", elapsed time 3.9536s.
+260203-22:14:27,579 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.960069s.
+INFO: [Node] Finished "embedder", elapsed time 3.960069s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:13:18,99 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix985fd0fu/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix985fd0fu/convert".
-260203-22:13:18,194 nipype.workflow INFO:
+260203-22:14:27,630 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix9djl2efr/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix9djl2efr/convert".
+260203-22:14:27,727 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:13:18,385 nipype.interface INFO:
-     stdout 2026-02-03T22:13:18.385831:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:13:18.385831:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:13:18,386 nipype.interface INFO:
-     stdout 2026-02-03T22:13:18.385831:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T22:13:18.385831:Found 485 DICOM file(s)
-260203-22:13:18,386 nipype.interface INFO:
-     stdout 2026-02-03T22:13:18.385831:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv904 (64x64x27x485)
-INFO: stdout 2026-02-03T22:13:18.385831:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv904 (64x64x27x485)
-260203-22:13:26,508 nipype.interface INFO:
-     stdout 2026-02-03T22:13:26.508817:Conversion required 8.279249 seconds (8.278317 for core code).
-INFO: stdout 2026-02-03T22:13:26.508817:Conversion required 8.279249 seconds (8.278317 for core code).
-260203-22:13:26,533 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.338565s.
-INFO: [Node] Finished "convert", elapsed time 8.338565s.
-260203-22:13:43,246 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetat0wo1_bw/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetat0wo1_bw/embedder".
-260203-22:13:43,269 nipype.workflow INFO:
+260203-22:14:27,927 nipype.interface INFO:
+     stdout 2026-02-03T22:14:27.927424:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:14:27.927424:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:14:27,927 nipype.interface INFO:
+     stdout 2026-02-03T22:14:27.927424:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:14:27.927424:Found 485 DICOM file(s)
+260203-22:14:27,927 nipype.interface INFO:
+     stdout 2026-02-03T22:14:27.927424:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv363 (64x64x27x485)
+INFO: stdout 2026-02-03T22:14:27.927424:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv363 (64x64x27x485)
+260203-22:14:36,35 nipype.interface INFO:
+     stdout 2026-02-03T22:14:36.035917:Conversion required 8.273015 seconds (8.272413 for core code).
+INFO: stdout 2026-02-03T22:14:36.035917:Conversion required 8.273015 seconds (8.272413 for core code).
+260203-22:14:36,58 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.331246s.
+INFO: [Node] Finished "convert", elapsed time 8.331246s.
+260203-22:14:52,774 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta5x3yejun/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta5x3yejun/embedder".
+260203-22:14:52,798 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:13:54,246 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.976454s.
-INFO: [Node] Finished "embedder", elapsed time 10.976454s.
+260203-22:15:03,662 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.86285s.
+INFO: [Node] Finished "embedder", elapsed time 10.86285s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:13:54,306 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixk1y2jzxw/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixk1y2jzxw/convert".
-260203-22:13:54,404 nipype.workflow INFO:
+260203-22:15:03,721 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixtvn3cdm9/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixtvn3cdm9/convert".
+260203-22:15:03,817 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:13:54,589 nipype.interface INFO:
-     stdout 2026-02-03T22:13:54.589735:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:13:54.589735:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:13:54,589 nipype.interface INFO:
-     stdout 2026-02-03T22:13:54.589735:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T22:13:54.589735:Found 485 DICOM file(s)
-260203-22:13:54,590 nipype.interface INFO:
-     stdout 2026-02-03T22:13:54.589735:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv815 (64x64x27x485)
-INFO: stdout 2026-02-03T22:13:54.589735:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv815 (64x64x27x485)
-260203-22:14:02,771 nipype.interface INFO:
-     stdout 2026-02-03T22:14:02.771196:Conversion required 8.332106 seconds (8.331576 for core code).
-INFO: stdout 2026-02-03T22:14:02.771196:Conversion required 8.332106 seconds (8.331576 for core code).
-260203-22:14:02,805 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.400656s.
-INFO: [Node] Finished "convert", elapsed time 8.400656s.
-260203-22:14:19,254 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetan6i7ehua/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetan6i7ehua/embedder".
-260203-22:14:19,277 nipype.workflow INFO:
+260203-22:15:04,17 nipype.interface INFO:
+     stdout 2026-02-03T22:15:04.017011:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:15:04.017011:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:15:04,17 nipype.interface INFO:
+     stdout 2026-02-03T22:15:04.017011:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:15:04.017011:Found 485 DICOM file(s)
+260203-22:15:04,17 nipype.interface INFO:
+     stdout 2026-02-03T22:15:04.017011:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv443 (64x64x27x485)
+INFO: stdout 2026-02-03T22:15:04.017011:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv443 (64x64x27x485)
+260203-22:15:12,194 nipype.interface INFO:
+     stdout 2026-02-03T22:15:12.194475:Conversion required 8.342124 seconds (8.341559 for core code).
+INFO: stdout 2026-02-03T22:15:12.194475:Conversion required 8.342124 seconds (8.341559 for core code).
+260203-22:15:12,231 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.41424s.
+INFO: [Node] Finished "convert", elapsed time 8.41424s.
+260203-22:15:28,637 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetaqgezvra2/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaqgezvra2/embedder".
+260203-22:15:28,661 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:14:30,123 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.845644s.
-INFO: [Node] Finished "embedder", elapsed time 10.845644s.
+260203-22:15:39,441 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.779606s.
+INFO: [Node] Finished "embedder", elapsed time 10.779606s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:14:30,183 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix9x2nlnyp/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix9x2nlnyp/convert".
-260203-22:14:30,278 nipype.workflow INFO:
+260203-22:15:39,501 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixhjkyc89u/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhjkyc89u/convert".
+260203-22:15:39,597 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:14:30,464 nipype.interface INFO:
-     stdout 2026-02-03T22:14:30.464505:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:14:30.464505:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:14:30,464 nipype.interface INFO:
-     stdout 2026-02-03T22:14:30.464505:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T22:14:30.464505:Found 485 DICOM file(s)
-260203-22:14:30,464 nipype.interface INFO:
-     stdout 2026-02-03T22:14:30.464505:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv639 (64x64x27x485)
-INFO: stdout 2026-02-03T22:14:30.464505:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv639 (64x64x27x485)
-260203-22:14:38,595 nipype.interface INFO:
-     stdout 2026-02-03T22:14:38.595823:Conversion required 8.282267 seconds (8.281640 for core code).
-INFO: stdout 2026-02-03T22:14:38.595823:Conversion required 8.282267 seconds (8.281640 for core code).
-260203-22:14:38,625 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.346702s.
-INFO: [Node] Finished "convert", elapsed time 8.346702s.
-260203-22:14:54,707 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta0pxn1v1e/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta0pxn1v1e/embedder".
-260203-22:14:54,731 nipype.workflow INFO:
+260203-22:15:39,788 nipype.interface INFO:
+     stdout 2026-02-03T22:15:39.788543:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:15:39.788543:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:15:39,788 nipype.interface INFO:
+     stdout 2026-02-03T22:15:39.788543:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:15:39.788543:Found 485 DICOM file(s)
+260203-22:15:39,788 nipype.interface INFO:
+     stdout 2026-02-03T22:15:39.788543:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv579 (64x64x27x485)
+INFO: stdout 2026-02-03T22:15:39.788543:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv579 (64x64x27x485)
+260203-22:15:47,925 nipype.interface INFO:
+     stdout 2026-02-03T22:15:47.925716:Conversion required 8.292484 seconds (8.291976 for core code).
+INFO: stdout 2026-02-03T22:15:47.925716:Conversion required 8.292484 seconds (8.291976 for core code).
+260203-22:15:47,959 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.361121s.
+INFO: [Node] Finished "convert", elapsed time 8.361121s.
+260203-22:16:04,207 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetafs73iujj/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetafs73iujj/embedder".
+260203-22:16:04,231 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:15:05,640 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.908231s.
-INFO: [Node] Finished "embedder", elapsed time 10.908231s.
+260203-22:16:14,934 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.702346s.
+INFO: [Node] Finished "embedder", elapsed time 10.702346s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:15:05,700 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixwz621_fr/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixwz621_fr/convert".
-260203-22:15:05,796 nipype.workflow INFO:
+260203-22:16:14,993 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix7_y1xfjt/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix7_y1xfjt/convert".
+260203-22:16:15,88 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:15:05,983 nipype.interface INFO:
-     stdout 2026-02-03T22:15:05.983218:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:15:05.983218:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:15:05,983 nipype.interface INFO:
-     stdout 2026-02-03T22:15:05.983218:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T22:15:05.983218:Found 485 DICOM file(s)
-260203-22:15:05,983 nipype.interface INFO:
-     stdout 2026-02-03T22:15:05.983218:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
-INFO: stdout 2026-02-03T22:15:05.983218:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
-260203-22:15:14,144 nipype.interface INFO:
-     stdout 2026-02-03T22:15:14.144168:Conversion required 8.312857 seconds (8.312260 for core code).
-INFO: stdout 2026-02-03T22:15:14.144168:Conversion required 8.312857 seconds (8.312260 for core code).
-260203-22:15:14,173 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.376068s.
-INFO: [Node] Finished "convert", elapsed time 8.376068s.
-260203-22:15:31,570 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetabttnjie7/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetabttnjie7/embedder".
-260203-22:15:31,593 nipype.workflow INFO:
+260203-22:16:15,283 nipype.interface INFO:
+     stdout 2026-02-03T22:16:15.283854:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:15.283854:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:15,284 nipype.interface INFO:
+     stdout 2026-02-03T22:16:15.283854:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:15.283854:Found 485 DICOM file(s)
+260203-22:16:15,284 nipype.interface INFO:
+     stdout 2026-02-03T22:16:15.283854:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
+INFO: stdout 2026-02-03T22:16:15.283854:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
+260203-22:16:23,456 nipype.interface INFO:
+     stdout 2026-02-03T22:16:23.456129:Conversion required 8.332291 seconds (8.331418 for core code).
+INFO: stdout 2026-02-03T22:16:23.456129:Conversion required 8.332291 seconds (8.331418 for core code).
+260203-22:16:23,487 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.398677s.
+INFO: [Node] Finished "convert", elapsed time 8.398677s.
+260203-22:16:41,27 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetapo6vvfr3/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetapo6vvfr3/embedder".
+260203-22:16:41,50 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:15:42,569 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.975319s.
-INFO: [Node] Finished "embedder", elapsed time 10.975319s.
+260203-22:16:51,795 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.743953s.
+INFO: [Node] Finished "embedder", elapsed time 10.743953s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold (196 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:15:42,625 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixis6mhzz_/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixis6mhzz_/convert".
-260203-22:15:42,664 nipype.workflow INFO:
+260203-22:16:51,848 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixtcw6w25h/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixtcw6w25h/convert".
+260203-22:16:51,887 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:15:42,766 nipype.interface INFO:
-     stdout 2026-02-03T22:15:42.766186:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:15:42.766186:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:15:42,766 nipype.interface INFO:
-     stdout 2026-02-03T22:15:42.766186:Found 196 DICOM file(s)
-INFO: stdout 2026-02-03T22:15:42.766186:Found 196 DICOM file(s)
-260203-22:15:42,766 nipype.interface INFO:
-     stdout 2026-02-03T22:15:42.766186:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv168 (64x64x27x196)
-INFO: stdout 2026-02-03T22:15:42.766186:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv168 (64x64x27x196)
-260203-22:15:46,62 nipype.interface INFO:
-     stdout 2026-02-03T22:15:46.061952:Conversion required 3.362337 seconds (3.362094 for core code).
-INFO: stdout 2026-02-03T22:15:46.061952:Conversion required 3.362337 seconds (3.362094 for core code).
-260203-22:15:46,91 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.426644s.
-INFO: [Node] Finished "convert", elapsed time 3.426644s.
-260203-22:15:52,777 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta50evjj_p/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta50evjj_p/embedder".
-260203-22:15:52,789 nipype.workflow INFO:
+260203-22:16:51,991 nipype.interface INFO:
+     stdout 2026-02-03T22:16:51.991436:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:51.991436:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:51,991 nipype.interface INFO:
+     stdout 2026-02-03T22:16:51.991436:Found 196 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:51.991436:Found 196 DICOM file(s)
+260203-22:16:51,991 nipype.interface INFO:
+     stdout 2026-02-03T22:16:51.991436:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv814 (64x64x27x196)
+INFO: stdout 2026-02-03T22:16:51.991436:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv814 (64x64x27x196)
+260203-22:16:55,288 nipype.interface INFO:
+     stdout 2026-02-03T22:16:55.288058:Conversion required 3.366025 seconds (3.365775 for core code).
+INFO: stdout 2026-02-03T22:16:55.288058:Conversion required 3.366025 seconds (3.365775 for core code).
+260203-22:16:55,317 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.42983s.
+INFO: [Node] Finished "convert", elapsed time 3.42983s.
+260203-22:17:01,957 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetamw8qqxj7/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetamw8qqxj7/embedder".
+260203-22:17:01,968 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:15:56,964 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 4.17431s.
-INFO: [Node] Finished "embedder", elapsed time 4.17431s.
+260203-22:17:06,105 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 4.135804s.
+INFO: [Node] Finished "embedder", elapsed time 4.135804s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01 (128 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:15:56,990 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixl5umnffz/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl5umnffz/convert".
-260203-22:15:57,15 nipype.workflow INFO:
+260203-22:17:06,131 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixoaojepl5/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixoaojepl5/convert".
+260203-22:17:06,156 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:15:57,86 nipype.interface INFO:
-     stdout 2026-02-03T22:15:57.086858:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:15:57.086858:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:15:57,87 nipype.interface INFO:
-     stdout 2026-02-03T22:15:57.086858:Found 128 DICOM file(s)
-INFO: stdout 2026-02-03T22:15:57.086858:Found 128 DICOM file(s)
-260203-22:15:57,87 nipype.interface INFO:
-     stdout 2026-02-03T22:15:57.086858:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv628 (160x160x128x1)
-INFO: stdout 2026-02-03T22:15:57.086858:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv628 (160x160x128x1)
-260203-22:15:57,658 nipype.interface INFO:
-     stdout 2026-02-03T22:15:57.658594:Conversion required 0.608398 seconds (0.608375 for core code).
-INFO: stdout 2026-02-03T22:15:57.658594:Conversion required 0.608398 seconds (0.608375 for core code).
-260203-22:15:57,679 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.663379s.
-INFO: [Node] Finished "convert", elapsed time 0.663379s.
-260203-22:16:02,413 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetahbvn6fld/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahbvn6fld/embedder".
-260203-22:16:02,421 nipype.workflow INFO:
+260203-22:17:06,228 nipype.interface INFO:
+     stdout 2026-02-03T22:17:06.227961:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:17:06.227961:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:17:06,228 nipype.interface INFO:
+     stdout 2026-02-03T22:17:06.227961:Found 128 DICOM file(s)
+INFO: stdout 2026-02-03T22:17:06.227961:Found 128 DICOM file(s)
+260203-22:17:06,228 nipype.interface INFO:
+     stdout 2026-02-03T22:17:06.227961:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv763 (160x160x128x1)
+INFO: stdout 2026-02-03T22:17:06.227961:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv763 (160x160x128x1)
+260203-22:17:06,802 nipype.interface INFO:
+     stdout 2026-02-03T22:17:06.802105:Conversion required 0.610558 seconds (0.610518 for core code).
+INFO: stdout 2026-02-03T22:17:06.802105:Conversion required 0.610558 seconds (0.610518 for core code).
+260203-22:17:06,824 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.666956s.
+INFO: [Node] Finished "convert", elapsed time 0.666956s.
+260203-22:17:11,553 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetadq3fa_fu/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetadq3fa_fu/embedder".
+260203-22:17:11,561 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:16:04,375 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 1.953278s.
-INFO: [Node] Finished "embedder", elapsed time 1.953278s.
+260203-22:17:13,498 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 1.936381s.
+INFO: [Node] Finished "embedder", elapsed time 1.936381s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-02 (5 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:16:04,389 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixhfkclv1i/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhfkclv1i/convert".
-260203-22:16:04,392 nipype.workflow INFO:
+260203-22:17:13,512 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixbbiuj3c0/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixbbiuj3c0/convert".
+260203-22:17:13,515 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:16:04,431 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.431288:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:16:04.431288:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:16:04,431 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.431288:Found 5 DICOM file(s)
-INFO: stdout 2026-02-03T22:16:04.431288:Found 5 DICOM file(s)
-260203-22:16:04,431 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.431288:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-INFO: stdout 2026-02-03T22:16:04.431288:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-260203-22:16:04,431 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.431288:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.431288:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00003 (162x162x1x1)
-260203-22:16:04,435 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.435481:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.435481:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00002 (162x162x1x1)
-260203-22:16:04,439 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.439848:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00001 (162x162x2x1)
-INFO: stdout 2026-02-03T22:16:04.439848:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00001 (162x162x2x1)
-260203-22:16:04,447 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.447207:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00004 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.447207:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00004 (162x162x1x1)
-260203-22:16:04,450 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.450073:Conversion required 0.023508 seconds (0.023505 for core code).
-INFO: stdout 2026-02-03T22:16:04.450073:Conversion required 0.023508 seconds (0.023505 for core code).
-260203-22:16:04,470 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.077213s.
-INFO: [Node] Finished "convert", elapsed time 0.077213s.
+260203-22:17:13,555 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.555421:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:17:13.555421:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:17:13,555 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.555421:Found 5 DICOM file(s)
+INFO: stdout 2026-02-03T22:17:13.555421:Found 5 DICOM file(s)
+260203-22:17:13,555 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.555421:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+INFO: stdout 2026-02-03T22:17:13.555421:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+260203-22:17:13,555 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.555421:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.555421:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00003 (162x162x1x1)
+260203-22:17:13,559 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.559423:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.559423:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00002 (162x162x1x1)
+260203-22:17:13,563 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.563940:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00001 (162x162x2x1)
+INFO: stdout 2026-02-03T22:17:13.563940:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00001 (162x162x2x1)
+260203-22:17:13,571 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.571292:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00004 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.571292:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv071_i00004 (162x162x1x1)
+260203-22:17:13,574 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.574244:Conversion required 0.023737 seconds (0.023734 for core code).
+INFO: stdout 2026-02-03T22:17:13.574244:Conversion required 0.023737 seconds (0.023734 for core code).
+260203-22:17:13,598 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.082176s.
+INFO: [Node] Finished "convert", elapsed time 0.082176s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-03 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:16:04,574 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixakejyrrl/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixakejyrrl/convert".
-260203-22:16:04,577 nipype.workflow INFO:
+260203-22:17:13,699 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix2bja0m0r/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix2bja0m0r/convert".
+260203-22:17:13,703 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:16:04,617 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.617452:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:16:04.617452:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:16:04,617 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.617452:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T22:16:04.617452:Found 3 DICOM file(s)
-260203-22:16:04,617 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.617452:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-INFO: stdout 2026-02-03T22:16:04.617452:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-260203-22:16:04,617 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.617452:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.617452:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00002 (162x162x1x1)
-260203-22:16:04,620 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.620939:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00001 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.620939:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00001 (162x162x1x1)
-260203-22:16:04,624 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.624293:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T22:16:04.624293:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00003 (162x162x1x1)
-260203-22:16:04,626 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.626739:Conversion required 0.014582 seconds (0.014579 for core code).
-INFO: stdout 2026-02-03T22:16:04.626739:Conversion required 0.014582 seconds (0.014579 for core code).
-260203-22:16:04,646 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.068091s.
-INFO: [Node] Finished "convert", elapsed time 0.068091s.
+260203-22:17:13,743 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.743435:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:17:13.743435:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:17:13,743 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.743435:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:17:13.743435:Found 3 DICOM file(s)
+260203-22:17:13,743 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.743435:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+INFO: stdout 2026-02-03T22:17:13.743435:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+260203-22:17:13,743 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.743435:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.743435:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00002 (162x162x1x1)
+260203-22:17:13,747 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.747086:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00001 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.747086:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00001 (162x162x1x1)
+260203-22:17:13,750 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.750442:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:17:13.750442:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv653_i00003 (162x162x1x1)
+260203-22:17:13,752 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.752955:Conversion required 0.014808 seconds (0.014802 for core code).
+INFO: stdout 2026-02-03T22:17:13.752955:Conversion required 0.014808 seconds (0.014802 for core code).
+260203-22:17:13,776 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.073274s.
+INFO: [Node] Finished "convert", elapsed time 0.073274s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:16:04,697 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixkbhrcqpe/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixkbhrcqpe/convert".
-260203-22:16:04,699 nipype.workflow INFO:
+260203-22:17:13,827 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixkj6fbw_x/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixkj6fbw_x/convert".
+260203-22:17:13,829 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:16:04,740 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.740408:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:16:04.740408:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:16:04,740 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.740408:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T22:16:04.740408:Found 3 DICOM file(s)
-260203-22:16:04,740 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.740408:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv441 (64x64x27x3)
-INFO: stdout 2026-02-03T22:16:04.740408:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv441 (64x64x27x3)
-260203-22:16:04,791 nipype.interface INFO:
-     stdout 2026-02-03T22:16:04.791905:Conversion required 0.057945 seconds (0.057941 for core code).
-INFO: stdout 2026-02-03T22:16:04.791905:Conversion required 0.057945 seconds (0.057941 for core code).
-260203-22:16:04,811 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.110921s.
-INFO: [Node] Finished "convert", elapsed time 0.110921s.
-260203-22:16:04,921 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetaq5dzbab2/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaq5dzbab2/embedder".
-260203-22:16:04,924 nipype.workflow INFO:
+260203-22:17:13,869 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.869553:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:17:13.869553:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:17:13,869 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.869553:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:17:13.869553:Found 3 DICOM file(s)
+260203-22:17:13,869 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.869553:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv365 (64x64x27x3)
+INFO: stdout 2026-02-03T22:17:13.869553:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv365 (64x64x27x3)
+260203-22:17:13,920 nipype.interface INFO:
+     stdout 2026-02-03T22:17:13.920920:Conversion required 0.056401 seconds (0.056396 for core code).
+INFO: stdout 2026-02-03T22:17:13.920920:Conversion required 0.056401 seconds (0.056396 for core code).
+260203-22:17:13,943 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.113769s.
+INFO: [Node] Finished "convert", elapsed time 0.113769s.
+260203-22:17:14,55 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetawr3scoiq/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetawr3scoiq/embedder".
+260203-22:17:14,58 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:16:04,995 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.070189s.
-INFO: [Node] Finished "embedder", elapsed time 0.070189s.
+260203-22:17:14,129 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.070035s.
+INFO: [Node] Finished "embedder", elapsed time 0.070035s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02 (12 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-22:16:05,2 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixt40fzzvi/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixt40fzzvi/convert".
-260203-22:16:05,6 nipype.workflow INFO:
+260203-22:17:14,136 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixgvr1rmte/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixgvr1rmte/convert".
+260203-22:17:14,140 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-22:16:05,49 nipype.interface INFO:
-     stdout 2026-02-03T22:16:05.049266:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T22:16:05.049266:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-22:16:05,49 nipype.interface INFO:
-     stdout 2026-02-03T22:16:05.049266:Found 12 DICOM file(s)
-INFO: stdout 2026-02-03T22:16:05.049266:Found 12 DICOM file(s)
-260203-22:16:05,49 nipype.interface INFO:
-     stdout 2026-02-03T22:16:05.049266:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv161 (64x64x27x12)
-INFO: stdout 2026-02-03T22:16:05.049266:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv161 (64x64x27x12)
-260203-22:16:05,248 nipype.interface INFO:
-     stdout 2026-02-03T22:16:05.248687:Conversion required 0.208107 seconds (0.208087 for core code).
-INFO: stdout 2026-02-03T22:16:05.248687:Conversion required 0.208107 seconds (0.208087 for core code).
-260203-22:16:05,268 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.261915s.
-INFO: [Node] Finished "convert", elapsed time 0.261915s.
-260203-22:16:05,696 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetahi25iuyt/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahi25iuyt/embedder".
-260203-22:16:05,699 nipype.workflow INFO:
+260203-22:17:14,184 nipype.interface INFO:
+     stdout 2026-02-03T22:17:14.184259:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:17:14.184259:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:17:14,184 nipype.interface INFO:
+     stdout 2026-02-03T22:17:14.184259:Found 12 DICOM file(s)
+INFO: stdout 2026-02-03T22:17:14.184259:Found 12 DICOM file(s)
+260203-22:17:14,184 nipype.interface INFO:
+     stdout 2026-02-03T22:17:14.184259:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv248 (64x64x27x12)
+INFO: stdout 2026-02-03T22:17:14.184259:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv248 (64x64x27x12)
+260203-22:17:14,385 nipype.interface INFO:
+     stdout 2026-02-03T22:17:14.385079:Conversion required 0.209394 seconds (0.209383 for core code).
+INFO: stdout 2026-02-03T22:17:14.385079:Conversion required 0.209394 seconds (0.209383 for core code).
+260203-22:17:14,409 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.268273s.
+INFO: [Node] Finished "convert", elapsed time 0.268273s.
+260203-22:17:14,832 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta0a3bu2_s/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta0a3bu2_s/embedder".
+260203-22:17:14,837 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-22:16:05,963 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.263256s.
-INFO: [Node] Finished "embedder", elapsed time 0.263256s.
+260203-22:17:15,97 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.259841s.
+INFO: [Node] Finished "embedder", elapsed time 0.259841s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02.json file
 INFO: Adding "IntendedFor" to the fieldmaps in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01.
 WARNING: We cannot add the IntendedFor field: no fmap/ in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01
@@ -6076,14 +6076,14 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 <section id="inspecting-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="inspecting-the-bids-dataset">Inspecting the BIDS dataset</h2>
 <p>Let’s see what was created:</p>
-<div id="96baf1d3" class="cell" data-execution_count="8">
+<div id="c20c1978" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114  0219191_mystudy-0219-1114.tar.gz  Norman</code></pre>
 </div>
 </div>
 <p>Let’s inspect the new folder in more detail:</p>
-<div id="c4eafcbf" class="cell" data-execution_count="9">
+<div id="b0c1550d" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">tree</span> <span class="at">-L</span> 7 Norman</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Norman
@@ -6176,7 +6176,7 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 <section id="validate-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>That looks like a BIDS dataset! Let’s check using the <a href="https://bids-standard.github.io/bids-validator/">BIDS Validator</a>:</p>
-<div id="1d3e4e85" class="cell" data-execution_count="10">
+<div id="73f92c15" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">cd</span> /Norman/Mennen/5516_greenEyes/</span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -6234,7 +6234,7 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 <section id="create-a-.bidsignore-file" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-.bidsignore-file">Create a <code>.bidsignore</code> file</h3>
 <p>Let the BIDS validator ignore <code>/sourcedata</code> and <code>.heudiconv</code>. To this end, we create a <code>.bidsignore</code> file:</p>
-<div id="f48f359d" class="cell" data-execution_count="11">
+<div id="63757d50" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">touch</span> .bidsignore</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="bu">echo</span> <span class="st">"/sourcedata"</span> <span class="op">&gt;</span> .bidsignore</span>
 <span id="cb17-3"><a href="#cb17-3"></a><span class="bu">echo</span> <span class="st">".heudiconv"</span> <span class="op">&gt;&gt;</span> .bidsignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -6242,13 +6242,13 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 </section>
 <section id="remove-data-from-the-mri-loalizer" class="level3">
 <h3 class="anchored" data-anchor-id="remove-data-from-the-mri-loalizer">Remove data from the MRI loalizer</h3>
-<div id="eada9c8a" class="cell" data-execution_count="12">
+<div id="b92a5a1b" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>scout<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="remove-repeated-runs-resulting-in-duplications" class="level3">
 <h3 class="anchored" data-anchor-id="remove-repeated-runs-resulting-in-duplications">Remove repeated runs (resulting in duplications)</h3>
-<div id="4efc6356" class="cell" data-execution_count="13">
+<div id="056ffa13" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>_dup<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -6271,7 +6271,7 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
 <section id="validate-again" class="level2">
 <h2 class="anchored" data-anchor-id="validate-again">Validate again</h2>
 <p>Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:</p>
-<div id="a7b17714" class="cell" data-execution_count="14">
+<div id="81ca68a3" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">

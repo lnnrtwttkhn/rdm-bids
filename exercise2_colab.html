@@ -199,14 +199,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Depending on your environment, paste the installation command here:</p>
-<div id="a1558d88" class="cell" data-execution_count="1">
+<div id="2b293cb9" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">!</span><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="download-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download and extract the example dataset or retrieve it from OSF at <a href="https://osf.io/rghtc/files/mqgzh" class="uri">https://osf.io/rghtc/files/mqgzh</a>.</p>
-<div id="ab5a4472" class="cell" data-execution_count="2">
+<div id="c2d24fcf" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">!</span>curl <span class="op">-</span>L https:<span class="op">//</span>nx81903.your<span class="op">-</span>storageshare.de<span class="op">/</span>s<span class="op">/</span>fKw8zSoLwGoDmyE<span class="op">/</span>download <span class="op">-</span>o rdm<span class="op">-</span>data.<span class="bu">zip</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="op">!</span>unzip <span class="op">-</span>j <span class="op">-</span>o rdm<span class="op">-</span>data.<span class="bu">zip</span> <span class="op">-</span>d rdm<span class="op">-</span>data</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="op">!</span>rm <span class="op">-</span>f rdm<span class="op">-</span>data.<span class="bu">zip</span></span>
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  902k    0  902k    0     0   720k      0 --:--:--  0:00:01 --:--:--  720k100 32.7M    0 32.7M    0     0  14.5M      0 --:--:--  0:00:02 --:--:-- 31.7M100 70.7M    0 70.7M    0     0  21.5M      0 --:--:--  0:00:03 --:--:-- 34.3M100  107M    0  107M    0     0  25.1M      0 --:--:--  0:00:04 --:--:-- 35.3M100  144M    0  144M    0     0  27.4M      0 --:--:--  0:00:05 --:--:-- 35.8M100  182M    0  182M    0     0  29.0M      0 --:--:--  0:00:06 --:--:-- 36.0M100  219M    0  219M    0     0  30.1M      0 --:--:--  0:00:07 --:--:-- 37.2M100  240M    0  240M    0     0  30.6M      0 --:--:--  0:00:07 --:--:-- 37.3M
+100  298k    0  298k    0     0   229k      0 --:--:--  0:00:01 --:--:--  229k100 19.7M    0 19.7M    0     0  8746k      0 --:--:--  0:00:02 --:--:-- 19.2M100 50.9M    0 50.9M    0     0  15.2M      0 --:--:--  0:00:03 --:--:-- 24.9M100 81.0M    0 81.0M    0     0  18.7M      0 --:--:--  0:00:04 --:--:-- 26.6M100  110M    0  110M    0     0  20.7M      0 --:--:--  0:00:05 --:--:-- 27.3M100  141M    0  141M    0     0  22.2M      0 --:--:--  0:00:06 --:--:-- 27.9M100  171M    0  171M    0     0  23.4M      0 --:--:--  0:00:07 --:--:-- 30.4M100  200M    0  200M    0     0  24.1M      0 --:--:--  0:00:08 --:--:-- 30.1M100  232M    0  232M    0     0  24.9M      0 --:--:--  0:00:09 --:--:-- 30.2M100  240M    0  240M    0     0  25.0M      0 --:--:--  0:00:09 --:--:-- 30.5M
 /usr/bin/sh: 1: unzip: not found
 /usr/bin/sh: 1: cd: can't cd to rdm-data</code></pre>
 </div>
@@ -224,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="prepare-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Extract the downloaded archive:</p>
-<div id="e90fd069" class="cell" data-execution_count="3">
+<div id="e42654ac" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">!</span>unzip sub<span class="op">-</span><span class="dv">219</span><span class="er">_dicom</span>.<span class="bu">zip</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="op">!</span>cd MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -236,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="inspect-the-raw-data-structure" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-raw-data-structure">Inspect the raw data structure</h2>
 <p>Let’s examine the directory structure of our dataset. The dataset contains DICOM files organized by subject and session:</p>
-<div id="54822195" class="cell" data-execution_count="4">
+<div id="b8c1b27f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">!</span>tree <span class="op">-</span>L <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="create-the-heuristic-file" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-heuristic-file">Create the heuristic file</h2>
 <p>Let’s examine the provided heuristic file that defines how to organize the DICOM files:</p>
-<div id="dc0e6b05" class="cell" data-execution_count="5">
+<div id="38ff6eed" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">!</span>cat Nifti<span class="op">/</span>code<span class="op">/</span>heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/code/heuristic1.py: No such file or directory</code></pre>
@@ -374,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>--minmeta</code> prevents overflow of meta-information in JSON files</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="8ead96ab" class="cell" data-execution_count="6">
+<div id="42f3d88a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">!</span>heudiconv <span class="op">--</span>files dicom<span class="op">/</span><span class="dv">219</span><span class="op">/</span>itbs<span class="op">/*/*</span>.dcm <span class="op">-</span>o Nifti <span class="op">-</span>f Nifti<span class="op">/</span>code<span class="op">/</span>heuristic1.py <span class="op">-</span>s <span class="dv">219</span> <span class="op">-</span>ss itbs <span class="op">-</span>c dcm2niix <span class="op">-</span>b <span class="op">--</span>minmeta <span class="op">--</span>overwrite</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -413,7 +413,7 @@ Traceback (most recent call last):
 <section id="inspect-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-bids-dataset">Inspect the BIDS dataset</h2>
 <p>Let’s see what was created in the Nifti directory:</p>
-<div id="2038824f" class="cell" data-execution_count="7">
+<div id="808f289d" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">!</span>tree Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nifti  [error opening dir]
@@ -428,7 +428,7 @@ Traceback (most recent call last):
 <li>Required BIDS text files (<code>CHANGES</code>, <code>README</code>, <code>dataset_description.json</code>, etc.)</li>
 </ul>
 <p>Let’s look at the subject structure in more detail:</p>
-<div id="5bad506c" class="cell" data-execution_count="8">
+<div id="694e4189" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">!</span>tree Nifti<span class="op">/</span>sub<span class="op">-</span><span class="dv">219</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nifti/sub-219  [error opening dir]
@@ -440,7 +440,7 @@ Traceback (most recent call last):
 <section id="check-bids-files" class="level2">
 <h2 class="anchored" data-anchor-id="check-bids-files">Check BIDS files</h2>
 <p>Let’s examine the required BIDS files that were created:</p>
-<div id="6b7e8ddb" class="cell" data-execution_count="9">
+<div id="a2398b23" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="op">!</span>ls Nifti<span class="op">/*</span>.json Nifti<span class="op">/*</span>.tsv Nifti<span class="op">/</span>README Nifti<span class="op">/</span>CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ls: cannot access 'Nifti/*.json': No such file or directory
@@ -450,7 +450,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 </div>
 </div>
 <p>View the dataset description:</p>
-<div id="5e7e3dc5" class="cell" data-execution_count="10">
+<div id="62da671d" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="op">!</span>cat Nifti<span class="op">/</span>dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/dataset_description.json: No such file or directory</code></pre>
@@ -460,7 +460,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 <section id="validate-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>Validate the dataset using the BIDS Validator to ensure everything is according to specification:</p>
-<div id="23aea441" class="cell" data-execution_count="11">
+<div id="02306cdd" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="op">!</span>bids<span class="op">-</span>validator<span class="op">-</span>deno Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -488,7 +488,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 <section id="understanding-the-conversion-process" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-conversion-process">Understanding the conversion process</h2>
 <p>Let’s examine what types of data were converted by looking at the different modality folders:</p>
-<div id="26af9dea" class="cell" data-execution_count="12">
+<div id="1a133998" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">!</span><span class="co"># Anatomical data</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="op">!</span>ls Nifti<span class="op">/</span>sub<span class="op">-</span><span class="dv">219</span><span class="op">/</span>ses<span class="op">-</span>itbs<span class="op">/</span>anat<span class="op">/</span></span>
 <span id="cb19-3"><a href="#cb19-3"></a></span>
@@ -511,7 +511,7 @@ ls: cannot access 'Nifti/sub-219/ses-itbs/fmap/': No such file or directory</cod
 <section id="examining-json-sidecars" class="level2">
 <h2 class="anchored" data-anchor-id="examining-json-sidecars">Examining JSON sidecars</h2>
 <p>BIDS requires JSON sidecar files alongside NIfTI files. Let’s examine one:</p>
-<div id="30abc283" class="cell" data-execution_count="13">
+<div id="dc25fac1" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="op">!</span>cat Nifti<span class="op">/</span>sub<span class="op">-</span><span class="dv">219</span><span class="op">/</span>ses<span class="op">-</span>itbs<span class="op">/</span>func<span class="op">/</span>sub<span class="op">-</span><span class="dv">219</span><span class="er">_ses</span><span class="op">-</span>itbs_task<span class="op">-</span>rest_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json: No such file or directory</code></pre>
