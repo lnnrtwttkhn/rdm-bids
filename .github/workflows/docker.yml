@@ -6,7 +6,6 @@ on:
       - 'Dockerfile'
       - 'pyproject.toml'
       - 'uv.lock'
-      - '_quarto*.yml'
 
 jobs:
   build:
