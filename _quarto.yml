@@ -25,9 +25,21 @@ website:
   search: false
   page-navigation: false
   back-to-top-navigation: true
+  navbar:
+    search: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Setup"
+        href: setup.qmd
+      - text: "Exercise 1"
+        href: exercise1.qmd
+      - text: "FAQ"
+        href: faq.qmd
   other-links:
-    - text: Jupyter Notebook
-      href: index.ipynb
+    - text: Exercise 1
+      href: exercise1.ipynb
+      icon: journal-code
 
 # table of contents:
 toc-depth: 3
