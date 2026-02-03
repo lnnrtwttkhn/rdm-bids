@@ -199,14 +199,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Depending on your environment, paste the installation command here:</p>
-<div id="6e7b74fa" class="cell" data-execution_count="1">
+<div id="ba6371ce" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="download-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download and extract the example dataset or retrieve it from OSF at <a href="https://osf.io/rghtc/files/mqgzh" class="uri">https://osf.io/rghtc/files/mqgzh</a>.</p>
-<div id="79af68c7" class="cell" data-execution_count="2">
+<div id="9950ea2c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download <span class="at">-o</span> rdm-data.zip</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">unzip</span> <span class="at">-j</span> <span class="at">-o</span> rdm-data.zip <span class="at">-d</span> rdm-data</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">rm</span> <span class="at">-f</span> rdm-data.zip</span>
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 76836    0 76836    0     0  66875      0 --:--:--  0:00:01 --:--:-- 66875100 15.1M    0 15.1M    0     0  7098k      0 --:--:--  0:00:02 --:--:-- 14.5M100 44.7M    0 44.7M    0     0  14.1M      0 --:--:--  0:00:03 --:--:-- 22.2M100 75.5M    0 75.5M    0     0  18.2M      0 --:--:--  0:00:04 --:--:-- 25.1M100  107M    0  107M    0     0  20.8M      0 --:--:--  0:00:05 --:--:-- 26.8M100  138M    0  138M    0     0  22.5M      0 --:--:--  0:00:06 --:--:-- 27.6M100  169M    0  169M    0     0  23.7M      0 --:--:--  0:00:07 --:--:-- 31.0M100  201M    0  201M    0     0  24.7M      0 --:--:--  0:00:08 --:--:-- 31.4M100  227M    0  227M    0     0  24.7M      0 --:--:--  0:00:09 --:--:-- 30.1M100  240M    0  240M    0     0  25.0M      0 --:--:--  0:00:09 --:--:-- 30.0M
+100 60468    0 60468    0     0  55482      0 --:--:--  0:00:01 --:--:-- 55482100 9377k    0 9377k    0     0  4464k      0 --:--:--  0:00:02 --:--:-- 9226k100 35.5M    0 35.5M    0     0  11.4M      0 --:--:--  0:00:03 --:--:-- 17.5M100 62.2M    0 62.2M    0     0  15.0M      0 --:--:--  0:00:04 --:--:-- 20.4M100 88.5M    0 88.5M    0     0  17.4M      0 --:--:--  0:00:05 --:--:-- 22.1M100  114M    0  114M    0     0  18.7M      0 --:--:--  0:00:06 --:--:-- 22.8M100  140M    0  140M    0     0  19.8M      0 --:--:--  0:00:07 --:--:-- 26.3M100  166M    0  166M    0     0  20.5M      0 --:--:--  0:00:08 --:--:-- 26.2M100  193M    0  193M    0     0  21.2M      0 --:--:--  0:00:09 --:--:-- 26.3M100  220M    0  220M    0     0  21.7M      0 --:--:--  0:00:10 --:--:-- 26.1M100  240M    0  240M    0     0  22.1M      0 --:--:--  0:00:10 --:--:-- 26.4M
 bash: unzip: command not found
 bash: cd: rdm-data: No such file or directory</code></pre>
 </div>
@@ -227,7 +227,7 @@ bash: cd: rdm-data: No such file or directory</code></pre>
 <section id="prepare-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Extract the downloaded archive:</p>
-<div id="4a9b497b" class="cell" data-execution_count="3">
+<div id="5b52543a" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">unzip</span> sub-219_dicom.zip</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="bu">cd</span> MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -242,7 +242,7 @@ bash: cd: MRIS: No such file or directory</code></pre>
 <section id="inspect-the-raw-data-structure" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-raw-data-structure">Inspect the raw data structure</h2>
 <p>Let’s examine the directory structure of our dataset. The dataset contains DICOM files organized by subject and session:</p>
-<div id="0465bc7c" class="cell" data-execution_count="4">
+<div id="4e394123" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>.
@@ -257,7 +257,8 @@ bash: cd: MRIS: No such file or directory</code></pre>
 ├── _site
 │&nbsp;&nbsp; ├── exercise1.ipynb
 │&nbsp;&nbsp; ├── exercise1_colab.ipynb
-│&nbsp;&nbsp; └── exercise2.ipynb
+│&nbsp;&nbsp; ├── exercise2.ipynb
+│&nbsp;&nbsp; └── exercise2_colab.ipynb
 ├── _variables.yml
 ├── apa.csl
 ├── exercise1.qmd
@@ -265,7 +266,6 @@ bash: cd: MRIS: No such file or directory</code></pre>
 ├── exercise1_colab.qmd
 ├── exercise2.qmd
 ├── exercise2.quarto_ipynb
-├── exercise2_colab.ipynb
 ├── exercise2_colab.qmd
 ├── faq.qmd
 ├── index.qmd
@@ -284,7 +284,7 @@ bash: cd: MRIS: No such file or directory</code></pre>
 <section id="create-the-heuristic-file" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-heuristic-file">Create the heuristic file</h2>
 <p>Let’s examine the provided heuristic file that defines how to organize the DICOM files:</p>
-<div id="440cab1e" class="cell" data-execution_count="5">
+<div id="f88266f9" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">cat</span> Nifti/code/heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/code/heuristic1.py: No such file or directory</code></pre>
@@ -310,7 +310,7 @@ bash: cd: MRIS: No such file or directory</code></pre>
 <li><code>--minmeta</code> prevents overflow of meta-information in JSON files</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="5db6d06b" class="cell" data-execution_count="6">
+<div id="757b3f5c" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">heudiconv</span> <span class="at">--files</span> dicom/219/itbs/<span class="pp">*</span>/<span class="pp">*</span>.dcm <span class="at">-o</span> Nifti <span class="at">-f</span> Nifti/code/heuristic1.py <span class="at">-s</span> 219 <span class="at">-ss</span> itbs <span class="at">-c</span> dcm2niix <span class="at">-b</span> <span class="at">--minmeta</span> <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -352,7 +352,7 @@ Traceback (most recent call last):
 <section id="inspect-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-bids-dataset">Inspect the BIDS dataset</h2>
 <p>Let’s see what was created in the Nifti directory:</p>
-<div id="e93a7902" class="cell" data-execution_count="7">
+<div id="8231c291" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">tree</span> Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nifti  [error opening dir]
@@ -370,7 +370,7 @@ Traceback (most recent call last):
 <li>Required BIDS text files (<code>CHANGES</code>, <code>README</code>, <code>dataset_description.json</code>, etc.)</li>
 </ul>
 <p>Let’s look at the subject structure in more detail:</p>
-<div id="df9b4344" class="cell" data-execution_count="8">
+<div id="be82de41" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">tree</span> Nifti/sub-219</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nifti/sub-219  [error opening dir]
@@ -385,7 +385,7 @@ Traceback (most recent call last):
 <section id="check-bids-files" class="level2">
 <h2 class="anchored" data-anchor-id="check-bids-files">Check BIDS files</h2>
 <p>Let’s examine the required BIDS files that were created:</p>
-<div id="f6c28a93" class="cell" data-execution_count="9">
+<div id="02b4368b" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ls</span> Nifti/<span class="pp">*</span>.json Nifti/<span class="pp">*</span>.tsv Nifti/README Nifti/CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ls: cannot access 'Nifti/*.json': No such file or directory
@@ -398,7 +398,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 </div>
 </div>
 <p>View the dataset description:</p>
-<div id="88923e4d" class="cell" data-execution_count="10">
+<div id="06501768" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span> Nifti/dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/dataset_description.json: No such file or directory</code></pre>
@@ -411,7 +411,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 <section id="validate-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>Validate the dataset using the BIDS Validator to ensure everything is according to specification:</p>
-<div id="7ab89765" class="cell" data-execution_count="11">
+<div id="16dedbb4" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1"></a><span class="ex">bids-validator-deno</span> Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
@@ -442,7 +442,7 @@ ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
 <section id="understanding-the-conversion-process" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-conversion-process">Understanding the conversion process</h2>
 <p>Let’s examine what types of data were converted by looking at the different modality folders:</p>
-<div id="2f16673a" class="cell" data-execution_count="12">
+<div id="07793798" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="co"># Anatomical data</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="fu">ls</span> Nifti/sub-219/ses-itbs/anat/</span>
 <span id="cb29-3"><a href="#cb29-3"></a></span>
@@ -468,7 +468,7 @@ ls: cannot access 'Nifti/sub-219/ses-itbs/fmap/': No such file or directory</cod
 <section id="examining-json-sidecars" class="level2">
 <h2 class="anchored" data-anchor-id="examining-json-sidecars">Examining JSON sidecars</h2>
 <p>BIDS requires JSON sidecar files alongside NIfTI files. Let’s examine one:</p>
-<div id="7a42033b" class="cell" data-execution_count="13">
+<div id="d91c5742" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">cat</span> Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cat: Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json: No such file or directory</code></pre>
