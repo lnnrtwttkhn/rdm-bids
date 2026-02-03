@@ -103,6 +103,10 @@ div.csl-indent {
 <span class="menu-text">Exercise 1</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./exercise2.html"> 
+<span class="menu-text">Exercise 2</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./faq.html"> 
 <span class="menu-text">FAQ</span></a>
   </li>  
@@ -123,9 +127,10 @@ div.csl-indent {
    
   <ul>
   <li><a href="#what-is-bids-brain-imaging-data-structure" id="toc-what-is-bids-brain-imaging-data-structure" class="nav-link active" data-scroll-target="#what-is-bids-brain-imaging-data-structure">What is BIDS (Brain Imaging Data Structure)?</a></li>
+  <li><a href="#tutorial-create-a-bids-dataset-using-heudiconv" id="toc-tutorial-create-a-bids-dataset-using-heudiconv" class="nav-link" data-scroll-target="#tutorial-create-a-bids-dataset-using-heudiconv">Tutorial: Create a BIDS dataset using <code>heudiconv</code></a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li><li><a href="exercise2.ipynb"><i class="bi bi-journal-code"></i>Exercise 2</a></li><li><a href="exercise1_colab.ipynb"><i class="bi bi-google"></i>Exercise 1 (Colab)</a></li><li><a href="exercise2_colab.ipynb"><i class="bi bi-google"></i>Exercise 2 (Colab)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -189,6 +194,11 @@ div.csl-indent {
 <li><p><strong>Sharing data</strong>: Data sharing is an important element of reproducible science and is encouraged (often enforced!) by many major federal funding agencies (e.g., <a href="https://grants.nih.gov/grants/policy/data_sharing/">NIH</a>, <a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF</a>, <a href="https://erc.europa.eu/managing-project/open-access">ERC</a>). BIDS allows others to more easily use your data and is the standard used by the <a href="https://openneuro.org/">OpenNeuro</a> data sharing platform <span class="citation" data-cites="poldrack2017">(<a href="#ref-poldrack2017" role="doc-biblioref">Poldrack &amp; Gorgolewski, 2017</a>)</span>. The workflow in this handbook encourages converting your data to BIDS format as early in the workflow as possible to facilitate reproducibility and save you the energy of retroactively organizing your data at the time of sharing.</p></li>
 </ul>
 <p>Consult the <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Specification</a> for detailed documentation on formatting. If you want to setup a new study using BIDS, check out documentation and scripts for converting raw data to BIDS format. You can also practice using BIDS with sample datasets.</p>
+</section>
+<section id="tutorial-create-a-bids-dataset-using-heudiconv" class="level2">
+<h2 class="anchored" data-anchor-id="tutorial-create-a-bids-dataset-using-heudiconv">Tutorial: Create a BIDS dataset using <code>heudiconv</code></h2>
+<p>In this tutorial, we will create a BIDS dataset using <code>heudiconv</code>.</p>
+<p><a href="https://heudiconv.readthedocs.io/en/latest/">HeuDiConv</a> is a flexible DICOM converter that helps organize brain imaging data into structured directory layouts. It converts DICOM files to NIfTI format using customizable heuristics (rules) to determine how files should be named and organized. HeuDiConv is particularly useful for converting raw scanner data to BIDS format, making your data more standardized and analysis-ready.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>

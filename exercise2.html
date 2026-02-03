@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
 <meta name="dcterms.date" content="2026-02-03">
 
-<title>Setup: How to setup and run the tutorial</title>
+<title>heudiconv with custom heuristics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./setup.html" aria-current="page"> 
+    <a class="nav-link" href="./setup.html"> 
 <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Exercise 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./exercise2.html"> 
+    <a class="nav-link active" href="./exercise2.html" aria-current="page"> 
 <span class="menu-text">Exercise 2</span></a>
   </li>  
   <li class="nav-item">
@@ -141,21 +141,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#download-notebooks" id="toc-download-notebooks" class="nav-link active" data-scroll-target="#download-notebooks">Download notebooks</a>
-  <ul class="collapse">
-  <li><a href="#jupyterhub-at-uhh" id="toc-jupyterhub-at-uhh" class="nav-link" data-scroll-target="#jupyterhub-at-uhh">JupyterHub at UHH</a></li>
-  <li><a href="#google-colab" id="toc-google-colab" class="nav-link" data-scroll-target="#google-colab">Google Colab</a></li>
-  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#download-the-data" id="toc-download-the-data" class="nav-link" data-scroll-target="#download-the-data">Download the data</a></li>
+  <li><a href="#prepare-the-data" id="toc-prepare-the-data" class="nav-link" data-scroll-target="#prepare-the-data">Prepare the data</a></li>
+  <li><a href="#inspect-the-raw-data-structure" id="toc-inspect-the-raw-data-structure" class="nav-link" data-scroll-target="#inspect-the-raw-data-structure">Inspect the raw data structure</a></li>
+  <li><a href="#create-the-heuristic-file" id="toc-create-the-heuristic-file" class="nav-link" data-scroll-target="#create-the-heuristic-file">Create the heuristic file</a></li>
+  <li><a href="#run-basic-heudiconv-conversion" id="toc-run-basic-heudiconv-conversion" class="nav-link" data-scroll-target="#run-basic-heudiconv-conversion">Run basic <code>heudiconv</code> conversion</a></li>
+  <li><a href="#inspect-the-bids-dataset" id="toc-inspect-the-bids-dataset" class="nav-link" data-scroll-target="#inspect-the-bids-dataset">Inspect the BIDS dataset</a></li>
+  <li><a href="#check-bids-files" id="toc-check-bids-files" class="nav-link" data-scroll-target="#check-bids-files">Check BIDS files</a></li>
+  <li><a href="#validate-the-bids-dataset" id="toc-validate-the-bids-dataset" class="nav-link" data-scroll-target="#validate-the-bids-dataset">Validate the BIDS dataset</a></li>
+  <li><a href="#understanding-the-conversion-process" id="toc-understanding-the-conversion-process" class="nav-link" data-scroll-target="#understanding-the-conversion-process">Understanding the conversion process</a></li>
+  <li><a href="#examining-json-sidecars" id="toc-examining-json-sidecars" class="nav-link" data-scroll-target="#examining-json-sidecars">Examining JSON sidecars</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/setup.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li><li><a href="exercise2.ipynb"><i class="bi bi-journal-code"></i>Exercise 2</a></li><li><a href="exercise1_colab.ipynb"><i class="bi bi-google"></i>Exercise 1 (Colab)</a></li><li><a href="exercise2_colab.ipynb"><i class="bi bi-google"></i>Exercise 2 (Colab)</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/exercise2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/exercise2.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li><li><a href="exercise2.ipynb"><i class="bi bi-journal-code"></i>Exercise 2</a></li><li><a href="exercise1_colab.ipynb"><i class="bi bi-google"></i>Exercise 1 (Colab)</a></li><li><a href="exercise2_colab.ipynb"><i class="bi bi-google"></i>Exercise 2 (Colab)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Setup: How to setup and run the tutorial</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><code>heudiconv</code> with custom heuristics</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Tutorial: How to create a BIDS dataset</p>
 </div>
 
@@ -185,48 +192,311 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="download-notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="download-notebooks">Download notebooks</h2>
-<p>Download notebooks from the right sidebar. Select <code>Colab</code> if you are using <a href="#google-colab">Google Colab</a>.</p>
-<section id="jupyterhub-at-uhh" class="level3">
-<h3 class="anchored" data-anchor-id="jupyterhub-at-uhh">JupyterHub at UHH</h3>
-<ol type="1">
-<li><p>Open <a href="https://code.min.uni-hamburg.de/" class="uri">https://code.min.uni-hamburg.de/</a></p></li>
-<li><p>Select <code>File</code> &gt; <code>New Launcher</code></p></li>
-<li><p>At the bottom, select <code>Terminal</code></p></li>
-<li><p>In the Terminal, enter:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/lnnrtwttkhn/rdm-bids</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cd</span> rdm-bids</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">make</span> install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>From the sidebar on the left, you can now open the exercise notebooks in the <code>rdm-bids</code> folder:</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This tutorial is based on <a href="https://neuroimaging-core-docs.readthedocs.io/en/latest/pages/heudiconv.html#lesson-3-reproin-py">Dianne Patterson’s University of Arizona tutorials</a>. It was adapted from the <a href="https://heudiconv.readthedocs.io/en/latest/quickstart.html"><code>heudiconv</code> Quickstart</a> tutorial. This guide demonstrates how to use <code>heudiconv</code> with a provided <code>heuristic.py</code> to convert DICOMS into the BIDS data structure using a basic conversion approach.</p>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>Depending on your environment, paste the installation command here:</p>
+<div id="eb096388" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="download-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
+<p>Download and extract the example dataset or retrieve it from OSF at <a href="https://osf.io/rghtc/files/mqgzh" class="uri">https://osf.io/rghtc/files/mqgzh</a>.</p>
+<div id="391970b8" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download <span class="at">-o</span> rdm-data.zip</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">unzip</span> <span class="at">-j</span> <span class="at">-o</span> rdm-data.zip <span class="at">-d</span> rdm-data</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">rm</span> <span class="at">-f</span> rdm-data.zip</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">cd</span> rdm-data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100 19546    0 19546    0     0  14046      0 --:--:--  0:00:01 --:--:-- 14046100 15.1M    0 15.1M    0     0  6485k      0 --:--:--  0:00:02 --:--:-- 15.1M100 53.2M    0 53.2M    0     0  15.7M      0 --:--:--  0:00:03 --:--:-- 26.6M100 91.6M    0 91.6M    0     0  20.7M      0 --:--:--  0:00:04 --:--:-- 30.2M100  128M    0  128M    0     0  23.8M      0 --:--:--  0:00:05 --:--:-- 32.0M100  165M    0  165M    0     0  25.9M      0 --:--:--  0:00:06 --:--:-- 33.1M100  204M    0  204M    0     0  27.5M      0 --:--:--  0:00:07 --:--:-- 37.6M100  240M    0  240M    0     0  28.7M      0 --:--:--  0:00:08 --:--:-- 37.5M
+bash: unzip: command not found
+bash: cd: rdm-data: No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="prepare-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
+<p>Extract the downloaded archive:</p>
+<div id="68f17275" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">unzip</span> sub-219_dicom.zip</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">cd</span> MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>bash: unzip: command not found
+bash: cd: MRIS: No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="inspect-the-raw-data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="inspect-the-raw-data-structure">Inspect the raw data structure</h2>
+<p>Let’s examine the directory structure of our dataset. The dataset contains DICOM files organized by subject and session:</p>
+<div id="f9542e87" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>.
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── README.md
+├── _colab_install.md
+├── _quarto-ci.yml
+├── _quarto-ipynb.yml
+├── _quarto.yml
+├── _site
+│&nbsp;&nbsp; ├── exercise1.ipynb
+│&nbsp;&nbsp; ├── exercise1_colab.ipynb
+│&nbsp;&nbsp; └── exercise2.ipynb
+├── _variables.yml
+├── apa.csl
+├── exercise1.qmd
+├── exercise1.quarto_ipynb
+├── exercise1_colab.qmd
+├── exercise2.qmd
+├── exercise2.quarto_ipynb
+├── exercise2_colab.ipynb
+├── exercise2_colab.qmd
+├── faq.qmd
+├── index.qmd
+├── index.quarto_ipynb
+├── prepare_colab.py
+├── pyproject.toml
+├── references.bib
+├── requirements.txt
+├── setup.qmd
+└── uv.lock
+
+2 directories, 29 files</code></pre>
+</div>
+</div>
+</section>
+<section id="create-the-heuristic-file" class="level2">
+<h2 class="anchored" data-anchor-id="create-the-heuristic-file">Create the heuristic file</h2>
+<p>Let’s examine the provided heuristic file that defines how to organize the DICOM files:</p>
+<div id="99e5531b" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">cat</span> Nifti/code/heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>cat: Nifti/code/heuristic1.py: No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="run-basic-heudiconv-conversion" class="level2">
+<h2 class="anchored" data-anchor-id="run-basic-heudiconv-conversion">Run basic <code>heudiconv</code> conversion</h2>
+<p>Now we’ll use heudiconv to convert DICOMS into the BIDS data structure using the custom heuristic.</p>
+<p><strong>Note:</strong> Heudiconv requires you to run the command from the parent directory of both the <code>dicom</code> and <code>Nifti</code> directories, which is <code>MRIS</code> in our case.</p>
+<p>Here’s an explanation of the flags and arguments:</p>
 <ul>
-<li><code>exercise1.ipynb</code></li>
-<li><code>exercise2.ipynb</code></li>
-</ul></li>
-<li><p>Paste the installation command into the first cell of the notebook:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
+<li><code>--files</code> specifies the DICOM files to convert</li>
+<li><code>-f</code> provides the heuristic file path</li>
+<li><code>-o</code> tells <code>heudiconv</code> where to place output (Nifti directory)</li>
+<li><code>-s</code> specifies the subject ID</li>
+<li><code>-ss</code> specifies the session</li>
+<li><code>-c dcm2niix</code> uses <code>dcm2niix</code> converter</li>
+<li><code>-b</code> indicates BIDS format output</li>
+<li><code>--minmeta</code> prevents overflow of meta-information in JSON files</li>
+<li><code>--overwrite</code> overwrites existing converted files</li>
+</ul>
+<div id="86349f6e" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">heudiconv</span> <span class="at">--files</span> dicom/219/itbs/<span class="pp">*</span>/<span class="pp">*</span>.dcm <span class="at">-o</span> Nifti <span class="at">-f</span> Nifti/code/heuristic1.py <span class="at">-s</span> 219 <span class="at">-ss</span> itbs <span class="at">-c</span> dcm2niix <span class="at">-b</span> <span class="at">--minmeta</span> <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre>WARNING: Could not check for version updates: Connection to server could not be made
+
+INFO: Running heudiconv version 1.3.4 latest Unknown
+
+Traceback (most recent call last):
+
+  File <span class="ansi-magenta-fg">"/app/.venv/bin/heudiconv"</span>, line <span class="ansi-magenta-fg">10</span>, in <span class="ansi-magenta-fg">&lt;module&gt;</span>
+
+    sys.exit(<span class="ansi-red-fg">main</span><span class="ansi-red-fg ansi-bold">()</span>)
+
+             <span class="ansi-red-fg">~~~~</span><span class="ansi-red-fg ansi-bold">^^</span>
+
+  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/cli/run.py"</span>, line <span class="ansi-magenta-fg">30</span>, in <span class="ansi-magenta-fg">main</span>
+
+    <span class="ansi-red-fg">workflow</span><span class="ansi-red-fg ansi-bold">(**kwargs)</span>
+
+    <span class="ansi-red-fg">~~~~~~~~</span><span class="ansi-red-fg ansi-bold">^^^^^^^^^^</span>
+
+  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/main.py"</span>, line <span class="ansi-magenta-fg">408</span>, in <span class="ansi-magenta-fg">workflow</span>
+
+    heuristic_mod = load_heuristic(heuristic)
+
+  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/utils.py"</span>, line <span class="ansi-magenta-fg">436</span>, in <span class="ansi-magenta-fg">load_heuristic</span>
+
+    mod = __import__(fname.split(".")[0])
+
+<span class="ansi-magenta-fg ansi-bold">ModuleNotFoundError</span>: <span class="ansi-magenta-fg">No module named 'heuristic1'</span>
+</pre>
+</div>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
 </section>
-<section id="google-colab" class="level3">
-<h3 class="anchored" data-anchor-id="google-colab">Google Colab</h3>
-<ol type="1">
-<li>Open <a href="https://colab.research.google.com/" class="uri">https://colab.research.google.com/</a></li>
-<li>Sign in with a Google account</li>
-<li>Select <code>File</code> &gt; <code>Open notebook</code></li>
-<li>Select <code>Upload</code> and open or drag the notebook file</li>
-<li>Paste the installation command into the first cell of the notebook:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">!</span>apt<span class="op">-</span>get install tree</span>
-<span id="cb3-2"><a href="#cb3-2"></a>pip install bash<span class="op">-</span>kernel<span class="op">&gt;=</span><span class="fl">0.10.0</span> bids<span class="op">-</span>validator<span class="op">-</span>deno<span class="op">&gt;=</span><span class="fl">2.3.1</span> dcm2niix<span class="op">&gt;=</span><span class="fl">1.0.20250506</span> heudiconv<span class="op">&gt;=</span><span class="fl">1.3.4</span> ipykernel<span class="op">&gt;=</span><span class="fl">7.1.0</span> jupyter<span class="op">&gt;=</span><span class="fl">1.1.1</span> nbformat<span class="op">&gt;=</span><span class="fl">5.10.4</span> pandas<span class="op">&gt;=</span><span class="fl">3.0.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="inspect-the-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="inspect-the-bids-dataset">Inspect the BIDS dataset</h2>
+<p>Let’s see what was created in the Nifti directory:</p>
+<div id="f3ccd23a" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">tree</span> Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nifti  [error opening dir]
+
+0 directories, 0 files</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 2</code></pre>
+</div>
+</div>
+<p>The output should contain:</p>
+<ul>
+<li>A BIDS-compliant subject directory (<code>sub-219/ses-itbs/</code>)</li>
+<li>Subdirectories for different data types (<code>anat</code>, <code>dwi</code>, <code>fmap</code>, <code>func</code>)</li>
+<li>Required BIDS text files (<code>CHANGES</code>, <code>README</code>, <code>dataset_description.json</code>, etc.)</li>
+</ul>
+<p>Let’s look at the subject structure in more detail:</p>
+<div id="f1882d73" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">tree</span> Nifti/sub-219</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nifti/sub-219  [error opening dir]
+
+0 directories, 0 files</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 2</code></pre>
+</div>
+</div>
 </section>
-<section id="terminal" class="level3">
-<h3 class="anchored" data-anchor-id="terminal">Terminal</h3>
-<ol type="1">
-<li>Open a Terminal and copy-paste all commands in the exercise</li>
-</ol>
+<section id="check-bids-files" class="level2">
+<h2 class="anchored" data-anchor-id="check-bids-files">Check BIDS files</h2>
+<p>Let’s examine the required BIDS files that were created:</p>
+<div id="06b317b5" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ls</span> Nifti/<span class="pp">*</span>.json Nifti/<span class="pp">*</span>.tsv Nifti/README Nifti/CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ls: cannot access 'Nifti/*.json': No such file or directory
+ls: cannot access 'Nifti/*.tsv': No such file or directory
+ls: cannot access 'Nifti/README': No such file or directory
+ls: cannot access 'Nifti/CHANGES': No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 2</code></pre>
+</div>
+</div>
+<p>View the dataset description:</p>
+<div id="04b367b6" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span> Nifti/dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>cat: Nifti/dataset_description.json: No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="validate-the-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
+<p>Validate the dataset using the BIDS Validator to ensure everything is according to specification:</p>
+<div id="81df0a51" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1"></a><span class="ex">bids-validator-deno</span> Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">error</span>: Uncaught (in promise) NotFound: No such file or directory (os error 2): readdir '/app/Nifti'
+
+  for await (const dirEntry of Deno.readDir(join(rootPath, relativePath))) {
+
+<span class="ansi-red-fg">                   ^</span>
+
+    <span style="opacity:0.7;color:rgb(138,138,138)">at </span><span style="opacity:0.7;color:rgb(138,138,138)">async </span><span style="opacity:0.7;color:rgb(138,138,138)">Object.[Symbol.asyncIterator]</span><span style="opacity:0.7;color:rgb(138,138,138)"> (</span><span style="opacity:0.7;color:rgb(138,138,138)">ext:deno_fs/30_fs.js</span><span style="opacity:0.7;color:rgb(138,138,138)">:</span><span style="opacity:0.7;color:rgb(138,138,138)">220</span><span style="opacity:0.7;color:rgb(138,138,138)">:</span><span style="opacity:0.7;color:rgb(138,138,138)">19</span><span style="opacity:0.7;color:rgb(138,138,138)">)</span>
+
+    at async <span style="font-weight:bold;font-style:italic">_readFileTree</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/files/deno.ts</span>:<span class="ansi-yellow-fg">43</span>:<span class="ansi-yellow-fg">20</span>)
+
+    at async <span style="font-weight:bold;font-style:italic">readFileTree</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/files/deno.ts</span>:<span class="ansi-yellow-fg">90</span>:<span class="ansi-yellow-fg">16</span>)
+
+    at async <span style="font-weight:bold;font-style:italic">main</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/main.ts</span>:<span class="ansi-yellow-fg">29</span>:<span class="ansi-yellow-fg">16</span>)
+
+    at async <span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/bids-validator.ts</span>:<span class="ansi-yellow-fg">4</span>:<span class="ansi-yellow-fg">16</span>
+</pre>
+</div>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+<p>The validation should show no errors, though there might be a couple of warnings.</p>
+</section>
+<section id="understanding-the-conversion-process" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-the-conversion-process">Understanding the conversion process</h2>
+<p>Let’s examine what types of data were converted by looking at the different modality folders:</p>
+<div id="3ce54b0c" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="co"># Anatomical data</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="fu">ls</span> Nifti/sub-219/ses-itbs/anat/</span>
+<span id="cb29-3"><a href="#cb29-3"></a></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="co"># Functional data</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a><span class="fu">ls</span> Nifti/sub-219/ses-itbs/func/</span>
+<span id="cb29-6"><a href="#cb29-6"></a></span>
+<span id="cb29-7"><a href="#cb29-7"></a><span class="co"># Diffusion data</span></span>
+<span id="cb29-8"><a href="#cb29-8"></a><span class="fu">ls</span> Nifti/sub-219/ses-itbs/dwi/</span>
+<span id="cb29-9"><a href="#cb29-9"></a></span>
+<span id="cb29-10"><a href="#cb29-10"></a><span class="co"># Fieldmap data</span></span>
+<span id="cb29-11"><a href="#cb29-11"></a><span class="fu">ls</span> Nifti/sub-219/ses-itbs/fmap/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ls: cannot access 'Nifti/sub-219/ses-itbs/anat/': No such file or directory
+ls: cannot access 'Nifti/sub-219/ses-itbs/func/': No such file or directory
+ls: cannot access 'Nifti/sub-219/ses-itbs/dwi/': No such file or directory
+ls: cannot access 'Nifti/sub-219/ses-itbs/fmap/': No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 2</code></pre>
+</div>
+</div>
+</section>
+<section id="examining-json-sidecars" class="level2">
+<h2 class="anchored" data-anchor-id="examining-json-sidecars">Examining JSON sidecars</h2>
+<p>BIDS requires JSON sidecar files alongside NIfTI files. Let’s examine one:</p>
+<div id="246ba150" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">cat</span> Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>cat: Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json: No such file or directory</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>You have successfully converted DICOM files to BIDS format using a custom heuristic file!</p>
+<p>Key differences from Exercise 1 (ReproIn approach):</p>
+<ul>
+<li>Used a custom <code>heuristic1.py</code> file instead of the built-in ReproIn heuristic</li>
+<li>Required manual specification of subject and session parameters</li>
+<li>Provides more control over the conversion process</li>
+<li>Suitable for datasets that don’t follow ReproIn naming conventions</li>
+</ul>
+<p>In future tutorials, you can:</p>
+<ul>
+<li>Learn how to create and modify custom heuristic files for your own data</li>
+<li>Understand how to handle more complex dataset structures</li>
+<li>Explore advanced heudiconv options for specific use cases</li>
+</ul>
+<p>Once you have a BIDS-compatible dataset, you can run <a href="https://bids-apps.neuroimaging.io/">BIDS Apps</a> for further analysis!</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -730,5 +1000,5 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/setup.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/exercise2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/exercise2.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

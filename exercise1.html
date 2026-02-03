@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
 <meta name="dcterms.date" content="2026-02-03">
 
-<title>Exercise 1</title>
+<title>heudiconv with ReproIn heuristic</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,6 +138,10 @@ div.csl-indent {
 <span class="menu-text">Exercise 1</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./exercise2.html"> 
+<span class="menu-text">Exercise 2</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./faq.html"> 
 <span class="menu-text">FAQ</span></a>
   </li>  
@@ -157,9 +161,7 @@ div.csl-indent {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#tutorial-create-a-bids-dataset-using-heudiconv" id="toc-tutorial-create-a-bids-dataset-using-heudiconv" class="nav-link active" data-scroll-target="#tutorial-create-a-bids-dataset-using-heudiconv">Tutorial: Create a BIDS dataset using <code>heudiconv</code></a>
-  <ul class="collapse">
-  <li><a href="#activate-the-environment" id="toc-activate-the-environment" class="nav-link" data-scroll-target="#activate-the-environment">Activate the environment</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#create-a-project-directory" id="toc-create-a-project-directory" class="nav-link" data-scroll-target="#create-a-project-directory">Create a project directory</a></li>
   <li><a href="#download-the-data" id="toc-download-the-data" class="nav-link" data-scroll-target="#download-the-data">Download the data</a></li>
   <li><a href="#prepare-the-data" id="toc-prepare-the-data" class="nav-link" data-scroll-target="#prepare-the-data">Prepare the data</a></li>
@@ -168,19 +170,24 @@ div.csl-indent {
   <li><a href="#run-heudiconv" id="toc-run-heudiconv" class="nav-link" data-scroll-target="#run-heudiconv">Run <code>heudiconv</code></a></li>
   <li><a href="#inspecting-the-bids-dataset" id="toc-inspecting-the-bids-dataset" class="nav-link" data-scroll-target="#inspecting-the-bids-dataset">Inspecting the BIDS dataset</a></li>
   <li><a href="#validate-the-bids-dataset" id="toc-validate-the-bids-dataset" class="nav-link" data-scroll-target="#validate-the-bids-dataset">Validate the BIDS dataset</a></li>
-  <li><a href="#fixing-a-bids-dataset" id="toc-fixing-a-bids-dataset" class="nav-link" data-scroll-target="#fixing-a-bids-dataset">Fixing a BIDS Dataset</a></li>
-  <li><a href="#validate-again" id="toc-validate-again" class="nav-link" data-scroll-target="#validate-again">Validate again</a></li>
+  <li><a href="#fixing-a-bids-dataset" id="toc-fixing-a-bids-dataset" class="nav-link" data-scroll-target="#fixing-a-bids-dataset">Fixing a BIDS Dataset</a>
+  <ul class="collapse">
+  <li><a href="#create-a-.bidsignore-file" id="toc-create-a-.bidsignore-file" class="nav-link" data-scroll-target="#create-a-.bidsignore-file">Create a <code>.bidsignore</code> file</a></li>
+  <li><a href="#remove-data-from-the-mri-loalizer" id="toc-remove-data-from-the-mri-loalizer" class="nav-link" data-scroll-target="#remove-data-from-the-mri-loalizer">Remove data from the MRI loalizer</a></li>
+  <li><a href="#remove-repeated-runs-resulting-in-duplications" id="toc-remove-repeated-runs-resulting-in-duplications" class="nav-link" data-scroll-target="#remove-repeated-runs-resulting-in-duplications">Remove repeated runs (resulting in duplications)</a></li>
+  <li><a href="#adjust-the-scans.tsv-file" id="toc-adjust-the-scans.tsv-file" class="nav-link" data-scroll-target="#adjust-the-scans.tsv-file">Adjust the <code>scans.tsv</code> file:</a></li>
   </ul></li>
+  <li><a href="#validate-again" id="toc-validate-again" class="nav-link" data-scroll-target="#validate-again">Validate again</a></li>
   <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next?</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/exercise1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/exercise1.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/edit/main/exercise1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/blob/main/exercise1.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lnnrtwttkhn/rdm-bids/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="exercise1.ipynb"><i class="bi bi-journal-code"></i>Exercise 1</a></li><li><a href="exercise2.ipynb"><i class="bi bi-journal-code"></i>Exercise 2</a></li><li><a href="exercise1_colab.ipynb"><i class="bi bi-google"></i>Exercise 1 (Colab)</a></li><li><a href="exercise2_colab.ipynb"><i class="bi bi-google"></i>Exercise 2 (Colab)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Exercise 1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><code>heudiconv</code> with ReproIn heuristic</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/rdm-bids"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Tutorial: How to create a BIDS dataset</p>
 </div>
 
@@ -210,61 +217,52 @@ div.csl-indent {
 </header>
 
 
-<section id="tutorial-create-a-bids-dataset-using-heudiconv" class="level2">
-<h2 class="anchored" data-anchor-id="tutorial-create-a-bids-dataset-using-heudiconv">Tutorial: Create a BIDS dataset using <code>heudiconv</code></h2>
-<p>In this tutorial, we will create a BIDS dataset using <code>heudiconv</code>.</p>
-<p><a href="https://heudiconv.readthedocs.io/en/latest/">HeuDiConv</a> is a flexible DICOM converter that helps organize brain imaging data into structured directory layouts. It converts DICOM files to NIfTI format using customizable heuristics (rules) to determine how files should be named and organized. HeuDiConv is particularly useful for converting raw scanner data to BIDS format, making your data more standardized and analysis-ready.</p>
-<section id="activate-the-environment" class="level3">
-<h3 class="anchored" data-anchor-id="activate-the-environment">Activate the environment</h3>
-<p>The setup created an environment that needs to be activated:</p>
-<div id="74efd7d5" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) </code></pre>
-</div>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>Depending on your environment, paste the installation command here:</p>
+<div id="3d9c25a3" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="create-a-project-directory" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-project-directory">Create a project directory</h3>
+<section id="create-a-project-directory" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-project-directory">Create a project directory</h2>
 <p>Create an empty directory called <code>mydataset</code> and navigate into it. <code>mydataset</code> is only a name. You can choose any other name.</p>
-<div id="47d24fec" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mkdir</span> mydataset</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">cd</span> mydataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cc203931" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">mkdir</span> mydataset</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">cd</span> mydataset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) 
-(rdm-bids) </code></pre>
+<pre><code>mkdir: cannot create directory ‘mydataset’: File exists</code></pre>
 </div>
 </div>
 </section>
-<section id="download-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="download-the-data">Download the data</h3>
+<section id="download-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download the data by <span class="citation" data-cites="nastase2020">Nastase et al. (<a href="#ref-nastase2020" role="doc-biblioref">2020</a>)</span> from <a href="https://doi.org/10.5281/zenodo.3677089">Zenodo</a>. Note that the download make take a few minutes.</p>
-<div id="b56998de" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">wget</span> https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3bb6f76f" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">wget</span> https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>--2026-02-03 20:01:53--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
-Resolving zenodo.org (zenodo.org)... 188.185.43.153, 137.138.153.219, 188.184.103.118, ...
-Connecting to zenodo.org (zenodo.org)|188.185.43.153|:443... connected.
+<pre><code>--2026-02-03 22:12:21--  https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+Resolving zenodo.org (zenodo.org)... 188.184.98.114, 137.138.153.219, 188.185.48.75, ...
+Connecting to zenodo.org (zenodo.org)|188.184.98.114|:443... connected.
 HTTP request sent, awaiting response... 301 MOVED PERMANENTLY
 Location: /records/3677090/files/0219191_mystudy-0219-1114.tar.gz [following]
---2026-02-03 20:01:54--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
+--2026-02-03 22:12:22--  https://zenodo.org/records/3677090/files/0219191_mystudy-0219-1114.tar.gz
 Reusing existing connection to zenodo.org:443.
 HTTP request sent, awaiting response... 200 OK
 Length: 405671662 (387M) [application/octet-stream]
 Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 
-          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  52.71K   156KB/s                       0219191_mys   0%[                    ] 211.54K   322KB/s                      0219191_myst   0%[                    ] 873.37K   900KB/s                     0219191_mystu   0%[                    ]   3.44M  2.85MB/s                    0219191_mystud   1%[                    ]   6.83M  4.72MB/s                   0219191_mystudy   3%[                    ]  14.47M  8.18MB/s                  0219191_mystudy-   5%[&gt;                   ]  22.19M  10.6MB/s                 0219191_mystudy-0   7%[&gt;                   ]  29.91M  12.4MB/s                0219191_mystudy-02   9%[&gt;                   ]  37.68M  13.7MB/s               0219191_mystudy-021  11%[=&gt;                  ]  45.41M  14.8MB/s    eta 23s    219191_mystudy-0219  13%[=&gt;                  ]  53.18M  16.6MB/s    eta 23s    19191_mystudy-0219-  15%[==&gt;                 ]  60.83M  18.8MB/s    eta 23s    9191_mystudy-0219-1  17%[==&gt;                 ]  68.05M  20.9MB/s    eta 23s    191_mystudy-0219-11  19%[==&gt;                 ]  75.74M  22.9MB/s    eta 18s    91_mystudy-0219-111  21%[===&gt;                ]  81.93M  23.9MB/s    eta 18s    1_mystudy-0219-1114  22%[===&gt;                ]  87.32M  23.6MB/s    eta 18s    _mystudy-0219-1114.  24%[===&gt;                ]  94.51M  24.3MB/s    eta 18s    mystudy-0219-1114.t  25%[====&gt;               ]  98.32M  23.3MB/s    eta 16s    ystudy-0219-1114.ta  27%[====&gt;               ] 106.08M  23.3MB/s    eta 16s    study-0219-1114.tar  29%[====&gt;               ] 113.82M  23.3MB/s    eta 16s    tudy-0219-1114.tar.  31%[=====&gt;              ] 121.55M  23.4MB/s    eta 16s    udy-0219-1114.tar.g  33%[=====&gt;              ] 129.17M  23.3MB/s    eta 13s    dy-0219-1114.tar.gz  35%[======&gt;             ] 136.71M  23.4MB/s    eta 13s    y-0219-1114.tar.gz   37%[======&gt;             ] 144.30M  23.5MB/s    eta 13s    -0219-1114.tar.gz    38%[======&gt;             ] 150.14M  23.8MB/s    eta 13s    0219-1114.tar.gz     40%[=======&gt;            ] 155.86M  23.0MB/s    eta 12s    219-1114.tar.gz      42%[=======&gt;            ] 163.49M  23.1MB/s    eta 12s    19-1114.tar.gz       44%[=======&gt;            ] 170.39M  22.9MB/s    eta 12s    9-1114.tar.gz        45%[========&gt;           ] 177.61M  23.9MB/s    eta 12s    -1114.tar.gz         47%[========&gt;           ] 181.98M  23.0MB/s    eta 10s    1114.tar.gz          49%[========&gt;           ] 189.77M  23.1MB/s    eta 10s    114.tar.gz           51%[=========&gt;          ] 197.56M  23.0MB/s    eta 10s    14.tar.gz            53%[=========&gt;          ] 205.24M  23.2MB/s    eta 10s    4.tar.gz             54%[=========&gt;          ] 212.67M  24.0MB/s    eta 8s     .tar.gz              56%[==========&gt;         ] 216.79M  23.2MB/s    eta 8s     tar.gz               57%[==========&gt;         ] 223.83M  23.8MB/s    eta 8s     ar.gz                59%[==========&gt;         ] 228.32M  23.2MB/s    eta 8s     r.gz                 61%[===========&gt;        ] 236.09M  23.4MB/s    eta 7s     .gz                  62%[===========&gt;        ] 243.70M  23.6MB/s    eta 7s     gz                   64%[===========&gt;        ] 251.46M  23.6MB/s    eta 7s     z                    66%[============&gt;       ] 259.19M  23.6MB/s    eta 6s                          68%[============&gt;       ] 266.54M  23.4MB/s    eta 6s                       0  70%[=============&gt;      ] 273.55M  23.3MB/s    eta 6s                      02  72%[=============&gt;      ] 281.16M  24.1MB/s    eta 6s                     021  73%[=============&gt;      ] 285.03M  23.2MB/s    eta 5s                    0219  75%[==============&gt;     ] 291.80M  23.8MB/s    eta 5s                   02191  76%[==============&gt;     ] 296.58M  23.0MB/s    eta 5s                  021919  78%[==============&gt;     ] 304.35M  23.2MB/s    eta 5s                 0219191  80%[===============&gt;    ] 312.08M  23.2MB/s    eta 3s                0219191_  82%[===============&gt;    ] 319.87M  23.3MB/s    eta 3s               0219191_m  84%[===============&gt;    ] 327.15M  24.1MB/s    eta 3s              0219191_my  85%[================&gt;   ] 331.13M  23.3MB/s    eta 3s             0219191_mys  87%[================&gt;   ] 338.84M  23.3MB/s    eta 2s            0219191_myst  89%[================&gt;   ] 345.63M  24.0MB/s    eta 2s           0219191_mystu  90%[=================&gt;  ] 349.70M  23.4MB/s    eta 2s          0219191_mystud  92%[=================&gt;  ] 356.28M  24.0MB/s    eta 2s         0219191_mystudy  93%[=================&gt;  ] 361.37M  23.5MB/s    eta 2s        0219191_mystudy-  95%[==================&gt; ] 367.76M  24.1MB/s    eta 1s       0219191_mystudy-0  96%[==================&gt; ] 373.05M  23.6MB/s    eta 1s      0219191_mystudy-02  97%[==================&gt; ] 378.42M  23.8MB/s    eta 1s     0219191_mystudy-021  99%[==================&gt; ] 384.71M  23.6MB/s    eta 1s     0219191_mystudy-021 100%[===================&gt;] 386.88M  24.0MB/s    in 18s     
+          0219191_m   0%[                    ]       0  --.-KB/s                        0219191_my   0%[                    ]  48.76K   233KB/s                       0219191_mys   0%[                    ] 405.49K   919KB/s                      0219191_myst   0%[                    ]   1.74M  2.53MB/s                     0219191_mystu   2%[                    ]   8.55M  9.63MB/s                    0219191_mystud   4%[                    ]  16.82M  15.5MB/s                   0219191_mystudy   6%[&gt;                   ]  23.32M  17.9MB/s                  0219191_mystudy-   8%[&gt;                   ]  32.25M  20.5MB/s                 0219191_mystudy-0  10%[=&gt;                  ]  40.05M  22.6MB/s                0219191_mystudy-02  12%[=&gt;                  ]  46.52M  23.6MB/s               0219191_mystudy-021  14%[=&gt;                  ]  54.21M  24.9MB/s               219191_mystudy-0219  15%[==&gt;                 ]  61.17M  25.8MB/s               19191_mystudy-0219-  18%[==&gt;                 ]  69.73M  26.8MB/s               9191_mystudy-0219-1  19%[==&gt;                 ]  77.13M  27.6MB/s               191_mystudy-0219-11  21%[===&gt;                ]  84.55M  28.2MB/s               91_mystudy-0219-111  23%[===&gt;                ]  91.97M  28.8MB/s    eta 10s    1_mystudy-0219-1114  25%[====&gt;               ]  98.60M  29.0MB/s    eta 10s    _mystudy-0219-1114.  27%[====&gt;               ] 106.96M  29.7MB/s    eta 10s    mystudy-0219-1114.t  29%[====&gt;               ] 115.63M  30.4MB/s    eta 10s    ystudy-0219-1114.ta  31%[=====&gt;              ] 122.94M  30.7MB/s    eta 10s    study-0219-1114.tar  34%[=====&gt;              ] 131.64M  32.5MB/s    eta 8s     tudy-0219-1114.tar.  35%[======&gt;             ] 138.24M  33.7MB/s    eta 8s     udy-0219-1114.tar.g  37%[======&gt;             ] 145.96M  35.4MB/s    eta 8s     dy-0219-1114.tar.gz  39%[======&gt;             ] 153.77M  36.7MB/s    eta 8s     y-0219-1114.tar.gz   41%[=======&gt;            ] 160.74M  36.6MB/s    eta 8s     -0219-1114.tar.gz    43%[=======&gt;            ] 168.99M  36.7MB/s    eta 7s     0219-1114.tar.gz     45%[========&gt;           ] 177.19M  36.8MB/s    eta 7s     219-1114.tar.gz      47%[========&gt;           ] 184.91M  36.8MB/s    eta 7s     19-1114.tar.gz       49%[========&gt;           ] 193.23M  37.3MB/s    eta 7s     9-1114.tar.gz        51%[=========&gt;          ] 200.15M  37.0MB/s    eta 7s     -1114.tar.gz         53%[=========&gt;          ] 207.69M  37.0MB/s    eta 5s     1114.tar.gz          55%[==========&gt;         ] 216.44M  36.9MB/s    eta 5s     114.tar.gz           57%[==========&gt;         ] 223.95M  37.2MB/s    eta 5s     14.tar.gz            59%[==========&gt;         ] 231.87M  37.3MB/s    eta 5s     4.tar.gz             61%[===========&gt;        ] 239.32M  37.3MB/s    eta 5s     .tar.gz              63%[===========&gt;        ] 247.15M  37.4MB/s    eta 4s     tar.gz               65%[============&gt;       ] 255.05M  37.4MB/s    eta 4s     ar.gz                67%[============&gt;       ] 262.58M  37.2MB/s    eta 4s     r.gz                 70%[=============&gt;      ] 271.50M  36.9MB/s    eta 4s     .gz                  72%[=============&gt;      ] 279.63M  37.0MB/s    eta 4s     gz                   73%[=============&gt;      ] 285.54M  36.6MB/s    eta 3s     z                    75%[==============&gt;     ] 292.98M  36.8MB/s    eta 3s                          77%[==============&gt;     ] 301.08M  36.6MB/s    eta 3s                       0  80%[===============&gt;    ] 309.88M  37.5MB/s    eta 3s                      02  82%[===============&gt;    ] 317.96M  37.7MB/s    eta 3s                     021  83%[===============&gt;    ] 324.76M  36.6MB/s    eta 2s                    0219  85%[================&gt;   ] 332.02M  36.5MB/s    eta 2s                   02191  87%[================&gt;   ] 339.93M  36.2MB/s    eta 2s                  021919  89%[================&gt;   ] 347.28M  36.3MB/s    eta 2s                 0219191  92%[=================&gt;  ] 356.09M  37.1MB/s    eta 2s                0219191_  93%[=================&gt;  ] 363.24M  35.9MB/s    eta 1s               0219191_m  96%[==================&gt; ] 371.63M  36.3MB/s    eta 1s              0219191_my  98%[==================&gt; ] 380.24M  37.0MB/s    eta 1s             0219191_mys  99%[==================&gt; ] 386.45M  36.6MB/s    eta 1s     0219191_mystudy-021 100%[===================&gt;] 386.88M  36.7MB/s    in 11s     
 
-2026-02-03 20:02:12 (21.9 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
-
-(rdm-bids) </code></pre>
+2026-02-03 22:12:33 (34.4 MB/s) - ‘0219191_mystudy-0219-1114.tar.gz’ saved [405671662/405671662]
+</code></pre>
 </div>
 </div>
 </section>
-<section id="prepare-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h3>
+<section id="prepare-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Now we need to extract the downloaded archive. The following command extracts the <code>tar.gz</code> archive (<code>-x</code> extract, <code>-v</code> verbose, <code>-z</code> gzip, <code>-f</code> file).</p>
-<div id="20dee8c0" class="cell" data-execution_count="4">
+<div id="f0f32352" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy"><code class="sourceCode bash"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="fu">tar</span> <span class="at">-xvzf</span> 0219191_mystudy-0219-1114.tar.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114/
@@ -2932,15 +2930,14 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 0219191_mystudy-0219-1114/dcm/9-402-1.dcm.gz
 0219191_mystudy-0219-1114/dcm/9-482-1.dcm.gz
 0219191_mystudy-0219-1114/dcm/12-358-1.dcm.gz
-0219191_mystudy-0219-1114/dcm/10-12-1.dcm.gz
-(rdm-bids) </code></pre>
+0219191_mystudy-0219-1114/dcm/10-12-1.dcm.gz</code></pre>
 </div>
 </div>
 </section>
-<section id="inspect-the-raw-data" class="level3">
-<h3 class="anchored" data-anchor-id="inspect-the-raw-data">Inspect the raw data</h3>
+<section id="inspect-the-raw-data" class="level2">
+<h2 class="anchored" data-anchor-id="inspect-the-raw-data">Inspect the raw data</h2>
 <p>Let’s navigate into the directory and see what’s inside the dataset. Using <code>tree -L 2</code> we show the directory structure with a maximum depth of 2 levels.</p>
-<div id="c226e8ee" class="cell" data-execution_count="5">
+<div id="54ea559b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy"><code class="sourceCode bash"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 0219191_mystudy-0219-1114</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0219191_mystudy-0219-1114
@@ -5609,23 +5606,19 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 │&nbsp;&nbsp; └── 9-99-1.dcm.gz
 └── gzip-report.log
 
-2 directories, 2663 files
-(rdm-bids) </code></pre>
+2 directories, 2663 files</code></pre>
 </div>
 </div>
 </section>
-<section id="decompress-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="decompress-the-data">Decompress the data</h3>
+<section id="decompress-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="decompress-the-data">Decompress the data</h2>
 <p>We need to decompress all gzipped DICOM files in the <code>dcm</code> directory:</p>
-<div id="005064b9" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">gunzip</span> 0219191_mystudy-0219-1114/dcm/<span class="pp">*</span>.dcm.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) </code></pre>
-</div>
+<div id="1754b74c" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">gunzip</span> 0219191_mystudy-0219-1114/dcm/<span class="pp">*</span>.dcm.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="run-heudiconv" class="level3">
-<h3 class="anchored" data-anchor-id="run-heudiconv">Run <code>heudiconv</code></h3>
+<section id="run-heudiconv" class="level2">
+<h2 class="anchored" data-anchor-id="run-heudiconv">Run <code>heudiconv</code></h2>
 <p>Finally, we can run <code>heudiconv</code>! The following command converts DICOM files to BIDS format using the ReproIn heuristic for subject 01 and session 01.</p>
 <p>Here is an explanation for the flags and arguments:</p>
 <ul>
@@ -5636,8 +5629,8 @@ Saving to: ‘0219191_mystudy-0219-1114.tar.gz’
 <li><code>--files</code> or directories containing files to process</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="c53a4879" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">heudiconv</span> <span class="at">-f</span> reproin <span class="at">--subject</span> 01 <span class="at">--ses</span> 01 <span class="at">--bids</span> <span class="at">--files</span> 0219191_mystudy-0219-1114/dcm <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="bf9dfe86" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">heudiconv</span> <span class="at">-f</span> reproin <span class="at">--subject</span> 01 <span class="at">--ses</span> 01 <span class="at">--bids</span> <span class="at">--files</span> 0219191_mystudy-0219-1114/dcm <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>WARNING: Could not check for version updates: Connection to server could not be made
 INFO: Running heudiconv version 1.3.4 latest Unknown
@@ -5655,445 +5648,443 @@ WARNING: Detected 3 duplicated run(s) for template {bids_subject_session_dir}/an
 WARNING: Detected 2 duplicated run(s) for template {bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-sound_run-01_bold: ['6-func_ses-01_task-sound_run-01', '7-func_ses-01_task-sound_run-01']
 INFO: Doing conversion using dcm2niix
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:02:33,84 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixr71euv1x/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixr71euv1x/convert".
-260203-20:02:33,87 nipype.workflow INFO:
+260203-22:12:53,304 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix42g2807q/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix42g2807q/convert".
+260203-22:12:53,307 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:02:33,197 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.197443:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:02:33.197443:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:02:33,197 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.197443:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T20:02:33.197443:Found 3 DICOM file(s)
-260203-20:02:33,197 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.197443:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-INFO: stdout 2026-02-03T20:02:33.197443:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
-260203-20:02:33,197 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.197443:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00001 (162x162x1x1)
-INFO: stdout 2026-02-03T20:02:33.197443:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00001 (162x162x1x1)
-260203-20:02:33,201 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.201766:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T20:02:33.201766:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00002 (162x162x1x1)
-260203-20:02:33,206 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.206073:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T20:02:33.206073:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv959_i00003 (162x162x1x1)
-260203-20:02:33,209 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.209129:Conversion required 0.016116 seconds (0.016110 for core code).
-INFO: stdout 2026-02-03T20:02:33.209129:Conversion required 0.016116 seconds (0.016110 for core code).
-260203-20:02:33,230 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.07129s.
-INFO: [Node] Finished "convert", elapsed time 0.07129s.
+260203-22:12:53,408 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.408055:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:12:53.408055:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:12:53,408 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.408055:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:12:53.408055:Found 3 DICOM file(s)
+260203-22:12:53,408 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.408055:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+INFO: stdout 2026-02-03T22:12:53.408055:Slices not stacked: orientation varies (vNav or localizer?) [0.996918 -0.0146115 0.077075 -0.00902414 0.954619 0.297693] != [0.999714 -0.00832137 0.0224079 0.00569606 0.993375 0.114773]
+260203-22:12:53,408 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.408055:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00001 (162x162x1x1)
+INFO: stdout 2026-02-03T22:12:53.408055:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00001 (162x162x1x1)
+260203-22:12:53,411 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.411855:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:12:53.411855:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00002 (162x162x1x1)
+260203-22:12:53,415 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.415267:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:12:53.415267:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_heudiconv697_i00003 (162x162x1x1)
+260203-22:12:53,417 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.417898:Conversion required 0.014449 seconds (0.014446 for core code).
+INFO: stdout 2026-02-03T22:12:53.417898:Conversion required 0.014449 seconds (0.014446 for core code).
+260203-22:12:53,437 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.067878s.
+INFO: [Node] Finished "convert", elapsed time 0.067878s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w (192 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:02:33,295 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixdwrnkd3d/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixdwrnkd3d/convert".
-260203-20:02:33,332 nipype.workflow INFO:
+260203-22:12:53,501 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixvrm1kgtx/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixvrm1kgtx/convert".
+260203-22:12:53,539 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:02:33,427 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.427553:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:02:33.427553:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:02:33,427 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.427553:Found 192 DICOM file(s)
-INFO: stdout 2026-02-03T20:02:33.427553:Found 192 DICOM file(s)
-260203-20:02:33,427 nipype.interface INFO:
-     stdout 2026-02-03T20:02:33.427553:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv972 (256x256x192x1)
-INFO: stdout 2026-02-03T20:02:33.427553:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv972 (256x256x192x1)
-260203-20:02:35,726 nipype.interface INFO:
-     stdout 2026-02-03T20:02:35.726525:Conversion required 2.359523 seconds (2.359288 for core code).
-INFO: stdout 2026-02-03T20:02:35.726525:Conversion required 2.359523 seconds (2.359288 for core code).
-260203-20:02:35,748 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 2.415242s.
-INFO: [Node] Finished "convert", elapsed time 2.415242s.
-260203-20:02:41,364 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetax1cq2sxq/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetax1cq2sxq/embedder".
-260203-20:02:41,376 nipype.workflow INFO:
+260203-22:12:53,634 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.634316:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:12:53.634316:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:12:53,634 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.634316:Found 192 DICOM file(s)
+INFO: stdout 2026-02-03T22:12:53.634316:Found 192 DICOM file(s)
+260203-22:12:53,634 nipype.interface INFO:
+     stdout 2026-02-03T22:12:53.634316:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv066 (256x256x192x1)
+INFO: stdout 2026-02-03T22:12:53.634316:Convert 192 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w_heudiconv066 (256x256x192x1)
+260203-22:12:55,940 nipype.interface INFO:
+     stdout 2026-02-03T22:12:55.940708:Conversion required 2.366310 seconds (2.366198 for core code).
+INFO: stdout 2026-02-03T22:12:55.940708:Conversion required 2.366310 seconds (2.366198 for core code).
+260203-22:12:55,962 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 2.422809s.
+INFO: [Node] Finished "convert", elapsed time 2.422809s.
+260203-22:13:01,554 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetad2r7qlgp/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetad2r7qlgp/embedder".
+260203-22:13:01,564 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:02:44,568 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.1914730000000002s.
-INFO: [Node] Finished "embedder", elapsed time 3.1914730000000002s.
+260203-22:13:04,704 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.138811s.
+INFO: [Node] Finished "embedder", elapsed time 3.138811s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_T1w.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold (179 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:02:44,593 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixoczt04lv/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixoczt04lv/convert".
-260203-20:02:44,629 nipype.workflow INFO:
+260203-22:13:04,727 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixakky4lj8/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixakky4lj8/convert".
+260203-22:13:04,762 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:02:44,724 nipype.interface INFO:
-     stdout 2026-02-03T20:02:44.724524:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:02:44.724524:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:02:44,724 nipype.interface INFO:
-     stdout 2026-02-03T20:02:44.724524:Found 179 DICOM file(s)
-INFO: stdout 2026-02-03T20:02:44.724524:Found 179 DICOM file(s)
-260203-20:02:44,724 nipype.interface INFO:
-     stdout 2026-02-03T20:02:44.724524:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv326 (64x64x27x179)
-INFO: stdout 2026-02-03T20:02:44.724524:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv326 (64x64x27x179)
-260203-20:02:47,718 nipype.interface INFO:
-     stdout 2026-02-03T20:02:47.718906:Conversion required 3.054898 seconds (3.054702 for core code).
-INFO: stdout 2026-02-03T20:02:47.718906:Conversion required 3.054898 seconds (3.054702 for core code).
-260203-20:02:47,742 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.112561s.
-INFO: [Node] Finished "convert", elapsed time 3.112561s.
-260203-20:02:53,957 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta2v5gl3zz/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta2v5gl3zz/embedder".
-260203-20:02:53,968 nipype.workflow INFO:
+260203-22:13:04,857 nipype.interface INFO:
+     stdout 2026-02-03T22:13:04.857896:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:13:04.857896:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:13:04,858 nipype.interface INFO:
+     stdout 2026-02-03T22:13:04.857896:Found 179 DICOM file(s)
+INFO: stdout 2026-02-03T22:13:04.857896:Found 179 DICOM file(s)
+260203-22:13:04,858 nipype.interface INFO:
+     stdout 2026-02-03T22:13:04.857896:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv663 (64x64x27x179)
+INFO: stdout 2026-02-03T22:13:04.857896:Convert 179 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_heudiconv663 (64x64x27x179)
+260203-22:13:07,848 nipype.interface INFO:
+     stdout 2026-02-03T22:13:07.848867:Conversion required 3.051294 seconds (3.051166 for core code).
+INFO: stdout 2026-02-03T22:13:07.848867:Conversion required 3.051294 seconds (3.051166 for core code).
+260203-22:13:07,871 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.108382s.
+INFO: [Node] Finished "convert", elapsed time 3.108382s.
+260203-22:13:14,102 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta4d28fv0e/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta4d28fv0e/embedder".
+260203-22:13:14,113 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:02:57,952 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 3.983675s.
-INFO: [Node] Finished "embedder", elapsed time 3.983675s.
+260203-22:13:18,67 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 3.9536s.
+INFO: [Node] Finished "embedder", elapsed time 3.9536s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:02:57,983 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix6urf2m41/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix6urf2m41/convert".
-260203-20:02:58,78 nipype.workflow INFO:
+260203-22:13:18,99 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix985fd0fu/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix985fd0fu/convert".
+260203-22:13:18,194 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:02:58,274 nipype.interface INFO:
-     stdout 2026-02-03T20:02:58.274596:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:02:58.274596:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:02:58,274 nipype.interface INFO:
-     stdout 2026-02-03T20:02:58.274596:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T20:02:58.274596:Found 485 DICOM file(s)
-260203-20:02:58,274 nipype.interface INFO:
-     stdout 2026-02-03T20:02:58.274596:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv452 (64x64x27x485)
-INFO: stdout 2026-02-03T20:02:58.274596:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv452 (64x64x27x485)
-260203-20:03:06,382 nipype.interface INFO:
-     stdout 2026-02-03T20:03:06.382215:Conversion required 8.269444 seconds (8.268888 for core code).
-INFO: stdout 2026-02-03T20:03:06.382215:Conversion required 8.269444 seconds (8.268888 for core code).
-260203-20:03:06,404 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.325669s.
-INFO: [Node] Finished "convert", elapsed time 8.325669s.
-260203-20:03:23,155 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetalje2f850/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetalje2f850/embedder".
-260203-20:03:23,179 nipype.workflow INFO:
+260203-22:13:18,385 nipype.interface INFO:
+     stdout 2026-02-03T22:13:18.385831:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:13:18.385831:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:13:18,386 nipype.interface INFO:
+     stdout 2026-02-03T22:13:18.385831:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:13:18.385831:Found 485 DICOM file(s)
+260203-22:13:18,386 nipype.interface INFO:
+     stdout 2026-02-03T22:13:18.385831:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv904 (64x64x27x485)
+INFO: stdout 2026-02-03T22:13:18.385831:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold_heudiconv904 (64x64x27x485)
+260203-22:13:26,508 nipype.interface INFO:
+     stdout 2026-02-03T22:13:26.508817:Conversion required 8.279249 seconds (8.278317 for core code).
+INFO: stdout 2026-02-03T22:13:26.508817:Conversion required 8.279249 seconds (8.278317 for core code).
+260203-22:13:26,533 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.338565s.
+INFO: [Node] Finished "convert", elapsed time 8.338565s.
+260203-22:13:43,246 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetat0wo1_bw/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetat0wo1_bw/embedder".
+260203-22:13:43,269 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:03:34,152 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.971893s.
-INFO: [Node] Finished "embedder", elapsed time 10.971893s.
+260203-22:13:54,246 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.976454s.
+INFO: [Node] Finished "embedder", elapsed time 10.976454s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:03:34,212 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixipx60ik5/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixipx60ik5/convert".
-260203-20:03:34,308 nipype.workflow INFO:
+260203-22:13:54,306 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixk1y2jzxw/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixk1y2jzxw/convert".
+260203-22:13:54,404 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:03:34,511 nipype.interface INFO:
-     stdout 2026-02-03T20:03:34.510982:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:03:34.510982:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:03:34,511 nipype.interface INFO:
-     stdout 2026-02-03T20:03:34.510982:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T20:03:34.510982:Found 485 DICOM file(s)
-260203-20:03:34,511 nipype.interface INFO:
-     stdout 2026-02-03T20:03:34.510982:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv350 (64x64x27x485)
-INFO: stdout 2026-02-03T20:03:34.510982:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv350 (64x64x27x485)
-260203-20:03:42,672 nipype.interface INFO:
-     stdout 2026-02-03T20:03:42.672592:Conversion required 8.328711 seconds (8.328121 for core code).
-INFO: stdout 2026-02-03T20:03:42.672592:Conversion required 8.328711 seconds (8.328121 for core code).
-260203-20:03:42,703 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.394456s.
-INFO: [Node] Finished "convert", elapsed time 8.394456s.
-260203-20:03:59,129 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetai8zds4ah/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetai8zds4ah/embedder".
-260203-20:03:59,153 nipype.workflow INFO:
+260203-22:13:54,589 nipype.interface INFO:
+     stdout 2026-02-03T22:13:54.589735:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:13:54.589735:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:13:54,589 nipype.interface INFO:
+     stdout 2026-02-03T22:13:54.589735:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:13:54.589735:Found 485 DICOM file(s)
+260203-22:13:54,590 nipype.interface INFO:
+     stdout 2026-02-03T22:13:54.589735:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv815 (64x64x27x485)
+INFO: stdout 2026-02-03T22:13:54.589735:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold_heudiconv815 (64x64x27x485)
+260203-22:14:02,771 nipype.interface INFO:
+     stdout 2026-02-03T22:14:02.771196:Conversion required 8.332106 seconds (8.331576 for core code).
+INFO: stdout 2026-02-03T22:14:02.771196:Conversion required 8.332106 seconds (8.331576 for core code).
+260203-22:14:02,805 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.400656s.
+INFO: [Node] Finished "convert", elapsed time 8.400656s.
+260203-22:14:19,254 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetan6i7ehua/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetan6i7ehua/embedder".
+260203-22:14:19,277 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:04:10,118 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.964617s.
-INFO: [Node] Finished "embedder", elapsed time 10.964617s.
+260203-22:14:30,123 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.845644s.
+INFO: [Node] Finished "embedder", elapsed time 10.845644s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:04:10,177 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix4tw9sql2/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix4tw9sql2/convert".
-260203-20:04:10,273 nipype.workflow INFO:
+260203-22:14:30,183 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix9x2nlnyp/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix9x2nlnyp/convert".
+260203-22:14:30,278 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:04:10,460 nipype.interface INFO:
-     stdout 2026-02-03T20:04:10.460919:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:04:10.460919:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:04:10,461 nipype.interface INFO:
-     stdout 2026-02-03T20:04:10.460919:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T20:04:10.460919:Found 485 DICOM file(s)
-260203-20:04:10,461 nipype.interface INFO:
-     stdout 2026-02-03T20:04:10.460919:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv387 (64x64x27x485)
-INFO: stdout 2026-02-03T20:04:10.460919:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv387 (64x64x27x485)
-260203-20:04:18,593 nipype.interface INFO:
-     stdout 2026-02-03T20:04:18.593169:Conversion required 8.284299 seconds (8.283746 for core code).
-INFO: stdout 2026-02-03T20:04:18.593169:Conversion required 8.284299 seconds (8.283746 for core code).
-260203-20:04:18,621 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.347615s.
-INFO: [Node] Finished "convert", elapsed time 8.347615s.
-260203-20:04:34,849 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetakcmjkgnk/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetakcmjkgnk/embedder".
-260203-20:04:34,874 nipype.workflow INFO:
+260203-22:14:30,464 nipype.interface INFO:
+     stdout 2026-02-03T22:14:30.464505:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:14:30.464505:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:14:30,464 nipype.interface INFO:
+     stdout 2026-02-03T22:14:30.464505:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:14:30.464505:Found 485 DICOM file(s)
+260203-22:14:30,464 nipype.interface INFO:
+     stdout 2026-02-03T22:14:30.464505:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv639 (64x64x27x485)
+INFO: stdout 2026-02-03T22:14:30.464505:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold_heudiconv639 (64x64x27x485)
+260203-22:14:38,595 nipype.interface INFO:
+     stdout 2026-02-03T22:14:38.595823:Conversion required 8.282267 seconds (8.281640 for core code).
+INFO: stdout 2026-02-03T22:14:38.595823:Conversion required 8.282267 seconds (8.281640 for core code).
+260203-22:14:38,625 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.346702s.
+INFO: [Node] Finished "convert", elapsed time 8.346702s.
+260203-22:14:54,707 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta0pxn1v1e/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta0pxn1v1e/embedder".
+260203-22:14:54,731 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:04:45,745 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.870085s.
-INFO: [Node] Finished "embedder", elapsed time 10.870085s.
+260203-22:15:05,640 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.908231s.
+INFO: [Node] Finished "embedder", elapsed time 10.908231s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold (485 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:04:45,804 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixpi8c89vl/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixpi8c89vl/convert".
-260203-20:04:45,900 nipype.workflow INFO:
+260203-22:15:05,700 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixwz621_fr/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixwz621_fr/convert".
+260203-22:15:05,796 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:04:46,90 nipype.interface INFO:
-     stdout 2026-02-03T20:04:46.090566:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:04:46.090566:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:04:46,90 nipype.interface INFO:
-     stdout 2026-02-03T20:04:46.090566:Found 485 DICOM file(s)
-INFO: stdout 2026-02-03T20:04:46.090566:Found 485 DICOM file(s)
-260203-20:04:46,90 nipype.interface INFO:
-     stdout 2026-02-03T20:04:46.090566:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv502 (64x64x27x485)
-INFO: stdout 2026-02-03T20:04:46.090566:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv502 (64x64x27x485)
-260203-20:04:54,250 nipype.interface INFO:
-     stdout 2026-02-03T20:04:54.250329:Conversion required 8.315003 seconds (8.314472 for core code).
-INFO: stdout 2026-02-03T20:04:54.250329:Conversion required 8.315003 seconds (8.314472 for core code).
-260203-20:04:54,277 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.375987s.
-INFO: [Node] Finished "convert", elapsed time 8.375987s.
-260203-20:05:11,693 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetatmtj2zzb/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetatmtj2zzb/embedder".
-260203-20:05:11,717 nipype.workflow INFO:
+260203-22:15:05,983 nipype.interface INFO:
+     stdout 2026-02-03T22:15:05.983218:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:15:05.983218:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:15:05,983 nipype.interface INFO:
+     stdout 2026-02-03T22:15:05.983218:Found 485 DICOM file(s)
+INFO: stdout 2026-02-03T22:15:05.983218:Found 485 DICOM file(s)
+260203-22:15:05,983 nipype.interface INFO:
+     stdout 2026-02-03T22:15:05.983218:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
+INFO: stdout 2026-02-03T22:15:05.983218:Convert 485 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold_heudiconv715 (64x64x27x485)
+260203-22:15:14,144 nipype.interface INFO:
+     stdout 2026-02-03T22:15:14.144168:Conversion required 8.312857 seconds (8.312260 for core code).
+INFO: stdout 2026-02-03T22:15:14.144168:Conversion required 8.312857 seconds (8.312260 for core code).
+260203-22:15:14,173 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.376068s.
+INFO: [Node] Finished "convert", elapsed time 8.376068s.
+260203-22:15:31,570 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetabttnjie7/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetabttnjie7/embedder".
+260203-22:15:31,593 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:05:22,618 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 10.900505s.
-INFO: [Node] Finished "embedder", elapsed time 10.900505s.
+260203-22:15:42,569 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 10.975319s.
+INFO: [Node] Finished "embedder", elapsed time 10.975319s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-story_run-04_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold (196 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:22,673 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixgl6ay4lo/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixgl6ay4lo/convert".
-260203-20:05:22,712 nipype.workflow INFO:
+260203-22:15:42,625 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixis6mhzz_/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixis6mhzz_/convert".
+260203-22:15:42,664 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:22,815 nipype.interface INFO:
-     stdout 2026-02-03T20:05:22.815758:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:22.815758:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:22,815 nipype.interface INFO:
-     stdout 2026-02-03T20:05:22.815758:Found 196 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:22.815758:Found 196 DICOM file(s)
-260203-20:05:22,816 nipype.interface INFO:
-     stdout 2026-02-03T20:05:22.815758:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv101 (64x64x27x196)
-INFO: stdout 2026-02-03T20:05:22.815758:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv101 (64x64x27x196)
-260203-20:05:26,117 nipype.interface INFO:
-     stdout 2026-02-03T20:05:26.117208:Conversion required 3.369794 seconds (3.369459 for core code).
-INFO: stdout 2026-02-03T20:05:26.117208:Conversion required 3.369794 seconds (3.369459 for core code).
-260203-20:05:26,144 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 3.430744s.
-INFO: [Node] Finished "convert", elapsed time 3.430744s.
-260203-20:05:32,864 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetambyq7822/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetambyq7822/embedder".
-260203-20:05:32,878 nipype.workflow INFO:
+260203-22:15:42,766 nipype.interface INFO:
+     stdout 2026-02-03T22:15:42.766186:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:15:42.766186:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:15:42,766 nipype.interface INFO:
+     stdout 2026-02-03T22:15:42.766186:Found 196 DICOM file(s)
+INFO: stdout 2026-02-03T22:15:42.766186:Found 196 DICOM file(s)
+260203-22:15:42,766 nipype.interface INFO:
+     stdout 2026-02-03T22:15:42.766186:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv168 (64x64x27x196)
+INFO: stdout 2026-02-03T22:15:42.766186:Convert 196 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold_heudiconv168 (64x64x27x196)
+260203-22:15:46,62 nipype.interface INFO:
+     stdout 2026-02-03T22:15:46.061952:Conversion required 3.362337 seconds (3.362094 for core code).
+INFO: stdout 2026-02-03T22:15:46.061952:Conversion required 3.362337 seconds (3.362094 for core code).
+260203-22:15:46,91 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.426644s.
+INFO: [Node] Finished "convert", elapsed time 3.426644s.
+260203-22:15:52,777 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmeta50evjj_p/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta50evjj_p/embedder".
+260203-22:15:52,789 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:05:37,135 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 4.256628s.
-INFO: [Node] Finished "embedder", elapsed time 4.256628s.
+260203-22:15:56,964 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 4.17431s.
+INFO: [Node] Finished "embedder", elapsed time 4.17431s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01 (128 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:37,162 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix4ybo1i60/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix4ybo1i60/convert".
-260203-20:05:37,188 nipype.workflow INFO:
+260203-22:15:56,990 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixl5umnffz/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl5umnffz/convert".
+260203-22:15:57,15 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:37,259 nipype.interface INFO:
-     stdout 2026-02-03T20:05:37.259098:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:37.259098:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:37,259 nipype.interface INFO:
-     stdout 2026-02-03T20:05:37.259098:Found 128 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:37.259098:Found 128 DICOM file(s)
-260203-20:05:37,259 nipype.interface INFO:
-     stdout 2026-02-03T20:05:37.259098:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv913 (160x160x128x1)
-INFO: stdout 2026-02-03T20:05:37.259098:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv913 (160x160x128x1)
-260203-20:05:37,838 nipype.interface INFO:
-     stdout 2026-02-03T20:05:37.838324:Conversion required 0.615182 seconds (0.615163 for core code).
-INFO: stdout 2026-02-03T20:05:37.838324:Conversion required 0.615182 seconds (0.615163 for core code).
-260203-20:05:37,863 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.674252s.
-INFO: [Node] Finished "convert", elapsed time 0.674252s.
-260203-20:05:42,617 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetabubbag2f/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetabubbag2f/embedder".
-260203-20:05:42,625 nipype.workflow INFO:
+260203-22:15:57,86 nipype.interface INFO:
+     stdout 2026-02-03T22:15:57.086858:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:15:57.086858:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:15:57,87 nipype.interface INFO:
+     stdout 2026-02-03T22:15:57.086858:Found 128 DICOM file(s)
+INFO: stdout 2026-02-03T22:15:57.086858:Found 128 DICOM file(s)
+260203-22:15:57,87 nipype.interface INFO:
+     stdout 2026-02-03T22:15:57.086858:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv628 (160x160x128x1)
+INFO: stdout 2026-02-03T22:15:57.086858:Convert 128 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-01_heudiconv628 (160x160x128x1)
+260203-22:15:57,658 nipype.interface INFO:
+     stdout 2026-02-03T22:15:57.658594:Conversion required 0.608398 seconds (0.608375 for core code).
+INFO: stdout 2026-02-03T22:15:57.658594:Conversion required 0.608398 seconds (0.608375 for core code).
+260203-22:15:57,679 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.663379s.
+INFO: [Node] Finished "convert", elapsed time 0.663379s.
+260203-22:16:02,413 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetahbvn6fld/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahbvn6fld/embedder".
+260203-22:16:02,421 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:05:44,591 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 1.9652370000000001s.
-INFO: [Node] Finished "embedder", elapsed time 1.9652370000000001s.
+260203-22:16:04,375 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 1.953278s.
+INFO: [Node] Finished "embedder", elapsed time 1.953278s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-02 (5 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:44,606 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix8xvixic_/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix8xvixic_/convert".
-260203-20:05:44,609 nipype.workflow INFO:
+260203-22:16:04,389 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixhfkclv1i/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhfkclv1i/convert".
+260203-22:16:04,392 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:44,649 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.649463:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:44.649463:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:44,649 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.649463:Found 5 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:44.649463:Found 5 DICOM file(s)
-260203-20:05:44,649 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.649463:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-INFO: stdout 2026-02-03T20:05:44.649463:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
-260203-20:05:44,649 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.649463:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.649463:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00003 (162x162x1x1)
-260203-20:05:44,653 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.653139:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.653139:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00002 (162x162x1x1)
-260203-20:05:44,656 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.656859:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00001 (162x162x2x1)
-INFO: stdout 2026-02-03T20:05:44.656859:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00001 (162x162x2x1)
-260203-20:05:44,663 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.663886:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00004 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.663886:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv737_i00004 (162x162x1x1)
-260203-20:05:44,666 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.666614:Conversion required 0.021994 seconds (0.021989 for core code).
-INFO: stdout 2026-02-03T20:05:44.666614:Conversion required 0.021994 seconds (0.021989 for core code).
-260203-20:05:44,697 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.087234s.
-INFO: [Node] Finished "convert", elapsed time 0.087234s.
+260203-22:16:04,431 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.431288:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:04.431288:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:04,431 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.431288:Found 5 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:04.431288:Found 5 DICOM file(s)
+260203-22:16:04,431 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.431288:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+INFO: stdout 2026-02-03T22:16:04.431288:Slices not stacked: orientation varies (vNav or localizer?) [0.0012676 0.954584 0.29794 0.0238695 0.297826 -0.954322] != [0.515908 0.788925 0.333821 0.0413103 0.366319 -0.929572]
+260203-22:16:04,431 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.431288:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.431288:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00003 (162x162x1x1)
+260203-22:16:04,435 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.435481:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.435481:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00002 (162x162x1x1)
+260203-22:16:04,439 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.439848:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00001 (162x162x2x1)
+INFO: stdout 2026-02-03T22:16:04.439848:Convert 2 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00001 (162x162x2x1)
+260203-22:16:04,447 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.447207:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00004 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.447207:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-02_heudiconv059_i00004 (162x162x1x1)
+260203-22:16:04,450 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.450073:Conversion required 0.023508 seconds (0.023505 for core code).
+INFO: stdout 2026-02-03T22:16:04.450073:Conversion required 0.023508 seconds (0.023505 for core code).
+260203-22:16:04,470 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.077213s.
+INFO: [Node] Finished "convert", elapsed time 0.077213s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout__dup-03 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:44,801 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix2g8mc45h/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix2g8mc45h/convert".
-260203-20:05:44,804 nipype.workflow INFO:
+260203-22:16:04,574 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixakejyrrl/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixakejyrrl/convert".
+260203-22:16:04,577 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:44,843 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.843696:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:44.843696:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:44,843 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.843696:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:44.843696:Found 3 DICOM file(s)
-260203-20:05:44,843 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.843696:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-INFO: stdout 2026-02-03T20:05:44.843696:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
-260203-20:05:44,843 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.843696:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00002 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.843696:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00002 (162x162x1x1)
-260203-20:05:44,847 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.847221:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00001 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.847221:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00001 (162x162x1x1)
-260203-20:05:44,850 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.850391:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00003 (162x162x1x1)
-INFO: stdout 2026-02-03T20:05:44.850391:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv073_i00003 (162x162x1x1)
-260203-20:05:44,852 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.852767:Conversion required 0.013558 seconds (0.013553 for core code).
-INFO: stdout 2026-02-03T20:05:44.852767:Conversion required 0.013558 seconds (0.013553 for core code).
-260203-20:05:44,875 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.069891s.
-INFO: [Node] Finished "convert", elapsed time 0.069891s.
+260203-22:16:04,617 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.617452:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:04.617452:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:04,617 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.617452:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:04.617452:Found 3 DICOM file(s)
+260203-22:16:04,617 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.617452:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+INFO: stdout 2026-02-03T22:16:04.617452:Slices not stacked: orientation varies (vNav or localizer?) [0.999714 -0.00832137 0.0224079 0.0238695 0.297826 -0.954322] != [0.99919 -0.00351184 0.040093 0.0399268 0.211814 -0.976494]
+260203-22:16:04,617 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.617452:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00002 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.617452:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00002 (162x162x1x1)
+260203-22:16:04,620 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.620939:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00001 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.620939:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00001 (162x162x1x1)
+260203-22:16:04,624 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.624293:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00003 (162x162x1x1)
+INFO: stdout 2026-02-03T22:16:04.624293:Convert 1 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/anat/sub-01_ses-01_scout_dup-03_heudiconv099_i00003 (162x162x1x1)
+260203-22:16:04,626 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.626739:Conversion required 0.014582 seconds (0.014579 for core code).
+INFO: stdout 2026-02-03T22:16:04.626739:Conversion required 0.014582 seconds (0.014579 for core code).
+260203-22:16:04,646 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.068091s.
+INFO: [Node] Finished "convert", elapsed time 0.068091s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01 (3 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:44,926 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niix5obeiybf/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix5obeiybf/convert".
-260203-20:05:44,929 nipype.workflow INFO:
+260203-22:16:04,697 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixkbhrcqpe/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixkbhrcqpe/convert".
+260203-22:16:04,699 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:44,969 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.969016:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:44.969016:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:44,969 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.969016:Found 3 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:44.969016:Found 3 DICOM file(s)
-260203-20:05:44,969 nipype.interface INFO:
-     stdout 2026-02-03T20:05:44.969016:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv730 (64x64x27x3)
-INFO: stdout 2026-02-03T20:05:44.969016:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv730 (64x64x27x3)
-260203-20:05:45,19 nipype.interface INFO:
-     stdout 2026-02-03T20:05:45.019650:Conversion required 0.056151 seconds (0.056146 for core code).
-INFO: stdout 2026-02-03T20:05:45.019650:Conversion required 0.056151 seconds (0.056146 for core code).
-260203-20:05:45,44 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.114778s.
-INFO: [Node] Finished "convert", elapsed time 0.114778s.
-260203-20:05:45,157 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmetabw_ez1xf/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmetabw_ez1xf/embedder".
-260203-20:05:45,160 nipype.workflow INFO:
+260203-22:16:04,740 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.740408:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:04.740408:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:04,740 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.740408:Found 3 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:04.740408:Found 3 DICOM file(s)
+260203-22:16:04,740 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.740408:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv441 (64x64x27x3)
+INFO: stdout 2026-02-03T22:16:04.740408:Convert 3 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-01_heudiconv441 (64x64x27x3)
+260203-22:16:04,791 nipype.interface INFO:
+     stdout 2026-02-03T22:16:04.791905:Conversion required 0.057945 seconds (0.057941 for core code).
+INFO: stdout 2026-02-03T22:16:04.791905:Conversion required 0.057945 seconds (0.057941 for core code).
+260203-22:16:04,811 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.110921s.
+INFO: [Node] Finished "convert", elapsed time 0.110921s.
+260203-22:16:04,921 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetaq5dzbab2/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetaq5dzbab2/embedder".
+260203-22:16:04,924 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:05:45,232 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.071127s.
-INFO: [Node] Finished "embedder", elapsed time 0.071127s.
+260203-22:16:04,995 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.070189s.
+INFO: [Node] Finished "embedder", elapsed time 0.070189s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-01.json file
 INFO: Converting /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02 (12 DICOMs) -&gt; /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
-260203-20:05:45,238 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixo4r5v9ji/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixo4r5v9ji/convert".
-260203-20:05:45,243 nipype.workflow INFO:
+260203-22:16:05,2 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixt40fzzvi/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixt40fzzvi/convert".
+260203-22:16:05,6 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260203-20:05:45,286 nipype.interface INFO:
-     stdout 2026-02-03T20:05:45.286203:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-03T20:05:45.286203:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260203-20:05:45,286 nipype.interface INFO:
-     stdout 2026-02-03T20:05:45.286203:Found 12 DICOM file(s)
-INFO: stdout 2026-02-03T20:05:45.286203:Found 12 DICOM file(s)
-260203-20:05:45,286 nipype.interface INFO:
-     stdout 2026-02-03T20:05:45.286203:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv264 (64x64x27x12)
-INFO: stdout 2026-02-03T20:05:45.286203:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv264 (64x64x27x12)
-260203-20:05:45,487 nipype.interface INFO:
-     stdout 2026-02-03T20:05:45.487553:Conversion required 0.209362 seconds (0.209339 for core code).
-INFO: stdout 2026-02-03T20:05:45.487553:Conversion required 0.209362 seconds (0.209339 for core code).
-260203-20:05:45,511 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.267157s.
-INFO: [Node] Finished "convert", elapsed time 0.267157s.
-260203-20:05:45,939 nipype.workflow INFO:
-     [Node] Setting-up "embedder" in "/tmp/embedmeta6b6_w8c5/embedder".
-INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta6b6_w8c5/embedder".
-260203-20:05:45,943 nipype.workflow INFO:
+260203-22:16:05,49 nipype.interface INFO:
+     stdout 2026-02-03T22:16:05.049266:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-03T22:16:05.049266:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260203-22:16:05,49 nipype.interface INFO:
+     stdout 2026-02-03T22:16:05.049266:Found 12 DICOM file(s)
+INFO: stdout 2026-02-03T22:16:05.049266:Found 12 DICOM file(s)
+260203-22:16:05,49 nipype.interface INFO:
+     stdout 2026-02-03T22:16:05.049266:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv161 (64x64x27x12)
+INFO: stdout 2026-02-03T22:16:05.049266:Convert 12 DICOM as /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold_dup-02_heudiconv161 (64x64x27x12)
+260203-22:16:05,248 nipype.interface INFO:
+     stdout 2026-02-03T22:16:05.248687:Conversion required 0.208107 seconds (0.208087 for core code).
+INFO: stdout 2026-02-03T22:16:05.248687:Conversion required 0.208107 seconds (0.208087 for core code).
+260203-22:16:05,268 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.261915s.
+INFO: [Node] Finished "convert", elapsed time 0.261915s.
+260203-22:16:05,696 nipype.workflow INFO:
+     [Node] Setting-up "embedder" in "/tmp/embedmetahi25iuyt/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahi25iuyt/embedder".
+260203-22:16:05,699 nipype.workflow INFO:
      [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
 INFO: [Node] Executing "embedder" &lt;nipype.interfaces.utility.wrappers.Function&gt;
-260203-20:05:46,210 nipype.workflow INFO:
-     [Node] Finished "embedder", elapsed time 0.266618s.
-INFO: [Node] Finished "embedder", elapsed time 0.266618s.
+260203-22:16:05,963 nipype.workflow INFO:
+     [Node] Finished "embedder", elapsed time 0.263256s.
+INFO: [Node] Finished "embedder", elapsed time 0.263256s.
 INFO: Post-treating /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold__dup-02.json file
 INFO: Adding "IntendedFor" to the fieldmaps in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01.
 WARNING: We cannot add the IntendedFor field: no fmap/ in /app/mydataset/Norman/Mennen/5516_greenEyes/sub-01/ses-01
 INFO: Populating template files under /app/mydataset/Norman/Mennen/5516_greenEyes
-INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen/5516_greenEyes', 'session': '01'}
-(rdm-bids) </code></pre>
+INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen/5516_greenEyes', 'session': '01'}</code></pre>
 </div>
 </div>
 </section>
-<section id="inspecting-the-bids-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="inspecting-the-bids-dataset">Inspecting the BIDS dataset</h3>
+<section id="inspecting-the-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="inspecting-the-bids-dataset">Inspecting the BIDS dataset</h2>
 <p>Let’s see what was created:</p>
-<div id="bb8caacb" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="96baf1d3" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0219191_mystudy-0219-1114  0219191_mystudy-0219-1114.tar.gz  Norman
-(rdm-bids) </code></pre>
+<pre><code>0219191_mystudy-0219-1114  0219191_mystudy-0219-1114.tar.gz  Norman</code></pre>
 </div>
 </div>
 <p>Let’s inspect the new folder in more detail:</p>
-<div id="c4e2f1f8" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">tree</span> <span class="at">-L</span> 7 Norman</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="c4eafcbf" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">tree</span> <span class="at">-L</span> 7 Norman</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Norman
 └── Mennen
@@ -6178,336 +6169,39 @@ INFO: PROCESSING DONE: {'subject': '01', 'outdir': '/app/mydataset/Norman/Mennen
         ├── task-sound_bold.json
         └── task-story_bold.json
 
-12 directories, 70 files
-(rdm-bids) </code></pre>
+12 directories, 70 files</code></pre>
 </div>
 </div>
 </section>
-<section id="validate-the-bids-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h3>
+<section id="validate-the-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>That looks like a BIDS dataset! Let’s check using the <a href="https://bids-standard.github.io/bids-validator/">BIDS Validator</a>:</p>
-<div id="aa8feb7f" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="bu">cd</span> Norman/Mennen/5516_greenEyes/</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="1d3e4e85" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">cd</span> /Norman/Mennen/5516_greenEyes/</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
-<pre>(rdm-bids) 
+<pre>bash: cd: /Norman/Mennen/5516_greenEyes/: No such file or directory
 
-    <span class="ansi-yellow-fg">[WARNING] JSON_KEY_RECOMMENDED A JSON file is missing a key listed as recommended.</span>
+    <span class="ansi-red-fg">[ERROR] MISSING_DATASET_DESCRIPTION A dataset_description.json file is required in the root of the dataset</span>
 
-        <span class="ansi-yellow-fg">GeneratedBy</span>
+        
 
-        /dataset_description.json - Field description: Used to specify provenance of the dataset.
 
 
-
-        <span class="ansi-yellow-fg">SourceDatasets</span>
-
-        /dataset_description.json - Field description: Used to specify the locations and relevant attributes of all source datasets.
-
-Valid keys in each object include <span class="ansi-cyan-fg">"URL"</span>, <span class="ansi-cyan-fg">"DOI"</span> (see
-
-<span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)), and
-
-<span class="ansi-cyan-fg">"Version"</span> with
-
-<span class="ansi-blue-fg">string</span> (<span class="ansi-bright-black-fg">https://www.w3schools.com/js/js_json_datatypes.asp</span>)
-
-values.
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=JSON_KEY_RECOMMENDED for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] README_FILE_SMALL The recommended file '/README' is very small.
-
-Please consider expanding it with additional information about the dataset.</span>
-
-        /README
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=README_FILE_SMALL for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] SIDECAR_FIELD_OVERRIDE Sidecar files should not override values assigned at a higher level.</span>
-
-        <span class="ansi-yellow-fg">ImageOrientationPatientDICOM</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">ImageType</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">ShimSetting</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">TablePosition</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">TaskName</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (TODO: full task name for story) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (TODO: full task name for sound) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_affine</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_reorient_transform</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_shape</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (64,64,27,485) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (64,64,27,179) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">BidsGuess</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-8_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-13_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">SliceTiming</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0.7675,0.055,0.8225,0.11,0.8775,0.165,0.9325,0.22,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (0,0.765,0.0525,0.82,0.1075,0.875,0.1625,0.93,0.2175,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">global</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">time</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_FIELD_OVERRIDE for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] SIDECAR_KEY_RECOMMENDED A data file's JSON sidecar is missing a key listed as recommended.</span>
-
-        <span class="ansi-yellow-fg">PulseSequenceType</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-
-
-        5 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">SpoilingType</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
-
-
-
-        <span class="ansi-yellow-fg">PartialFourierDirection</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: The direction where only partial Fourier information was collected.
-
-Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: The direction where only partial Fourier information was collected.
-
-Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
-
-
-
-        5 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">Instructions</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">TaskDescription</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: Longer description of the task.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: Longer description of the task.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">CogPOID</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
-
-of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
-
-of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">StimulusPresentation</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_KEY_RECOMMENDED for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] SUSPICIOUSLY_SHORT_EVENT_DESIGN The onset of the last event is less than half the total duration of the corresponding scan.
-
-This design is suspiciously short.</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SUSPICIOUSLY_SHORT_EVENT_DESIGN for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] TSV_ADDITIONAL_COLUMNS_UNDEFINED A TSV file has extra columns which are not defined in its associated JSON sidecar</span>
-
-        <span class="ansi-yellow-fg">TODO -- fill in rows and add more tab-separated columns if desired</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_events.tsv
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_events.tsv
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=TSV_ADDITIONAL_COLUMNS_UNDEFINED for existing conversations about this issue.</span>
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=MISSING_DATASET_DESCRIPTION for existing conversations about this issue.</span>
 
 
 
     <span class="ansi-red-fg">[ERROR] NOT_INCLUDED Files with such naming scheme are not part of BIDS specification. This error is most commonly caused by typos in file names that make them not BIDS compatible. Please consult the specification and make sure your files are named correctly. If this is not a file naming issue (for example when including files not yet covered by the BIDS specification) you should include a ".bidsignore" file in your dataset (see </span><span class="ansi-blue-fg">https://github.com/bids-standard/bids-validator#bidsignore</span><span class="ansi-red-fg"> (</span><span class="ansi-bright-black-fg">https://github.com/bids-standard/bids-validator#bidsignore</span><span class="ansi-red-fg">) for details). Please note that derived (processed) data should be placed in /derivatives folder and source data (such as DICOMS or behavioural logs in proprietary formats) should be placed in the /sourcedata folder.</span>
 
-        /sub-01/ses-01/anat/sub-01_ses-01_scout__dup-023.nii.gz
+        /0219191_mystudy-0219-1114.tar.gz
 
-        /sub-01/ses-01/anat/sub-01_ses-01_scout__dup-023.json
+        /Norman/
 
 
 
-        24 more files with the same issue
+        3 more files with the same issue
 
 
 
@@ -6517,25 +6211,15 @@ This design is suspiciously short.</span>
 
 
 
-          <span class="ansi-magenta-fg">Summary:</span>                         <span class="ansi-magenta-fg">Available Tasks:</span>                      <span class="ansi-magenta-fg">Available Modalities:</span>
+          <span class="ansi-magenta-fg">Summary:</span>                         <span class="ansi-magenta-fg">Available Tasks:</span>        <span class="ansi-magenta-fg">Available Modalities:</span>
 
-          56 Files, 337 MB                 TODO: full task name for sound        MRI                  
+          3 Files, 2.3 GB                                                               
 
-          1 - Subjects 1 - Sessions        TODO: full task name for story                             
-
-                                           TODO: full task name for faces                             
-
-                                           sound                                                      
-
-                                           story                                                      
-
-                                           faces                                                      
+          0 - Subjects 1 - Sessions                                                     
 
 
 
 
-
-(rdm-bids) 
 </pre>
 </div>
 </div>
@@ -6544,43 +6228,32 @@ This design is suspiciously short.</span>
 </div>
 </div>
 </section>
-<section id="fixing-a-bids-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="fixing-a-bids-dataset">Fixing a BIDS Dataset</h3>
+<section id="fixing-a-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="fixing-a-bids-dataset">Fixing a BIDS Dataset</h2>
 <p>The BIDS Validator found several errors and issued a number of warnings. This means the dataset is not yet fully BIDS-compliant. You need to manually adjust the relevant files to fix these issues. Start by addressing the errors first. Errors make your dataset BIDS-incompatible and must be resolved for proper validation. Many <a href="https://bids-apps.neuroimaging.io/">BIDS Apps</a> (like <a href="https://fmriprep.org/en/stable/">fMRIPrep</a> and <a href="https://mriqc.readthedocs.io/en/latest/">MRIQC</a>) require datasets to be error-free they can run. Warnings indicate that your dataset is technically BIDS-compliant, but improvements are recommended. You should try to resolve all warnings to ensure your dataset is robust and ready for downstream analysis.</p>
-<section id="create-a-.bidsignore-file" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-.bidsignore-file">Create a <code>.bidsignore</code> file</h4>
+<section id="create-a-.bidsignore-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-.bidsignore-file">Create a <code>.bidsignore</code> file</h3>
 <p>Let the BIDS validator ignore <code>/sourcedata</code> and <code>.heudiconv</code>. To this end, we create a <code>.bidsignore</code> file:</p>
-<div id="d23e8f02" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">touch</span> .bidsignore</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">echo</span> <span class="st">"/sourcedata"</span> <span class="op">&gt;</span> .bidsignore</span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="bu">echo</span> <span class="st">".heudiconv"</span> <span class="op">&gt;&gt;</span> .bidsignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) 
-(rdm-bids) 
-(rdm-bids) </code></pre>
-</div>
+<div id="f48f359d" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">touch</span> .bidsignore</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="bu">echo</span> <span class="st">"/sourcedata"</span> <span class="op">&gt;</span> .bidsignore</span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="bu">echo</span> <span class="st">".heudiconv"</span> <span class="op">&gt;&gt;</span> .bidsignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="remove-data-from-the-mri-loalizer" class="level4">
-<h4 class="anchored" data-anchor-id="remove-data-from-the-mri-loalizer">Remove data from the MRI loalizer</h4>
-<div id="fbb056a1" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>scout<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) </code></pre>
-</div>
+<section id="remove-data-from-the-mri-loalizer" class="level3">
+<h3 class="anchored" data-anchor-id="remove-data-from-the-mri-loalizer">Remove data from the MRI loalizer</h3>
+<div id="eada9c8a" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>scout<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="remove-repeated-runs-resulting-in-duplications" class="level4">
-<h4 class="anchored" data-anchor-id="remove-repeated-runs-resulting-in-duplications">Remove repeated runs (resulting in duplications)</h4>
-<div id="c8fb9454" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>_dup<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(rdm-bids) </code></pre>
-</div>
+<section id="remove-repeated-runs-resulting-in-duplications" class="level3">
+<h3 class="anchored" data-anchor-id="remove-repeated-runs-resulting-in-duplications">Remove repeated runs (resulting in duplications)</h3>
+<div id="4efc6356" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">rm</span> <span class="at">-rf</span> sub-<span class="pp">*</span>/ses-<span class="pp">*</span>/<span class="pp">*</span>/<span class="pp">*</span>_dup<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="adjust-the-scans.tsv-file" class="level4">
-<h4 class="anchored" data-anchor-id="adjust-the-scans.tsv-file">Adjust the <code>scans.tsv</code> file:</h4>
+<section id="adjust-the-scans.tsv-file" class="level3">
+<h3 class="anchored" data-anchor-id="adjust-the-scans.tsv-file">Adjust the <code>scans.tsv</code> file:</h3>
 <ol type="1">
 <li>Import the <code>pandas</code> library for data manipulation.</li>
 <li>Load the <code>*scans.tsv</code> file into a DataFrame.</li>
@@ -6588,357 +6261,57 @@ This design is suspiciously short.</span>
 <li>Further remove rows where <code>'filename'</code> contains <code>'scout'</code> (localizer scans).</li>
 <li>Save the cleaned DataFrame back to the original<code>*scans.tsv</code> file, overwriting it.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource {python} number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a href="#cb25-1"></a>import pandas as pd</span>
-<span id="cb25-2"><a href="#cb25-2"></a>df = pd.read_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')</span>
-<span id="cb25-3"><a href="#cb25-3"></a>df_clean = df[~df['filename'].str.contains('_dup')]</span>
-<span id="cb25-4"><a href="#cb25-4"></a>df_clean = df_clean[~df_clean['filename'].str.contains('scout')]</span>
-<span id="cb25-5"><a href="#cb25-5"></a>df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {python} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a href="#cb20-1"></a>import pandas as pd</span>
+<span id="cb20-2"><a href="#cb20-2"></a>df = pd.read_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')</span>
+<span id="cb20-3"><a href="#cb20-3"></a>df_clean = df[~df['filename'].str.contains('_dup')]</span>
+<span id="cb20-4"><a href="#cb20-4"></a>df_clean = df_clean[~df_clean['filename'].str.contains('scout')]</span>
+<span id="cb20-5"><a href="#cb20-5"></a>df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="validate-again" class="level3">
-<h3 class="anchored" data-anchor-id="validate-again">Validate again</h3>
+<section id="validate-again" class="level2">
+<h2 class="anchored" data-anchor-id="validate-again">Validate again</h2>
 <p>Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:</p>
-<div id="f56646f9" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a7b17714" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="ex">bids-validator-deno</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
-<pre>   <span class="ansi-yellow-fg">[WARNING] SIDECAR_FIELD_OVERRIDE Sidecar files should not override values assigned at a higher level.</span>
+<pre>   <span class="ansi-red-fg">[ERROR] MISSING_DATASET_DESCRIPTION A dataset_description.json file is required in the root of the dataset</span>
 
-        <span class="ansi-yellow-fg">ImageOrientationPatientDICOM</span>
+        
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0.999714,-0.00838295,0.0224008,0.00575803,0.993375,0.114774) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
 
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=MISSING_DATASET_DESCRIPTION for existing conversations about this issue.</span>
 
 
-        4 more files with the same issue
 
+    <span class="ansi-red-fg">[ERROR] NOT_INCLUDED Files with such naming scheme are not part of BIDS specification. This error is most commonly caused by typos in file names that make them not BIDS compatible. Please consult the specification and make sure your files are named correctly. If this is not a file naming issue (for example when including files not yet covered by the BIDS specification) you should include a ".bidsignore" file in your dataset (see </span><span class="ansi-blue-fg">https://github.com/bids-standard/bids-validator#bidsignore</span><span class="ansi-red-fg"> (</span><span class="ansi-bright-black-fg">https://github.com/bids-standard/bids-validator#bidsignore</span><span class="ansi-red-fg">) for details). Please note that derived (processed) data should be placed in /derivatives folder and source data (such as DICOMS or behavioural logs in proprietary formats) should be placed in the /sourcedata folder.</span>
 
+        /0219191_mystudy-0219-1114.tar.gz
 
-        <span class="ansi-yellow-fg">ImageType</span>
+        /Norman/
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
 
+        3 more files with the same issue
 
 
-        4 more files with the same issue
 
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=NOT_INCLUDED for existing conversations about this issue.</span>
 
 
-        <span class="ansi-yellow-fg">ShimSetting</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (3381,8615,9370,473,199,-206,243,231) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
 
+          <span class="ansi-magenta-fg">Summary:</span>                         <span class="ansi-magenta-fg">Available Tasks:</span>        <span class="ansi-magenta-fg">Available Modalities:</span>
 
+          3 Files, 2.3 GB                                                               
 
-        4 more files with the same issue
+          0 - Subjects 1 - Sessions                                                     
 
 
 
-        <span class="ansi-yellow-fg">TablePosition</span>
 
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0,0) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">TaskName</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (TODO: full task name for story) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (TODO: full task name for sound) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_affine</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (-2.9991416931152344,0.01727408915758133,0.092858225107193,92.07717895507812,0.025148851796984673,2.9801249504089355,0.45844852924346924,-111.91024780273438,0.06720245629549026,-0.3443218469619751,3.9725561141967773,-23.962722778320312,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_reorient_transform</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,-1,0,63,1,0,0,0,0,0,1,0,0,0,0,1) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">dcmmeta_shape</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json - Sidecar key defined in /task-story_bold.json overrides previous value (64,64,27,485) from /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (64,64,27,179) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">BidsGuess</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-8_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (func,_acq-epfid2p2_dir-AP_run-13_bold) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">SliceTiming</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value (0,0.7675,0.055,0.8225,0.11,0.8775,0.165,0.9325,0.22,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value (0,0.765,0.0525,0.82,0.1075,0.875,0.1625,0.93,0.2175,0.985,0.2725,1.04,0.3275,1.095,0.3825,1.15,0.4375,1.205,0.4925,1.26,0.5475,1.315,0.6025,1.37,0.6575,1.425,0.7125) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">global</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-        <span class="ansi-yellow-fg">time</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json - Sidecar key defined in /task-sound_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.json
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json - Sidecar key defined in /task-faces_bold.json overrides previous value ([object Object]) from /sub-01/ses-01/func/sub-01_ses-01_task-faces_run-01_bold.json
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_FIELD_OVERRIDE for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] JSON_KEY_RECOMMENDED A JSON file is missing a key listed as recommended.</span>
-
-        <span class="ansi-yellow-fg">GeneratedBy</span>
-
-        /dataset_description.json - Field description: Used to specify provenance of the dataset.
-
-
-
-        <span class="ansi-yellow-fg">SourceDatasets</span>
-
-        /dataset_description.json - Field description: Used to specify the locations and relevant attributes of all source datasets.
-
-Valid keys in each object include <span class="ansi-cyan-fg">"URL"</span>, <span class="ansi-cyan-fg">"DOI"</span> (see
-
-<span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)), and
-
-<span class="ansi-cyan-fg">"Version"</span> with
-
-<span class="ansi-blue-fg">string</span> (<span class="ansi-bright-black-fg">https://www.w3schools.com/js/js_json_datatypes.asp</span>)
-
-values.
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=JSON_KEY_RECOMMENDED for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] README_FILE_SMALL The recommended file '/README' is very small.
-
-Please consider expanding it with additional information about the dataset.</span>
-
-        /README
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=README_FILE_SMALL for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] SIDECAR_KEY_RECOMMENDED A data file's JSON sidecar is missing a key listed as recommended.</span>
-
-        <span class="ansi-yellow-fg">PulseSequenceType</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-
-
-        5 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">SpoilingType</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
-
-
-
-        <span class="ansi-yellow-fg">PartialFourierDirection</span>
-
-        /sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz - Field description: The direction where only partial Fourier information was collected.
-
-Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: The direction where only partial Fourier information was collected.
-
-Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
-
-
-
-        5 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">Instructions</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">TaskDescription</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: Longer description of the task.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: Longer description of the task.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">CogPOID</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
-
-of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
-
-of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
-
-
-
-        4 more files with the same issue
-
-
-
-        <span class="ansi-yellow-fg">StimulusPresentation</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_KEY_RECOMMENDED for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] SUSPICIOUSLY_SHORT_EVENT_DESIGN The onset of the last event is less than half the total duration of the corresponding scan.
-
-This design is suspiciously short.</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-03_bold.nii.gz
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-sound_run-01_bold.nii.gz
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SUSPICIOUSLY_SHORT_EVENT_DESIGN for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-yellow-fg">[WARNING] TSV_ADDITIONAL_COLUMNS_UNDEFINED A TSV file has extra columns which are not defined in its associated JSON sidecar</span>
-
-        <span class="ansi-yellow-fg">TODO -- fill in rows and add more tab-separated columns if desired</span>
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-02_events.tsv
-
-        /sub-01/ses-01/func/sub-01_ses-01_task-story_run-01_events.tsv
-
-
-
-        4 more files with the same issue
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=TSV_ADDITIONAL_COLUMNS_UNDEFINED for existing conversations about this issue.</span>
-
-
-
-    <span class="ansi-red-fg">[ERROR] SCANS_FILENAME_NOT_MATCH_DATASET Filenames in scans.tsv file do not match what is present in the BIDS dataset.</span>
-
-        /sub-01/ses-01/sub-01_ses-01_scans.tsv
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SCANS_FILENAME_NOT_MATCH_DATASET for existing conversations about this issue.</span>
-
-
-
-
-
-          <span class="ansi-magenta-fg">Summary:</span>                         <span class="ansi-magenta-fg">Available Tasks:</span>                      <span class="ansi-magenta-fg">Available Modalities:</span>
-
-          30 Files, 331 MB                 TODO: full task name for sound        MRI                  
-
-          1 - Subjects 1 - Sessions        TODO: full task name for story                             
-
-                                           TODO: full task name for faces                             
-
-                                           sound                                                      
-
-                                           story                                                      
-
-                                           faces                                                      
-
-
-
-
-
-(rdm-bids) 
 </pre>
 </div>
 </div>
@@ -6948,15 +6321,9 @@ This design is suspiciously short.</span>
 </div>
 <p>Cool, no more errors!</p>
 </section>
-</section>
 <section id="whats-next" class="level2">
 <h2 class="anchored" data-anchor-id="whats-next">What’s next?</h2>
 <p>Once you have a fully BIDS-compatible dataset, you can run <a href="https://bids-apps.neuroimaging.io/">BIDS Apps</a> (like <a href="https://fmriprep.org/en/stable/">fMRIPrep</a> and <a href="https://mriqc.readthedocs.io/en/latest/">MRIQC</a>) and more! And you have a well-documented dataset that follows best community practices! Congrats!</p>
-<hr>
-<ul>
-<li>Python: <code>/app/.venv/bin/python</code></li>
-<li>Profile: <code>ci</code></li>
-</ul>
 
 
 
