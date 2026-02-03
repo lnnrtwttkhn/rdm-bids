@@ -12,6 +12,14 @@ In this tutorial, we will create a BIDS dataset using `heudiconv`.
 It converts DICOM files to NIfTI format using customizable heuristics (rules) to determine how files should be named and organized.
 HeuDiConv is particularly useful for converting raw scanner data to BIDS format, making your data more standardized and analysis-ready.
 
+### Activate the environment
+
+The setup created an environment that needs to be activated:
+
+```{bash}
+source .venv/bin/activate
+```
+
 ### Create a project directory
 
 Create an empty directory called `mydataset` and navigate into it.
