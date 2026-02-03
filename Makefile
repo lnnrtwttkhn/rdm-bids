@@ -143,6 +143,7 @@ ipynb:
 	mv exercise1.ipynb _site/
 	mv exercise2.ipynb _site/
 	mv exercise1_colab.ipynb _site/
+	mv exercise2_colab.ipynb _site/
 
 # Show logs from running container
 .PHONY: logs
