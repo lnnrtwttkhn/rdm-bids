@@ -127,6 +127,12 @@ clean-images: clean
 ps:
 	docker ps --filter name=$(CONTAINER_NAME)
 
+.PHONY: ipynb
+ipynb:
+	mkdir -p _site
+	quarto convert exercise1.qmd
+	mv exercise1.ipynb _site/
+
 # Show logs from running container
 .PHONY: logs
 logs:
