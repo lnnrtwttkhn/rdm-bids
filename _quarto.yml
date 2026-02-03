@@ -59,8 +59,8 @@ from: "markdown+emoji"
 
 format:
   html:
-    title: "{{< var project.title >}}"
     subtitle: "{{< var project.subtitle >}}"
+    date: today
     # format options:
     theme: default
     anchor-sections: true

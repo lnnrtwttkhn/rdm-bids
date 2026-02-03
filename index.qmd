@@ -1,5 +1,5 @@
 ---
-date: today
+title: "Home: What this tutorial is about"
 engine: jupyter
 jupyter: bash
 ---
