@@ -1,7 +1,9 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - main
+      - exercise2
 
 env:
   QUARTO_PROFILE: ci
