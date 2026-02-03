@@ -1,0 +1,40 @@
+---
+title: "FAQ"
+engine: jupyter
+jupyter: bash
+---
+
+::: {.callout-tip title="What are key differences between DICOM and NIfTI?" collapse="true"}
+**DICOM (Digital Imaging and Communications in Medicine)** is the standard format used by medical imaging devices (CT, MRI, etc.). DICOM files:
+
+- Store images as 2D layers/slices that can be viewed individually
+- Include extensive metadata (patient info, acquisition parameters, etc.)
+- Are larger and more complex but provide rich clinical information
+- Are widely used across all medical specialties
+
+**NIfTI (Neuroimaging Informatics Technology Initiative)** was designed specifically for neuroimaging research. NIfTI files:
+
+- Store 3D volumetric data with clear spatial orientation
+- Have less metadata but are simpler and faster to process
+- Solve spatial orientation problems that existed in older formats
+- Are primarily used in neuroscience and brain research
+
+**Why convert from DICOM to NIfTI?**
+
+DICOM files can be converted to NIfTI without losing image quality, making the data easier to work with in research pipelines while maintaining the essential imaging information.
+:::
+
+::: {.callout-tip title="What is in the dataset by @nastase2020?" collapse="true"}
+This archive contains a raw DICOM dataset acquired (with informed consent) using the ReproIn naming convention on a Siemens Skyra 3T MRI scanner.
+The dataset includes a T1-weighted anatomical image, four functional runs with the "prettymouth" spoken story stimulus, and one functional run with a block design emotional faces task, as well as auxiliary scans (e.g., scout, soundcheck).
+The "prettymouth" story stimulus created by Yeshurun et al., 2017 and is available as part of the Narratives collection, and the emotional faces task is similar to Chai et al., 2015.
+These data are intended for use with the [Princeton Handbook for Reproducible Neuroimaging](https://brainhack-princeton.github.io/handbook/).
+The handbook provides guidelines for BIDS conversion and execution of BIDS apps (e.g., fMRIPrep, MRIQC).
+The brain data are contributed by author S.A.N. and are authorized for non-anonymized distribution.
+:::
+
+::: {.callout-tip title="What is an MRI Localizer (Scout) scan?" collapse="true"}
+An **MRI localizer** (also called a *scout* or *survey* scan) is a quick, low-resolution scan done at the start of an MRI session.
+Its main purpose is to help plan and position the detailed scans that follow.
+Localizers show the basic anatomy and orientation, but are not used for diagnosis or analysis.
+:::

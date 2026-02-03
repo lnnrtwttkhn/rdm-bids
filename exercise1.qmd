@@ -1,0 +1,172 @@
+---
+title: "Exercise 1"
+engine: jupyter
+jupyter: bash
+---
+
+## Tutorial: Create a BIDS dataset using `heudiconv`
+
+In this tutorial, we will create a BIDS dataset using `heudiconv`.
+
+[HeuDiConv](https://heudiconv.readthedocs.io/en/latest/) is a flexible DICOM converter that helps organize brain imaging data into structured directory layouts.
+It converts DICOM files to NIfTI format using customizable heuristics (rules) to determine how files should be named and organized.
+HeuDiConv is particularly useful for converting raw scanner data to BIDS format, making your data more standardized and analysis-ready.
+
+### Create a project directory
+
+Create an empty directory called `mydataset` and navigate into it.
+`mydataset` is only a name.
+You can choose any other name.
+
+```{bash}
+mkdir mydataset
+cd mydataset
+```
+
+### Download the data
+
+Download the data by @nastase2020 from [Zenodo](https://doi.org/10.5281/zenodo.3677089).
+Note that the download make take a few minutes.
+
+```{bash}
+wget https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
+```
+
+### Prepare the data
+
+Now we need to extract the downloaded archive.
+The following command extracts the `tar.gz` archive (`-x` extract, `-v` verbose, `-z` gzip, `-f` file).
+
+```{bash}
+tar -xvzf 0219191_mystudy-0219-1114.tar.gz # <1>
+```
+
+### Inspect the raw data
+
+Let's navigate into the directory and see what's inside the dataset.
+Using `tree -L 2` we show the directory structure with a maximum depth of 2 levels.
+
+```{bash}
+tree -L 2 0219191_mystudy-0219-1114 # <1>
+```
+
+### Decompress the data
+
+We need to decompress all gzipped DICOM files in the `dcm` directory:
+
+```{bash}
+gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
+```
+
+### Run `heudiconv`
+
+Finally, we can run `heudiconv`!
+The following command converts DICOM files to BIDS format using the ReproIn heuristic for subject 01 and session 01.
+
+Here is an explanation for the flags and arguments:
+
+- `-f reproin` specifies the converter file to use
+- `--subject 01` specifies the subject
+- `--ses 01` specifies the subject
+- `--bids` is a flag for output into BIDS structure
+- `--files` or directories containing files to process
+- `--overwrite ` overwrites existing converted files
+
+```{bash}
+heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
+```
+
+### Inspecting the BIDS dataset
+
+Let's see what was created:
+
+```{bash}
+ls
+```
+
+Let's inspect the new folder in more detail:
+
+```{bash}
+tree -L 7 Norman
+```
+
+### Validate the BIDS dataset
+
+That looks like a BIDS dataset!
+Let's check using the [BIDS Validator](https://bids-standard.github.io/bids-validator/):
+
+```{bash}
+cd Norman/Mennen/5516_greenEyes/
+bids-validator-deno .
+```
+
+### Fixing a BIDS Dataset
+
+The BIDS Validator found several errors and issued a number of warnings.
+This means the dataset is not yet fully BIDS-compliant.
+You need to manually adjust the relevant files to fix these issues.
+Start by addressing the errors first.
+Errors make your dataset BIDS-incompatible and must be resolved for proper validation.
+Many [BIDS Apps](https://bids-apps.neuroimaging.io/) (like [fMRIPrep](https://fmriprep.org/en/stable/) and [MRIQC](https://mriqc.readthedocs.io/en/latest/)) require datasets to be error-free they can run.
+Warnings indicate that your dataset is technically BIDS-compliant, but improvements are recommended.
+You should try to resolve all warnings to ensure your dataset is robust and ready for downstream analysis.
+
+#### Create a `.bidsignore` file
+
+Let the BIDS validator ignore `/sourcedata` and `.heudiconv`.
+To this end, we create a `.bidsignore` file:
+
+```{bash}
+touch .bidsignore
+echo "/sourcedata" > .bidsignore
+echo ".heudiconv" >> .bidsignore
+```
+
+#### Remove data from the MRI loalizer
+
+```{bash}
+rm -rf sub-*/ses-*/*/*scout*
+```
+
+#### Remove repeated runs (resulting in duplications)
+
+```{bash}
+rm -rf sub-*/ses-*/*/*_dup*
+```
+
+#### Adjust the `scans.tsv` file:
+
+1. Import the `pandas` library for data manipulation.
+2. Load the `*scans.tsv` file into a DataFrame.
+3. Remove rows where the `'filename'` column contains `'_dup'` (duplicate runs).
+4. Further remove rows where `'filename'` contains `'scout'` (localizer scans).
+5. Save the cleaned DataFrame back to the original`*scans.tsv` file, overwriting it.
+
+```{python}
+import pandas as pd
+df = pd.read_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
+df_clean = df[~df['filename'].str.contains('_dup')]
+df_clean = df_clean[~df_clean['filename'].str.contains('scout')]
+df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
+```
+
+### Validate again
+
+Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:
+
+```{bash}
+bids-validator-deno .
+```
+
+Cool, no more errors!
+
+## What's next?
+
+Once you have a fully BIDS-compatible dataset, you can run [BIDS Apps](https://bids-apps.neuroimaging.io/) (like [fMRIPrep](https://fmriprep.org/en/stable/) and [MRIQC](https://mriqc.readthedocs.io/en/latest/)) and more!
+And you have a well-documented dataset that follows best community practices!
+Congrats!
+
+---
+
+- Python: `{{< env QUARTO_PYTHON >}}`
+- Profile: `{{< env QUARTO_PROFILE >}}`
