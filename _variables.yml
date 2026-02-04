@@ -1,7 +1,6 @@
 project:
   name: "rdm-bids"
-  title: "The Brain Imaging Data Structure"
-  subtitle: "Exercise: How to turn your data into BIDS"
+  subtitle: "Tutorial: How to create a BIDS dataset"
   author: "Dr. Lennart Wittkuhn"
   source: "https://github.com/lnnrtwttkhn/rdm-bids"
   website: "https://lennartwittkuhn.com/rdm-bids"

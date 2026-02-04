@@ -2,6 +2,7 @@ project:
   type: website
   execute-dir: project
   output-dir: _site
+  pre-render: make ipynb
   preview:
     port: 4200
     browser: true
@@ -24,9 +25,32 @@ website:
   search: false
   page-navigation: false
   back-to-top-navigation: true
+  navbar:
+    search: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Setup"
+        href: setup.qmd
+      - text: "Exercise 1"
+        href: exercise1.qmd
+      - text: "Exercise 2"
+        href: exercise2.qmd
+      - text: "FAQ"
+        href: faq.qmd
   other-links:
-    - text: Jupyter Notebook
-      href: index.ipynb
+    - text: Exercise 1
+      href: exercise1.ipynb
+      icon: journal-code
+    - text: Exercise 2
+      href: exercise2.ipynb
+      icon: journal-code
+    - text: Exercise 1 (Colab)
+      href: exercise1_colab.ipynb
+      icon: google
+    - text: Exercise 2 (Colab)
+      href: exercise2_colab.ipynb
+      icon: google
 
 # table of contents:
 toc-depth: 3
@@ -58,8 +82,8 @@ from: "markdown+emoji"
 
 format:
   html:
-    title: "{{< var project.title >}}"
     subtitle: "{{< var project.subtitle >}}"
+    date: today
     # format options:
     theme: default
     anchor-sections: true
@@ -74,6 +98,7 @@ format:
     page-layout: article
     title-block-style: default
     # code:
+    highlight-style: github
     code-fold: false
     code-summary: "Code"
     code-overflow: scroll
