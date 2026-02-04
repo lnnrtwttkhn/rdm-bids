@@ -23,19 +23,20 @@ Depending on your environment, paste the installation command here:
 Download and extract the example dataset or retrieve it from OSF at <https://osf.io/rghtc/files/mqgzh>.
 
 ```{bash}
-curl -L https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download -o rdm-data.zip
-unzip -j -o rdm-data.zip -d rdm-data
-rm -f rdm-data.zip
-cd rdm-data
+#| output-fold: true
+curl -L https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download -o data.zip
+unzip -j -o data.zip -d data
+rm -f data.zip
 ```
 
 ## Prepare the data
 
-Extract the downloaded archive:
+Extract the downloaded archive.
+This created the folder `MRIS`.
 
 ```{bash}
-unzip sub-219_dicom.zip
-cd MRIS
+#| output-fold: true
+unzip data/sub-219_dicom.zip
 ```
 
 ## Inspect the raw data structure
@@ -44,7 +45,8 @@ Let's examine the directory structure of our dataset.
 The dataset contains DICOM files organized by subject and session:
 
 ```{bash}
-tree -L 2
+#| output-fold: true
+tree -L 2 MRIS
 ```
 
 ## Create the heuristic file
@@ -52,14 +54,13 @@ tree -L 2
 Let's examine the provided heuristic file that defines how to organize the DICOM files:
 
 ```{bash}
-cat Nifti/code/heuristic1.py
+#| output-fold: true
+cat MRIS/Nifti/code/heuristic1.py
 ```
 
 ## Run basic `heudiconv` conversion
 
 Now we'll use heudiconv to convert DICOMS into the BIDS data structure using the custom heuristic.
-
-**Note:** Heudiconv requires you to run the command from the parent directory of both the `dicom` and `Nifti` directories, which is `MRIS` in our case.
 
 Here's an explanation of the flags and arguments:
 
@@ -74,7 +75,8 @@ Here's an explanation of the flags and arguments:
 - `--overwrite` overwrites existing converted files
 
 ```{bash}
-heudiconv --files dicom/219/itbs/*/*.dcm -o Nifti -f Nifti/code/heuristic1.py -s 219 -ss itbs -c dcm2niix -b --minmeta --overwrite
+#| output-fold: true
+heudiconv --files MRIS/dicom/219/itbs/*/*.dcm -o MRIS/Nifti -f MRIS/Nifti/code/heuristic1.py -s 219 -ss itbs -c dcm2niix -b --minmeta --overwrite
 ```
 
 ## Inspect the BIDS dataset
@@ -82,7 +84,8 @@ heudiconv --files dicom/219/itbs/*/*.dcm -o Nifti -f Nifti/code/heuristic1.py -s
 Let's see what was created in the Nifti directory:
 
 ```{bash}
-tree Nifti
+#| output-fold: true
+tree MRIS/Nifti
 ```
 
 The output should contain:
@@ -94,7 +97,8 @@ The output should contain:
 Let's look at the subject structure in more detail:
 
 ```{bash}
-tree Nifti/sub-219
+#| output-fold: true
+tree MRIS/Nifti/sub-219
 ```
 
 ## Check BIDS files
@@ -102,13 +106,30 @@ tree Nifti/sub-219
 Let's examine the required BIDS files that were created:
 
 ```{bash}
-ls Nifti/*.json Nifti/*.tsv Nifti/README Nifti/CHANGES
+#| output-fold: true
+ls MRIS/Nifti/*.json
+```
+
+```{bash}
+#| output-fold: true
+ls MRIS/Nifti/*.tsv
+```
+
+```{bash}
+#| output-fold: true
+cat MRIS/Nifti/README
+```
+
+```{bash}
+#| output-fold: true
+cat MRIS/Nifti/CHANGES
 ```
 
 View the dataset description:
 
 ```{bash}
-cat Nifti/dataset_description.json
+#| output-fold: true
+cat MRIS/Nifti/dataset_description.json
 ```
 
 ## Validate the BIDS dataset
@@ -116,7 +137,8 @@ cat Nifti/dataset_description.json
 Validate the dataset using the BIDS Validator to ensure everything is according to specification:
 
 ```{bash}
-bids-validator-deno Nifti
+#| output-fold: true
+bids-validator-deno MRIS/Nifti
 ```
 
 The validation should show no errors, though there might be a couple of warnings.
@@ -125,26 +147,42 @@ The validation should show no errors, though there might be a couple of warnings
 
 Let's examine what types of data were converted by looking at the different modality folders:
 
+### Anatomical data
+
 ```{bash}
-# Anatomical data
-ls Nifti/sub-219/ses-itbs/anat/
+#| output-fold: true
+ls MRIS/Nifti/sub-219/ses-itbs/anat/
+```
 
-# Functional data
-ls Nifti/sub-219/ses-itbs/func/
+### Functional data
 
-# Diffusion data
-ls Nifti/sub-219/ses-itbs/dwi/
+```{bash}
+#| output-fold: true
+ls MRIS/Nifti/sub-219/ses-itbs/func/
+```
 
-# Fieldmap data
-ls Nifti/sub-219/ses-itbs/fmap/
+### Diffusion data
+
+```{bash}
+#| output-fold: true
+ls MRIS/Nifti/sub-219/ses-itbs/dwi/
+```
+
+### Diffusion data
+
+```{bash}
+#| output-fold: true
+ls MRIS/Nifti/sub-219/ses-itbs/fmap/
 ```
 
 ## Examining JSON sidecars
 
-BIDS requires JSON sidecar files alongside NIfTI files. Let's examine one:
+BIDS requires JSON sidecar files alongside NIfTI files.
+Let's examine one:
 
 ```{bash}
-cat Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json
+#| output-fold: true
+cat MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json
 ```
 
 ## Summary

@@ -12,23 +12,13 @@ Depending on your environment, paste the installation command here:
 # < replace with installation command >
 ```
 
-## Create a project directory
-
-Create an empty directory called `mydataset` and navigate into it.
-`mydataset` is only a name.
-You can choose any other name.
-
-```{bash}
-mkdir mydataset
-cd mydataset
-```
-
 ## Download the data
 
 Download the data by @nastase2020 from [Zenodo](https://doi.org/10.5281/zenodo.3677089).
 Note that the download make take a few minutes.
 
 ```{bash}
+#| output-fold: true
 wget https://zenodo.org/record/3677090/files/0219191_mystudy-0219-1114.tar.gz
 ```
 
@@ -38,6 +28,7 @@ Now we need to extract the downloaded archive.
 The following command extracts the `tar.gz` archive (`-x` extract, `-v` verbose, `-z` gzip, `-f` file).
 
 ```{bash}
+#| output-fold: true
 tar -xvzf 0219191_mystudy-0219-1114.tar.gz # <1>
 ```
 
@@ -47,6 +38,7 @@ Let's navigate into the directory and see what's inside the dataset.
 Using `tree -L 2` we show the directory structure with a maximum depth of 2 levels.
 
 ```{bash}
+#| output-fold: true
 tree -L 2 0219191_mystudy-0219-1114 # <1>
 ```
 
@@ -55,6 +47,7 @@ tree -L 2 0219191_mystudy-0219-1114 # <1>
 We need to decompress all gzipped DICOM files in the `dcm` directory:
 
 ```{bash}
+#| output-fold: true
 gunzip 0219191_mystudy-0219-1114/dcm/*.dcm.gz
 ```
 
@@ -73,6 +66,7 @@ Here is an explanation for the flags and arguments:
 - `--overwrite ` overwrites existing converted files
 
 ```{bash}
+#| output-fold: true
 heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1114/dcm --overwrite
 ```
 
@@ -81,12 +75,14 @@ heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1
 Let's see what was created:
 
 ```{bash}
+#| output-fold: true
 ls
 ```
 
 Let's inspect the new folder in more detail:
 
 ```{bash}
+#| output-fold: true
 tree -L 7 Norman
 ```
 
@@ -96,8 +92,8 @@ That looks like a BIDS dataset!
 Let's check using the [BIDS Validator](https://bids-standard.github.io/bids-validator/):
 
 ```{bash}
-cd /Norman/Mennen/5516_greenEyes/
-bids-validator-deno .
+#| output-fold: true
+bids-validator-deno /Norman/Mennen/5516_greenEyes/
 ```
 
 ## Fixing a BIDS Dataset
@@ -117,21 +113,24 @@ Let the BIDS validator ignore `/sourcedata` and `.heudiconv`.
 To this end, we create a `.bidsignore` file:
 
 ```{bash}
-touch .bidsignore
-echo "/sourcedata" > .bidsignore
-echo ".heudiconv" >> .bidsignore
+#| output-fold: true
+touch /Norman/Mennen/5516_greenEyes/.bidsignore
+echo "/sourcedata" > /Norman/Mennen/5516_greenEyes/.bidsignore
+echo ".heudiconv" >> /Norman/Mennen/5516_greenEyes/.bidsignore
 ```
 
 ### Remove data from the MRI loalizer
 
 ```{bash}
-rm -rf sub-*/ses-*/*/*scout*
+#| output-fold: true
+rm -rf /Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*scout*
 ```
 
 ### Remove repeated runs (resulting in duplications)
 
 ```{bash}
-rm -rf sub-*/ses-*/*/*_dup*
+#| output-fold: true
+rm -rf /Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*_dup*
 ```
 
 ### Adjust the `scans.tsv` file:
@@ -144,10 +143,10 @@ rm -rf sub-*/ses-*/*/*_dup*
 
 ```{python}
 import pandas as pd
-df = pd.read_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
+df = pd.read_csv('/Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
 df_clean = df[~df['filename'].str.contains('_dup')]
 df_clean = df_clean[~df_clean['filename'].str.contains('scout')]
-df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
+df_clean.to_csv('/Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
 ```
 
 ## Validate again
@@ -155,7 +154,8 @@ df_clean.to_csv('sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
 Run the BIDS Validator repeatedly to verify that you resolved remaining errors and warnings:
 
 ```{bash}
-bids-validator-deno .
+#| output-fold: true
+bids-validator-deno /Norman/Mennen/5516_greenEyes/
 ```
 
 Cool, no more errors!
