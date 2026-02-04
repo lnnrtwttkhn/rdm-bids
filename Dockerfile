@@ -45,7 +45,7 @@ RUN uv sync --frozen
 RUN uv run python -m bash_kernel.install
 
 # Add quarto extension
-RUN quarto add --no-prompt mcanouil/quarto-collapse-output
+RUN uv run quarto add --no-prompt mcanouil/quarto-collapse-output
 
 # Set environment variables
 ENV QUARTO_PYTHON="/app/.venv/bin/python"
