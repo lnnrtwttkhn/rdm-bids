@@ -7,3 +7,6 @@ mydataset
 *_colab.qmd
 /rdm-data
 *.ipynb
+MRIS
+*.zip
+Nifti
