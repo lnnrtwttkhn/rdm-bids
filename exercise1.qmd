@@ -72,13 +72,6 @@ heudiconv -f reproin --subject 01 --ses 01 --bids --files 0219191_mystudy-0219-1
 
 ## Inspecting the BIDS dataset
 
-Let's see what was created:
-
-```{bash}
-#| output-fold: true
-ls
-```
-
 Let's inspect the new folder in more detail:
 
 ```{bash}
@@ -93,7 +86,7 @@ Let's check using the [BIDS Validator](https://bids-standard.github.io/bids-vali
 
 ```{bash}
 #| output-fold: true
-bids-validator-deno /Norman/Mennen/5516_greenEyes/
+bids-validator-deno Norman/Mennen/5516_greenEyes
 ```
 
 ## Fixing a BIDS Dataset
@@ -114,23 +107,23 @@ To this end, we create a `.bidsignore` file:
 
 ```{bash}
 #| output-fold: true
-touch /Norman/Mennen/5516_greenEyes/.bidsignore
-echo "/sourcedata" > /Norman/Mennen/5516_greenEyes/.bidsignore
-echo ".heudiconv" >> /Norman/Mennen/5516_greenEyes/.bidsignore
+touch Norman/Mennen/5516_greenEyes/.bidsignore
+echo "/sourcedata" > Norman/Mennen/5516_greenEyes/.bidsignore
+echo ".heudiconv" >> Norman/Mennen/5516_greenEyes/.bidsignore
 ```
 
 ### Remove data from the MRI loalizer
 
 ```{bash}
 #| output-fold: true
-rm -rf /Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*scout*
+rm -rf Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*scout*
 ```
 
 ### Remove repeated runs (resulting in duplications)
 
 ```{bash}
 #| output-fold: true
-rm -rf /Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*_dup*
+rm -rf Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*_dup*
 ```
 
 ### Adjust the `scans.tsv` file:
@@ -143,10 +136,10 @@ rm -rf /Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*_dup*
 
 ```{python}
 import pandas as pd
-df = pd.read_csv('/Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
+df = pd.read_csv('Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
 df_clean = df[~df['filename'].str.contains('_dup')]
 df_clean = df_clean[~df_clean['filename'].str.contains('scout')]
-df_clean.to_csv('/Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
+df_clean.to_csv('Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t', index=False)
 ```
 
 ## Validate again
@@ -155,7 +148,7 @@ Run the BIDS Validator repeatedly to verify that you resolved remaining errors a
 
 ```{bash}
 #| output-fold: true
-bids-validator-deno /Norman/Mennen/5516_greenEyes/
+bids-validator-deno Norman/Mennen/5516_greenEyes/
 ```
 
 Cool, no more errors!
