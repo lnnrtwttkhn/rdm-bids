@@ -2,7 +2,7 @@ project:
   type: website
   execute-dir: project
   output-dir: _site
-  pre-render: make generate-install
+  # pre-render: make generate-install
   post-render: make ipynb
   preview:
     port: 4200
