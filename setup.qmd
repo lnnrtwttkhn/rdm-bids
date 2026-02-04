@@ -7,6 +7,8 @@ title: "Setup: How to setup and run the tutorial"
 Download notebooks from the right sidebar.
 Select `Colab` if you are using [Google Colab](#google-colab).
 
+## Computational environments
+
 ### JupyterHub at UHH
 
 1. Open <https://code.min.uni-hamburg.de/>
