@@ -1,27 +1,7 @@
-import tomllib
 import re
 
-# Read pyproject.toml
-with open("pyproject.toml", "rb") as f:
-    data = tomllib.load(f)
-
-# Extract dependencies and create pip install command
-deps = " ".join(data["project"]["dependencies"])
-pip_command = f"pip install {deps}"
-
-# Write to markdown file
-markdown_content = f"""```python
-!apt-get install tree
-{pip_command}
-```"""
-
-with open("_colab_install.md", "w") as f:
-    f.write(markdown_content)
-
-print("Generated _colab_install.md")
-
-# Process exercise files - convert bash chunks to python with jupyter magics
 def replace_bash_chunk(match):
+    """Convert bash chunk to python with jupyter magics."""
     # Extract the command content
     command_content = match.group(1)
     # Add ! magic to each line that isn't empty
@@ -36,6 +16,7 @@ def replace_bash_chunk(match):
     return f"```{{python}}\n{chr(10).join(python_lines)}\n```"
 
 def process_exercise_file(input_file, output_file):
+    """Process exercise file to convert bash chunks to python with jupyter magics."""
     with open(input_file, "r") as f:
         content = f.read()
 
@@ -51,6 +32,11 @@ def process_exercise_file(input_file, output_file):
 
     print(f"Generated {output_file} with bash chunks converted to python with jupyter magics")
 
-# Process both exercise files
-process_exercise_file("exercise1.qmd", "exercise1_colab.qmd")
-process_exercise_file("exercise2.qmd", "exercise2_colab.qmd")
+def convert_all_exercises():
+    """Convert all exercise files for Colab compatibility."""
+    # Process both exercise files
+    process_exercise_file("exercise1.qmd", "exercise1_colab.qmd")
+    process_exercise_file("exercise2.qmd", "exercise2_colab.qmd")
+
+if __name__ == "__main__":
+    convert_all_exercises()

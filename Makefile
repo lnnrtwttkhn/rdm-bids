@@ -132,12 +132,16 @@ install:
 	uv sync --frozen
 	uv run quarto render
 
+make: generate-install
+generate-install:
+	uv run python3 generate_install.py
+
 .PHONY: ipynb
 ipynb:
 	mkdir -p _site
 	uv run quarto convert exercise1.qmd
 	uv run quarto convert exercise2.qmd
-	uv run python3 prepare_colab.py
+	uv run python3 convert_colab.py
 	uv run quarto convert exercise1_colab.qmd
 	uv run quarto convert exercise2_colab.qmd
 	mv exercise1.ipynb _site/
