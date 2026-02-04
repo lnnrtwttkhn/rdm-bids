@@ -112,7 +112,12 @@ ls MRIS/Nifti/*.json
 
 ```{bash}
 #| output-fold: true
-ls MRIS/Nifti/*.tsv
+cat MRIS/Nifti/participants.tsv
+```
+
+```{bash}
+#| output-fold: true
+cat MRIS/Nifti/participants.json
 ```
 
 ```{bash}
@@ -182,7 +187,7 @@ Let's examine one:
 
 ```{bash}
 #| output-fold: true
-cat MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_bold.json
+cat MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json
 ```
 
 ## Summary
