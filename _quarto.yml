@@ -2,7 +2,7 @@ project:
   type: website
   execute-dir: project
   output-dir: _site
-  post-render: make ipynb
+  pre-render: make ipynb
   preview:
     port: 4200
     browser: true
