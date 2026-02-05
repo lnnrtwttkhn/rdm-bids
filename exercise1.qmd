@@ -142,7 +142,14 @@ rm -rf Norman/Mennen/5516_greenEyes/sub-*/ses-*/*/*_dup*
 4. Further remove rows where `'filename'` contains `'scout'` (localizer scans).
 5. Save the cleaned DataFrame back to the original`*scans.tsv` file, overwriting it.
 
-```{python}
+```{bash}
+#| output-fold: true
+awk -F'\t' 'NR==1 || (!/scout/ && !/_dup/)' Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv > temp_scans.tsv && mv temp_scans.tsv Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv
+```
+
+You can also run Python code to achieve the same result:
+
+```python
 import pandas as pd
 df = pd.read_csv('Norman/Mennen/5516_greenEyes/sub-01/ses-01/sub-01_ses-01_scans.tsv', sep='\t')
 df_clean = df[~df['filename'].str.contains('_dup')]
