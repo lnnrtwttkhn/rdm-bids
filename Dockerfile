@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     tree \
     git \
+    unzip \
     build-essential \
     ca-certificates \
     gdebi-core \
