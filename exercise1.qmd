@@ -114,6 +114,12 @@ echo "/sourcedata" > Norman/Mennen/5516_greenEyes/.bidsignore
 echo ".heudiconv" >> Norman/Mennen/5516_greenEyes/.bidsignore
 ```
 
+Let's look at the contents of the `.bidsignore` file:
+
+```{bash}
+cat  Norman/Mennen/5516_greenEyes/.bidsignore
+```
+
 ### Remove data from the MRI loalizer
 
 ```{bash}
