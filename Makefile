@@ -129,8 +129,10 @@ ps:
 
 .PHONY: install
 install:
+	curl -LsSf https://astral.sh/uv/install.sh | sh
 	uv sync --frozen
-	uv run python3 generate_install.py
+	uv run python -m bash_kernel.install
+	uv run python generate_install.py
 	uv run quarto convert exercise1.qmd
 	uv run quarto convert exercise2.qmd
 
