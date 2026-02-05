@@ -130,7 +130,9 @@ ps:
 .PHONY: install
 install:
 	uv sync --frozen
-	uv run quarto render
+	uv run python3 generate_install.py
+	uv run quarto convert exercise1.qmd
+	uv run quarto convert exercise2.qmd
 
 make: generate-install
 generate-install:
