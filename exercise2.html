@@ -205,14 +205,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Depending on your environment, paste the installation command here:</p>
-<div id="112533e6" class="cell" data-execution_count="1">
+<div id="9bb719ca" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="download-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download and extract the example dataset or retrieve it from OSF at <a href="https://osf.io/rghtc/files/mqgzh" class="uri">https://osf.io/rghtc/files/mqgzh</a>.</p>
-<div id="d3b327f6" class="cell" data-output-fold="true" data-execution_count="2">
+<div id="6e0a5c67" class="cell" data-output-fold="true" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download <span class="at">-o</span> data.zip</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">unzip</span> <span class="at">-j</span> <span class="at">-o</span> data.zip <span class="at">-d</span> data</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">rm</span> <span class="at">-f</span> data.zip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -221,8 +221,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 23644    0 23644    0     0  18300      0 --:--:--  0:00:01 --:--:-- 18300100 3028k    0 3028k    0     0  1330k      0 --:--:--  0:00:02 --:--:-- 3053k100 23.4M    0 23.4M    0     0  7341k      0 --:--:--  0:00:03 --:--:-- 11.8M100 44.6M    0 44.6M    0     0  10.3M      0 --:--:--  0:00:04 --:--:-- 14.7M100 66.1M    0 66.1M    0     0  12.4M      0 --:--:--  0:00:05 --:--:-- 16.5M100 88.3M    0 88.3M    0     0  14.0M      0 --:--:--  0:00:06 --:--:-- 17.7M100  110M    0  110M    0     0  15.1M      0 --:--:--  0:00:07 --:--:-- 21.4M100  131M    0  131M    0     0  15.8M      0 --:--:--  0:00:08 --:--:-- 21.5M100  153M    0  153M    0     0  16.5M      0 --:--:--  0:00:09 --:--:-- 21.8M100  175M    0  175M    0     0  16.9M      0 --:--:--  0:00:10 --:--:-- 21.6M100  196M    0  196M    0     0  17.3M      0 --:--:--  0:00:11 --:--:-- 21.4M100  217M    0  217M    0     0  17.7M      0 --:--:--  0:00:12 --:--:-- 21.4M100  239M    0  239M    0     0  18.0M      0 --:--:--  0:00:13 --:--:-- 21.5M100  240M    0  240M    0     0  18.0M      0 --:--:--  0:00:13 --:--:-- 21.4M
-bash: unzip: command not found</code></pre>
+100 19546    0 19546    0     0  16242      0 --:--:--  0:00:01 --:--:-- 16242100 2105k    0 2105k    0     0   959k      0 --:--:--  0:00:02 --:--:-- 2104k100 20.9M    0 20.9M    0     0  6715k      0 --:--:--  0:00:03 --:--:-- 10.5M100 43.2M    0 43.2M    0     0  10.1M      0 --:--:--  0:00:04 --:--:-- 14.1M100 63.8M    0 63.8M    0     0  12.2M      0 --:--:--  0:00:05 --:--:-- 15.9M100 84.6M    0 84.6M    0     0  13.6M      0 --:--:--  0:00:06 --:--:-- 16.9M100  103M    0  103M    0     0  14.4M      0 --:--:--  0:00:07 --:--:-- 20.3M100  125M    0  125M    0     0  15.2M      0 --:--:--  0:00:08 --:--:-- 20.7M100  145M    0  145M    0     0  15.8M      0 --:--:--  0:00:09 --:--:-- 20.7M100  168M    0  168M    0     0  16.4M      0 --:--:--  0:00:10 --:--:-- 20.8M100  189M    0  189M    0     0  16.8M      0 --:--:--  0:00:11 --:--:-- 20.7M100  210M    0  210M    0     0  17.2M      0 --:--:--  0:00:12 --:--:-- 21.3M100  232M    0  232M    0     0  17.6M      0 --:--:--  0:00:13 --:--:-- 21.6M100  240M    0  240M    0     0  17.7M      0 --:--:--  0:00:13 --:--:-- 21.7M
+Archive:  data.zip
+ extracting: data/sub-219_dicom.zip  </code></pre>
 </div>
 </details>
 </div>
@@ -230,16 +231,1747 @@ bash: unzip: command not found</code></pre>
 <section id="prepare-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Extract the downloaded archive. This created the folder <code>MRIS</code>.</p>
-<div id="2b4b4e04" class="cell" data-output-fold="true" data-execution_count="3">
+<div id="c7867ae3" class="cell" data-output-fold="true" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">unzip</span> data/sub-219_dicom.zip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>bash: unzip: command not found</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 127</code></pre>
+<pre><code>Archive:  data/sub-219_dicom.zip
+   creating: MRIS/
+   creating: MRIS/dicom/
+   creating: MRIS/dicom/219/
+   creating: MRIS/dicom/219/itbs/
+   creating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/Bzero_verify_PA_17/IM-0005-0148.dcm  
+   creating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/DTI_30_DIRs_AP_15/IM-0003-0032.dcm  
+   creating: MRIS/dicom/219/itbs/field_mapping_20/
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0001-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0001-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0002-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0002-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0003-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0003-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0004-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0004-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0005-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0005-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0006-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0006-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0007-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0007-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0008-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0008-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0009-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0009-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0010-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0010-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0011-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0011-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0012-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0012-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0013-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0013-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0014-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0014-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0015-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0015-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0016-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0016-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0017-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0017-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0018-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0018-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0019-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0019-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0020-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0020-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0021-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0021-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0022-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0022-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0023-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0023-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0024-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0024-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0025-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0025-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0026-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0026-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0027-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0027-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0028-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0028-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0029-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0029-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0030-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0030-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0031-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0031-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0032-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_20/IM-0008-0032-0002.dcm  
+   creating: MRIS/dicom/219/itbs/field_mapping_21/
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/field_mapping_21/IM-0009-0032.dcm  
+   creating: MRIS/dicom/219/itbs/Localizers_1/
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0001-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0002-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0003-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0004-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0005-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0006-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0006-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0006-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0006-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0007-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0007-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0007-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0007-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0008-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0008-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0008-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0008-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0009-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0009-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0009-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0009-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0010-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0010-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0010-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0010-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0011-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0011-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0011-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0011-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0012-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0012-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0012-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0012-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0013-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0013-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0013-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0013-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0014-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0014-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0014-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0014-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0015-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0015-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0015-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0015-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0016-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0016-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0016-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0016-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0017-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0017-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0017-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0017-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0018-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0018-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0018-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0018-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0019-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0019-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0019-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0019-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0020-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0020-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0020-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0020-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0021-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0021-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0021-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0021-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0022-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0022-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0022-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0022-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0023-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0023-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0023-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0023-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0024-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0024-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0024-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0024-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0025-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0025-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0025-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0025-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0026-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0026-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0026-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0026-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0027-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0027-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0027-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0027-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0028-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0028-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0028-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0028-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0029-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0029-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0029-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0029-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0030-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0030-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0030-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0030-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0031-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0031-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0031-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0031-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0032-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0032-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0032-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0032-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0033-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0033-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0033-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0033-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0034-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0034-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0034-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0034-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0035-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0035-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0035-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0035-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0036-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0036-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0036-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0036-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0037-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0037-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0037-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0037-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0038-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0038-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0038-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0038-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0039-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0039-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0039-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0039-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0040-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0040-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0040-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0040-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0041-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0041-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0041-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0041-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0042-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0042-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0042-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0042-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0043-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0043-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0043-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0043-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0044-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0044-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0044-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0044-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0045-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0045-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0045-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0045-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0046-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0046-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0046-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0046-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0047-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0047-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0047-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0047-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0048-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0048-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0048-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0048-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0049-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0049-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0049-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0049-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0050-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0050-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0050-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0050-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0051-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0051-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0051-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0051-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0052-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0052-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0052-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0052-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0053-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0053-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0053-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0053-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0054-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0054-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0054-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0054-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0055-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0055-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0055-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0055-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0056-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0056-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0056-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0056-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0057-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0057-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0057-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0057-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0058-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0058-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0058-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0058-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0059-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0059-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0059-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0059-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0060-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0060-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0060-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0060-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0061-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0061-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0061-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0061-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0062-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0062-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0062-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0062-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0063-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0063-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0063-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0063-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0064-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0064-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0064-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0064-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0065-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0065-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0065-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0065-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0066-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0066-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0066-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0066-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0067-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0067-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0067-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0067-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0068-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0068-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0068-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0068-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0069-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0069-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0069-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0069-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0070-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0070-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0070-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0070-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0071-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0071-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0071-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0071-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0072-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0072-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0072-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0072-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0073-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0073-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0073-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0073-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0074-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0074-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0074-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0074-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0075-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0075-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0075-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0075-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0076-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0076-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0076-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0076-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0077-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0077-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0077-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0077-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0078-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0078-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0078-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0078-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0079-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0079-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0079-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0079-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0080-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0080-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0080-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0080-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0081-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0081-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0081-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0081-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0082-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0082-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0082-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0082-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0083-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0083-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0083-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0083-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0084-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0084-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0084-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0084-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0085-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0085-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0085-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0085-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0086-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0086-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0086-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0086-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0087-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0087-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0087-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0087-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0088-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0088-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0088-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0088-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0089-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0089-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0089-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0089-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0090-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0090-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0090-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0090-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0091-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0091-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0091-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0091-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0092-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0092-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0092-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0092-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0093-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0093-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0093-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0093-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0094-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0094-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0094-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0094-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0095-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0095-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0095-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0095-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0096-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0096-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0096-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0096-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0097-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0097-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0097-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0097-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0098-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0098-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0098-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0098-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0099-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0099-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0099-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0099-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0100-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0100-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0100-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0100-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0101-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0101-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0101-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0101-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0102-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0102-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0102-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0102-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0103-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0103-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0103-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0103-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0104-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0104-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0104-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0104-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0105-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0105-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0105-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0105-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0106-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0106-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0106-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0106-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0107-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0107-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0107-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0107-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0108-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0108-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0108-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0108-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0109-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0109-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0109-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0109-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0110-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0110-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0110-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0110-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0111-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0111-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0111-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0111-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0112-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0112-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0112-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0112-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0113-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0113-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0113-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0113-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0114-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0114-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0114-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0114-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0115-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0115-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0115-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0115-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0116-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0116-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0116-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0116-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0117-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0117-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0117-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0117-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0118-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0118-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0118-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0118-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0119-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0119-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0119-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0119-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0120-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0120-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0120-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0120-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0121-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0121-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0121-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0121-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0122-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0122-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0122-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0122-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0123-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0123-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0123-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0123-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0124-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0124-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0124-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0124-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0125-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0125-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0125-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0125-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0126-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0126-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0126-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0126-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0127-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0127-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0127-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0127-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0128-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0128-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0128-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Localizers_1/IM-0020-0128-0004.dcm  
+   creating: MRIS/dicom/219/itbs/MoCoSeries_19/
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0148.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0149.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0150.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0151.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0152.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0153.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0154.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0155.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0156.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0157.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0158.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0159.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0160.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0161.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0162.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0163.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0164.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0165.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0166.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0167.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0168.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0169.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0170.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0171.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0172.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0173.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0174.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0175.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0176.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_19/IM-0007-0177.dcm  
+   creating: MRIS/dicom/219/itbs/MoCoSeries_31/
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0148.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0149.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0150.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0151.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0152.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0153.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0154.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0155.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0156.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0157.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0158.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0159.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0160.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0161.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0162.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0163.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0164.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0165.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0166.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0167.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0168.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0169.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0170.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0171.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0172.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0173.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0174.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0175.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0176.dcm  
+  inflating: MRIS/dicom/219/itbs/MoCoSeries_31/IM-0015-0177.dcm  
+   creating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0148.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0149.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0150.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0151.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0152.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0153.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0154.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0155.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0156.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0157.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0158.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0159.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0160.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0161.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0162.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0163.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0164.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0165.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0166.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0167.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0168.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0169.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0170.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0171.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0172.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0173.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0174.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0175.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0176.dcm  
+  inflating: MRIS/dicom/219/itbs/Post_TMS_restingstate_30/IM-0014-0177.dcm  
+   creating: MRIS/dicom/219/itbs/restingstate_18/
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0148.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0149.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0150.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0151.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0152.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0153.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0154.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0155.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0156.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0157.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0158.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0159.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0160.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0161.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0162.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0163.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0164.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0165.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0166.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0167.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0168.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0169.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0170.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0171.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0172.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0173.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0174.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0175.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0176.dcm  
+  inflating: MRIS/dicom/219/itbs/restingstate_18/IM-0006-0177.dcm  
+   creating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0001.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0002.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0003.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0004.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0005.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0006.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0007.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0008.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0009.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0010.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0011.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0012.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0013.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0014.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0015.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0016.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0017.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0018.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0019.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0020.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0021.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0022.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0023.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0024.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0025.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0026.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0027.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0028.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0029.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0030.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0031.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0032.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0033.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0034.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0035.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0036.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0037.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0038.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0039.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0040.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0041.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0042.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0043.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0044.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0045.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0046.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0047.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0048.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0049.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0050.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0051.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0052.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0053.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0054.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0055.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0056.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0057.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0058.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0059.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0060.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0061.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0062.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0063.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0064.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0065.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0066.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0067.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0068.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0069.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0070.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0071.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0072.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0073.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0074.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0075.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0076.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0077.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0078.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0079.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0080.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0081.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0082.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0083.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0084.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0085.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0086.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0087.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0088.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0089.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0090.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0091.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0092.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0093.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0094.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0095.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0096.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0097.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0098.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0099.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0100.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0101.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0102.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0103.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0104.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0105.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0106.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0107.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0108.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0109.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0110.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0111.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0112.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0113.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0114.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0115.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0116.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0117.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0118.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0119.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0120.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0121.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0122.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0123.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0124.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0125.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0126.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0127.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0128.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0129.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0130.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0131.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0132.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0133.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0134.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0135.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0136.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0137.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0138.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0139.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0140.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0141.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0142.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0143.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0144.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0145.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0146.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0147.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0148.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0149.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0150.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0151.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0152.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0153.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0154.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0155.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0156.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0157.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0158.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0159.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0160.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0161.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0162.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0163.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0164.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0165.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0166.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0167.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0168.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0169.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0170.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0171.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0172.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0173.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0174.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0175.dcm  
+  inflating: MRIS/dicom/219/itbs/T1_mprage_1mm_13/IM-0001-0176.dcm  
+  inflating: MRIS/hdc_run.sh         
+  inflating: MRIS/Makefile           
+   creating: MRIS/Nifti/
+   creating: MRIS/Nifti/code/
+  inflating: MRIS/Nifti/code/heuristic1.py  
+  inflating: MRIS/Nifti/code/heuristic2.py  </code></pre>
 </div>
 </details>
 </div>
@@ -247,18 +1979,19 @@ bash: unzip: command not found</code></pre>
 <section id="inspect-the-raw-data-structure" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-raw-data-structure">Inspect the raw data structure</h2>
 <p>Let’s examine the directory structure of our dataset. The dataset contains DICOM files organized by subject and session:</p>
-<div id="cb017428" class="cell" data-output-fold="true" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a831f8e8" class="cell" data-output-fold="true" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>MRIS  [error opening dir]
+<pre><code>MRIS
+├── Makefile
+├── Nifti
+│&nbsp;&nbsp; └── code
+├── dicom
+│&nbsp;&nbsp; └── 219
+└── hdc_run.sh
 
-0 directories, 0 files</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+5 directories, 2 files</code></pre>
 </div>
 </details>
 </div>
@@ -266,16 +1999,120 @@ bash: unzip: command not found</code></pre>
 <section id="create-the-heuristic-file" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-heuristic-file">Create the heuristic file</h2>
 <p>Let’s examine the provided heuristic file that defines how to organize the DICOM files:</p>
-<div id="97e9d99c" class="cell" data-output-fold="true" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">cat</span> MRIS/Nifti/code/heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="84c94652" class="cell" data-output-fold="true" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">cat</span> MRIS/Nifti/code/heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/code/heuristic1.py: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<pre><code>import os
+
+
+def create_key(template, outtype=('nii.gz',), annotation_classes=None):
+    if template is None or not template:
+        raise ValueError('Template must be a valid format string')
+    return template, outtype, annotation_classes
+
+
+def infotodict(seqinfo):
+    # Section 1: These key definitions should be revised by the user
+    ###################################################################
+    # For each sequence, define a key variables (e.g., t1w, dwi etc) and template using the create_key function:
+    # key = create_key(output_directory_path_and_name).
+    # TIPS
+    # If there are sessions, then session must be subfolder name. 
+    # Do not prepend the ses key to the session! It will be prepended automatically for the subfolder and the filename.
+    # The final value in the filename should be the modality.  It does not have a key, just a value.
+    # Otherwise, there is a key for every value. 
+    # Filenames always start with subject, optionally followed by session, and end with modality.
+    
+    # The "data" key creates sequential numbers which can be for naming sequences.
+    # This is especially valuable if you run the same sequence multiple times at the scanner.
+    data = create_key('run-{item:03d}')
+    
+    t1w = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w')
+    
+    dwi = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-AP_dwi')
+    
+    # Save the RPE (reverse phase-encode) B0 image as a fieldmap (fmap).  It will be used to correct
+    # the distortion in the DWI
+    fmap_rev_phase =  create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-PA_epi')
+    
+    fmap_mag =  create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude')
+    
+    fmap_phase = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff')
+    
+    # Even if this is resting state, you still need a task key
+    func_rest = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_run-01_bold')
+    func_rest_post = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_run-02_bold')
+
+    # Section 1b: This data dictionary (below) should be revised by the user.
+    ########################################################################### 
+    # info is a Python dictionary containing the following keys from the infotodict defined above.
+    # This list should contain all and only the sequences you want to export from the dicom directory.
+    info = {t1w: [], dwi: [], fmap_rev_phase: [], fmap_mag: [], fmap_phase: [], func_rest: [], func_rest_post: []}
+
+    # The following line does no harm, but it is not part of the dictionary.
+    last_run = len(seqinfo)
+
+    # Section 2: These criteria should be revised by the user.
+    ##########################################################
+    # Define test criteria to check that each DICOM sequence is correct
+    # seqinfo (s) refers to information in dicominfo.tsv. Consult that file for
+    # available criteria.
+    # Each sequence to export must have been defined in Section 1 and included in Section 1b.
+    # The following illustrates the use of multiple criteria:
+    for idx, s in enumerate(seqinfo):
+        # Dimension 3 must equal 176 and the string 'mprage' must appear somewhere in the protocol_name
+        if (s.dim3 == 176) and ('mprage' in s.protocol_name):
+            info[t1w].append(s.series_id)
+        
+        # Dimension 3 must equal 74 and dimension 4 must equal 32, and the string 'DTI' must appear somewhere in the protocol_name
+        if (s.dim3 == 74) and (s.dim4 == 32) and ('DTI' in s.protocol_name):
+            info[dwi].append(s.series_id)
+        
+        # The string 'verify_P-A' must appear somewhere in the protocol_name    
+        if ('verify_P-A' in s.protocol_name):
+            info[fmap_rev_phase] = [s.series_id]
+        
+        # Dimension 3 must equal 64, and the string 'field_mapping' must appear somewhere in the protocol_name    
+        if (s.dim3 == 64) and ('field_mapping' in s.protocol_name):
+            info[fmap_mag] = [s.series_id]
+        
+        # Dimension 3 must equal 32, and the string 'field_mapping' must appear somewhere in the protocol_name      
+        if (s.dim3 == 32) and ('field_mapping' in s.protocol_name):
+            info[fmap_phase] = [s.series_id]
+        
+        # The string 'resting_state' must appear somewhere in the protocol_name and the boolean field is_motion_corrected must be False (i.e. not motion corrected) 
+        
+        # This ensures I do NOT get the motion corrected MOCO series instead of the raw series!
+        if ('restingstate' == s.protocol_name) and (not s.is_motion_corrected):
+            info[func_rest].append(s.series_id) 
+        
+        # The string 'Post_TMS_resting_state' must appear somewhere in the protocol_name and the boolean field is_motion_corrected must be False (i.e. not motion corrected) 
+        # This ensures I do NOT get the motion corrected MOCO series instead of the raw series.
+        if ('Post_TMS_restingstate' == s.protocol_name) and (not s.is_motion_corrected):
+            info[func_rest_post].append(s.series_id)
+
+    # Section 3: Optional Report
+    ###################################
+    # Populate the msg list IF the wrong number of files is created (!= means not equal) 
+    # and exit the program with an error (No BIDS files are generated)
+    msg = []
+
+    if len(info[t1w]) != 1: msg.append('WARNING: Missing correct number of T1w runs')
+    if len(info[dwi]) != 1: msg.append('WARNING: Missing correct number of dwi runs')
+    if len(info[fmap_rev_phase]) != 1: msg.append('WARNING: Missing correct number of RPE runs')
+    if len(info[fmap_mag]) != 1: msg.append('WARNING: Missing correct number of magnitude runs')
+    if len(info[fmap_phase]) != 1: msg.append('WARNING: Missing correct number of phasediff runs')
+    if len(info[func_rest]) != 1: msg.append('WARNING: Missing correct number of resting_state runs')
+    if len(info[func_rest_post]) != 1: msg.append('WARNING: Missing correct number of resting_state_post runs')
+
+    # If there is an error, a message will be generated and no NIfTI files will be generated for the subject.
+    if msg:
+      raise ValueError('\n'.join(msg))
+
+    return info
+
+    </code></pre>
 </div>
 </details>
 </div>
@@ -295,45 +2132,189 @@ bash: unzip: command not found</code></pre>
 <li><code>--minmeta</code> prevents overflow of meta-information in JSON files</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="4cc67ff5" class="cell" data-output-fold="true" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">heudiconv</span> <span class="at">--files</span> MRIS/dicom/219/itbs/<span class="pp">*</span>/<span class="pp">*</span>.dcm <span class="at">-o</span> MRIS/Nifti <span class="at">-f</span> MRIS/Nifti/code/heuristic1.py <span class="at">-s</span> 219 <span class="at">-ss</span> itbs <span class="at">-c</span> dcm2niix <span class="at">-b</span> <span class="at">--minmeta</span> <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="db891e53" class="cell" data-output-fold="true" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">heudiconv</span> <span class="at">--files</span> MRIS/dicom/219/itbs/<span class="pp">*</span>/<span class="pp">*</span>.dcm <span class="at">-o</span> MRIS/Nifti <span class="at">-f</span> MRIS/Nifti/code/heuristic1.py <span class="at">-s</span> 219 <span class="at">-ss</span> itbs <span class="at">-c</span> dcm2niix <span class="at">-b</span> <span class="at">--minmeta</span> <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<div class="ansi-escaped-output">
-<pre>WARNING: Could not check for version updates: Connection to server could not be made
-
+<pre><code>WARNING: Could not check for version updates: Connection to server could not be made
 INFO: Running heudiconv version 1.3.4 latest Unknown
-
-Traceback (most recent call last):
-
-  File <span class="ansi-magenta-fg">"/app/.venv/bin/heudiconv"</span>, line <span class="ansi-magenta-fg">10</span>, in <span class="ansi-magenta-fg">&lt;module&gt;</span>
-
-    sys.exit(<span class="ansi-red-fg">main</span><span class="ansi-red-fg ansi-bold">()</span>)
-
-             <span class="ansi-red-fg">~~~~</span><span class="ansi-red-fg ansi-bold">^^</span>
-
-  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/cli/run.py"</span>, line <span class="ansi-magenta-fg">30</span>, in <span class="ansi-magenta-fg">main</span>
-
-    <span class="ansi-red-fg">workflow</span><span class="ansi-red-fg ansi-bold">(**kwargs)</span>
-
-    <span class="ansi-red-fg">~~~~~~~~</span><span class="ansi-red-fg ansi-bold">^^^^^^^^^^</span>
-
-  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/main.py"</span>, line <span class="ansi-magenta-fg">408</span>, in <span class="ansi-magenta-fg">workflow</span>
-
-    heuristic_mod = load_heuristic(heuristic)
-
-  File <span class="ansi-magenta-fg">"/app/.venv/lib/python3.13/site-packages/heudiconv/utils.py"</span>, line <span class="ansi-magenta-fg">436</span>, in <span class="ansi-magenta-fg">load_heuristic</span>
-
-    mod = __import__(fname.split(".")[0])
-
-<span class="ansi-magenta-fg ansi-bold">ModuleNotFoundError</span>: <span class="ansi-magenta-fg">No module named 'heuristic1'</span>
-</pre>
-</div>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+INFO: Analyzing 1716 dicoms
+INFO: Generated sequence info for 1 studies with 25 entries total
+INFO: Heuristic is missing an `infotoids` method, assigning empty method and using provided subject id 219. Provide `session` and `locator` fields for best results.
+INFO: Study session for StudySessionInfo(locator=None, session='itbs', subject='219')
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session': 'itbs'}
+INFO: Processing 25 pre-sorted seqinfo entries
+INFO: Doing conversion using dcm2niix
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w (176 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/anat . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:21,508 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixm6kg0d0d/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixm6kg0d0d/convert".
+260205-11:01:21,546 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:21,706 nipype.interface INFO:
+     stdout 2026-02-05T11:01:21.706336:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:21.706336:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:21,706 nipype.interface INFO:
+     stdout 2026-02-05T11:01:21.706336:Found 176 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:21.706336:Found 176 DICOM file(s)
+260205-11:01:21,706 nipype.interface INFO:
+     stdout 2026-02-05T11:01:21.706336:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv491 (256x256x176x1)
+INFO: stdout 2026-02-05T11:01:21.706336:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv491 (256x256x176x1)
+260205-11:01:24,240 nipype.interface INFO:
+     stdout 2026-02-05T11:01:24.240182:Conversion required 2.588261 seconds (2.588037 for core code).
+INFO: stdout 2026-02-05T11:01:24.240182:Conversion required 2.588261 seconds (2.588037 for core code).
+260205-11:01:24,262 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 2.6444900000000002s.
+INFO: [Node] Finished "convert", elapsed time 2.6444900000000002s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.json file
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi (32 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:24,278 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix3fpwuzbf/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix3fpwuzbf/convert".
+260205-11:01:24,286 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:24,360 nipype.interface INFO:
+     stdout 2026-02-05T11:01:24.360209:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:24.360209:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:24,360 nipype.interface INFO:
+     stdout 2026-02-05T11:01:24.360209:Found 32 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:24.360209:Found 32 DICOM file(s)
+260205-11:01:24,360 nipype.interface INFO:
+     stdout 2026-02-05T11:01:24.360209:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv209 (128x128x74x32)
+INFO: stdout 2026-02-05T11:01:24.360209:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv209 (128x128x74x32)
+260205-11:01:31,574 nipype.interface INFO:
+     stdout 2026-02-05T11:01:31.574705:Conversion required 7.253946 seconds (7.252933 for core code).
+INFO: stdout 2026-02-05T11:01:31.574705:Conversion required 7.253946 seconds (7.252933 for core code).
+260205-11:01:31,598 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 7.310483s.
+INFO: [Node] Finished "convert", elapsed time 7.310483s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.json file
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi (148 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:31,608 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixi_a3bcju/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixi_a3bcju/convert".
+260205-11:01:31,642 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:31,723 nipype.interface INFO:
+     stdout 2026-02-05T11:01:31.723099:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:31.723099:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:31,723 nipype.interface INFO:
+     stdout 2026-02-05T11:01:31.723099:Found 148 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:31.723099:Found 148 DICOM file(s)
+260205-11:01:31,723 nipype.interface INFO:
+     stdout 2026-02-05T11:01:31.723099:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv084 (128x128x74x2)
+INFO: stdout 2026-02-05T11:01:31.723099:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv084 (128x128x74x2)
+260205-11:01:32,152 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.152511:Conversion required 0.475147 seconds (0.475121 for core code).
+INFO: stdout 2026-02-05T11:01:32.152511:Conversion required 0.475147 seconds (0.475121 for core code).
+260205-11:01:32,175 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.531695s.
+INFO: [Node] Finished "convert", elapsed time 0.531695s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi.json file
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude (64 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:32,189 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixz8rh4x3c/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixz8rh4x3c/convert".
+260205-11:01:32,204 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:32,259 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.259819:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:32.259819:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:32,259 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.259819:Found 64 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:32.259819:Found 64 DICOM file(s)
+260205-11:01:32,260 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.259819:Slices not stacked: echo varies (TE 7.38, 4.92; echo 2, 1). Use 'merge 2D slices' option to force stacking
+INFO: stdout 2026-02-05T11:01:32.259819:Slices not stacked: echo varies (TE 7.38, 4.92; echo 2, 1). Use 'merge 2D slices' option to force stacking
+260205-11:01:32,260 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.259819:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv113_e2 (80x80x32x1)
+INFO: stdout 2026-02-05T11:01:32.259819:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv113_e2 (80x80x32x1)
+260205-11:01:32,291 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.291724:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv113_e1 (80x80x32x1)
+INFO: stdout 2026-02-05T11:01:32.291724:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv113_e1 (80x80x32x1)
+260205-11:01:32,323 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.323864:Conversion required 0.084257 seconds (0.084252 for core code).
+INFO: stdout 2026-02-05T11:01:32.323864:Conversion required 0.084257 seconds (0.084252 for core code).
+260205-11:01:32,347 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.142073s.
+INFO: [Node] Finished "convert", elapsed time 0.142073s.
+WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff (32 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:32,359 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixn4uokmrl/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixn4uokmrl/convert".
+260205-11:01:32,367 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:32,414 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.414511:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:32.414511:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:32,414 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.414511:Found 32 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:32.414511:Found 32 DICOM file(s)
+260205-11:01:32,414 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.414511:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv433_e2_ph (80x80x32x1)
+INFO: stdout 2026-02-05T11:01:32.414511:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv433_e2_ph (80x80x32x1)
+260205-11:01:32,432 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.432677:Conversion required 0.030419 seconds (0.030416 for core code).
+INFO: stdout 2026-02-05T11:01:32.432677:Conversion required 0.030419 seconds (0.030416 for core code).
+260205-11:01:32,455 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.087399s.
+INFO: [Node] Finished "convert", elapsed time 0.087399s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff.json file
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold (177 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/func . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:32,466 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixl0ipjbu6/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl0ipjbu6/convert".
+260205-11:01:32,503 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:32,620 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.620686:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:32.620686:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:32,620 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.620686:Found 177 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:32.620686:Found 177 DICOM file(s)
+260205-11:01:32,621 nipype.interface INFO:
+     stdout 2026-02-05T11:01:32.620686:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv906 (88x84x32x177)
+INFO: stdout 2026-02-05T11:01:32.620686:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv906 (88x84x32x177)
+260205-11:01:40,723 nipype.interface INFO:
+     stdout 2026-02-05T11:01:40.723155:Conversion required 8.185064 seconds (8.184340 for core code).
+INFO: stdout 2026-02-05T11:01:40.723155:Conversion required 8.185064 seconds (8.184340 for core code).
+260205-11:01:40,746 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.242608s.
+INFO: [Node] Finished "convert", elapsed time 8.242608s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json file
+INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold (177 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/func . Converter: dcm2niix . Output types: ('nii.gz',)
+260205-11:01:40,882 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixugclb2gx/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixugclb2gx/convert".
+260205-11:01:40,923 nipype.workflow INFO:
+     [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
+260205-11:01:41,37 nipype.interface INFO:
+     stdout 2026-02-05T11:01:41.037300:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-02-05T11:01:41.037300:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260205-11:01:41,37 nipype.interface INFO:
+     stdout 2026-02-05T11:01:41.037300:Found 177 DICOM file(s)
+INFO: stdout 2026-02-05T11:01:41.037300:Found 177 DICOM file(s)
+260205-11:01:41,37 nipype.interface INFO:
+     stdout 2026-02-05T11:01:41.037300:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv395 (88x84x32x177)
+INFO: stdout 2026-02-05T11:01:41.037300:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv395 (88x84x32x177)
+260205-11:01:49,36 nipype.interface INFO:
+     stdout 2026-02-05T11:01:49.036459:Conversion required 8.078518 seconds (8.077938 for core code).
+INFO: stdout 2026-02-05T11:01:49.036459:Conversion required 8.078518 seconds (8.077938 for core code).
+260205-11:01:49,62 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.137507s.
+INFO: [Node] Finished "convert", elapsed time 8.137507s.
+INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json file
+INFO: Populating template files under /app/MRIS/Nifti/
+INFO: PROCESSING DONE: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session': 'itbs'}</code></pre>
 </div>
 </details>
 </div>
@@ -341,18 +2322,52 @@ Traceback (most recent call last):
 <section id="inspect-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-bids-dataset">Inspect the BIDS dataset</h2>
 <p>Let’s see what was created in the Nifti directory:</p>
-<div id="5538ff63" class="cell" data-output-fold="true" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">tree</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="7c6d726d" class="cell" data-output-fold="true" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="ex">tree</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>MRIS/Nifti  [error opening dir]
+<pre><code>MRIS/Nifti
+├── CHANGES
+├── README
+├── code
+│&nbsp;&nbsp; ├── __pycache__
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── heuristic1.cpython-313.pyc
+│&nbsp;&nbsp; ├── heuristic1.py
+│&nbsp;&nbsp; └── heuristic2.py
+├── dataset_description.json
+├── participants.json
+├── participants.tsv
+├── scans.json
+├── sub-219
+│&nbsp;&nbsp; └── ses-itbs
+│&nbsp;&nbsp;     ├── anat
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_T1w.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; └── sub-219_ses-itbs_T1w.nii.gz
+│&nbsp;&nbsp;     ├── dwi
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.bval
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.bvec
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; └── sub-219_ses-itbs_acq-AP_dwi.nii.gz
+│&nbsp;&nbsp;     ├── fmap
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_dir-PA_epi.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_dir-PA_epi.nii.gz
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude1.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude1.nii.gz
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude2.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude2.nii.gz
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_phasediff.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; └── sub-219_ses-itbs_phasediff.nii.gz
+│&nbsp;&nbsp;     ├── func
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_bold.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_bold.nii.gz
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_events.tsv
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-02_bold.json
+│&nbsp;&nbsp;     │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-02_bold.nii.gz
+│&nbsp;&nbsp;     │&nbsp;&nbsp; └── sub-219_ses-itbs_task-rest_run-02_events.tsv
+│&nbsp;&nbsp;     └── sub-219_ses-itbs_scans.tsv
+└── task-rest_bold.json
 
-0 directories, 0 files</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+9 directories, 31 files</code></pre>
 </div>
 </details>
 </div>
@@ -363,18 +2378,39 @@ Traceback (most recent call last):
 <li>Required BIDS text files (<code>CHANGES</code>, <code>README</code>, <code>dataset_description.json</code>, etc.)</li>
 </ul>
 <p>Let’s look at the subject structure in more detail:</p>
-<div id="a865df70" class="cell" data-output-fold="true" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">tree</span> MRIS/Nifti/sub-219</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="5c17725f" class="cell" data-output-fold="true" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="ex">tree</span> MRIS/Nifti/sub-219</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>MRIS/Nifti/sub-219  [error opening dir]
+<pre><code>MRIS/Nifti/sub-219
+└── ses-itbs
+    ├── anat
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_T1w.json
+    │&nbsp;&nbsp; └── sub-219_ses-itbs_T1w.nii.gz
+    ├── dwi
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.bval
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.bvec
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_acq-AP_dwi.json
+    │&nbsp;&nbsp; └── sub-219_ses-itbs_acq-AP_dwi.nii.gz
+    ├── fmap
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_dir-PA_epi.json
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_dir-PA_epi.nii.gz
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude1.json
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude1.nii.gz
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude2.json
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_magnitude2.nii.gz
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_phasediff.json
+    │&nbsp;&nbsp; └── sub-219_ses-itbs_phasediff.nii.gz
+    ├── func
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_bold.json
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_bold.nii.gz
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-01_events.tsv
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-02_bold.json
+    │&nbsp;&nbsp; ├── sub-219_ses-itbs_task-rest_run-02_bold.nii.gz
+    │&nbsp;&nbsp; └── sub-219_ses-itbs_task-rest_run-02_events.tsv
+    └── sub-219_ses-itbs_scans.tsv
 
-0 directories, 0 files</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+6 directories, 21 files</code></pre>
 </div>
 </details>
 </div>
@@ -382,82 +2418,93 @@ Traceback (most recent call last):
 <section id="check-bids-files" class="level2">
 <h2 class="anchored" data-anchor-id="check-bids-files">Check BIDS files</h2>
 <p>Let’s examine the required BIDS files that were created:</p>
-<div id="75c11531" class="cell" data-output-fold="true" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ls</span> MRIS/Nifti/<span class="pp">*</span>.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="aa1132fc" class="cell" data-output-fold="true" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ls</span> MRIS/Nifti/<span class="pp">*</span>.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: cannot access 'MRIS/Nifti/*.json': No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+<pre><code>MRIS/Nifti/dataset_description.json  MRIS/Nifti/scans.json
+MRIS/Nifti/participants.json         MRIS/Nifti/task-rest_bold.json</code></pre>
 </div>
 </details>
 </div>
-<div id="bd93d4cd" class="cell" data-output-fold="true" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.tsv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="f3114d80" class="cell" data-output-fold="true" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.tsv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/participants.tsv: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<pre><code>participant_id  age sex group
+sub-219 54  F   control</code></pre>
 </div>
 </details>
 </div>
-<div id="ce7b8093" class="cell" data-output-fold="true" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="386ecc6a" class="cell" data-output-fold="true" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/participants.json: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
-</div>
-</details>
-</div>
-<div id="7b863e02" class="cell" data-output-fold="true" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">cat</span> MRIS/Nifti/README</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/README: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<pre><code>{
+  "participant_id": {
+    "Description": "Participant identifier"
+  },
+  "age": {
+    "Description": "Age in years (TODO - verify) as in the initial session, might not be correct for other sessions"
+  },
+  "sex": {
+    "Description": "self-rated by participant, M for male/F for female (TODO: verify)"
+  },
+  "group": {
+    "Description": "(TODO: adjust - by default everyone is in control group)"
+  }
+}</code></pre>
 </div>
 </details>
 </div>
-<div id="c73b8e40" class="cell" data-output-fold="true" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">cat</span> MRIS/Nifti/CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a9241a71" class="cell" data-output-fold="true" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">cat</span> MRIS/Nifti/README</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/CHANGES: No such file or directory</code></pre>
+<pre><code>TODO: Provide description for the dataset -- basic details about the study, possibly pointing to pre-registration (if public or embargoed)</code></pre>
 </div>
 </details>
+</div>
+<div id="d88e6ff6" class="cell" data-output-fold="true" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span> MRIS/Nifti/CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.0.1  Initial data acquired
+TODOs:
+    - verify and possibly extend information in participants.tsv (see for example http://datasets.datalad.org/?dir=/openfmri/ds000208)
+    - fill out dataset_description.json, README, sourcedata/README (if present)
+    - provide _events.tsv file for each _bold.nii.gz with onsets of events (see  '8.5 Task events'  of BIDS specification)</code></pre>
 </div>
 </details>
 </div>
 <p>View the dataset description:</p>
-<div id="fbd9dbc8" class="cell" data-output-fold="true" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">cat</span> MRIS/Nifti/dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="69c427bd" class="cell" data-output-fold="true" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">cat</span> MRIS/Nifti/dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/dataset_description.json: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<pre><code>{
+  "Acknowledgements": "TODO: whom you want to acknowledge",
+  "Authors": [
+    "TODO:",
+    "First1 Last1",
+    "First2 Last2",
+    "..."
+  ],
+  "BIDSVersion": "1.8.0",
+  "DatasetDOI": "TODO: eventually a DOI for the dataset",
+  "Funding": [
+    "TODO",
+    "GRANT #1",
+    "GRANT #2"
+  ],
+  "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
+  "License": "TODO: choose a license, e.g. PDDL (http://opendatacommons.org/licenses/pddl/)",
+  "Name": "TODO: name of the dataset",
+  "ReferencesAndLinks": [
+    "TODO",
+    "List of papers or websites"
+  ]
+}</code></pre>
 </div>
 </details>
 </div>
@@ -465,33 +2512,262 @@ Traceback (most recent call last):
 <section id="validate-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>Validate the dataset using the BIDS Validator to ensure everything is according to specification:</p>
-<div id="0258ebf9" class="cell" data-output-fold="true" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1"></a><span class="ex">bids-validator-deno</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="5bba2e15" class="cell" data-output-fold="true" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="ex">bids-validator-deno</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg ansi-bold">error</span>: Uncaught (in promise) NotFound: No such file or directory (os error 2): readdir '/app/MRIS/Nifti'
+<pre>   <span class="ansi-yellow-fg">[WARNING] JSON_KEY_RECOMMENDED A JSON file is missing a key listed as recommended.</span>
 
-  for await (const dirEntry of Deno.readDir(join(rootPath, relativePath))) {
+        <span class="ansi-yellow-fg">GeneratedBy</span>
 
-<span class="ansi-red-fg">                   ^</span>
+        /dataset_description.json - Field description: Used to specify provenance of the dataset.
 
-    <span style="opacity:0.7;color:rgb(138,138,138)">at </span><span style="opacity:0.7;color:rgb(138,138,138)">async </span><span style="opacity:0.7;color:rgb(138,138,138)">Object.[Symbol.asyncIterator]</span><span style="opacity:0.7;color:rgb(138,138,138)"> (</span><span style="opacity:0.7;color:rgb(138,138,138)">ext:deno_fs/30_fs.js</span><span style="opacity:0.7;color:rgb(138,138,138)">:</span><span style="opacity:0.7;color:rgb(138,138,138)">220</span><span style="opacity:0.7;color:rgb(138,138,138)">:</span><span style="opacity:0.7;color:rgb(138,138,138)">19</span><span style="opacity:0.7;color:rgb(138,138,138)">)</span>
 
-    at async <span style="font-weight:bold;font-style:italic">_readFileTree</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/files/deno.ts</span>:<span class="ansi-yellow-fg">43</span>:<span class="ansi-yellow-fg">20</span>)
 
-    at async <span style="font-weight:bold;font-style:italic">readFileTree</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/files/deno.ts</span>:<span class="ansi-yellow-fg">90</span>:<span class="ansi-yellow-fg">16</span>)
+        <span class="ansi-yellow-fg">SourceDatasets</span>
 
-    at async <span style="font-weight:bold;font-style:italic">main</span> (<span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/main.ts</span>:<span class="ansi-yellow-fg">29</span>:<span class="ansi-yellow-fg">16</span>)
+        /dataset_description.json - Field description: Used to specify the locations and relevant attributes of all source datasets.
 
-    at async <span class="ansi-cyan-fg">file:///tmp/deno-compile-bids-validator-deno/src/bids-validator.ts</span>:<span class="ansi-yellow-fg">4</span>:<span class="ansi-yellow-fg">16</span>
+Valid keys in each object include <span class="ansi-cyan-fg">"URL"</span>, <span class="ansi-cyan-fg">"DOI"</span> (see
+
+<span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)), and
+
+<span class="ansi-cyan-fg">"Version"</span> with
+
+<span class="ansi-blue-fg">string</span> (<span class="ansi-bright-black-fg">https://www.w3schools.com/js/js_json_datatypes.asp</span>)
+
+values.
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=JSON_KEY_RECOMMENDED for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] SIDECAR_FIELD_OVERRIDE Sidecar files should not override values assigned at a higher level.</span>
+
+        <span class="ansi-yellow-fg">ImageType</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (ORIGINAL,PRIMARY,M,ND,NORM,MOSAIC,MAGNITUDE) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json
+
+
+
+        <span class="ansi-yellow-fg">TablePosition</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (0,0,0) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (0,0,0) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json
+
+
+
+        <span class="ansi-yellow-fg">TaskName</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (TODO: full task name for rest) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json - Sidecar key defined in /task-rest_bold.json overrides previous value (TODO: full task name for rest) from /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_FIELD_OVERRIDE for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] README_FILE_SMALL The recommended file '/README' is very small.
+
+Please consider expanding it with additional information about the dataset.</span>
+
+        /README
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=README_FILE_SMALL for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] SIDECAR_KEY_RECOMMENDED A data file's JSON sidecar is missing a key listed as recommended.</span>
+
+        <span class="ansi-yellow-fg">PulseSequenceType</span>
+
+        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: A general description of the pulse sequence used for the scan.
+
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: A general description of the pulse sequence used for the scan.
+
+
+
+        6 more files with the same issue
+
+
+
+        <span class="ansi-yellow-fg">SpoilingType</span>
+
+        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
+
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.bvec - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
+
+
+
+        3 more files with the same issue
+
+
+
+        <span class="ansi-yellow-fg">PartialFourierDirection</span>
+
+        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: The direction where only partial Fourier information was collected.
+
+Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
+
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: The direction where only partial Fourier information was collected.
+
+Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
+
+
+
+        6 more files with the same issue
+
+
+
+        <span class="ansi-yellow-fg">Instructions</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.nii.gz - Field description: Text of the instructions given to participants before the recording.
+
+
+
+        <span class="ansi-yellow-fg">TaskDescription</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.nii.gz - Field description: Longer description of the task.
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.nii.gz - Field description: Longer description of the task.
+
+
+
+        <span class="ansi-yellow-fg">CogPOID</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
+
+of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.nii.gz - Field description: <span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)
+
+of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-bright-black-fg">http://www.cogpo.org/</span>) term.
+
+
+
+        <span class="ansi-yellow-fg">StimulusPresentation</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv - Field description: Object containing key-value pairs related to the software used to present
+
+the stimuli during the experiment.
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv - Field description: Object containing key-value pairs related to the software used to present
+
+the stimuli during the experiment.
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_KEY_RECOMMENDED for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] SUSPICIOUSLY_SHORT_EVENT_DESIGN The onset of the last event is less than half the total duration of the corresponding scan.
+
+This design is suspiciously short.</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.nii.gz
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.nii.gz
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SUSPICIOUSLY_SHORT_EVENT_DESIGN for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] TSV_ADDITIONAL_COLUMNS_UNDEFINED A TSV file has extra columns which are not defined in its associated JSON sidecar</span>
+
+        <span class="ansi-yellow-fg">TODO -- fill in rows and add more tab-separated columns if desired</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=TSV_ADDITIONAL_COLUMNS_UNDEFINED for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] B0_FIELD_IDENTIFIER_RECOMMENDED File is missing B0FieldIdentifier metadata and IntendedFor metadata,
+
+so it will not be possible to use to perform susceptibility distortion correction.
+
+B0FieldIdentifier metadata permits the flexible selection of images
+
+for estimating B0 inhomogeneity fields, and B0FieldSource permits EPI
+
+images to indicate the identifier of the estimated field to use.</span>
+
+        <span class="ansi-yellow-fg">B0FieldIdentifier</span>
+
+        /sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude2.nii.gz - Field description: The presence of this key states that this particular 3D or 4D image MAY be
+
+used for fieldmap estimation purposes.
+
+Each <span class="ansi-cyan-fg">"B0FieldIdentifier"</span> MUST be a unique string within one participant's tree,
+
+shared only by the images meant to be used as inputs for the estimation of a
+
+particular instance of the <span style="font-style:italic">B&lt;sub&gt;0&lt;/sub&gt; field</span> estimation.
+
+It is RECOMMENDED to derive this identifier from DICOM Tags, for example,
+
+DICOM tag 0018, 1030 <span class="ansi-cyan-fg">Protocol Name</span>, or DICOM tag 0018, 0024 <span class="ansi-cyan-fg">Sequence Name</span>
+
+when the former is not defined (for example, in GE devices.)
+
+        /sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi.nii.gz - Field description: The presence of this key states that this particular 3D or 4D image MAY be
+
+used for fieldmap estimation purposes.
+
+Each <span class="ansi-cyan-fg">"B0FieldIdentifier"</span> MUST be a unique string within one participant's tree,
+
+shared only by the images meant to be used as inputs for the estimation of a
+
+particular instance of the <span style="font-style:italic">B&lt;sub&gt;0&lt;/sub&gt; field</span> estimation.
+
+It is RECOMMENDED to derive this identifier from DICOM Tags, for example,
+
+DICOM tag 0018, 1030 <span class="ansi-cyan-fg">Protocol Name</span>, or DICOM tag 0018, 0024 <span class="ansi-cyan-fg">Sequence Name</span>
+
+when the former is not defined (for example, in GE devices.)
+
+
+
+        2 more files with the same issue
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=B0_FIELD_IDENTIFIER_RECOMMENDED for existing conversations about this issue.</span>
+
+
+
+
+
+          <span class="ansi-magenta-fg">Summary:</span>                         <span class="ansi-magenta-fg">Available Tasks:</span>                     <span class="ansi-magenta-fg">Available Modalities:</span>
+
+          28 Files, 120 MB                 TODO: full task name for rest        MRI                  
+
+          1 - Subjects 1 - Sessions        rest                                                      
+
+
+
+
 </pre>
 </div>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
 </div>
 </details>
 </div>
@@ -502,64 +2778,53 @@ Traceback (most recent call last):
 <p>Let’s examine what types of data were converted by looking at the different modality folders:</p>
 <section id="anatomical-data" class="level3">
 <h3 class="anchored" data-anchor-id="anatomical-data">Anatomical data</h3>
-<div id="dff3e2b4" class="cell" data-output-fold="true" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/anat/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="899bf58d" class="cell" data-output-fold="true" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/anat/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: cannot access 'MRIS/Nifti/sub-219/ses-itbs/anat/': No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+<pre><code>sub-219_ses-itbs_T1w.json  sub-219_ses-itbs_T1w.nii.gz</code></pre>
 </div>
 </details>
 </div>
 </section>
 <section id="functional-data" class="level3">
 <h3 class="anchored" data-anchor-id="functional-data">Functional data</h3>
-<div id="4cfd9f54" class="cell" data-output-fold="true" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/func/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="797c2e10" class="cell" data-output-fold="true" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/func/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: cannot access 'MRIS/Nifti/sub-219/ses-itbs/func/': No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+<pre><code>sub-219_ses-itbs_task-rest_run-01_bold.json
+sub-219_ses-itbs_task-rest_run-01_bold.nii.gz
+sub-219_ses-itbs_task-rest_run-01_events.tsv
+sub-219_ses-itbs_task-rest_run-02_bold.json
+sub-219_ses-itbs_task-rest_run-02_bold.nii.gz
+sub-219_ses-itbs_task-rest_run-02_events.tsv</code></pre>
 </div>
 </details>
 </div>
 </section>
 <section id="diffusion-data" class="level3">
 <h3 class="anchored" data-anchor-id="diffusion-data">Diffusion data</h3>
-<div id="6884e216" class="cell" data-output-fold="true" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/dwi/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="4c71f388" class="cell" data-output-fold="true" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/dwi/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: cannot access 'MRIS/Nifti/sub-219/ses-itbs/dwi/': No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+<pre><code>sub-219_ses-itbs_acq-AP_dwi.bval  sub-219_ses-itbs_acq-AP_dwi.json
+sub-219_ses-itbs_acq-AP_dwi.bvec  sub-219_ses-itbs_acq-AP_dwi.nii.gz</code></pre>
 </div>
 </details>
 </div>
 </section>
 <section id="diffusion-data-1" class="level3">
 <h3 class="anchored" data-anchor-id="diffusion-data-1">Diffusion data</h3>
-<div id="02dbccdb" class="cell" data-output-fold="true" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/fmap/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e7cc6a32" class="cell" data-output-fold="true" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/fmap/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: cannot access 'MRIS/Nifti/sub-219/ses-itbs/fmap/': No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 2</code></pre>
+<pre><code>sub-219_ses-itbs_dir-PA_epi.json    sub-219_ses-itbs_magnitude2.json
+sub-219_ses-itbs_dir-PA_epi.nii.gz  sub-219_ses-itbs_magnitude2.nii.gz
+sub-219_ses-itbs_magnitude1.json    sub-219_ses-itbs_phasediff.json
+sub-219_ses-itbs_magnitude1.nii.gz  sub-219_ses-itbs_phasediff.nii.gz</code></pre>
 </div>
 </details>
 </div>
@@ -568,16 +2833,91 @@ Traceback (most recent call last):
 <section id="examining-json-sidecars" class="level2">
 <h2 class="anchored" data-anchor-id="examining-json-sidecars">Examining JSON sidecars</h2>
 <p>BIDS requires JSON sidecar files alongside NIfTI files. Let’s examine one:</p>
-<div id="60eed7d6" class="cell" data-output-fold="true" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">cat</span> MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a894a628" class="cell" data-output-fold="true" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">cat</span> MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>cat: MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json: No such file or directory</code></pre>
-</div>
-</details>
-<details><summary>Code Output</summary>
-<div class="cell-output cell-output-error">
-<pre><code>: 1</code></pre>
+<pre><code>{
+  "AcquisitionMatrixPE": 84,
+  "AcquisitionNumber": 1,
+  "AcquisitionTime": "11:27:49.575000",
+  "BandwidthPerPixelPhaseEncode": 42.017,
+  "BaseResolution": 88,
+  "BidsGuess": [
+    "func",
+    "_acq-epfid2p2_dir-AP_run-18_bold"
+],
+  "BodyPart": "BRAIN",
+  "CoilCombinationMethod": "Sum of Squares",
+  "ConsistencyInfo": "N4_VE11A_LATEST_20140830",
+  "ConversionSoftware": "dcm2niix",
+  "ConversionSoftwareVersion": "v1.0.20250505",
+  "DerivedVendorReportedEchoSpacing": 0.000566664,
+  "DeviceSerialNumber": "45424",
+  "DwellTime": 2.7e-06,
+  "EchoTime": 0.025,
+  "EchoTrainLength": 43,
+  "EffectiveEchoSpacing": 0.000283332,
+  "FlipAngle": 90,
+  "HeudiconvVersion": "1.3.4",
+  "ImageOrientationPatientDICOM": [1, 0, 0, 0, 1, 0],
+  "ImageOrientationText": "Tra",
+  "ImageType": [
+    "ORIGINAL",
+    "PRIMARY",
+    "M",
+    "ND",
+    "NORM",
+    "MOSAIC",
+    "MAGNITUDE"
+],
+  "ImagingFrequency": 123.238644,
+  "InPlanePhaseEncodingDirectionDICOM": "COL",
+  "InstitutionAddress": "North Warren Ave 1609,Tucson,Denver,US,85719",
+  "InstitutionName": "University of Arizona",
+  "InstitutionalDepartmentName": "Department",
+  "MRAcquisitionType": "2D",
+  "MagneticFieldStrength": 3,
+  "Manufacturer": "Siemens",
+  "ManufacturersModelName": "Skyra",
+  "MatrixCoilMode": "GRAPPA",
+  "Modality": "MR",
+  "NonlinearGradientCorrection": false,
+  "ParallelReductionFactorInPlane": 2,
+  "PartialFourier": 1,
+  "PatientPosition": "HFS",
+  "PercentPhaseFOV": 95.4545,
+  "PercentSampling": 100,
+  "PhaseEncodingDirection": "j-",
+  "PhaseEncodingSteps": 85,
+  "PhaseResolution": 1,
+  "PixelBandwidth": 2105,
+  "ProcedureStepDescription": "Kielar^TMS",
+  "ProtocolName": "restingstate",
+  "PulseSequenceDetails": "%SiemensSeq%\\ep2d_bold",
+  "ReceiveCoilActiveElements": "HEA;HEP",
+  "ReceiveCoilName": "Head_32",
+  "ReconMatrixPE": 84,
+  "RefLinesPE": 24,
+  "RepetitionTime": 2,
+  "SAR": 0.152693,
+  "ScanOptions": "FS",
+  "ScanningSequence": "EP",
+  "SequenceName": "*epfid2d1_84",
+  "SequenceVariant": "SK\\OSP",
+  "SeriesDescription": "restingstate",
+  "SeriesNumber": 18,
+  "ShimSetting": [7564, -13886, 14785, -92, 361, -404, -317, -108],
+  "SliceThickness": 2.5,
+  "SliceTiming": [0.99, 0, 1.0525, 0.0625, 1.115, 0.125, 1.175, 0.185, 1.2375, 0.2475, 1.3, 0.31, 1.3625, 0.3725, 1.4225, 0.4325, 1.485, 0.495, 1.5475, 0.5575, 1.6075, 0.62, 1.67, 0.68, 1.7325, 0.7425, 1.795, 0.805, 1.855, 0.8675, 1.9175, 0.9275],
+  "SoftwareVersions": "syngo MR E11",
+  "SpacingBetweenSlices": 3.5,
+  "StationName": "AWP45424",
+  "StudyDescription": "Kielar^TMS",
+  "TablePosition": [0, 0, 0],
+  "TaskName": "rest",
+  "TotalReadoutTime": 0.0235166,
+  "TxRefAmp": 336.357}</code></pre>
 </div>
 </details>
 </div>
