@@ -2,6 +2,8 @@
 title: "`heudiconv` with custom heuristics"
 engine: jupyter
 jupyter: bash
+filters:
+  - collapse-output
 ---
 
 ## Introduction

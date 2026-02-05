@@ -2,6 +2,8 @@
 title: "`heudiconv` with ReproIn heuristic"
 engine: jupyter
 jupyter: bash
+filters:
+  - collapse-output
 ---
 
 ## Installation
