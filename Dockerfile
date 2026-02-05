@@ -44,9 +44,6 @@ RUN uv sync --frozen
 # Install and register bash kernel for Jupyter
 RUN uv run python -m bash_kernel.install
 
-# Add quarto extension
-RUN uv run quarto add --no-prompt mcanouil/quarto-collapse-output
-
 # Set environment variables
 ENV QUARTO_PYTHON="/app/.venv/bin/python"
 ENV PATH="/app/.venv/bin:$PATH"
