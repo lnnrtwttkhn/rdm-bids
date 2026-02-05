@@ -32,3 +32,4 @@ This project uses [uv](https://github.com/astral-sh/uv) for Python dependency ma
 - `rdm-bids.qmd` - Main documentation about BIDS
 - `references.qmd` - Reference materials
 - `.pre-commit-config.yaml` - Code quality hooks
+
