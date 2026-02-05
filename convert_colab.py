@@ -23,6 +23,11 @@ def process_exercise_file(input_file, output_file):
     # Update the YAML header to specify python kernel
     content = re.sub(r'jupyter: bash', 'jupyter: python3', content)
 
+    # Remove lines that contain #|
+    lines = content.split('\n')
+    filtered_lines = [line for line in lines if '#|' not in line]
+    content = '\n'.join(filtered_lines)
+
     # Find and replace all bash chunks
     content = re.sub(r'```\{bash\}\n(.*?)\n```', replace_bash_chunk, content, flags=re.DOTALL)
 
