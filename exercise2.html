@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
-<meta name="dcterms.date" content="2026-02-05">
+<meta name="dcterms.date" content="2026-05-06">
 
 <title>heudiconv with custom heuristics</title>
 <style>
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9fa9e98f73ee3efa585e3f50c18792c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5e541dbae3e6ed7453ce4e6ee8581165.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2026</p>
+      <p class="date">May 6, 2026</p>
     </div>
   </div>
   
@@ -205,14 +205,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Depending on your environment, paste the installation command here:</p>
-<div id="1f481c89" class="cell" data-execution_count="1">
+<div id="0dad5842" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># &lt; replace with installation command &gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="download-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="download-the-data">Download the data</h2>
 <p>Download and extract the example dataset or retrieve it from OSF at <a href="https://osf.io/rghtc/files/mqgzh" class="uri">https://osf.io/rghtc/files/mqgzh</a>.</p>
-<div id="93e4fe45" class="cell" data-output-fold="true" data-execution_count="2">
+<div id="5afac424" class="cell" data-output-fold="true" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://nx81903.your-storageshare.de/s/fKw8zSoLwGoDmyE/download <span class="at">-o</span> data.zip</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">unzip</span> <span class="at">-j</span> <span class="at">-o</span> data.zip <span class="at">-d</span> data</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">rm</span> <span class="at">-f</span> data.zip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -220,8 +220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  694k    0  694k    0     0   451k      0 --:--:--  0:00:01 --:--:--  451k100 24.2M    0 24.2M    0     0  9767k      0 --:--:--  0:00:02 --:--:-- 23.5M100 53.3M    0 53.3M    0     0  14.9M      0 --:--:--  0:00:03 --:--:-- 26.0M100 81.4M    0 81.4M    0     0  17.9M      0 --:--:--  0:00:04 --:--:-- 26.9M100  110M    0  110M    0     0  19.9M      0 --:--:--  0:00:05 --:--:-- 27.3M100  140M    0  140M    0     0  21.3M      0 --:--:--  0:00:06 --:--:-- 27.8M100  169M    0  169M    0     0  22.4M      0 --:--:--  0:00:07 --:--:-- 29.0M100  200M    0  200M    0     0  23.4M      0 --:--:--  0:00:08 --:--:-- 29.5M100  229M    0  229M    0     0  24.1M      0 --:--:--  0:00:09 --:--:-- 29.6M100  240M    0  240M    0     0  24.2M      0 --:--:--  0:00:09 --:--:-- 29.8M
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100 40012    0 40012    0     0  14659      0 --:--:--  0:00:02 --:--:--  305k100 6013k    0 6013k    0     0  1613k      0 --:--:--  0:00:03 --:--:-- 5349k100 40.9M    0 40.9M    0     0  8880k      0 --:--:--  0:00:04 --:--:-- 19.2M100 79.8M    0 79.8M    0     0  13.8M      0 --:--:--  0:00:05 --:--:-- 25.2M100  116M    0  116M    0     0  17.3M      0 --:--:--  0:00:06 --:--:-- 28.3M100  153M    0  153M    0     0  19.8M      0 --:--:--  0:00:07 --:--:-- 30.7M100  192M    0  192M    0     0  21.9M      0 --:--:--  0:00:08 --:--:-- 37.0M100  230M    0  230M    0     0  23.6M      0 --:--:--  0:00:09 --:--:-- 37.7M100  240M    0  240M    0     0  23.9M      0 --:--:--  0:00:10 --:--:-- 37.7M
 Archive:  data.zip
  extracting: data/sub-219_dicom.zip  </code></pre>
 </div>
@@ -231,7 +231,7 @@ Archive:  data.zip
 <section id="prepare-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-the-data">Prepare the data</h2>
 <p>Extract the downloaded archive. This created the folder <code>MRIS</code>.</p>
-<div id="d4fd3150" class="cell" data-output-fold="true" data-execution_count="3">
+<div id="ac9f3359" class="cell" data-output-fold="true" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">unzip</span> data/sub-219_dicom.zip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -1979,7 +1979,7 @@ Archive:  data.zip
 <section id="inspect-the-raw-data-structure" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-raw-data-structure">Inspect the raw data structure</h2>
 <p>Let’s examine the directory structure of our dataset. The dataset contains DICOM files organized by subject and session:</p>
-<div id="10c9f678" class="cell" data-output-fold="true" data-execution_count="4">
+<div id="3c2929cb" class="cell" data-output-fold="true" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">tree</span> <span class="at">-L</span> 2 MRIS</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -1999,7 +1999,7 @@ Archive:  data.zip
 <section id="create-the-heuristic-file" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-heuristic-file">Create the heuristic file</h2>
 <p>Let’s examine the provided heuristic file that defines how to organize the DICOM files:</p>
-<div id="6241abc9" class="cell" data-output-fold="true" data-execution_count="5">
+<div id="7b8e00ad" class="cell" data-output-fold="true" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">cat</span> MRIS/Nifti/code/heuristic1.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2132,11 +2132,11 @@ def infotodict(seqinfo):
 <li><code>--minmeta</code> prevents overflow of meta-information in JSON files</li>
 <li><code>--overwrite</code> overwrites existing converted files</li>
 </ul>
-<div id="5f142bfc" class="cell" data-output-fold="true" data-execution_count="6">
+<div id="ab672ebd" class="cell" data-output-fold="true" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">heudiconv</span> <span class="at">--files</span> MRIS/dicom/219/itbs/<span class="pp">*</span>/<span class="pp">*</span>.dcm <span class="at">-o</span> MRIS/Nifti <span class="at">-f</span> MRIS/Nifti/code/heuristic1.py <span class="at">-s</span> 219 <span class="at">-ss</span> itbs <span class="at">-c</span> dcm2niix <span class="at">-b</span> <span class="at">--minmeta</span> <span class="at">--overwrite</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
-<pre><code>WARNING: Could not check for version updates: Connection to server could not be made
+<pre><code>WARNING: Could not check for version updates: 500 Server Error: Internal Server Error for url: https://rig.mit.edu/et/projects/nipy/heudiconv
 INFO: Running heudiconv version 1.3.4 latest Unknown
 INFO: Analyzing 1716 dicoms
 INFO: Generated sequence info for 1 studies with 25 entries total
@@ -2147,171 +2147,171 @@ INFO: PROCESSING STARTS: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'sessi
 INFO: Processing 25 pre-sorted seqinfo entries
 INFO: Doing conversion using dcm2niix
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w (176 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/anat . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:30,660 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixlm5axg0c/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixlm5axg0c/convert".
-260205-18:29:30,703 nipype.workflow INFO:
+260506-19:50:15,980 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixv0bg76vt/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixv0bg76vt/convert".
+260506-19:50:16,15 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:30,881 nipype.interface INFO:
-     stdout 2026-02-05T18:29:30.881924:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:30.881924:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:30,882 nipype.interface INFO:
-     stdout 2026-02-05T18:29:30.881924:Found 176 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:30.881924:Found 176 DICOM file(s)
-260205-18:29:30,882 nipype.interface INFO:
-     stdout 2026-02-05T18:29:30.881924:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv746 (256x256x176x1)
-INFO: stdout 2026-02-05T18:29:30.881924:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv746 (256x256x176x1)
-260205-18:29:33,422 nipype.interface INFO:
-     stdout 2026-02-05T18:29:33.422542:Conversion required 2.595486 seconds (2.593593 for core code).
-INFO: stdout 2026-02-05T18:29:33.422542:Conversion required 2.595486 seconds (2.593593 for core code).
-260205-18:29:33,448 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 2.658454s.
-INFO: [Node] Finished "convert", elapsed time 2.658454s.
+260506-19:50:16,176 nipype.interface INFO:
+     stdout 2026-05-06T19:50:16.176680:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:16.176680:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:16,176 nipype.interface INFO:
+     stdout 2026-05-06T19:50:16.176680:Found 176 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:16.176680:Found 176 DICOM file(s)
+260506-19:50:16,176 nipype.interface INFO:
+     stdout 2026-05-06T19:50:16.176680:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv911 (256x256x176x1)
+INFO: stdout 2026-05-06T19:50:16.176680:Convert 176 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w_heudiconv911 (256x256x176x1)
+260506-19:50:19,228 nipype.interface INFO:
+     stdout 2026-05-06T19:50:19.228083:Conversion required 3.104611 seconds (3.104459 for core code).
+INFO: stdout 2026-05-06T19:50:19.228083:Conversion required 3.104611 seconds (3.104459 for core code).
+260506-19:50:19,253 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 3.1658749999999998s.
+INFO: [Node] Finished "convert", elapsed time 3.1658749999999998s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.json file
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi (32 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/dwi . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:33,465 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixtz8t88lp/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixtz8t88lp/convert".
-260205-18:29:33,473 nipype.workflow INFO:
+260506-19:50:19,269 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixp9csch7m/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixp9csch7m/convert".
+260506-19:50:19,277 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:33,550 nipype.interface INFO:
-     stdout 2026-02-05T18:29:33.550716:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:33.550716:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:33,550 nipype.interface INFO:
-     stdout 2026-02-05T18:29:33.550716:Found 32 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:33.550716:Found 32 DICOM file(s)
-260205-18:29:33,551 nipype.interface INFO:
-     stdout 2026-02-05T18:29:33.550716:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv786 (128x128x74x32)
-INFO: stdout 2026-02-05T18:29:33.550716:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv786 (128x128x74x32)
-260205-18:29:40,766 nipype.interface INFO:
-     stdout 2026-02-05T18:29:40.766174:Conversion required 7.255900 seconds (7.255090 for core code).
-INFO: stdout 2026-02-05T18:29:40.766174:Conversion required 7.255900 seconds (7.255090 for core code).
-260205-18:29:40,795 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 7.321301s.
-INFO: [Node] Finished "convert", elapsed time 7.321301s.
+260506-19:50:19,346 nipype.interface INFO:
+     stdout 2026-05-06T19:50:19.346571:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:19.346571:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:19,346 nipype.interface INFO:
+     stdout 2026-05-06T19:50:19.346571:Found 32 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:19.346571:Found 32 DICOM file(s)
+260506-19:50:19,346 nipype.interface INFO:
+     stdout 2026-05-06T19:50:19.346571:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv423 (128x128x74x32)
+INFO: stdout 2026-05-06T19:50:19.346571:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi_heudiconv423 (128x128x74x32)
+260506-19:50:27,778 nipype.interface INFO:
+     stdout 2026-05-06T19:50:27.778853:Conversion required 8.465564 seconds (8.464908 for core code).
+INFO: stdout 2026-05-06T19:50:27.778853:Conversion required 8.465564 seconds (8.464908 for core code).
+260506-19:50:27,803 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 8.525941s.
+INFO: [Node] Finished "convert", elapsed time 8.525941s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.json file
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi (148 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:40,806 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixjd6ga02g/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixjd6ga02g/convert".
-260205-18:29:40,841 nipype.workflow INFO:
+260506-19:50:27,814 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix_rdurlok/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix_rdurlok/convert".
+260506-19:50:27,846 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:40,922 nipype.interface INFO:
-     stdout 2026-02-05T18:29:40.922479:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:40.922479:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:40,922 nipype.interface INFO:
-     stdout 2026-02-05T18:29:40.922479:Found 148 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:40.922479:Found 148 DICOM file(s)
-260205-18:29:40,922 nipype.interface INFO:
-     stdout 2026-02-05T18:29:40.922479:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv841 (128x128x74x2)
-INFO: stdout 2026-02-05T18:29:40.922479:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv841 (128x128x74x2)
-260205-18:29:41,352 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.352273:Conversion required 0.473840 seconds (0.473729 for core code).
-INFO: stdout 2026-02-05T18:29:41.352273:Conversion required 0.473840 seconds (0.473729 for core code).
-260205-18:29:41,377 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.535248s.
-INFO: [Node] Finished "convert", elapsed time 0.535248s.
+260506-19:50:27,925 nipype.interface INFO:
+     stdout 2026-05-06T19:50:27.925354:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:27.925354:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:27,925 nipype.interface INFO:
+     stdout 2026-05-06T19:50:27.925354:Found 148 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:27.925354:Found 148 DICOM file(s)
+260506-19:50:27,925 nipype.interface INFO:
+     stdout 2026-05-06T19:50:27.925354:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv570 (128x128x74x2)
+INFO: stdout 2026-05-06T19:50:27.925354:Convert 148 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi_heudiconv570 (128x128x74x2)
+260506-19:50:28,428 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.428198:Conversion required 0.544848 seconds (0.544833 for core code).
+INFO: stdout 2026-05-06T19:50:28.428198:Conversion required 0.544848 seconds (0.544833 for core code).
+260506-19:50:28,452 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.605085s.
+INFO: [Node] Finished "convert", elapsed time 0.605085s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_dir-PA_epi.json file
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude (64 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:41,392 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixmw4_cwya/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixmw4_cwya/convert".
-260205-18:29:41,408 nipype.workflow INFO:
+260506-19:50:28,466 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixsi6066ep/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixsi6066ep/convert".
+260506-19:50:28,481 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:41,465 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.465355:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:41.465355:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:41,465 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.465355:Found 64 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:41.465355:Found 64 DICOM file(s)
-260205-18:29:41,465 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.465355:Slices not stacked: echo varies (TE 7.38, 4.92; echo 2, 1). Use 'merge 2D slices' option to force stacking
-INFO: stdout 2026-02-05T18:29:41.465355:Slices not stacked: echo varies (TE 7.38, 4.92; echo 2, 1). Use 'merge 2D slices' option to force stacking
-260205-18:29:41,465 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.465355:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv445_e2 (80x80x32x1)
-INFO: stdout 2026-02-05T18:29:41.465355:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv445_e2 (80x80x32x1)
-260205-18:29:41,498 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.498568:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv445_e1 (80x80x32x1)
-INFO: stdout 2026-02-05T18:29:41.498568:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv445_e1 (80x80x32x1)
-260205-18:29:41,530 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.530683:Conversion required 0.085686 seconds (0.085644 for core code).
-INFO: stdout 2026-02-05T18:29:41.530683:Conversion required 0.085686 seconds (0.085644 for core code).
-260205-18:29:41,559 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.150102s.
-INFO: [Node] Finished "convert", elapsed time 0.150102s.
+260506-19:50:28,537 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.536953:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:28.536953:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:28,537 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.536953:Found 64 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:28.536953:Found 64 DICOM file(s)
+260506-19:50:28,537 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.536953:Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use 'merge 2D slices' option to force stacking
+INFO: stdout 2026-05-06T19:50:28.536953:Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use 'merge 2D slices' option to force stacking
+260506-19:50:28,537 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.536953:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv837_e1 (80x80x32x1)
+INFO: stdout 2026-05-06T19:50:28.536953:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv837_e1 (80x80x32x1)
+260506-19:50:28,576 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.576680:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv837_e2 (80x80x32x1)
+INFO: stdout 2026-05-06T19:50:28.576680:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude_heudiconv837_e2 (80x80x32x1)
+260506-19:50:28,612 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.612000:Conversion required 0.094021 seconds (0.094008 for core code).
+INFO: stdout 2026-05-06T19:50:28.612000:Conversion required 0.094021 seconds (0.094008 for core code).
+260506-19:50:28,637 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.155195s.
+INFO: [Node] Finished "convert", elapsed time 0.155195s.
 WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff (32 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/fmap . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:41,571 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixnl7eeayv/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixnl7eeayv/convert".
-260205-18:29:41,580 nipype.workflow INFO:
+260506-19:50:28,647 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixz35e9qsi/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixz35e9qsi/convert".
+260506-19:50:28,655 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:41,629 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.629019:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:41.629019:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:41,629 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.629019:Found 32 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:41.629019:Found 32 DICOM file(s)
-260205-18:29:41,629 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.629019:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv934_e2_ph (80x80x32x1)
-INFO: stdout 2026-02-05T18:29:41.629019:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv934_e2_ph (80x80x32x1)
-260205-18:29:41,648 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.648306:Conversion required 0.032712 seconds (0.032709 for core code).
-INFO: stdout 2026-02-05T18:29:41.648306:Conversion required 0.032712 seconds (0.032709 for core code).
-260205-18:29:41,677 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 0.096651s.
-INFO: [Node] Finished "convert", elapsed time 0.096651s.
+260506-19:50:28,702 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.702436:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:28.702436:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:28,702 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.702436:Found 32 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:28.702436:Found 32 DICOM file(s)
+260506-19:50:28,702 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.702436:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv816_e2_ph (80x80x32x1)
+INFO: stdout 2026-05-06T19:50:28.702436:Convert 32 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff_heudiconv816_e2_ph (80x80x32x1)
+260506-19:50:28,723 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.723575:Conversion required 0.032352 seconds (0.032333 for core code).
+INFO: stdout 2026-05-06T19:50:28.723575:Conversion required 0.032352 seconds (0.032333 for core code).
+260506-19:50:28,747 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 0.091799s.
+INFO: [Node] Finished "convert", elapsed time 0.091799s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/fmap/sub-219_ses-itbs_phasediff.json file
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold (177 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/func . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:41,689 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixf0rlqtbf/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixf0rlqtbf/convert".
-260205-18:29:41,726 nipype.workflow INFO:
+260506-19:50:28,758 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niixppx0om91/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixppx0om91/convert".
+260506-19:50:28,793 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:41,842 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.842904:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:41.842904:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:41,843 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.842904:Found 177 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:41.842904:Found 177 DICOM file(s)
-260205-18:29:41,843 nipype.interface INFO:
-     stdout 2026-02-05T18:29:41.842904:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv079 (88x84x32x177)
-INFO: stdout 2026-02-05T18:29:41.842904:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv079 (88x84x32x177)
-260205-18:29:49,953 nipype.interface INFO:
-     stdout 2026-02-05T18:29:49.953659:Conversion required 8.191842 seconds (8.191081 for core code).
-INFO: stdout 2026-02-05T18:29:49.953659:Conversion required 8.191842 seconds (8.191081 for core code).
-260205-18:29:49,984 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.257005s.
-INFO: [Node] Finished "convert", elapsed time 8.257005s.
+260506-19:50:28,900 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.900489:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:28.900489:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:28,900 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.900489:Found 177 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:28.900489:Found 177 DICOM file(s)
+260506-19:50:28,900 nipype.interface INFO:
+     stdout 2026-05-06T19:50:28.900489:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv821 (88x84x32x177)
+INFO: stdout 2026-05-06T19:50:28.900489:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold_heudiconv821 (88x84x32x177)
+260506-19:50:38,497 nipype.interface INFO:
+     stdout 2026-05-06T19:50:38.497911:Conversion required 9.667290 seconds (9.666352 for core code).
+INFO: stdout 2026-05-06T19:50:38.497911:Conversion required 9.667290 seconds (9.666352 for core code).
+260506-19:50:38,522 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 9.728417s.
+INFO: [Node] Finished "convert", elapsed time 9.728417s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json file
 INFO: Converting /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold (177 DICOMs) -&gt; /app/MRIS/Nifti/sub-219/ses-itbs/func . Converter: dcm2niix . Output types: ('nii.gz',)
-260205-18:29:50,1 nipype.workflow INFO:
-     [Node] Setting-up "convert" in "/tmp/dcm2niixhn_yfyif/convert".
-INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixhn_yfyif/convert".
-260205-18:29:50,43 nipype.workflow INFO:
+260506-19:50:38,540 nipype.workflow INFO:
+     [Node] Setting-up "convert" in "/tmp/dcm2niix1ckwab2s/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niix1ckwab2s/convert".
+260506-19:50:38,578 nipype.workflow INFO:
      [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
 INFO: [Node] Executing "convert" &lt;nipype.interfaces.dcm2nii.Dcm2niix&gt;
-260205-18:29:50,158 nipype.interface INFO:
-     stdout 2026-02-05T18:29:50.158797:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-INFO: stdout 2026-02-05T18:29:50.158797:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
-260205-18:29:50,159 nipype.interface INFO:
-     stdout 2026-02-05T18:29:50.158797:Found 177 DICOM file(s)
-INFO: stdout 2026-02-05T18:29:50.158797:Found 177 DICOM file(s)
-260205-18:29:50,159 nipype.interface INFO:
-     stdout 2026-02-05T18:29:50.158797:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv367 (88x84x32x177)
-INFO: stdout 2026-02-05T18:29:50.158797:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv367 (88x84x32x177)
-260205-18:29:58,181 nipype.interface INFO:
-     stdout 2026-02-05T18:29:58.180954:Conversion required 8.101576 seconds (8.100701 for core code).
-INFO: stdout 2026-02-05T18:29:58.180954:Conversion required 8.101576 seconds (8.100701 for core code).
-260205-18:29:58,209 nipype.workflow INFO:
-     [Node] Finished "convert", elapsed time 8.1659s.
-INFO: [Node] Finished "convert", elapsed time 8.1659s.
+260506-19:50:38,686 nipype.interface INFO:
+     stdout 2026-05-06T19:50:38.686561:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+INFO: stdout 2026-05-06T19:50:38.686561:Chris Rorden's dcm2niiX version v1.0.20250505  GCC10.2.1 x86-64 (64-bit Linux)
+260506-19:50:38,686 nipype.interface INFO:
+     stdout 2026-05-06T19:50:38.686561:Found 177 DICOM file(s)
+INFO: stdout 2026-05-06T19:50:38.686561:Found 177 DICOM file(s)
+260506-19:50:38,686 nipype.interface INFO:
+     stdout 2026-05-06T19:50:38.686561:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv956 (88x84x32x177)
+INFO: stdout 2026-05-06T19:50:38.686561:Convert 177 DICOM as /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold_heudiconv956 (88x84x32x177)
+260506-19:50:48,135 nipype.interface INFO:
+     stdout 2026-05-06T19:50:48.135489:Conversion required 9.519782 seconds (9.518937 for core code).
+INFO: stdout 2026-05-06T19:50:48.135489:Conversion required 9.519782 seconds (9.518937 for core code).
+260506-19:50:48,162 nipype.workflow INFO:
+     [Node] Finished "convert", elapsed time 9.582863s.
+INFO: [Node] Finished "convert", elapsed time 9.582863s.
 INFO: Post-treating /app/MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_bold.json file
 INFO: Populating template files under /app/MRIS/Nifti/
 INFO: PROCESSING DONE: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session': 'itbs'}</code></pre>
@@ -2322,7 +2322,7 @@ INFO: PROCESSING DONE: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session
 <section id="inspect-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-bids-dataset">Inspect the BIDS dataset</h2>
 <p>Let’s see what was created in the Nifti directory:</p>
-<div id="76e09d1e" class="cell" data-output-fold="true" data-execution_count="7">
+<div id="4e36d110" class="cell" data-output-fold="true" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="ex">tree</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2378,7 +2378,7 @@ INFO: PROCESSING DONE: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session
 <li>Required BIDS text files (<code>CHANGES</code>, <code>README</code>, <code>dataset_description.json</code>, etc.)</li>
 </ul>
 <p>Let’s look at the subject structure in more detail:</p>
-<div id="5a4bf954" class="cell" data-output-fold="true" data-execution_count="8">
+<div id="dac332a0" class="cell" data-output-fold="true" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="ex">tree</span> MRIS/Nifti/sub-219</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2418,7 +2418,7 @@ INFO: PROCESSING DONE: {'subject': '219', 'outdir': '/app/MRIS/Nifti/', 'session
 <section id="check-bids-files" class="level2">
 <h2 class="anchored" data-anchor-id="check-bids-files">Check BIDS files</h2>
 <p>Let’s examine the required BIDS files that were created:</p>
-<div id="f91064d1" class="cell" data-output-fold="true" data-execution_count="9">
+<div id="5e5ee1ad" class="cell" data-output-fold="true" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ls</span> MRIS/Nifti/<span class="pp">*</span>.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2427,7 +2427,7 @@ MRIS/Nifti/participants.json         MRIS/Nifti/task-rest_bold.json</code></pre>
 </div>
 </details>
 </div>
-<div id="c645e276" class="cell" data-output-fold="true" data-execution_count="10">
+<div id="07a06ebc" class="cell" data-output-fold="true" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.tsv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2436,7 +2436,7 @@ sub-219 54  F   control</code></pre>
 </div>
 </details>
 </div>
-<div id="6d8d4da6" class="cell" data-output-fold="true" data-execution_count="11">
+<div id="f2fd8bf6" class="cell" data-output-fold="true" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">cat</span> MRIS/Nifti/participants.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2457,7 +2457,7 @@ sub-219 54  F   control</code></pre>
 </div>
 </details>
 </div>
-<div id="495cd7af" class="cell" data-output-fold="true" data-execution_count="12">
+<div id="f898930c" class="cell" data-output-fold="true" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">cat</span> MRIS/Nifti/README</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2465,7 +2465,7 @@ sub-219 54  F   control</code></pre>
 </div>
 </details>
 </div>
-<div id="cc6c69ca" class="cell" data-output-fold="true" data-execution_count="13">
+<div id="170939f9" class="cell" data-output-fold="true" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">cat</span> MRIS/Nifti/CHANGES</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2478,7 +2478,7 @@ TODOs:
 </details>
 </div>
 <p>View the dataset description:</p>
-<div id="28f7a344" class="cell" data-output-fold="true" data-execution_count="14">
+<div id="9675c1c9" class="cell" data-output-fold="true" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">cat</span> MRIS/Nifti/dataset_description.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2512,36 +2512,20 @@ TODOs:
 <section id="validate-the-bids-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="validate-the-bids-dataset">Validate the BIDS dataset</h2>
 <p>Validate the dataset using the BIDS Validator to ensure everything is according to specification:</p>
-<div id="671bd524" class="cell" data-output-fold="true" data-execution_count="15">
+<div id="18f3cb02" class="cell" data-output-fold="true" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="ex">bids-validator-deno</span> MRIS/Nifti</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
 <div class="ansi-escaped-output">
-<pre>   <span class="ansi-yellow-fg">[WARNING] JSON_KEY_RECOMMENDED A JSON file is missing a key listed as recommended.</span>
+<pre>   <span class="ansi-yellow-fg">[WARNING] README_FILE_SMALL The recommended file '/README' is very small.
 
-        <span class="ansi-yellow-fg">GeneratedBy</span>
+Please consider expanding it with additional information about the dataset.</span>
 
-        /dataset_description.json - Field description: Used to specify provenance of the dataset.
-
-
-
-        <span class="ansi-yellow-fg">SourceDatasets</span>
-
-        /dataset_description.json - Field description: Used to specify the locations and relevant attributes of all source datasets.
-
-Valid keys in each object include <span class="ansi-cyan-fg">"URL"</span>, <span class="ansi-cyan-fg">"DOI"</span> (see
-
-<span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)), and
-
-<span class="ansi-cyan-fg">"Version"</span> with
-
-<span class="ansi-blue-fg">string</span> (<span class="ansi-bright-black-fg">https://www.w3schools.com/js/js_json_datatypes.asp</span>)
-
-values.
+        /README
 
 
 
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=JSON_KEY_RECOMMENDED for existing conversations about this issue.</span>
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=README_FILE_SMALL for existing conversations about this issue.</span>
 
 
 
@@ -2575,37 +2559,41 @@ values.
 
 
 
-    <span class="ansi-yellow-fg">[WARNING] README_FILE_SMALL The recommended file '/README' is very small.
+    <span class="ansi-yellow-fg">[WARNING] JSON_KEY_RECOMMENDED A JSON file is missing a key listed as recommended.</span>
 
-Please consider expanding it with additional information about the dataset.</span>
+        <span class="ansi-yellow-fg">GeneratedBy</span>
 
-        /README
+        /dataset_description.json - Field description: Used to specify provenance of the dataset.
 
 
 
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=README_FILE_SMALL for existing conversations about this issue.</span>
+        <span class="ansi-yellow-fg">SourceDatasets</span>
+
+        /dataset_description.json - Field description: Used to specify the locations and relevant attributes of all source datasets.
+
+Valid keys in each object include <span class="ansi-cyan-fg">"URL"</span>, <span class="ansi-cyan-fg">"DOI"</span> (see
+
+<span class="ansi-blue-fg">URI</span> (<span class="ansi-bright-black-fg">https://bids-specification.readthedocs.io/en/stable/common-principles.md#uniform-resource-indicator</span>)), and
+
+<span class="ansi-cyan-fg">"Version"</span> with
+
+<span class="ansi-blue-fg">string</span> (<span class="ansi-bright-black-fg">https://www.w3schools.com/js/js_json_datatypes.asp</span>)
+
+values.
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=JSON_KEY_RECOMMENDED for existing conversations about this issue.</span>
 
 
 
     <span class="ansi-yellow-fg">[WARNING] SIDECAR_KEY_RECOMMENDED A data file's JSON sidecar is missing a key listed as recommended.</span>
 
-        <span class="ansi-yellow-fg">PulseSequenceType</span>
-
-        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: A general description of the pulse sequence used for the scan.
-
-
-
-        6 more files with the same issue
-
-
-
         <span class="ansi-yellow-fg">SpoilingType</span>
 
-        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
-
         /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.bvec - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
+
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.bval - Field description: Specifies which spoiling method(s) are used by a spoiled sequence.
 
 
 
@@ -2613,19 +2601,43 @@ Please consider expanding it with additional information about the dataset.</spa
 
 
 
+        <span class="ansi-yellow-fg">PulseSequenceType</span>
+
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: A general description of the pulse sequence used for the scan.
+
+        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: A general description of the pulse sequence used for the scan.
+
+
+
+        6 more files with the same issue
+
+
+
         <span class="ansi-yellow-fg">PartialFourierDirection</span>
 
-        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: The direction where only partial Fourier information was collected.
+        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: The direction where only partial Fourier information was collected.
 
 Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
 
-        /sub-219/ses-itbs/dwi/sub-219_ses-itbs_acq-AP_dwi.nii.gz - Field description: The direction where only partial Fourier information was collected.
+        /sub-219/ses-itbs/anat/sub-219_ses-itbs_T1w.nii.gz - Field description: The direction where only partial Fourier information was collected.
 
 Corresponds to <span class="ansi-blue-fg">DICOM Tag 0018, 9036</span> (<span class="ansi-bright-black-fg">https://dicomlookup.com/dicomtags/(0018,9036)</span>) <span class="ansi-cyan-fg">Partial Fourier Direction</span>.
 
 
 
         6 more files with the same issue
+
+
+
+        <span class="ansi-yellow-fg">StimulusPresentation</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv - Field description: Object containing key-value pairs related to the software used to present
+
+the stimuli during the experiment.
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv - Field description: Object containing key-value pairs related to the software used to present
+
+the stimuli during the experiment.
 
 
 
@@ -2657,19 +2669,21 @@ of the corresponding <span class="ansi-blue-fg">CogPO</span> (<span class="ansi-
 
 
 
-        <span class="ansi-yellow-fg">StimulusPresentation</span>
-
-        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv - Field description: Object containing key-value pairs related to the software used to present
-
-the stimuli during the experiment.
-
-
-
 <span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=SIDECAR_KEY_RECOMMENDED for existing conversations about this issue.</span>
+
+
+
+    <span class="ansi-yellow-fg">[WARNING] TSV_ADDITIONAL_COLUMNS_UNDEFINED A TSV file has extra columns which are not defined in its associated JSON sidecar</span>
+
+        <span class="ansi-yellow-fg">TODO -- fill in rows and add more tab-separated columns if desired</span>
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv
+
+        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv
+
+
+
+<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=TSV_ADDITIONAL_COLUMNS_UNDEFINED for existing conversations about this issue.</span>
 
 
 
@@ -2687,20 +2701,6 @@ This design is suspiciously short.</span>
 
 
 
-    <span class="ansi-yellow-fg">[WARNING] TSV_ADDITIONAL_COLUMNS_UNDEFINED A TSV file has extra columns which are not defined in its associated JSON sidecar</span>
-
-        <span class="ansi-yellow-fg">TODO -- fill in rows and add more tab-separated columns if desired</span>
-
-        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_events.tsv
-
-        /sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-02_events.tsv
-
-
-
-<span class="ansi-cyan-fg"> Please visit https://neurostars.org/search?q=TSV_ADDITIONAL_COLUMNS_UNDEFINED for existing conversations about this issue.</span>
-
-
-
     <span class="ansi-yellow-fg">[WARNING] B0_FIELD_IDENTIFIER_RECOMMENDED File is missing B0FieldIdentifier metadata and IntendedFor metadata,
 
 so it will not be possible to use to perform susceptibility distortion correction.
@@ -2713,7 +2713,7 @@ images to indicate the identifier of the estimated field to use.</span>
 
         <span class="ansi-yellow-fg">B0FieldIdentifier</span>
 
-        /sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude2.nii.gz - Field description: The presence of this key states that this particular 3D or 4D image MAY be
+        /sub-219/ses-itbs/fmap/sub-219_ses-itbs_magnitude1.nii.gz - Field description: The presence of this key states that this particular 3D or 4D image MAY be
 
 used for fieldmap estimation purposes.
 
@@ -2778,7 +2778,7 @@ when the former is not defined (for example, in GE devices.)
 <p>Let’s examine what types of data were converted by looking at the different modality folders:</p>
 <section id="anatomical-data" class="level3">
 <h3 class="anchored" data-anchor-id="anatomical-data">Anatomical data</h3>
-<div id="a2bc574f" class="cell" data-output-fold="true" data-execution_count="16">
+<div id="df47cb15" class="cell" data-output-fold="true" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/anat/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2789,7 +2789,7 @@ when the former is not defined (for example, in GE devices.)
 </section>
 <section id="functional-data" class="level3">
 <h3 class="anchored" data-anchor-id="functional-data">Functional data</h3>
-<div id="62e8502f" class="cell" data-output-fold="true" data-execution_count="17">
+<div id="6a648d30" class="cell" data-output-fold="true" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/func/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2805,7 +2805,7 @@ sub-219_ses-itbs_task-rest_run-02_events.tsv</code></pre>
 </section>
 <section id="diffusion-data" class="level3">
 <h3 class="anchored" data-anchor-id="diffusion-data">Diffusion data</h3>
-<div id="3728b4dc" class="cell" data-output-fold="true" data-execution_count="18">
+<div id="d7d05508" class="cell" data-output-fold="true" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/dwi/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2817,7 +2817,7 @@ sub-219_ses-itbs_acq-AP_dwi.bvec  sub-219_ses-itbs_acq-AP_dwi.nii.gz</code></pre
 </section>
 <section id="diffusion-data-1" class="level3">
 <h3 class="anchored" data-anchor-id="diffusion-data-1">Diffusion data</h3>
-<div id="9a239e64" class="cell" data-output-fold="true" data-execution_count="19">
+<div id="578881f7" class="cell" data-output-fold="true" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">ls</span> MRIS/Nifti/sub-219/ses-itbs/fmap/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
@@ -2833,7 +2833,7 @@ sub-219_ses-itbs_magnitude1.nii.gz  sub-219_ses-itbs_phasediff.nii.gz</code></pr
 <section id="examining-json-sidecars" class="level2">
 <h2 class="anchored" data-anchor-id="examining-json-sidecars">Examining JSON sidecars</h2>
 <p>BIDS requires JSON sidecar files alongside NIfTI files. Let’s examine one:</p>
-<div id="addb3cd2" class="cell" data-output-fold="true" data-execution_count="20">
+<div id="5646f678" class="cell" data-output-fold="true" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">cat</span> MRIS/Nifti/sub-219/ses-itbs/func/sub-219_ses-itbs_task-rest_run-01_bold.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <details><summary>Code Output</summary>
 <div class="cell-output cell-output-stdout">
