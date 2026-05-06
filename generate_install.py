@@ -8,7 +8,7 @@ def generate_install_commands():
 
     # Extract dependencies and create pip install command
     deps = " ".join(data["project"]["dependencies"])
-    pip_command = f"pip install {deps}"
+    pip_command = f"!pip install {deps}"
 
     # Write to markdown file
     markdown_content = f"""```python
