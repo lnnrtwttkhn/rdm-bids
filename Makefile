@@ -80,6 +80,10 @@ jupyter:
 # Start Quarto preview server
 .PHONY: preview
 preview:
+	@echo "Clearing stale Quarto session cache..."
+	@rm -rf .quarto/quarto-session-temp*
+	@echo "Removing old preview container if it exists..."
+	@docker container rm -f $(CONTAINER_NAME)-preview 2>/dev/null || true
 	@echo "Starting Quarto preview on http://localhost:4200"
 	docker run --rm \
 		--name $(CONTAINER_NAME)-preview \
