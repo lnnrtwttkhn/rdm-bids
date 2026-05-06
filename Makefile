@@ -83,11 +83,11 @@ preview:
 	@echo "Starting Quarto preview on http://localhost:4200"
 	docker run --rm \
 		--name $(CONTAINER_NAME)-preview \
-		-p 4200:4200 \
+		-p 4240:4240 \
 		-v $(CURRENT_DIR):/workspace \
 		-w /workspace \
 		$(IMAGE_NAME):latest \
-		uv run quarto preview --host 0.0.0.0 --port 4200 --no-browser
+		sh -c "quarto add --no-prompt mcanouil/quarto-collapse-output && uv run quarto preview --host 0.0.0.0 --port 4240 --no-browser"
 
 # Check Quarto and Python versions
 .PHONY: versions
