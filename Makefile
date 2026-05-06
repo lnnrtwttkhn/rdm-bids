@@ -88,6 +88,7 @@ preview:
 	docker run --rm \
 		--name $(CONTAINER_NAME)-preview \
 		-p 4240:4240 \
+		-e UV_PROJECT_ENVIRONMENT=/app/.venv \
 		-v $(CURRENT_DIR):/workspace \
 		-w /workspace \
 		$(IMAGE_NAME):latest \
