@@ -13,3 +13,6 @@ Nifti
 site_libs
 0219191_mystudy-0219-1114*
 Norman
+**/*.quarto_ipynb
+/.luarc.json
+_extensions
